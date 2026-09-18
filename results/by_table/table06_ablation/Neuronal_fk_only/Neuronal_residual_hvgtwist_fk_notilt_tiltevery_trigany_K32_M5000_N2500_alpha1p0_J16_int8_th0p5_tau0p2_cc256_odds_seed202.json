@@ -1,0 +1,29 @@
+{
+ "table": "Table 6",
+ "arm": "Neuronal_fk_only",
+ "request": "Neuronal",
+ "sample_seed": null,
+ "stem": "Neuronal_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260989",
+ "source_json": "purity_ablation_table10.json",
+ "metrics": {
+  "purity_whole_set": 0.4544,
+  "purity_over_ceiling": 0.6449964513839603,
+  "canonical_ceiling": 0.7045,
+  "purity_matched_n": 0.4544,
+  "unique_cell_fraction": 0.9848,
+  "n_delivered": 2500,
+  "label_dist_whole": {
+   "Adip2": 5,
+   "EC10_CMC-like": 2,
+   "EC3_cap": 1,
+   "FB3": 1,
+   "NC1_glial": 1136,
+   "NC2_glial_NGF+": 1347,
+   "aCM1": 1,
+   "aCM4": 7
+  }
+ },
+ "tau": 0.2,
+ "alpha": 1.0,
+ "sampler": "twist"
+}

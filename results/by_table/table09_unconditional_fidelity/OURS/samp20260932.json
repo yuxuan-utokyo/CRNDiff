@@ -1,0 +1,42 @@
+{
+ "table": "Table 9",
+ "arm": "OURS",
+ "sample_seed": 20260932,
+ "source_json": "200_uncond_fidelity.json",
+ "metrics": {
+  "generator": "OURS",
+  "seed": 20260932,
+  "pool": "out\\uncond_pools\\ours_uncond_seed20260932_n160000.npy",
+  "pool_sha256": "f5cf5cd8a7910d785754c8b47f2228bf892bf50c3cb1db4e5f11213d2fb75d44",
+  "n_scored": 20000,
+  "W1_per_gene_mean": 0.017245087078574032,
+  "W1_per_gene_median": 0.010801949637017782,
+  "sliced_W1": 0.024084351780179536,
+  "mmd2_rbf_biased": 0.0002695867876116864,
+  "scc": 0.9979819687673509,
+  "pcc": 0.9985324757187888,
+  "median_fano": 2.3816273707564557,
+  "fano_q25_q75": [
+   1.6699034520464875,
+   4.23341231110824
+  ],
+  "NFE_per_sample": null,
+  "library_size_source": "generated",
+  "count_legality": {
+   "fraction_negative": 0.0,
+   "fraction_non_integer": 0.0
+  },
+  "diagnostic_not_ruler": {
+   "library_size_mean": 304.529,
+   "library_size_median": 162.0,
+   "library_size_mean_rel_diff_vs_real": 0.1823130068186453,
+   "gene_mean_pearson_raw": 0.9955429703505307,
+   "gene_mean_pearson_log": 0.9985324757160823,
+   "gene_mean_spearman_raw": 0.9914378879026409,
+   "zero_fraction": 0.94646775,
+   "e21_zero_library_rows": 0
+  },
+  "B_F1_passed": true,
+  "walltime_s": 5.4791693687438965
+ }
+}

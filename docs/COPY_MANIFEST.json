@@ -1,0 +1,3536 @@
+{
+ "stage": "A",
+ "files": [
+  {
+   "src": "HVG/analysis/__init__.py",
+   "dst": "src/evaluation/__init__.py",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "src": "HVG/analysis/e33_deployed_arm.py",
+   "dst": "src/evaluation/downstream_deployed_arm.py",
+   "bytes": 13806,
+   "sha256": "bf2c29c41cf304d1b818f3c8fcfbd5772d202b9254ed977e99199afad8dd8efb"
+  },
+  {
+   "src": "HVG/analysis/e33_deployed_summary.py",
+   "dst": "src/evaluation/downstream_deployed_summary.py",
+   "bytes": 8560,
+   "sha256": "dbac1ff0b92096b3d47209c0402f6c061b8aea1e57b87cd8313a6d2155b7306b"
+  },
+  {
+   "src": "HVG/analysis/e33_multiseed.py",
+   "dst": "src/evaluation/downstream_multiseed.py",
+   "bytes": 10460,
+   "sha256": "ee3ada35aa7f28f282286225e2813c127ddccb5491e9770008d9fcdb891f590c"
+  },
+  {
+   "src": "HVG/analysis/e33_multiseed_212.py",
+   "dst": "src/evaluation/downstream_cfgen_only.py",
+   "bytes": 8247,
+   "sha256": "435b5103120e0af25308cdf8325336ffae37199f62889a4ed5c4efad6dcfe526"
+  },
+  {
+   "src": "HVG/analysis/e33_tstr11.py",
+   "dst": "src/evaluation/downstream_tstr_11class.py",
+   "bytes": 14324,
+   "sha256": "d10dff10a22ad98503c66bea64b299fb3557d2363722e4cc940352bde17a8259"
+  },
+  {
+   "src": "HVG/analysis/gates.py",
+   "dst": "src/evaluation/acceptance_gates.py",
+   "bytes": 14972,
+   "sha256": "b80d21e21711313ef00bc7b1df25425aaa07590e35bc1469e15415cb64e7ed8f"
+  },
+  {
+   "src": "HVG/analysis/score_distribution.py",
+   "dst": "src/evaluation/score_distances_logcp10k.py",
+   "bytes": 13824,
+   "sha256": "e54bd74ff65ef7b08f5ae86bcb73c9041b7a24747d1cdace2624c4e6bc5b4390"
+  },
+  {
+   "src": "HVG/analysis/score_e21.py",
+   "dst": "src/evaluation/score_distances_frozen_ruler.py",
+   "bytes": 11712,
+   "sha256": "da65ef7d20686f77625c47e0ca743aa9be734a2f7eeb8f551d33c421464599f0"
+  },
+  {
+   "src": "HVG/analysis/score_purity.py",
+   "dst": "src/evaluation/score_purity.py",
+   "bytes": 10135,
+   "sha256": "fe563c209f3697b31b5160eb4ff01f77d103bbcfa9ff7fadc19cf86cadf2f524"
+  },
+  {
+   "src": "HVG/analysis/score_purity_external.py",
+   "dst": "src/evaluation/score_purity_external.py",
+   "bytes": 13558,
+   "sha256": "6f563233c53838644eb2dbf542293d76a4a692fe998a8d179ae9b172fb6e7aca"
+  },
+  {
+   "src": "HVG/analysis/score_w1_paper.py",
+   "dst": "src/evaluation/score_wasserstein_raw_counts.py",
+   "bytes": 10349,
+   "sha256": "c939fd23cb3789a82bcbda373302e02bade159c5b3610e10541c16999266a3e4"
+  },
+  {
+   "src": "HVG/analysis/summarize_ancestry.py",
+   "dst": "src/evaluation/summarize_ancestry.py",
+   "bytes": 11241,
+   "sha256": "2d411c0ec67ca7d3c02d23196cca6287ff58749e2de2d866ac8d0e5cb9c22478"
+  },
+  {
+   "src": "HVG/experiments/__init__.py",
+   "dst": "experiments/single_cell/__init__.py",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "src": "HVG/experiments/manifests.py",
+   "dst": "experiments/single_cell/manifests.py",
+   "bytes": 34912,
+   "sha256": "39955eff83ab718c2da529f4d47ee5ee95212305ef733278a15852a41b860cb1"
+  },
+  {
+   "src": "HVG/experiments/queue.py",
+   "dst": "experiments/single_cell/queue.py",
+   "bytes": 6191,
+   "sha256": "0aa782e13044b07a60e2241ff290365338237cdd9aee3e3cc6496af28a85c1de"
+  },
+  {
+   "src": "HVG/experiments/run_one.py",
+   "dst": "experiments/single_cell/run_one.py",
+   "bytes": 27806,
+   "sha256": "dfbdabcbefa0c79534e3337745d4d8a784be8114569bdaf50a8dfb9fa4a2ae8f"
+  },
+  {
+   "src": "HVG/figures/__init__.py",
+   "dst": "src/figures/__init__.py",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "src": "HVG/figures/fig_ablation_pca.py",
+   "dst": "src/figures/ablation_pca_base.py",
+   "bytes": 18357,
+   "sha256": "f4d34bfadba14964522a7d756c5c60b884e57aea540cad194b8fcb993ef9997a"
+  },
+  {
+   "src": "HVG/figures/fig_ablation_pca_3x3.py",
+   "dst": "src/figures/ablation_pca_grid_3x3.py",
+   "bytes": 6838,
+   "sha256": "22878ab7ccd534110c61637abe464e8bc3281c5f6532ad56d67c3559abf94942"
+  },
+  {
+   "src": "HVG/figures/fig_ancestry_collapse.py",
+   "dst": "src/figures/ancestry_collapse.py",
+   "bytes": 7823,
+   "sha256": "25e51297399220709684eb84a1a56af44bbb4fb679f7e390d8611289ea4d5cd6"
+  },
+  {
+   "src": "HVG/figures/fig_pca_baselines.py",
+   "dst": "src/figures/pca_grid_base.py",
+   "bytes": 9432,
+   "sha256": "451549d8237968a8c89dcbce50d9cea3da1e08a4d75fc12cc5d19557da9e440f"
+  },
+  {
+   "src": "HVG/figures/fig_pca_baselines_v2.py",
+   "dst": "src/figures/pca_grid_add_mdlm.py",
+   "bytes": 7828,
+   "sha256": "80280117cad0f050965cab09610cf4aba62135ba50e2892745cabc3593ac96b4"
+  },
+  {
+   "src": "HVG/figures/fig_pca_baselines_v3.py",
+   "dst": "src/figures/pca_grid_swap_cfgen_pool.py",
+   "bytes": 9029,
+   "sha256": "6214213e9f8ff5710c411ddca011d41dea717fdeb73001f200a803293dfa11d7"
+  },
+  {
+   "src": "HVG/figures/fig_umap_panels.py",
+   "dst": "src/figures/umap_panels.py",
+   "bytes": 6628,
+   "sha256": "0ae40dbda976626c96684ff132c50301779edc788a5dcf68ff979e1d03e5d4a1"
+  },
+  {
+   "src": "HVG/figures/hvgfig.py",
+   "dst": "src/figures/panels.py",
+   "bytes": 13730,
+   "sha256": "c89f29141dbd1ccc1fdd52680ff796ea3cd818f591311a9369a4125c21b5fd0b"
+  },
+  {
+   "src": "HVG/figures/style.py",
+   "dst": "src/figures/style.py",
+   "bytes": 1695,
+   "sha256": "a0ce93c47b3172948a6ed8689d6de005c110d225faee4dd81e11280e8ec1a4c3"
+  },
+  {
+   "src": "HVG/hvg/__init__.py",
+   "dst": "src/crndiff/__init__.py",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "src": "HVG/hvg/config.py",
+   "dst": "src/crndiff/config.py",
+   "bytes": 9887,
+   "sha256": "12bf0100623a7525fd604ee06fb0227441612d7bc29a0cfd8ee0f2084d1877b7"
+  },
+  {
+   "src": "HVG/hvg/io.py",
+   "dst": "src/crndiff/io.py",
+   "bytes": 7344,
+   "sha256": "325569ef2fa067eedfddf836f726504e7eecbdb83a95029aa011eab2dca13386"
+  },
+  {
+   "src": "HVG/hvg/metrics.py",
+   "dst": "src/crndiff/metrics.py",
+   "bytes": 7427,
+   "sha256": "545832810c3397d64ba8a50a5ab38e8033366951c9874ff663e57da110949db9"
+  },
+  {
+   "src": "HVG/hvg/model_conditional.py",
+   "dst": "src/crndiff/conditional_model.py",
+   "bytes": 15480,
+   "sha256": "f1857a1decdf5cefac5daf0d2176864c2713ba042178706174bb4badc45c31ff"
+  },
+  {
+   "src": "HVG/hvg/model_masked_mdlm.py",
+   "dst": "baselines/mdlm/model_masked_mdlm.py",
+   "bytes": 14119,
+   "sha256": "e1add9107c078684c1c55254cf60ba0602b27d3f3e1dff5ba645056d7570c430"
+  },
+  {
+   "src": "HVG/hvg/multicluster.py",
+   "dst": "src/crndiff/multicluster_sampler.py",
+   "bytes": 14713,
+   "sha256": "ca4c9935b3017d869124f90d45d300f047c2f70fe5e37c2d2ba46d55dc6dea23"
+  },
+  {
+   "src": "HVG/hvg/sampler.py",
+   "dst": "src/crndiff/sampler.py",
+   "bytes": 31236,
+   "sha256": "d317af41a8a56d2b72c89cc611d4efe2634979ddd4a598342aa556581383aca2"
+  },
+  {
+   "src": "HVG/hvg/sampler_vgr.py",
+   "dst": "src/crndiff/sampler_value_guided.py",
+   "bytes": 8834,
+   "sha256": "ffdaf74f977f0808d638a45502efb6a47fdf5d1bd323122891e4609f86a5d636"
+  },
+  {
+   "src": "HVG/tools/_summary_lock.py",
+   "dst": "scripts/_summary_lock.py",
+   "bytes": 2154,
+   "sha256": "c52f673d84e8e54c9d1170d8efe48d17b8b2235f7492a79d61635788bd800cff"
+  },
+  {
+   "src": "HVG/tools/check_assets.py",
+   "dst": "scripts/check_assets.py",
+   "bytes": 10578,
+   "sha256": "372d4109af69d1ddde669ba4d1d408a790a496d7d6977ed8d8b6c1af1c78c9f1"
+  },
+  {
+   "src": "HVG/tools/ess_pre_resample.py",
+   "dst": "scripts/collect_ess_at_resampling.py",
+   "bytes": 4836,
+   "sha256": "6b30f5b6e330ca3b200b6c9e690d12e2e8c91375ad04aef25c81b252f68e45e3"
+  },
+  {
+   "src": "HVG/tools/fit_apply_residual_hvg.py",
+   "dst": "scripts/fit_residual_discriminator.py",
+   "bytes": 15299,
+   "sha256": "a4480bd90aeee78358e9b25d2fcc8f02a87d7f9febd4db91f64ea16b91ea436d"
+  },
+  {
+   "src": "HVG/tools/fit_noised_classifier.py",
+   "dst": "scripts/fit_noised_value_classifier.py",
+   "bytes": 9305,
+   "sha256": "181bb2c5f3dca3ef162a2a6c6b3885331d9126a56488aea503e457f9e4d93176"
+  },
+  {
+   "src": "HVG/tools/fit_selection_classifier.py",
+   "dst": "scripts/fit_selection_classifier.py",
+   "bytes": 13507,
+   "sha256": "76b267d4d98b6cbc981439143713b6c0bc215fae3aee79289b8e2903efd1669e"
+  },
+  {
+   "src": "HVG/tools/t200_baseline_uncond_pool.py",
+   "dst": "scripts/sample_unconditional_pool.py",
+   "bytes": 14518,
+   "sha256": "9af6cc86e4e41082d47a07b3c3d58d52d2edd75a11b94a7265cab4297894c33c"
+  },
+  {
+   "src": "HVG/tools/t200_bestofn.py",
+   "dst": "scripts/sample_best_of_n.py",
+   "bytes": 18069,
+   "sha256": "2aecb82f6681edd3db1d41e6fc7352c019d86809a384e4ae7d1d78dbec1a5674"
+  },
+  {
+   "src": "HVG/tools/t200_m1_8_lineage.py",
+   "dst": "scripts/collect_ancestry_diagnostics.py",
+   "bytes": 8562,
+   "sha256": "796918082e44ad134aca20ece02b04ad82ae4093d80b1c5d1f2fbe9423aefd3b"
+  },
+  {
+   "src": "HVG/tools/t200_mdlm.py",
+   "dst": "scripts/run_mdlm_baseline.py",
+   "bytes": 13219,
+   "sha256": "3fe94d95b8fa5294a2549b09863466a91dc4b0a93edf9525fc1cedbdc14abbf9"
+  },
+  {
+   "src": "HVG/tools/t200_pool_composition.py",
+   "dst": "scripts/score_pool_composition.py",
+   "bytes": 5271,
+   "sha256": "3c9eaa18516773ac686dc78ad3a3ed0fffcd9bc4092d4a001dad85b877286e88"
+  },
+  {
+   "src": "HVG/tools/t200_run_vgr.py",
+   "dst": "scripts/sample_value_guided.py",
+   "bytes": 10977,
+   "sha256": "eb713bcff2b7487bb50a147d19a5155e717cc203c2df2eb9e295b17adda3c839"
+  },
+  {
+   "src": "HVG/tools/t200_score_deliveries.py",
+   "dst": "scripts/score_deliveries.py",
+   "bytes": 16768,
+   "sha256": "51ceeab2738ef2699bfe03679cdcc2558dfa94901e3f8c8baabeead76660985b"
+  },
+  {
+   "src": "HVG/tools/t200_tables.py",
+   "dst": "scripts/build_sampler_axis_tables.py",
+   "bytes": 28145,
+   "sha256": "774d559f3118067e3034f2ede0c75b6d01bdbe6c17be11d7353027b50796bb2a"
+  },
+  {
+   "src": "HVG/tools/t200_train_aprime.py",
+   "dst": "scripts/train_conditional_generator.py",
+   "bytes": 11270,
+   "sha256": "86f0149d7095fa4c0557a0e006625000b888ae721564f0f38a114fab3b06bfb9"
+  },
+  {
+   "src": "HVG/tools/t200_uncond_fidelity.py",
+   "dst": "scripts/score_unconditional_fidelity.py",
+   "bytes": 16043,
+   "sha256": "fd6e19b362cb8c9b5d2729a385e3a34509e4d2144cea333082b479256a9e705c"
+  },
+  {
+   "src": "HVG/tools/t201_tau_score.py",
+   "dst": "scripts/score_tilt_exponent_sweep.py",
+   "bytes": 15288,
+   "sha256": "948b2b89e22271a8de69cf95d9d2ab25d0ef6e18115c4bdb9e6742afb7cb38f7"
+  },
+  {
+   "src": "HVG/tools/t201_tau_sweep.py",
+   "dst": "scripts/sweep_tilt_exponent.py",
+   "bytes": 15902,
+   "sha256": "3952b034c66eaeb8ce0a57ff6835ac25227a1e119ca86f33cc9c9d986caa02ad"
+  },
+  {
+   "src": "HVG/tools/t202_pool_composition.py",
+   "dst": "scripts/score_pool_composition_batch.py",
+   "bytes": 5843,
+   "sha256": "1c5062f7ae5a3fa20d3c05827264a5fc09b9d67be949b202bfd235c0f9e25d00"
+  },
+  {
+   "src": "HVG/tools/t210_cfgen_sample.py",
+   "dst": "scripts/sample_baseline_cfgen.py",
+   "bytes": 7237,
+   "sha256": "f749d48af6a27082099d535c114f4c8fb55c41cd95d3f831219b0c4f48660981"
+  },
+  {
+   "src": "HVG/tools/t213_ladder.py",
+   "dst": "scripts/build_sampler_axis_ladder.py",
+   "bytes": 9437,
+   "sha256": "91763cff1db8c4fb165978b0a18425898bd910403616a157ae5f00f260440bd9"
+  },
+  {
+   "src": "HVG/tools/t214_baselines.py",
+   "dst": "scripts/train_and_sample_scvi_scanvi.py",
+   "bytes": 7177,
+   "sha256": "625a5951ad74d45a11b84d238645c76567d9c76b055da9eafa4bd84033d22a7d"
+  },
+  {
+   "src": "HVG/tools/t214_grid.py",
+   "dst": "scripts/build_grid_scvi_scanvi.py",
+   "bytes": 14805,
+   "sha256": "b94f2351ba48db8e5f81262ea91c1b319b5e32ef4abf3e3ce99619b59559a2e5"
+  },
+  {
+   "src": "HVG/tools/t214_ours_downstream.py",
+   "dst": "scripts/run_ours_downstream_chain.py",
+   "bytes": 14098,
+   "sha256": "a8011b466fad0732696ba3421b6ee7952c025d343b1440cb181c0ceda937bf30"
+  },
+  {
+   "src": "HVG/tools/t215_lineage_ruler.py",
+   "dst": "scripts/build_lineage_purity_ruler.py",
+   "bytes": 9522,
+   "sha256": "7cd55833f3a0e2d41649fc2ae2977331da454bc748d43125bbb995d9d13d6928"
+  },
+  {
+   "src": "HVG/tools/t215_paper_numbers.py",
+   "dst": "scripts/audit_paper_numbers.py",
+   "bytes": 32571,
+   "sha256": "73fe71c8ec316e840e21cc0670a1faf60983d27b504869a9ea235b7c2fe1c682"
+  },
+  {
+   "src": "HVG/tools/t215_rescore_v8.py",
+   "dst": "scripts/rescore_purity_lineage_ruler.py",
+   "bytes": 9115,
+   "sha256": "6d36f83633c04bd5b6772fc00c234e5be4383a708f647b9784b1b7b64706b4b3"
+  },
+  {
+   "src": "HVG/tools/t215_table2_v8.py",
+   "dst": "scripts/build_conditional_fidelity_grid.py",
+   "bytes": 8148,
+   "sha256": "37dba305825207f7037dd38aec273ca5927f178254dbe03abec0adfd2d67dbde"
+  },
+  {
+   "src": "HVG/tools/t216_mdlm_grid.py",
+   "dst": "scripts/build_grid_mdlm.py",
+   "bytes": 8218,
+   "sha256": "dfbe7a499edb58af1a4f87e6d4671339275bc903147ecc76b2d70ddfd6f15e19"
+  },
+  {
+   "src": "HVG/tools/t217_ours_seed.py",
+   "dst": "scripts/run_ours_training_seed.py",
+   "bytes": 13258,
+   "sha256": "a48fac73d51a7dc05faa0020f7a461781caeb6ae4fbc478b001664dab73cc354"
+  },
+  {
+   "src": "HVG/tools/t219_cfgen_grid.py",
+   "dst": "scripts/build_grid_cfgen.py",
+   "bytes": 7223,
+   "sha256": "acdf2cdaf5f9bb3f63ecc5db5aa16820bc83d84393d3b56c9093bb68befdfd42"
+  },
+  {
+   "src": "HVG/tools/wallclock.py",
+   "dst": "scripts/collect_wallclock.py",
+   "bytes": 5423,
+   "sha256": "0f0779c3a4943abe0d13957b54ba006f01406fd80864f715ca763aa8a3350792"
+  },
+  {
+   "src": "T1D/code/t1d_criterion_dots_run.py",
+   "dst": "scripts/reproduce/figure_horizon_criterion.py",
+   "bytes": 13947,
+   "sha256": "2a6eb2f2f6c5c96d3549c4ac821461136736d54488f39dd929091f5a42a9324b"
+  },
+  {
+   "src": "T1D/code/t1d_enough_core.py",
+   "dst": "src/horizon/reverse_kernel_core.py",
+   "bytes": 2022,
+   "sha256": "684972ef57a0955f2e76603b515543242885ec107ed5257b06601227066950a6"
+  },
+  {
+   "src": "paper/Figs/code/figdata.py",
+   "dst": "scripts/reproduce/build_toy_figure_data.py",
+   "bytes": 4711,
+   "sha256": "d3cd1a1a4aef1ffed49ec96d8f5ee2d0e18afa8e6e476e28c0d008a21a727ef8"
+  },
+  {
+   "src": "paper/Figs/code/make_figures.py",
+   "dst": "scripts/reproduce/figure_toy_chain_and_resampling.py",
+   "bytes": 11109,
+   "sha256": "27b21495fcf1b339a8bbf2072b6b59223db6a4d532c992f83fa32e5e278fe6db"
+  },
+  {
+   "src": "paper/Figs/code/make_toy_delivered_2panel.py",
+   "dst": "scripts/reproduce/figure_01_toy_delivered.py",
+   "bytes": 3129,
+   "sha256": "d7aa20542d62cf23e10d90be71687caa1e4db97aa49239c5d93e9ce724aa6f2d"
+  },
+  {
+   "src": "paper/Figs/code/redraw_toy_dataset.py",
+   "dst": "scripts/reproduce/figure_toy_dataset.py",
+   "bytes": 7447,
+   "sha256": "7a931a6db18ef4bff6abe840c45f635732c2106f290eea2a47720cf39a56b194"
+  },
+  {
+   "src": "paper/Figs/code/table_toy_main.py",
+   "dst": "scripts/reproduce/table_01_toy_quality.py",
+   "bytes": 7279,
+   "sha256": "90558d92eb9f14f68c2fa4468194b426044aaa26806f1272d0d0f812fffa1760"
+  },
+  {
+   "src": "paper/Tables/code/table_hvg_de_212.py",
+   "dst": "scripts/reproduce/table_04_differential_expression.py",
+   "bytes": 3601,
+   "sha256": "9111cf9e0863aeb223697566c6471a3e902eebe10667f88550acc45f03cf5612"
+  },
+  {
+   "src": "paper/Tables/code/table_hvg_tstr11.py",
+   "dst": "scripts/reproduce/table_05_tstr.py",
+   "bytes": 3649,
+   "sha256": "147d4ee3e900715eec802f618884204c3222af79704a9c22676b7e95a4a5aae3"
+  },
+  {
+   "src": "toy2d_rare/toy2d/__init__.py",
+   "dst": "src/toy2d/__init__.py",
+   "bytes": 62,
+   "sha256": "c61311831cc7e5bcd16ee890bbbaa9f8565f341741a39e0c4173cf95614c092e"
+  },
+  {
+   "src": "toy2d_rare/toy2d/chain.py",
+   "dst": "src/toy2d/chain.py",
+   "bytes": 9913,
+   "sha256": "29ef42e251019815e5be0a930f19512736486d6c2720bfc14b5e994a8dcf3fde"
+  },
+  {
+   "src": "toy2d_rare/toy2d/config.py",
+   "dst": "src/toy2d/config.py",
+   "bytes": 1843,
+   "sha256": "556e2fcb5467c8c085e712b853a0c923e0c397ce0f66937ad359c286ddc4d979"
+  },
+  {
+   "src": "toy2d_rare/toy2d/metrics.py",
+   "dst": "src/toy2d/metrics.py",
+   "bytes": 4218,
+   "sha256": "bcfbd511364458d9e2d4706cbcaf899b15e3957de7e1b800b52585fd4edd9d33"
+  },
+  {
+   "src": "toy2d_rare/toy2d/verified/__init__.py",
+   "dst": "src/toy2d/verified/__init__.py",
+   "bytes": 78,
+   "sha256": "0215247676e41693b97da7fa158a8e848b7806c8f1df9b2804f946a51a0557da"
+  },
+  {
+   "src": "HVG/analysis/_frozen/e21_scc_mmd.py",
+   "dst": "src/evaluation/frozen/e21_scc_mmd.py",
+   "bytes": 9974,
+   "sha256": "e1de4039c8a657dbc025a2e64b5f9439b88f5672a805fe8fd67bbc15a0d8f9d4"
+  },
+  {
+   "src": "HVG/analysis/_frozen/e21c_pcc.py",
+   "dst": "src/evaluation/frozen/e21c_pcc.py",
+   "bytes": 12458,
+   "sha256": "83b19b11871875d977c8c81bd22e5cbcc5108db83fd5a7d052a92b3dc46a40dc"
+  },
+  {
+   "src": "HVG/analysis/_frozen/e25_em_population_ruler.py",
+   "dst": "src/evaluation/frozen/e25_em_population_ruler.py",
+   "bytes": 23838,
+   "sha256": "f85fb19d62653498ff0fc37d416368fe90fbe68991323a172ddd180fca642cb2"
+  },
+  {
+   "src": "HVG/analysis/_frozen/e30plus_eval_cpu_worker.py",
+   "dst": "src/evaluation/frozen/e30plus_eval_cpu_worker.py",
+   "bytes": 18983,
+   "sha256": "b5ca3313ed7e540328d542afd8f5b7fb799321a13e83589cca4ab23da99af7bc"
+  },
+  {
+   "src": "HVG/analysis/_frozen/e50_ext158_score.py",
+   "dst": "src/evaluation/frozen/e50_ext158_score.py",
+   "bytes": 6400,
+   "sha256": "1a6b18f681ad4ef141d534284f547f4ef76c74206f8b0d58464a0270ee70722d"
+  },
+  {
+   "src": "HVG/analysis/_frozen/eval_deconv.py",
+   "dst": "src/evaluation/frozen/eval_deconv.py",
+   "bytes": 6453,
+   "sha256": "078110f74df8575921f80bbf06a2c1815670a4fcdbe89326f3fdfac05eb8bc28"
+  },
+  {
+   "src": "HVG/analysis/_frozen/eval_mix_intersect.py",
+   "dst": "src/evaluation/frozen/eval_mix_intersect.py",
+   "bytes": 4221,
+   "sha256": "9a49d8ce240445b4a22b86366cfd29597e88d33da0e145f051b9e1ce619fa858"
+  },
+  {
+   "src": "HVG/analysis/_frozen/intersection_metrics.py",
+   "dst": "src/evaluation/frozen/intersection_metrics.py",
+   "bytes": 11035,
+   "sha256": "465a9d48dab51a4a4d2d0b80373fc9bc87dea71205556e88908bd077738123ee"
+  },
+  {
+   "src": "HVG/analysis/_frozen/metrics_exp08.py",
+   "dst": "src/evaluation/frozen/metrics_exp08.py",
+   "bytes": 9884,
+   "sha256": "bdb35b4592e44cd2ac2443971d1317cf061846592b5edb39d3aba656d01f56de"
+  },
+  {
+   "src": "HVG/analysis/_frozen/sliced_w1.py",
+   "dst": "src/evaluation/frozen/sliced_w1.py",
+   "bytes": 2199,
+   "sha256": "6224428255b9f97cf577e668aa16bd62c263bd5c07cf0ce4c2a0bde9ef9a63e0"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/code/__init__.py",
+   "dst": "assets/_shared/panel61/_shared/code/__init__.py",
+   "bytes": 242,
+   "sha256": "4feff2fa92a6f05c61eb0f1584a331165a3cbf5cfb0c84e6ac112545bac876a6"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/code/backbone.py",
+   "dst": "assets/_shared/panel61/_shared/code/backbone.py",
+   "bytes": 3026,
+   "sha256": "5ad00d67218ad1a643b682722f7a00e18cd1a49416ea1a14b5da49ea8f85d56b"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/code/ctx.py",
+   "dst": "assets/_shared/panel61/_shared/code/ctx.py",
+   "bytes": 4226,
+   "sha256": "8454b73b43f1f644539be845a80a29660f5703a9657feecdba4bb84a2405d36d"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/code/d3pm_kstep.py",
+   "dst": "assets/_shared/panel61/_shared/code/d3pm_kstep.py",
+   "bytes": 5047,
+   "sha256": "7be9f312125e330223ff3fe6193663fe6286ec6ac8981b56dd80ebbcbc25c3f8"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/code/d3pm_kstep_run.py",
+   "dst": "assets/_shared/panel61/_shared/code/d3pm_kstep_run.py",
+   "bytes": 5824,
+   "sha256": "fdd18f53d9be23205f46137b74848738f4c2a56de295a6dcbbb1955ffdd2a13a"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/code/data.py",
+   "dst": "assets/_shared/panel61/_shared/code/data.py",
+   "bytes": 1999,
+   "sha256": "ef0bbf91c644ee7d10b1380169a4efdbbbf00dc8f5ec203d2a41c7aaec701db0"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/code/earlystop.py",
+   "dst": "assets/_shared/panel61/_shared/code/earlystop.py",
+   "bytes": 4165,
+   "sha256": "846cd713e6c1722ea22cb1000e19d13634d82206ab94fe05e222ff5d53c3d4e5"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/code/evaluate_common.py",
+   "dst": "assets/_shared/panel61/_shared/code/evaluate_common.py",
+   "bytes": 3209,
+   "sha256": "c9eef7f8bd00121245748981414638481384406bd73f6cbe16ae7d8c8304f372"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/code/gates.py",
+   "dst": "assets/_shared/panel61/_shared/code/gates.py",
+   "bytes": 2562,
+   "sha256": "9f6693ff873ab0039bda22996280a2431ba8fa9c7fbec254f973fd85bf017e89"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/code/guard_audit.py",
+   "dst": "assets/_shared/panel61/_shared/code/guard_audit.py",
+   "bytes": 6501,
+   "sha256": "ac658af0533b0e82e33c78dcdd8cf771dee48fe1d87b79df8f413069d53c1070"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/code/metrics.py",
+   "dst": "assets/_shared/panel61/_shared/code/metrics.py",
+   "bytes": 13661,
+   "sha256": "73157ba639447bebe3e1badc264b0d60498eb7ff8999a29be522e583a412b2fa"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/code/metrics_canonical.py",
+   "dst": "assets/_shared/panel61/_shared/code/metrics_canonical.py",
+   "bytes": 4176,
+   "sha256": "5be685f7a9b9bc46cb29330918beafc625da3ab598792a38af12788e368d683e"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/code/metrics_exp08.py",
+   "dst": "assets/_shared/panel61/_shared/code/metrics_exp08.py",
+   "bytes": 9884,
+   "sha256": "bdb35b4592e44cd2ac2443971d1317cf061846592b5edb39d3aba656d01f56de"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/code/p1_plugin.py",
+   "dst": "assets/_shared/panel61/_shared/code/p1_plugin.py",
+   "bytes": 7845,
+   "sha256": "3005484d346c9d147cda23f904f7190133e53d760ad3845befa27d0adbaf3ac9"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/code/p2_a4_crippled.py",
+   "dst": "assets/_shared/panel61/_shared/code/p2_a4_crippled.py",
+   "bytes": 5011,
+   "sha256": "8a451f83a276a6088526604e95b94042f5f1b19e149b92486409a93a05416943"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/code/p2e_clip128.py",
+   "dst": "assets/_shared/panel61/_shared/code/p2e_clip128.py",
+   "bytes": 5116,
+   "sha256": "51ba8e14a6f34bcf043afe86a64361c9211f7f5022af2c2c4232accd14e6635f"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/code/p2f_significance.py",
+   "dst": "assets/_shared/panel61/_shared/code/p2f_significance.py",
+   "bytes": 4053,
+   "sha256": "91d4b7fbc05145f568a7e48d8445ad3dab6d49a94ecba686aadf8f2dfc73c55a"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/code/seeds.py",
+   "dst": "assets/_shared/panel61/_shared/code/seeds.py",
+   "bytes": 1768,
+   "sha256": "5adb3e91723b7184ed57e77c3e0e40815e271cb22eb7de231b0bf4b85b620d1b"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/code/vendor_countsdiff.py",
+   "dst": "assets/_shared/panel61/_shared/code/vendor_countsdiff.py",
+   "bytes": 9503,
+   "sha256": "7041ef96e9228b7d6d5bfbc4e10bb3dbae9605219dc4302acfa13f6add0bcd6f"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/code/vendor_ours.py",
+   "dst": "assets/_shared/panel61/_shared/code/vendor_ours.py",
+   "bytes": 17050,
+   "sha256": "8495d6cd1fff929a4688c2befeaca9853370d2efc99026c1262903fd4bb839b0"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/code/vendor_ours_fast.py",
+   "dst": "assets/_shared/panel61/_shared/code/vendor_ours_fast.py",
+   "bytes": 5626,
+   "sha256": "7e9787e2338c1c0a262d33e252c1f7dce253cb37f0dfcdd73f983b817190d9e8"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/data/DATA.md",
+   "dst": "assets/_shared/panel61/_shared/data/DATA.md",
+   "bytes": 666,
+   "sha256": "69062220e73fcbd1c66f3e6ad36d97a9e39faae9fdee415de75a16aa59e75e68"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/data/meta.json",
+   "dst": "assets/_shared/panel61/_shared/data/meta.json",
+   "bytes": 1736,
+   "sha256": "3c0c8e076a7cc6b02ff79bc212abc3a95a0c78cdb8ab5c8a3022cc082c7c6386"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/data/train.npy",
+   "dst": "assets/_shared/panel61/_shared/data/train.npy",
+   "bytes": 39266072,
+   "sha256": "a85ebd31cea634642dcc5797aa63589696af87c2e8e1a0aeb8e37ee483722708"
+  },
+  {
+   "src": "HVG/assets/_shared/panel61/_shared/data/val.npy",
+   "dst": "assets/_shared/panel61/_shared/data/val.npy",
+   "bytes": 4907944,
+   "sha256": "009701144b28593d77bd52c1b9caa5b200935c893d4fb3b559a7d574bf8bf65d"
+  },
+  {
+   "src": "HVG/assets/legacy_root/Baseline/OURS/code/bank_dedup.py",
+   "dst": "assets/legacy_root/Baseline/OURS/code/bank_dedup.py",
+   "bytes": 4865,
+   "sha256": "3a8a65d52ecc562910ac3e77018eb6e6ee74b23cc7d0fc14f241e2342ee66a5d"
+  },
+  {
+   "src": "HVG/assets/legacy_root/Baseline/OURS/code/bank_dedup_v2.py",
+   "dst": "assets/legacy_root/Baseline/OURS/code/bank_dedup_v2.py",
+   "bytes": 11035,
+   "sha256": "efb64b1f3692c03d5d4bd80e136b32b90376a6864272ced1413d7ae64c5e524d"
+  },
+  {
+   "src": "HVG/assets/legacy_root/Baseline/OURS/code/config_hvg2k.py",
+   "dst": "assets/legacy_root/Baseline/OURS/code/config_hvg2k.py",
+   "bytes": 10919,
+   "sha256": "e7414df23b30dd0a1493f34b655349044f8f01ef46367f369c711191b24fb042"
+  },
+  {
+   "src": "HVG/assets/legacy_root/Baseline/OURS/code/gen_ls_train.py",
+   "dst": "assets/legacy_root/Baseline/OURS/code/gen_ls_train.py",
+   "bytes": 10518,
+   "sha256": "0170cb8e0668cdf8b968815c73c21063c79bc543c39f66d913a496df8b397824"
+  },
+  {
+   "src": "HVG/assets/legacy_root/Baseline/OURS/code/gen_lspg.py",
+   "dst": "assets/legacy_root/Baseline/OURS/code/gen_lspg.py",
+   "bytes": 5739,
+   "sha256": "ceea27f84d0a4e1ba5c28f8ee8ec4f25d0db60b7f3a816d5a0d71574a41b2362"
+  },
+  {
+   "src": "HVG/assets/legacy_root/Baseline/OURS/code/gen_noa4.py",
+   "dst": "assets/legacy_root/Baseline/OURS/code/gen_noa4.py",
+   "bytes": 6637,
+   "sha256": "b9c0b733e84e65a720c97de0661f5b2f9103a845e51991557801b2c27cf42951"
+  },
+  {
+   "src": "HVG/assets/legacy_root/Baseline/OURS/code/model_hvg2k.py",
+   "dst": "assets/legacy_root/Baseline/OURS/code/model_hvg2k.py",
+   "bytes": 18527,
+   "sha256": "e875237507ce7f3e5b0c0d8b3d8b9a775a1a0427c3dd4479053336c14cb3874b"
+  },
+  {
+   "src": "HVG/assets/legacy_root/Baseline/OURS/code/model_hvg2k_ls.py",
+   "dst": "assets/legacy_root/Baseline/OURS/code/model_hvg2k_ls.py",
+   "bytes": 18310,
+   "sha256": "e03fc725ab580a7afcc2f1204d0e71ca85c5f2b3050db45772d96ba31884b004"
+  },
+  {
+   "src": "HVG/assets/legacy_root/Baseline/OURS/code/model_hvg2k_lspg.py",
+   "dst": "assets/legacy_root/Baseline/OURS/code/model_hvg2k_lspg.py",
+   "bytes": 20402,
+   "sha256": "2fc43bd84d8334a46b9abebf3c35e02057c39bf0d290fb1df61b61cd8fc3f2c4"
+  },
+  {
+   "src": "HVG/assets/legacy_root/Baseline/OURS/code/run_tonight_a4.py",
+   "dst": "assets/legacy_root/Baseline/OURS/code/run_tonight_a4.py",
+   "bytes": 10292,
+   "sha256": "09535498b51c967dd1e762fdae44670910764d21e1a7cd16aef89ea2e11c0e80"
+  },
+  {
+   "src": "HVG/assets/legacy_root/Baseline/OURS/code/sample_hvg2k.py",
+   "dst": "assets/legacy_root/Baseline/OURS/code/sample_hvg2k.py",
+   "bytes": 11576,
+   "sha256": "054e0208d063ae96801ef68eaaca7868ff8c262c6ad3611b097b3ecc4559d6f3"
+  },
+  {
+   "src": "HVG/assets/legacy_root/Baseline/OURS/code/sample_hvg2k_la.py",
+   "dst": "assets/legacy_root/Baseline/OURS/code/sample_hvg2k_la.py",
+   "bytes": 15646,
+   "sha256": "ec9abe98d46a20c7a0452b4083fa58667b26bf53a7270bf97df65b0351ee571c"
+  },
+  {
+   "src": "HVG/assets/legacy_root/Baseline/OURS/code/sample_hvg2k_noa4.py",
+   "dst": "assets/legacy_root/Baseline/OURS/code/sample_hvg2k_noa4.py",
+   "bytes": 18943,
+   "sha256": "bc5c68420dd9d90237d4699abf751e90dc7b86445d377e0202ac0a494761f71d"
+  },
+  {
+   "src": "HVG/assets/legacy_root/Baseline/OURS/code/sample_hvg2k_shrink.py",
+   "dst": "assets/legacy_root/Baseline/OURS/code/sample_hvg2k_shrink.py",
+   "bytes": 18040,
+   "sha256": "8a0482d5788700572744db265745282157219cfbf350901e930cad32c71c7b7a"
+  },
+  {
+   "src": "HVG/assets/legacy_root/Baseline/OURS/code/sample_hvg2k_toplus.py",
+   "dst": "assets/legacy_root/Baseline/OURS/code/sample_hvg2k_toplus.py",
+   "bytes": 12809,
+   "sha256": "6633add25e674def93d4177d719c9f71a9fdeefc6507777983e4a2164ae9b661"
+  },
+  {
+   "src": "HVG/assets/legacy_root/Baseline/OURS/code/sample_oracle_hvg2k.py",
+   "dst": "assets/legacy_root/Baseline/OURS/code/sample_oracle_hvg2k.py",
+   "bytes": 13409,
+   "sha256": "9e9daf86b9ecb1935c375f1e8d37a84df0ce6e5e8e57a92f5f4291fcbf47a2af"
+  },
+  {
+   "src": "HVG/assets/legacy_root/Baseline/OURS/code/train_pilot.py",
+   "dst": "assets/legacy_root/Baseline/OURS/code/train_pilot.py",
+   "bytes": 7314,
+   "sha256": "45e4ae7a5ba204a2d35615ca50261fe1cf1ca35f8f26e52444dd6e7757003302"
+  },
+  {
+   "src": "HVG/assets/legacy_root/Baseline/OURS/code/train_pilot_la.py",
+   "dst": "assets/legacy_root/Baseline/OURS/code/train_pilot_la.py",
+   "bytes": 9179,
+   "sha256": "e6a600e6417dfbbb06badadf146911635e0e5c8fa57f72902a06fefff2ca2a9c"
+  },
+  {
+   "src": "HVG/assets/legacy_root/Baseline/OURS/code/train_pilot_ls.py",
+   "dst": "assets/legacy_root/Baseline/OURS/code/train_pilot_ls.py",
+   "bytes": 7646,
+   "sha256": "6aaeed768d691f258a44b5ce2b8e49bd6f31c076f07498446d92cdb162367f09"
+  },
+  {
+   "src": "HVG/assets/legacy_root/Baseline/OURS/code/train_pilot_lspg.py",
+   "dst": "assets/legacy_root/Baseline/OURS/code/train_pilot_lspg.py",
+   "bytes": 7846,
+   "sha256": "d94cb3d1a1c36c660ca428eae67c28483133b06c2f6f362458c5d18ca92209ea"
+  },
+  {
+   "src": "HVG/assets/legacy_root/Baseline/OURS/code/train_pilot_toplus.py",
+   "dst": "assets/legacy_root/Baseline/OURS/code/train_pilot_toplus.py",
+   "bytes": 6588,
+   "sha256": "cab4f5cf1d2af02705b78c260625ed675d64f18f5e06034eda6f583b4d583b23"
+  },
+  {
+   "src": "HVG/hvg/_frozen/bank_dedup.py",
+   "dst": "src/crndiff/frozen/bank_dedup.py",
+   "bytes": 4865,
+   "sha256": "3a8a65d52ecc562910ac3e77018eb6e6ee74b23cc7d0fc14f241e2342ee66a5d"
+  },
+  {
+   "src": "HVG/hvg/_frozen/bank_dedup_v2.py",
+   "dst": "src/crndiff/frozen/bank_dedup_v2.py",
+   "bytes": 11035,
+   "sha256": "efb64b1f3692c03d5d4bd80e136b32b90376a6864272ced1413d7ae64c5e524d"
+  },
+  {
+   "src": "HVG/hvg/_frozen/canonical_purity.py",
+   "dst": "src/crndiff/frozen/canonical_purity.py",
+   "bytes": 17164,
+   "sha256": "597b0bcd96591f99bf72487d345e772aa67bd70448127d67306b1e96de6b46cd"
+  },
+  {
+   "src": "HVG/hvg/_frozen/config_hvg2k.py",
+   "dst": "src/crndiff/frozen/config_hvg2k.py",
+   "bytes": 10520,
+   "sha256": "1ef4f43b685f6f0641387b519d04c4aa2dd21ede70492c6dfc6efe9da731d238"
+  },
+  {
+   "src": "HVG/hvg/_frozen/e38_twist.py",
+   "dst": "src/crndiff/frozen/e38_twist.py",
+   "bytes": 6541,
+   "sha256": "c27d0150986d4ff009c4617968b3bba612910cd6dfb4384cff65e7bda31b7f77"
+  },
+  {
+   "src": "HVG/hvg/_frozen/fk_hvg_v2.py",
+   "dst": "src/crndiff/frozen/fk_hvg_v2.py",
+   "bytes": 33045,
+   "sha256": "ad84bfd1dbc4dfac9a183d034e81adba83237b3c8f321b1f2b6aaa5bc18d42b2"
+  },
+  {
+   "src": "HVG/hvg/_frozen/model_hvg2k.py",
+   "dst": "src/crndiff/frozen/model_hvg2k.py",
+   "bytes": 16432,
+   "sha256": "51781f0b81ea82bb1bedbfb2e6b9837097818115b13bca33e68ca55fb51e09a9"
+  },
+  {
+   "src": "HVG/hvg/_frozen/sample_hvg2k_noa4.py",
+   "dst": "src/crndiff/frozen/sample_hvg2k_noa4.py",
+   "bytes": 18943,
+   "sha256": "bc5c68420dd9d90237d4699abf751e90dc7b86445d377e0202ac0a494761f71d"
+  },
+  {
+   "src": "Conditional generation experiments/HVG2K/baseline_scanvi/code/generate_scanvi.py",
+   "dst": "baselines/scanvi/code/generate_scanvi.py",
+   "bytes": 9474,
+   "sha256": "18b002a2f3a13bd287fdb98142f1f40729d429f1029f37fda0263dba7e8a09ad"
+  },
+  {
+   "src": "Conditional generation experiments/HVG2K/baseline_scanvi/code/train_scanvi.py",
+   "dst": "baselines/scanvi/code/train_scanvi.py",
+   "bytes": 3687,
+   "sha256": "802e3120e07fa2ab7a6ab293617f74377c78c507152e076a920e32b2b5d0c30f"
+  },
+  {
+   "src": "Conditional generation experiments/HVG2K/baseline_scvi/FAIRNESS.md",
+   "dst": "baselines/scvi/FAIRNESS.md",
+   "bytes": 3137,
+   "sha256": "a8b20b3f38655f017077e8fa251aa5d7d457e17a8513c65f7fa6d7b3824201bc"
+  },
+  {
+   "src": "Conditional generation experiments/HVG2K/baseline_scvi/PREREG_scvi.md",
+   "dst": "baselines/scvi/PREREG_scvi.md",
+   "bytes": 5298,
+   "sha256": "263f67197fdfd3168ef930c2342cd10b928b30e051d2dac5a841765c581c37e1"
+  },
+  {
+   "src": "Conditional generation experiments/HVG2K/baseline_scvi/code/generate_scvi.py",
+   "dst": "baselines/scvi/code/generate_scvi.py",
+   "bytes": 6023,
+   "sha256": "e867cc4e31d6b493e557b3a6623c4d911cfa245878a0badbcc4193de07ce87ff"
+  },
+  {
+   "src": "Conditional generation experiments/HVG2K/baseline_scvi/code/train_scvi.py",
+   "dst": "baselines/scvi/code/train_scvi.py",
+   "bytes": 4136,
+   "sha256": "cf110885c979c80c21763f70a940e257e52472f9560ab92ae038d0736d611ffb"
+  },
+  {
+   "src": "Conditional generation experiments/HVG2K/code/overnight/cfgen/generate_cfgen.py",
+   "dst": "baselines/cfgen/code/generate_cfgen.py",
+   "bytes": 11299,
+   "sha256": "950d992ade2e643356cab30838895228138db4e3c81a2ee81faf7718a25087e7"
+  },
+  {
+   "src": "Conditional generation experiments/HVG2K/code/overnight/cfgen/prepare_cfgen_data.py",
+   "dst": "baselines/cfgen/code/prepare_cfgen_data.py",
+   "bytes": 5332,
+   "sha256": "f923d0a190409716c9183b30827e0d69fa930e87cc6f6bb9977c422c77fad3c9"
+  },
+  {
+   "src": "Conditional generation experiments/HVG2K/code/overnight/cfgen/train_cfgen.py",
+   "dst": "baselines/cfgen/code/train_cfgen.py",
+   "bytes": 10349,
+   "sha256": "f10709f577e16b2ef5ef0ac5411a9db9fe0c2343bf8aee50f6e88d64ed7380d6"
+  },
+  {
+   "src": "Conditional generation experiments/HVG2K/results/figure_data/frozen_atlas_pca_basis.npz",
+   "dst": "assets/frozen_atlas_pca_basis.npz",
+   "bytes": 47279,
+   "sha256": "cd0c9728d6352c718db888323439d7d596a3c546b71dd974533345220b99afe1"
+  },
+  {
+   "src": "Conditional generation experiments/HVG2K/viz/make_F8_dispersion_baselines.py",
+   "dst": "baselines/frozen_viz/dispersion_baselines.py",
+   "bytes": 20146,
+   "sha256": "9411f29a33ffb2079f77450a3a0d69cf71311e6b73e88afaaf9bc4f18187368b"
+  },
+  {
+   "src": "Conditional generation experiments/HVG2K/viz/style.py",
+   "dst": "baselines/frozen_viz/style.py",
+   "bytes": 10275,
+   "sha256": "6a1dcbd2f27ddd000bd937a3ae6b48ae619ae48b882fa98d0d79d964e0a868bd"
+  },
+  {
+   "src": "Conditional generation experiments/HVG2K/baseline_cfgen/upstream/configs/configs_encoder/dataset/hvg2k.yaml",
+   "dst": "baselines/cfgen/configs/configs_encoder/dataset/hvg2k.yaml",
+   "bytes": 313,
+   "sha256": "5ad9e5b13e3e37e4ba0752414e5984ca50d19a141fba99dd79210f95906392ae"
+  },
+  {
+   "src": "Conditional generation experiments/HVG2K/baseline_cfgen/upstream/configs/configs_encoder/dataset/hvg2k_e22_d1.yaml",
+   "dst": "baselines/cfgen/configs/configs_encoder/dataset/hvg2k_e22_d1.yaml",
+   "bytes": 314,
+   "sha256": "ee49a32d06cae2996ac3780cf7db2209e3872e184304440782cab66850283bc8"
+  },
+  {
+   "src": "Conditional generation experiments/HVG2K/baseline_cfgen/upstream/configs/configs_encoder/dataset/hvg2k_e50.yaml",
+   "dst": "baselines/cfgen/configs/configs_encoder/dataset/hvg2k_e50.yaml",
+   "bytes": 311,
+   "sha256": "d8bb0eef92509c7b4a91c8c426684781ecf5a47f2b152772659aec53fa25835f"
+  },
+  {
+   "src": "Conditional generation experiments/HVG2K/baseline_cfgen/upstream/configs/configs_encoder/dataset/hvg2k_smoke.yaml",
+   "dst": "baselines/cfgen/configs/configs_encoder/dataset/hvg2k_smoke.yaml",
+   "bytes": 313,
+   "sha256": "1be4cfbc07f8d3259abb6c63fbf8ffb85efa5502e2b333b97eef68fd07c3a049"
+  },
+  {
+   "src": "Conditional generation experiments/HVG2K/baseline_cfgen/upstream/configs/configs_sccfm/dataset/hvg2k.yaml",
+   "dst": "baselines/cfgen/configs/configs_sccfm/dataset/hvg2k.yaml",
+   "bytes": 445,
+   "sha256": "bfd49d5f68526292d3b21aa8009ebabf340d0f8437185badd0a6ff56e94ccd29"
+  },
+  {
+   "src": "Conditional generation experiments/HVG2K/baseline_cfgen/upstream/configs/configs_sccfm/dataset/hvg2k_e22_d1.yaml",
+   "dst": "baselines/cfgen/configs/configs_sccfm/dataset/hvg2k_e22_d1.yaml",
+   "bytes": 446,
+   "sha256": "7590e534c9b84342bb8b5f0bd6268f17a773aaa0492314155488e27a16c50b0f"
+  },
+  {
+   "src": "Conditional generation experiments/HVG2K/baseline_cfgen/upstream/configs/configs_sccfm/dataset/hvg2k_e50.yaml",
+   "dst": "baselines/cfgen/configs/configs_sccfm/dataset/hvg2k_e50.yaml",
+   "bytes": 443,
+   "sha256": "9737c72685014464263dacb86971e517b37412e74497200fccaf7885e360c569"
+  },
+  {
+   "src": "Conditional generation experiments/HVG2K/baseline_cfgen/upstream/configs/configs_sccfm/dataset/hvg2k_smoke.yaml",
+   "dst": "baselines/cfgen/configs/configs_sccfm/dataset/hvg2k_smoke.yaml",
+   "bytes": 445,
+   "sha256": "7e18c09f5f37e5764f6659a429ee024d4644c015e454a8e1ee0384e1ae5080e6"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/_source_json/200_aprime_v2_scored.json",
+   "dst": "results/summary_json/200_aprime_v2_scored.json",
+   "bytes": 24946,
+   "sha256": "cd85faf6aaef7f03eba0caeca85f2611d44c9f40f212c9098214e0ebc9961a46"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/_source_json/200_bestofn_FINAL_scored.json",
+   "dst": "results/summary_json/200_bestofn_FINAL_scored.json",
+   "bytes": 267726,
+   "sha256": "017fb1bdab1c02284ddb5080bb962d045d27dc0809f8ad5d8b8c7c03ae4d602a"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/_source_json/200_selftest_table1_scored.json",
+   "dst": "results/summary_json/200_selftest_table1_scored.json",
+   "bytes": 22383,
+   "sha256": "adbc27e70bb20e0c22988017a06bd63229e01ed108ab6f0deeb8936d08b7dbde"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/_source_json/200_uncond_fidelity.json",
+   "dst": "results/summary_json/200_uncond_fidelity.json",
+   "bytes": 14893,
+   "sha256": "d60fc2156f1176c227ec0d1b73a87433c37187110b04b5f8310d799962494968"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/_source_json/200_vgr_FINAL_scored.json",
+   "dst": "results/summary_json/200_vgr_FINAL_scored.json",
+   "bytes": 195991,
+   "sha256": "7b5501fd6c31bb59e4856fb2532bfe9838d6a1418bfaab2103240fa60d19df69"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/_source_json/201_tau_archived_raw_scored.json",
+   "dst": "results/summary_json/201_tau_archived_raw_scored.json",
+   "bytes": 26043,
+   "sha256": "45418ae22bb29d585a99b589a11056a93f17d1162e385322bd9993344e7361da"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/_source_json/201_tau_sweep_raw_scored.json",
+   "dst": "results/summary_json/201_tau_sweep_raw_scored.json",
+   "bytes": 48879,
+   "sha256": "2979b834450a26347f2ee43a842727db8d372ea7fdc5dcbd8b32834924701eaf"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/_source_json/211_tstr11.json",
+   "dst": "results/summary_json/211_tstr11.json",
+   "bytes": 128422,
+   "sha256": "c0bead6360c37a5b487abfdfea84f6e21cad9f4b8ef9757e445643fb7c8ca3bb"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/_source_json/212_cfgen_de.json",
+   "dst": "results/summary_json/212_cfgen_de.json",
+   "bytes": 21575,
+   "sha256": "3c2b3d5c12f37efed415696d78b891730c3c0be926f948fdd1ea1dda92776cfb"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/_source_json/214_neuronal_dual_calibre.json",
+   "dst": "results/summary_json/214_neuronal_dual_calibre.json",
+   "bytes": 33105,
+   "sha256": "5092f179c20860731e5fb2ae19c5f049522d68ac02d11fe0c35a667894372fca"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/_source_json/215_paper_numbers_v8.json",
+   "dst": "results/summary_json/215_paper_numbers_v8.json",
+   "bytes": 159247,
+   "sha256": "9ad7745b1b067f445f800439ebc691d4b14787b7549c035a8591935360cc7403"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/_source_json/215_purity_v8_rescore.json",
+   "dst": "results/summary_json/215_purity_v8_rescore.json",
+   "bytes": 1245206,
+   "sha256": "07beea55fb48f52b61d8f58b261fd9888ddc936f4aa91ffd98b396b5be87194e"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/_source_json/215_table2_grid_3x3_v8.json",
+   "dst": "results/summary_json/215_table2_grid_3x3_v8.json",
+   "bytes": 31375,
+   "sha256": "0cd92f2c5c3ebac7aeee5a8f247c84e18af108dfdb7ad557a38c985641942f60"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/_source_json/216_mdlm_grid_3x3.json",
+   "dst": "results/summary_json/216_mdlm_grid_3x3.json",
+   "bytes": 35122,
+   "sha256": "90d03b0c293c33c90ddf0e636699c7161a19896b1db4e8a110ce7d696de7f8f9"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/_source_json/217_ours_grid_3x3.json",
+   "dst": "results/summary_json/217_ours_grid_3x3.json",
+   "bytes": 62960,
+   "sha256": "ef9b2e14a5bf84190d1e5a83b8bdac674ce53c1a01356ad7ee606c2ab97d56c1"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/_source_json/219_cfgen_grid_3x3.json",
+   "dst": "results/summary_json/219_cfgen_grid_3x3.json",
+   "bytes": 35034,
+   "sha256": "22bef499f6cda35cd71e52de4d18c0502c49bd941e1e5071cb6547d7682b41a7"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/_source_json/ancestry_trace.json",
+   "dst": "results/summary_json/ancestry_trace.json",
+   "bytes": 138872,
+   "sha256": "e74b3588fe1f89aca39f92215e671049211dce5616383828ec3020b05018ab52"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/_source_json/ess_pre_resample.json",
+   "dst": "results/summary_json/ess_pre_resample.json",
+   "bytes": 22694,
+   "sha256": "0718eb1b53b6fbd62cd756b465a6bb376b19cdac33e924377a878f78eac4ae13"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/_source_json/purity_ablation_table10.json",
+   "dst": "results/summary_json/purity_ablation_table10.json",
+   "bytes": 80845,
+   "sha256": "21ca0e781839fef29ad45db9dda2dff232b21f0819af23cc70e9e6cb750af0d9"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table06_ablation/Endothelial_a1/Endothelial_residual_hvgtwist_fk_tiltevery_trigany_K32_M20114_N10057_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260.json",
+   "dst": "results/by_table/table06_ablation/Endothelial_a1/Endothelial_residual_hvgtwist_fk_tiltevery_trigany_K32_M20114_N10057_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260.json",
+   "bytes": 1821,
+   "sha256": "9c8119470abb364a22b93de8dbc4d76da1daeed2bf750fe02bb8ff1394aa0ae5"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table06_ablation/Endothelial_fk_only/Endothelial_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M20114_N10057_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_se.json",
+   "dst": "results/by_table/table06_ablation/Endothelial_fk_only/Endothelial_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M20114_N10057_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_se.json",
+   "bytes": 1588,
+   "sha256": "40d0851cf8a44b1425a569cb73a7f041974d71c9d264738908f4717fcdb08490"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table06_ablation/Endothelial_tilt_only/Endothelial_hvgtilt_only_tilt_K32_M20114_N10057_tau0p4_cc256_seed20260987.json",
+   "dst": "results/by_table/table06_ablation/Endothelial_tilt_only/Endothelial_hvgtilt_only_tilt_K32_M20114_N10057_tau0p4_cc256_seed20260987.json",
+   "bytes": 1707,
+   "sha256": "132abde30e4d95b0c2c32ef3a74502cd26fa5435beb29e41f7a099f98dd4be01"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table06_ablation/Endothelial_tilt_only/Endothelial_hvgtilt_only_tilt_K32_M20114_N10057_tau0p4_cc256_seed20260988.json",
+   "dst": "results/by_table/table06_ablation/Endothelial_tilt_only/Endothelial_hvgtilt_only_tilt_K32_M20114_N10057_tau0p4_cc256_seed20260988.json",
+   "bytes": 1651,
+   "sha256": "0ed1800225b22a832a2f2a1bbc89ae19bcc19265544e4b2385a5e1e2903179ed"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table06_ablation/Endothelial_tilt_only/Endothelial_hvgtilt_only_tilt_K32_M20114_N10057_tau0p4_cc256_seed20260989.json",
+   "dst": "results/by_table/table06_ablation/Endothelial_tilt_only/Endothelial_hvgtilt_only_tilt_K32_M20114_N10057_tau0p4_cc256_seed20260989.json",
+   "bytes": 1641,
+   "sha256": "efa68e527092528c59e2f8e04309282b648acb3a89f7996b558b38629ceb53fb"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table06_ablation/Myeloid_a1/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987.json",
+   "dst": "results/by_table/table06_ablation/Myeloid_a1/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987.json",
+   "bytes": 1619,
+   "sha256": "5e5f0f6c7ab0b4b25e31d7fca7573a71ec2eccf50ea08eb72041b1f94daca2ec"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table06_ablation/Myeloid_a1/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260988.json",
+   "dst": "results/by_table/table06_ablation/Myeloid_a1/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260988.json",
+   "bytes": 1397,
+   "sha256": "4ab8321cbb1039efd82982e6cb8b7c40670f71d2e2463f5047a051d65757e59e"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table06_ablation/Myeloid_a1/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260989.json",
+   "dst": "results/by_table/table06_ablation/Myeloid_a1/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260989.json",
+   "bytes": 1603,
+   "sha256": "7997804e48b05ee57c72fed6fe6618e76e84e8318c376f1e46825c606145c6f3"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table06_ablation/Myeloid_fk_only/Myeloid_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed2026.json",
+   "dst": "results/by_table/table06_ablation/Myeloid_fk_only/Myeloid_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed2026.json",
+   "bytes": 1281,
+   "sha256": "db56ffa35ea84772a22c198202a07b669785fc8aed11d3653aee6f2eb01aa1c8"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table06_ablation/Myeloid_tilt_only/Myeloid_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260987.json",
+   "dst": "results/by_table/table06_ablation/Myeloid_tilt_only/Myeloid_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260987.json",
+   "bytes": 1562,
+   "sha256": "a86ce5ccfe70f0f2f8377686a1de3836e5611d4257cc521ea248ab5666a94a20"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table06_ablation/Myeloid_tilt_only/Myeloid_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260988.json",
+   "dst": "results/by_table/table06_ablation/Myeloid_tilt_only/Myeloid_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260988.json",
+   "bytes": 1599,
+   "sha256": "797ac3b3029d648e496ddb729b442c4300fbb9fc9e7b2ea376b8d756a36fb812"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table06_ablation/Myeloid_tilt_only/Myeloid_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260989.json",
+   "dst": "results/by_table/table06_ablation/Myeloid_tilt_only/Myeloid_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260989.json",
+   "bytes": 1609,
+   "sha256": "845a3e654e56cc71de841aff7eeec0d59b1fde209cc3105363a99d126f8eeb10"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table06_ablation/Neuronal_a1/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987.json",
+   "dst": "results/by_table/table06_ablation/Neuronal_a1/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987.json",
+   "bytes": 973,
+   "sha256": "a554d4ee7892f677e3286a0f84408239c49318e0f0c32d4fe98137103d59bccb"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table06_ablation/Neuronal_a1/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260988.json",
+   "dst": "results/by_table/table06_ablation/Neuronal_a1/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260988.json",
+   "bytes": 1091,
+   "sha256": "6fe4eb4a15cd678f7d50e2bd52a48fb8e3d35c7bf6ecbd0bd628f8b8e2261b1b"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table06_ablation/Neuronal_a1/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260989.json",
+   "dst": "results/by_table/table06_ablation/Neuronal_a1/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260989.json",
+   "bytes": 1020,
+   "sha256": "6c63fbdbc1d2094deb8f71c72283423b1e6c22ff3d7b2bc2b4bed479162b4921"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table06_ablation/Neuronal_fk_only/Neuronal_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed202.json",
+   "dst": "results/by_table/table06_ablation/Neuronal_fk_only/Neuronal_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed202.json",
+   "bytes": 715,
+   "sha256": "1539c8ec88bf4495171ddcbc8584b0ea0507aa4bf1272b6de8d3454dc5688fb1"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table06_ablation/Neuronal_tilt_only/Neuronal_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260987.json",
+   "dst": "results/by_table/table06_ablation/Neuronal_tilt_only/Neuronal_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260987.json",
+   "bytes": 1537,
+   "sha256": "5ee8b4a6fc16728cafed08e590d8a5a7288764f93631387eb94d953980a25dbf"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table06_ablation/Neuronal_tilt_only/Neuronal_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260988.json",
+   "dst": "results/by_table/table06_ablation/Neuronal_tilt_only/Neuronal_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260988.json",
+   "bytes": 1542,
+   "sha256": "073fe7bc54daa0eb9d8622f1163e188275e65db34830c4964dfb367b4e1423f4"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table06_ablation/Neuronal_tilt_only/Neuronal_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260989.json",
+   "dst": "results/by_table/table06_ablation/Neuronal_tilt_only/Neuronal_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260989.json",
+   "bytes": 1594,
+   "sha256": "7196419f4025124e76e73a38c116293ad391e2e31338919827bc493f100b66ed"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table07_particle_diagnostics/OURS/Endothelial__AGGREGATE.json",
+   "dst": "results/by_table/table07_particle_diagnostics/OURS/Endothelial__AGGREGATE.json",
+   "bytes": 737,
+   "sha256": "613b04316d56f16a0c87d00b5b3352f5aa63d89242514b279fe06c028d9a8476"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table07_particle_diagnostics/OURS/Endothelial__samprun.json",
+   "dst": "results/by_table/table07_particle_diagnostics/OURS/Endothelial__samprun.json",
+   "bytes": 888,
+   "sha256": "2f7e2842f20288568bf9d9e333130c31dded1fcf021b90e0e0e2ce79d0c09bc7"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table07_particle_diagnostics/OURS/Myeloid__AGGREGATE.json",
+   "dst": "results/by_table/table07_particle_diagnostics/OURS/Myeloid__AGGREGATE.json",
+   "bytes": 730,
+   "sha256": "379945e4c58b0cb8bdb003b477abe56847443b305b4047412a0c505a6f2ac50d"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table07_particle_diagnostics/OURS/Myeloid__samprun.json",
+   "dst": "results/by_table/table07_particle_diagnostics/OURS/Myeloid__samprun.json",
+   "bytes": 1104,
+   "sha256": "9513cda442c74f973a991e6044d5ee1e6ffe9563c13b87bef1c115595afd76e3"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table07_particle_diagnostics/OURS/Neuronal__AGGREGATE.json",
+   "dst": "results/by_table/table07_particle_diagnostics/OURS/Neuronal__AGGREGATE.json",
+   "bytes": 741,
+   "sha256": "8b245b5474199692d957c4c85aadf4881d7526a335e5cea06761a4c43370d27b"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table07_particle_diagnostics/OURS/Neuronal__samprun.json",
+   "dst": "results/by_table/table07_particle_diagnostics/OURS/Neuronal__samprun.json",
+   "bytes": 1139,
+   "sha256": "e7db110fe1a5e6ae88a5ad8925b00015a8934fc84ee612616285c1835be9f8be"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table07_particle_diagnostics/Residual Correction/Endothelial__AGGREGATE.json",
+   "dst": "results/by_table/table07_particle_diagnostics/Residual Correction/Endothelial__AGGREGATE.json",
+   "bytes": 796,
+   "sha256": "30fda62db0724d1a4e54d8e5a5705d137b8d3da1909c46d03e73bc062a3e7dcf"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table07_particle_diagnostics/Residual Correction/Endothelial__samprun.json",
+   "dst": "results/by_table/table07_particle_diagnostics/Residual Correction/Endothelial__samprun.json",
+   "bytes": 1028,
+   "sha256": "4995361d686f14099018677780f1563d940acf1c6ed2fa36a41fb4e9a4bec7ee"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table07_particle_diagnostics/Residual Correction/Myeloid__AGGREGATE.json",
+   "dst": "results/by_table/table07_particle_diagnostics/Residual Correction/Myeloid__AGGREGATE.json",
+   "bytes": 795,
+   "sha256": "218c0d6b1f72c416f627807100a8f66fc387de37aafe7756c291cf8874ea42c4"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table07_particle_diagnostics/Residual Correction/Myeloid__samprun.json",
+   "dst": "results/by_table/table07_particle_diagnostics/Residual Correction/Myeloid__samprun.json",
+   "bytes": 1039,
+   "sha256": "9722ef90006f14282189517daebf180968942edb0dc26c8c29f2afa16a64f757"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table07_particle_diagnostics/Residual Correction/Neuronal__AGGREGATE.json",
+   "dst": "results/by_table/table07_particle_diagnostics/Residual Correction/Neuronal__AGGREGATE.json",
+   "bytes": 802,
+   "sha256": "4ccc423820b7e8f187249a633c947e61a3e5ed0b188ca07599a64bb19e178e40"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table07_particle_diagnostics/Residual Correction/Neuronal__samprun.json",
+   "dst": "results/by_table/table07_particle_diagnostics/Residual Correction/Neuronal__samprun.json",
+   "bytes": 1166,
+   "sha256": "3a1710c09993babba781e757cd6e4a78529460a38622595d74ae92c83ec5279f"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table08_tau_sweep/Endothelial_a1/Endothelial_residual_hvgtwist_fk_tiltevery_trigany_K32_M20114_N10057_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260.json",
+   "dst": "results/by_table/table08_tau_sweep/Endothelial_a1/Endothelial_residual_hvgtwist_fk_tiltevery_trigany_K32_M20114_N10057_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260.json",
+   "bytes": 1924,
+   "sha256": "d5ab5a3219b0f9d7211ce9976acdd86cfb426d774abd83e0309eb6086ccc8cfe"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table08_tau_sweep/Endothelial_tau0p2/Endothelial_residual_hvgtwist_fk_tiltevery_trigany_K32_M20114_N10057_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260.json",
+   "dst": "results/by_table/table08_tau_sweep/Endothelial_tau0p2/Endothelial_residual_hvgtwist_fk_tiltevery_trigany_K32_M20114_N10057_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260.json",
+   "bytes": 1904,
+   "sha256": "490de98b4fb58d0cd01a8e686de86c7bf070e1065a0e7ddde8a0da30131ab6b2"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table08_tau_sweep/Endothelial_tau1p0/Endothelial_residual_hvgtwist_fk_tiltevery_trigany_K32_M20114_N10057_alpha1p0_J16_int8_th0p5_tau1p0_cc256_odds_seed20260.json",
+   "dst": "results/by_table/table08_tau_sweep/Endothelial_tau1p0/Endothelial_residual_hvgtwist_fk_tiltevery_trigany_K32_M20114_N10057_alpha1p0_J16_int8_th0p5_tau1p0_cc256_odds_seed20260.json",
+   "bytes": 1556,
+   "sha256": "a5584ac312607786fd49866c809c15376ffa3f27033616773b97458573eb1d8b"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table08_tau_sweep/Myeloid_a1/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987.json",
+   "dst": "results/by_table/table08_tau_sweep/Myeloid_a1/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987.json",
+   "bytes": 1722,
+   "sha256": "883fdc50c06a160c6e56edbb094c3276a4d8a75da6690eba9ba710ffa6540fc3"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table08_tau_sweep/Myeloid_a1/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260988.json",
+   "dst": "results/by_table/table08_tau_sweep/Myeloid_a1/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260988.json",
+   "bytes": 1498,
+   "sha256": "9982fb83f40506871ed0546b496dcb5cc022c11fc1e34abfa344cefa509b8f29"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table08_tau_sweep/Myeloid_a1/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260989.json",
+   "dst": "results/by_table/table08_tau_sweep/Myeloid_a1/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260989.json",
+   "bytes": 1705,
+   "sha256": "02e17b7502c03daf4bba7b8ceaa5a8d714b30930ad94608fb65119fbd1389004"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table08_tau_sweep/Myeloid_tau0p4/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260987.json",
+   "dst": "results/by_table/table08_tau_sweep/Myeloid_tau0p4/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260987.json",
+   "bytes": 1876,
+   "sha256": "a45e0d761f3135bcee3bf3bce6bf1e82792367f4310e40db62ecfda0b3581104"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table08_tau_sweep/Myeloid_tau0p4/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260988.json",
+   "dst": "results/by_table/table08_tau_sweep/Myeloid_tau0p4/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260988.json",
+   "bytes": 1845,
+   "sha256": "9420181515ff2bf923d800b7c6a3ae509c7501ec587cab311cb4bda79454c871"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table08_tau_sweep/Myeloid_tau0p4/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260989.json",
+   "dst": "results/by_table/table08_tau_sweep/Myeloid_tau0p4/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260989.json",
+   "bytes": 1901,
+   "sha256": "02ad9764367f27ed06c04b2031b2f67ad80e725750d1eb23bc10df6c479b2243"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table08_tau_sweep/Myeloid_tau1p0/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau1p0_cc256_odds_seed20260987.json",
+   "dst": "results/by_table/table08_tau_sweep/Myeloid_tau1p0/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau1p0_cc256_odds_seed20260987.json",
+   "bytes": 1686,
+   "sha256": "3f24a021174efec2207d5c176c2370a4a0c4462aaabc98e1f2200d3be6e0516d"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table08_tau_sweep/Myeloid_tau1p0/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau1p0_cc256_odds_seed20260988.json",
+   "dst": "results/by_table/table08_tau_sweep/Myeloid_tau1p0/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau1p0_cc256_odds_seed20260988.json",
+   "bytes": 1777,
+   "sha256": "f7f4a8300f723e49bf8486adcbda47a463b49fcef739825c4685008be9321ba1"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table08_tau_sweep/Myeloid_tau1p0/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau1p0_cc256_odds_seed20260989.json",
+   "dst": "results/by_table/table08_tau_sweep/Myeloid_tau1p0/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau1p0_cc256_odds_seed20260989.json",
+   "bytes": 1787,
+   "sha256": "a9b59d71c98504a42e55f526f3248039eea2cf6cb0cb5a871e28d8eaf787d861"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table08_tau_sweep/Neuronal_a1/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987.json",
+   "dst": "results/by_table/table08_tau_sweep/Neuronal_a1/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987.json",
+   "bytes": 1075,
+   "sha256": "a383e5e45720c5483023e541f546a0824be0e2b97fc9bd1d7015a4f6a036e6b6"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table08_tau_sweep/Neuronal_a1/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260988.json",
+   "dst": "results/by_table/table08_tau_sweep/Neuronal_a1/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260988.json",
+   "bytes": 1192,
+   "sha256": "dcd232727d4211d40fefa92b7cb5d295d955985ac37b07460d267df129903032"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table08_tau_sweep/Neuronal_a1/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260989.json",
+   "dst": "results/by_table/table08_tau_sweep/Neuronal_a1/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260989.json",
+   "bytes": 1122,
+   "sha256": "8ee1cff0f5db5ced0380edc24cf9c9cca7492f6cb273e8e4b9f0e7cebe2511ad"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table08_tau_sweep/Neuronal_tau0p4/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260987.json",
+   "dst": "results/by_table/table08_tau_sweep/Neuronal_tau0p4/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260987.json",
+   "bytes": 1178,
+   "sha256": "9d227a7c1131aafaf3f21a0afa185381087be28a5a43778e6d94d927cddb68f8"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table08_tau_sweep/Neuronal_tau0p4/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260988.json",
+   "dst": "results/by_table/table08_tau_sweep/Neuronal_tau0p4/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260988.json",
+   "bytes": 1141,
+   "sha256": "d20886ff0d00d1fb0cd382fdbdbddab0bfe471f934d96e4fa216b2797b577ec8"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table08_tau_sweep/Neuronal_tau0p4/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260989.json",
+   "dst": "results/by_table/table08_tau_sweep/Neuronal_tau0p4/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260989.json",
+   "bytes": 1212,
+   "sha256": "84c946b5c82065b90dc884cb4358cab133bc7edb5b2f5ddba6049207828efdca"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table08_tau_sweep/Neuronal_tau1p0/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau1p0_cc256_odds_seed20260987.json",
+   "dst": "results/by_table/table08_tau_sweep/Neuronal_tau1p0/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau1p0_cc256_odds_seed20260987.json",
+   "bytes": 1236,
+   "sha256": "e50b61d8df00a1a6e94630ed8a1f108e4c28f2837f7623daaf40212d79d2ff0e"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table08_tau_sweep/Neuronal_tau1p0/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau1p0_cc256_odds_seed20260988.json",
+   "dst": "results/by_table/table08_tau_sweep/Neuronal_tau1p0/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau1p0_cc256_odds_seed20260988.json",
+   "bytes": 1226,
+   "sha256": "7e2512e6a06726c92eb1eed52c9e6afcadcec00757f49bd195a30c6b3c8e57cb"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table08_tau_sweep/Neuronal_tau1p0/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau1p0_cc256_odds_seed20260989.json",
+   "dst": "results/by_table/table08_tau_sweep/Neuronal_tau1p0/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau1p0_cc256_odds_seed20260989.json",
+   "bytes": 1226,
+   "sha256": "2385ad85d9f668e6ae9b30e0be897b6f31817b72abdba1e0aaa65d23f727a167"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table09_unconditional_fidelity/OURS/samp20260931.json",
+   "dst": "results/by_table/table09_unconditional_fidelity/OURS/samp20260931.json",
+   "bytes": 1253,
+   "sha256": "8c7b48122dff7f51a043dd559e88e3f7dd1c1c0697cf8e0bfd0e2e2ea7d4c60f"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table09_unconditional_fidelity/OURS/samp20260932.json",
+   "dst": "results/by_table/table09_unconditional_fidelity/OURS/samp20260932.json",
+   "bytes": 1255,
+   "sha256": "47446819d42a7db060d7a3b571bab9a56489447cefedf7512989949f08864fc2"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table09_unconditional_fidelity/OURS/samp20260933.json",
+   "dst": "results/by_table/table09_unconditional_fidelity/OURS/samp20260933.json",
+   "bytes": 1254,
+   "sha256": "898ee1c3d6f6ba41ca8db8b1269e75a8563edc7b1fb6467ee654681a4f8f9a01"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table09_unconditional_fidelity/scanvi/samp20260931.json",
+   "dst": "results/by_table/table09_unconditional_fidelity/scanvi/samp20260931.json",
+   "bytes": 1285,
+   "sha256": "04002ece3bcd187a71c30b23c35d57d8348047537c73374ef4b30c4024f6a5d4"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table09_unconditional_fidelity/scanvi/samp20260932.json",
+   "dst": "results/by_table/table09_unconditional_fidelity/scanvi/samp20260932.json",
+   "bytes": 1287,
+   "sha256": "8b60801b5b1913bfeabda922be74f6a72f6b3dbc93df00b6bfbb89a2b43a46d1"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table09_unconditional_fidelity/scanvi/samp20260933.json",
+   "dst": "results/by_table/table09_unconditional_fidelity/scanvi/samp20260933.json",
+   "bytes": 1287,
+   "sha256": "6549e5a00733f74808804bfb1b5bdb0f0754320ef0bc967ad9b12b46b56e0c05"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table09_unconditional_fidelity/scvi/samp20260931.json",
+   "dst": "results/by_table/table09_unconditional_fidelity/scvi/samp20260931.json",
+   "bytes": 1307,
+   "sha256": "bc34bc268c2a9c6c1b9aa17fa41f55f6cb30b1ae081ea7fd361a3b27d8acf349"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table09_unconditional_fidelity/scvi/samp20260932.json",
+   "dst": "results/by_table/table09_unconditional_fidelity/scvi/samp20260932.json",
+   "bytes": 1312,
+   "sha256": "5002c1759c4bbd4b42ff897dd19bfe8962cf149377feca8bc66c02b41cf814cb"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table09_unconditional_fidelity/scvi/samp20260933.json",
+   "dst": "results/by_table/table09_unconditional_fidelity/scvi/samp20260933.json",
+   "bytes": 1313,
+   "sha256": "566cb959e6e93ef434e95aa7c1480f7aca07f874da4ac324a6aacf7bf00ac2eb"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_a1/Endothelial_residual_hvgtwist_fk_tiltevery_trigany_K32_M20114_N10057_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_a1/Endothelial_residual_hvgtwist_fk_tiltevery_trigany_K32_M20114_N10057_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260.json",
+   "bytes": 1822,
+   "sha256": "34029129b7ac68e8baa914527f17ab3424a5b692385eafcd11b129b087aae7e9"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_aprime_v2/Endothelial_aprime_v2_N10057_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_aprime_v2/Endothelial_aprime_v2_N10057_seed20260931.json",
+   "bytes": 1504,
+   "sha256": "e581e47c8f2650e3a5b6936477b56c18fd4395ad8b1fa21f7afe6ed8b5b0118a"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_aprime_v2/Endothelial_aprime_v2_N10057_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_aprime_v2/Endothelial_aprime_v2_N10057_seed20260932.json",
+   "bytes": 1516,
+   "sha256": "7fd2cf95c9048fe016e0087f65b16e9a12cbaf52933b1ebc4983c14a6e47d940"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_aprime_v2/Endothelial_aprime_v2_N10057_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_aprime_v2/Endothelial_aprime_v2_N10057_seed20260933.json",
+   "bytes": 1458,
+   "sha256": "9045a5903d13aed55b4d16a26ee148d7bc2b97be1f17d60dd2e04d45f94c9ede"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S1_forced_b1/Endothelial_bestofn_S1_forced_b1_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S1_forced_b1/Endothelial_bestofn_S1_forced_b1_seed20260931.json",
+   "bytes": 1921,
+   "sha256": "a30c15a8817d8bb6789c3fefcb64dc631386ea6eb2b4ad8e3de81045cfd0819b"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S1_forced_b1/Endothelial_bestofn_S1_forced_b1_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S1_forced_b1/Endothelial_bestofn_S1_forced_b1_seed20260932.json",
+   "bytes": 2011,
+   "sha256": "7f93cf1e5c705db82c9c8fd73e8b64d6fe63cd02bf55a73426437259385e7e29"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S1_forced_b1/Endothelial_bestofn_S1_forced_b1_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S1_forced_b1/Endothelial_bestofn_S1_forced_b1_seed20260933.json",
+   "bytes": 1919,
+   "sha256": "ab328dbd40f812735e5b474460b09d05be700f85041ce69082f85a8f628e27cb"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S1_forced_b2/Endothelial_bestofn_S1_forced_b2_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S1_forced_b2/Endothelial_bestofn_S1_forced_b2_seed20260931.json",
+   "bytes": 1363,
+   "sha256": "05b0ec41d55428ecbb7f3500bbc69687802c7085aac2b861d45b70ef2b228a4a"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S1_forced_b2/Endothelial_bestofn_S1_forced_b2_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S1_forced_b2/Endothelial_bestofn_S1_forced_b2_seed20260932.json",
+   "bytes": 1393,
+   "sha256": "e28cb36e3d8583206f902f63df6620540a47c149c86e739dceff0850e6b5f869"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S1_forced_b2/Endothelial_bestofn_S1_forced_b2_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S1_forced_b2/Endothelial_bestofn_S1_forced_b2_seed20260933.json",
+   "bytes": 1424,
+   "sha256": "51521d8d84d3d980039c3a3b4c3c751dc634154ae9b9d68bffe536ec59307c44"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S1_forced_b4/Endothelial_bestofn_S1_forced_b4_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S1_forced_b4/Endothelial_bestofn_S1_forced_b4_seed20260931.json",
+   "bytes": 1261,
+   "sha256": "7c163d780169b718023416d9f759dc10e94026364ca01a9b66c246e154830ab4"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S1_forced_b4/Endothelial_bestofn_S1_forced_b4_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S1_forced_b4/Endothelial_bestofn_S1_forced_b4_seed20260932.json",
+   "bytes": 1360,
+   "sha256": "96ee1263e725f55353955efd199b777861e32d86aff8fccdf88126aac9aa101f"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S1_forced_b4/Endothelial_bestofn_S1_forced_b4_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S1_forced_b4/Endothelial_bestofn_S1_forced_b4_seed20260933.json",
+   "bytes": 1365,
+   "sha256": "9ad7a6aa75187dc9e42677e7535fbb5740cbf498db1e603be6d735ae8b471cc3"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S1_thresh_b1/Endothelial_bestofn_S1_thresh_b1_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S1_thresh_b1/Endothelial_bestofn_S1_thresh_b1_seed20260931.json",
+   "bytes": 1563,
+   "sha256": "c6237b74ce8db3ba287b0b2d210d8ba41f3ab4e1a14fd1e04c50811c38d77d79"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S1_thresh_b1/Endothelial_bestofn_S1_thresh_b1_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S1_thresh_b1/Endothelial_bestofn_S1_thresh_b1_seed20260932.json",
+   "bytes": 1703,
+   "sha256": "7a13304981641672f0ea6cd088256502cec6aded8e308dd452ca55339a8b8f1b"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S1_thresh_b1/Endothelial_bestofn_S1_thresh_b1_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S1_thresh_b1/Endothelial_bestofn_S1_thresh_b1_seed20260933.json",
+   "bytes": 1593,
+   "sha256": "8c57d796456a5b967288fe2b0b34c6cd828878916f5dcfb30ab8aaa518687569"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S1_thresh_b2/Endothelial_bestofn_S1_thresh_b2_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S1_thresh_b2/Endothelial_bestofn_S1_thresh_b2_seed20260931.json",
+   "bytes": 1732,
+   "sha256": "e81586a4484c4e5851c095455226061c07309e85f1b8cf0c013a11f586c0e224"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S1_thresh_b2/Endothelial_bestofn_S1_thresh_b2_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S1_thresh_b2/Endothelial_bestofn_S1_thresh_b2_seed20260932.json",
+   "bytes": 1818,
+   "sha256": "577aa4896cb0b2dbe6bd32e008d43d999f56c655c930867a4875cf795eafacc8"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S1_thresh_b2/Endothelial_bestofn_S1_thresh_b2_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S1_thresh_b2/Endothelial_bestofn_S1_thresh_b2_seed20260933.json",
+   "bytes": 1720,
+   "sha256": "6ac057f33aead941608eefa4950b9931805492d3fc5473e669408bd415f7b77d"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S1_thresh_b4/Endothelial_bestofn_S1_thresh_b4_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S1_thresh_b4/Endothelial_bestofn_S1_thresh_b4_seed20260931.json",
+   "bytes": 1733,
+   "sha256": "6cdd10b358861b19e1edb06f9fa4428845094f18721ae3485853ce6b47303977"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S1_thresh_b4/Endothelial_bestofn_S1_thresh_b4_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S1_thresh_b4/Endothelial_bestofn_S1_thresh_b4_seed20260932.json",
+   "bytes": 1819,
+   "sha256": "2876f8a300c0f118d7dfff614c6bafbd765f1e07d57c9724725d5af17a888d42"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S1_thresh_b4/Endothelial_bestofn_S1_thresh_b4_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S1_thresh_b4/Endothelial_bestofn_S1_thresh_b4_seed20260933.json",
+   "bytes": 1721,
+   "sha256": "77eba0829b714eede2e943c0fe6011f780cc409c324680565fb1fd769b56c228"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S2_forced_b1/Endothelial_bestofn_S2_forced_b1_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S2_forced_b1/Endothelial_bestofn_S2_forced_b1_seed20260931.json",
+   "bytes": 1907,
+   "sha256": "a20d97dc62568e7d28a953cf821aeb147e1ef9e4fd8b8930dd755ca2bb77090a"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S2_forced_b1/Endothelial_bestofn_S2_forced_b1_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S2_forced_b1/Endothelial_bestofn_S2_forced_b1_seed20260932.json",
+   "bytes": 2024,
+   "sha256": "7b102b6c1e407743c28d917b4182f221928fceb71d4b68ec92dac59996548958"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S2_forced_b1/Endothelial_bestofn_S2_forced_b1_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S2_forced_b1/Endothelial_bestofn_S2_forced_b1_seed20260933.json",
+   "bytes": 1912,
+   "sha256": "aadcc3e3404033b9fff1efba8802999e78f9ae48e00e8942f18f510925355b51"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S2_forced_b2/Endothelial_bestofn_S2_forced_b2_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S2_forced_b2/Endothelial_bestofn_S2_forced_b2_seed20260931.json",
+   "bytes": 1473,
+   "sha256": "dfab4be13a64fc7128a16fdd5e9ba93d640827ef9b48190d3d244103c9274995"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S2_forced_b2/Endothelial_bestofn_S2_forced_b2_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S2_forced_b2/Endothelial_bestofn_S2_forced_b2_seed20260932.json",
+   "bytes": 1624,
+   "sha256": "4bbc793da9650eba67e984327098e1f9292eb1d31f9ebdcfd21b1facc308e4d0"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S2_forced_b2/Endothelial_bestofn_S2_forced_b2_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S2_forced_b2/Endothelial_bestofn_S2_forced_b2_seed20260933.json",
+   "bytes": 1558,
+   "sha256": "6bbee73816dff730917a5116bc983834fda4c239564226ecdd693604399a9889"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S2_forced_b4/Endothelial_bestofn_S2_forced_b4_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S2_forced_b4/Endothelial_bestofn_S2_forced_b4_seed20260931.json",
+   "bytes": 1540,
+   "sha256": "7570a5349687e6efff7cee40363b557af10f62d7d3b7c920e0294180e07cc0bc"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S2_forced_b4/Endothelial_bestofn_S2_forced_b4_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S2_forced_b4/Endothelial_bestofn_S2_forced_b4_seed20260932.json",
+   "bytes": 1533,
+   "sha256": "7ab88f196bdaefcf9fa3edd83c0172138e1c7207cebb0617eef83ed552e55742"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S2_forced_b4/Endothelial_bestofn_S2_forced_b4_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S2_forced_b4/Endothelial_bestofn_S2_forced_b4_seed20260933.json",
+   "bytes": 1550,
+   "sha256": "73279c7cb12de0bb3cd7d9881acd61013abe63367b4ac17c48e55fde43b533e8"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S2_thresh_b1/Endothelial_bestofn_S2_thresh_b1_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S2_thresh_b1/Endothelial_bestofn_S2_thresh_b1_seed20260931.json",
+   "bytes": 1464,
+   "sha256": "b5c474f1f52bf073d4217eb36f6e12b9415bace48a70cb9d394e4cdbf9dbc235"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S2_thresh_b1/Endothelial_bestofn_S2_thresh_b1_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S2_thresh_b1/Endothelial_bestofn_S2_thresh_b1_seed20260932.json",
+   "bytes": 1601,
+   "sha256": "7c3336bf317c90761fccfcffe6081537b0bee641cba972f85fcde22e04c74c3c"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S2_thresh_b1/Endothelial_bestofn_S2_thresh_b1_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S2_thresh_b1/Endothelial_bestofn_S2_thresh_b1_seed20260933.json",
+   "bytes": 1541,
+   "sha256": "1c47cb8088e69137b44d7477d5ddeb974f9977805a9969a016f75919fd9627aa"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S2_thresh_b2/Endothelial_bestofn_S2_thresh_b2_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S2_thresh_b2/Endothelial_bestofn_S2_thresh_b2_seed20260931.json",
+   "bytes": 1610,
+   "sha256": "21e1cf8e4fc940fd3c9cb9157438aae873bc0415ace22c7fb3436699a2de2b1b"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S2_thresh_b2/Endothelial_bestofn_S2_thresh_b2_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S2_thresh_b2/Endothelial_bestofn_S2_thresh_b2_seed20260932.json",
+   "bytes": 1720,
+   "sha256": "af04f572f2ac42f4357f9ba7e1d2a15586b584f25f12ca4ae84c0ab0f3e62359"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S2_thresh_b2/Endothelial_bestofn_S2_thresh_b2_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S2_thresh_b2/Endothelial_bestofn_S2_thresh_b2_seed20260933.json",
+   "bytes": 1670,
+   "sha256": "49ae2013b2aca2d9779ed422dad7741ec8e475795da6faa245c65a3699bb866b"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S2_thresh_b4/Endothelial_bestofn_S2_thresh_b4_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S2_thresh_b4/Endothelial_bestofn_S2_thresh_b4_seed20260931.json",
+   "bytes": 1611,
+   "sha256": "626f05336df61bd5a72166f94036abac9f238ae1a9dff2c121d4634ee64d601e"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S2_thresh_b4/Endothelial_bestofn_S2_thresh_b4_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S2_thresh_b4/Endothelial_bestofn_S2_thresh_b4_seed20260932.json",
+   "bytes": 1721,
+   "sha256": "5b9ab0e4f2f0a55f041b8d13902d53962cc2fc2eae4c49b20b3674bfc953d37e"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_bestofn_S2_thresh_b4/Endothelial_bestofn_S2_thresh_b4_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_bestofn_S2_thresh_b4/Endothelial_bestofn_S2_thresh_b4_seed20260933.json",
+   "bytes": 1671,
+   "sha256": "047f11514319de82bfa9114e5a5ed60479389537d42f8d20c749acf10ed9658d"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_vgr_clean_g1p0/Endothelial_vgr_clean_g1p0_M10057_N10057_J16_K32_seed20260987.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_vgr_clean_g1p0/Endothelial_vgr_clean_g1p0_M10057_N10057_J16_K32_seed20260987.json",
+   "bytes": 2002,
+   "sha256": "1600d0859908de25abd7149c0f41e47d6fbf35e2288400fe5e3e628a3e967e42"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_vgr_clean_g1p0/Endothelial_vgr_clean_g1p0_M10057_N10057_J16_K32_seed20260988.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_vgr_clean_g1p0/Endothelial_vgr_clean_g1p0_M10057_N10057_J16_K32_seed20260988.json",
+   "bytes": 1974,
+   "sha256": "d854d57877c9344ecc7a358b4cc5337f2d9ace881b7e9c25432273275d528282"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_vgr_clean_g1p0/Endothelial_vgr_clean_g1p0_M10057_N10057_J16_K32_seed20260989.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_vgr_clean_g1p0/Endothelial_vgr_clean_g1p0_M10057_N10057_J16_K32_seed20260989.json",
+   "bytes": 1948,
+   "sha256": "c5bb523bcd8cbe5f863323a0fb80371db2972b9f7bcd946fec39af34ba4ae294"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_vgr_clean_g2p0/Endothelial_vgr_clean_g2p0_M10057_N10057_J16_K32_seed20260987.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_vgr_clean_g2p0/Endothelial_vgr_clean_g2p0_M10057_N10057_J16_K32_seed20260987.json",
+   "bytes": 2032,
+   "sha256": "f211c273864bfc522a8faccc911a858a59ad1e347649328c7813d92ceec0d5dd"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_vgr_clean_g2p0/Endothelial_vgr_clean_g2p0_M10057_N10057_J16_K32_seed20260988.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_vgr_clean_g2p0/Endothelial_vgr_clean_g2p0_M10057_N10057_J16_K32_seed20260988.json",
+   "bytes": 1985,
+   "sha256": "1bec829d761534919e648b66d6bc3af50fc89bd8ba9a306239f9ec2971994dfe"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_vgr_clean_g2p0/Endothelial_vgr_clean_g2p0_M10057_N10057_J16_K32_seed20260989.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_vgr_clean_g2p0/Endothelial_vgr_clean_g2p0_M10057_N10057_J16_K32_seed20260989.json",
+   "bytes": 1968,
+   "sha256": "7541940d735864d8315933de070cb3edb5cd7deb9852944812aab5b7c19c6032"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_vgr_clean_g4p0/Endothelial_vgr_clean_g4p0_M10057_N10057_J16_K32_seed20260987.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_vgr_clean_g4p0/Endothelial_vgr_clean_g4p0_M10057_N10057_J16_K32_seed20260987.json",
+   "bytes": 2035,
+   "sha256": "edba3deef1f4a7e81f01d0ea9596b0dbf80bc6ba131b54ba697377a706837f41"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_vgr_clean_g4p0/Endothelial_vgr_clean_g4p0_M10057_N10057_J16_K32_seed20260988.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_vgr_clean_g4p0/Endothelial_vgr_clean_g4p0_M10057_N10057_J16_K32_seed20260988.json",
+   "bytes": 1990,
+   "sha256": "91d6f66e6fa8ad2b8cc8bcec9cbc542064f8c70fa56a9c8947ea9f352f74cc3d"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_vgr_clean_g4p0/Endothelial_vgr_clean_g4p0_M10057_N10057_J16_K32_seed20260989.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_vgr_clean_g4p0/Endothelial_vgr_clean_g4p0_M10057_N10057_J16_K32_seed20260989.json",
+   "bytes": 1979,
+   "sha256": "a8b24bd3ff403faa90b893a640a9bfd677df7f8bc8d18be6c43bf313ce651d2a"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_vgr_noised_g1p0/Endothelial_vgr_noised_g1p0_M10057_N10057_J16_K32_seed20260987.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_vgr_noised_g1p0/Endothelial_vgr_noised_g1p0_M10057_N10057_J16_K32_seed20260987.json",
+   "bytes": 2032,
+   "sha256": "bc681214f6b78c42379d2addf98ca0388441349d942361a634ebdb20b44babf2"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_vgr_noised_g1p0/Endothelial_vgr_noised_g1p0_M10057_N10057_J16_K32_seed20260988.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_vgr_noised_g1p0/Endothelial_vgr_noised_g1p0_M10057_N10057_J16_K32_seed20260988.json",
+   "bytes": 1993,
+   "sha256": "37c09ba520261de9c40e66fbd3f706ffec9d16746c41e2b6398f5c3acd729ef9"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_vgr_noised_g1p0/Endothelial_vgr_noised_g1p0_M10057_N10057_J16_K32_seed20260989.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_vgr_noised_g1p0/Endothelial_vgr_noised_g1p0_M10057_N10057_J16_K32_seed20260989.json",
+   "bytes": 1988,
+   "sha256": "36678e46b49fd6af0a575b085c5e8f2e462b5593b7fd8f9b0d61fa6bebc96601"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_vgr_noised_g2p0/Endothelial_vgr_noised_g2p0_M10057_N10057_J16_K32_seed20260987.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_vgr_noised_g2p0/Endothelial_vgr_noised_g2p0_M10057_N10057_J16_K32_seed20260987.json",
+   "bytes": 1857,
+   "sha256": "ac5e0884c6b627785ac4f6008f2c41ce09d2d5c489ee1f8d00317892ce47a208"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_vgr_noised_g2p0/Endothelial_vgr_noised_g2p0_M10057_N10057_J16_K32_seed20260988.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_vgr_noised_g2p0/Endothelial_vgr_noised_g2p0_M10057_N10057_J16_K32_seed20260988.json",
+   "bytes": 1796,
+   "sha256": "3ef871c4075e5d933c1ac341cecad29e1180f120d73f60773ba9ac5d87d20e76"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_vgr_noised_g2p0/Endothelial_vgr_noised_g2p0_M10057_N10057_J16_K32_seed20260989.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_vgr_noised_g2p0/Endothelial_vgr_noised_g2p0_M10057_N10057_J16_K32_seed20260989.json",
+   "bytes": 1804,
+   "sha256": "d028485c0545589ce11f7cd3641a2b590a090d38c6c975501e7d3a19dd80c521"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_vgr_noised_g4p0/Endothelial_vgr_noised_g4p0_M10057_N10057_J16_K32_seed20260987.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_vgr_noised_g4p0/Endothelial_vgr_noised_g4p0_M10057_N10057_J16_K32_seed20260987.json",
+   "bytes": 1608,
+   "sha256": "86ca87a0e4abf27b2888f9a02ee50a6c88528a38840da95bd4b2becd18de973c"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_vgr_noised_g4p0/Endothelial_vgr_noised_g4p0_M10057_N10057_J16_K32_seed20260988.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_vgr_noised_g4p0/Endothelial_vgr_noised_g4p0_M10057_N10057_J16_K32_seed20260988.json",
+   "bytes": 1482,
+   "sha256": "08a2f96aad4dd252e73b74e73e9a71ddf273c41387715cdcaf9456a2dae8c01c"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Endothelial_vgr_noised_g4p0/Endothelial_vgr_noised_g4p0_M10057_N10057_J16_K32_seed20260989.json",
+   "dst": "results/by_table/table10_sampler_axis/Endothelial_vgr_noised_g4p0/Endothelial_vgr_noised_g4p0_M10057_N10057_J16_K32_seed20260989.json",
+   "bytes": 1594,
+   "sha256": "2308fdf7ad50919a60fc3a3495c7176d2b3222e6cd4e5aa99ed884bdb35a24f7"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_a1/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_a1/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987.json",
+   "bytes": 1620,
+   "sha256": "0321e53dbb00bee21a164e0ffa5f977bb07b508aa0fa81395d1e82d6abb78ff9"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_a1/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260988.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_a1/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260988.json",
+   "bytes": 1398,
+   "sha256": "f1eddc3848e6fa6e76f7e7e3d117496e9ef875c9cb497520096eea4cf464a385"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_a1/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260989.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_a1/Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260989.json",
+   "bytes": 1604,
+   "sha256": "24c04137c5253bffd7f26ae5dec45eb98028c495cac0fb2095b445ff4ef1a760"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_aprime_v2/Myeloid_aprime_v2_N2500_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_aprime_v2/Myeloid_aprime_v2_N2500_seed20260931.json",
+   "bytes": 1491,
+   "sha256": "3c8cf999798a9ff71d2247d5abc8a1bd6899f4edbbeea1ff096c723881184c6d"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_aprime_v2/Myeloid_aprime_v2_N2500_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_aprime_v2/Myeloid_aprime_v2_N2500_seed20260932.json",
+   "bytes": 1439,
+   "sha256": "58690b594b22a05d860046dcdb6668ebbab9e9fe745718f2aa54b6f17ac3d8cf"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_aprime_v2/Myeloid_aprime_v2_N2500_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_aprime_v2/Myeloid_aprime_v2_N2500_seed20260933.json",
+   "bytes": 1464,
+   "sha256": "7241a6e37097fe665c06093843e38c25ce25b3f2853421f1351fba6ebb633322"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S1_forced_b1/Myeloid_bestofn_S1_forced_b1_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S1_forced_b1/Myeloid_bestofn_S1_forced_b1_seed20260931.json",
+   "bytes": 1862,
+   "sha256": "80fb2c6d2799a2aa28c717fc2339af0d758816d077163ac4a85a0ad90bb0541b"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S1_forced_b1/Myeloid_bestofn_S1_forced_b1_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S1_forced_b1/Myeloid_bestofn_S1_forced_b1_seed20260932.json",
+   "bytes": 1943,
+   "sha256": "fe6fb28a876f8e224c9e44843bf714ceddcb72d4c0f4420d82c7b810087b54e8"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S1_forced_b1/Myeloid_bestofn_S1_forced_b1_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S1_forced_b1/Myeloid_bestofn_S1_forced_b1_seed20260933.json",
+   "bytes": 1861,
+   "sha256": "dee76e77d524c1081731143441c2004b684f61fa41bb7e93d86f35f78c140eb0"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S1_forced_b16/Myeloid_bestofn_S1_forced_b16_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S1_forced_b16/Myeloid_bestofn_S1_forced_b16_seed20260931.json",
+   "bytes": 1358,
+   "sha256": "5839ad3377ad9c0df251ad67be77bbac67232753de655360cde8898c6c1370f5"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S1_forced_b16/Myeloid_bestofn_S1_forced_b16_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S1_forced_b16/Myeloid_bestofn_S1_forced_b16_seed20260932.json",
+   "bytes": 1348,
+   "sha256": "28d09b3524b806dfa43bd52058c6b0dfca2910ca938511a9d46a45cd2f897ac6"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S1_forced_b16/Myeloid_bestofn_S1_forced_b16_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S1_forced_b16/Myeloid_bestofn_S1_forced_b16_seed20260933.json",
+   "bytes": 1303,
+   "sha256": "da419cd36428d69583b25b7daebca6b938b067d5a9513e3a542dd545189e874b"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S1_forced_b2/Myeloid_bestofn_S1_forced_b2_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S1_forced_b2/Myeloid_bestofn_S1_forced_b2_seed20260931.json",
+   "bytes": 1880,
+   "sha256": "6527313600c9c4e18543e22aff33b34d97473ed3e6fe62f75a1a19320874f0d9"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S1_forced_b2/Myeloid_bestofn_S1_forced_b2_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S1_forced_b2/Myeloid_bestofn_S1_forced_b2_seed20260932.json",
+   "bytes": 1903,
+   "sha256": "1d0e6f5bd2d1db633a62b666916ee9ca4a0f62ab0da1967de00f6fcf69ca91a6"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S1_forced_b2/Myeloid_bestofn_S1_forced_b2_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S1_forced_b2/Myeloid_bestofn_S1_forced_b2_seed20260933.json",
+   "bytes": 1895,
+   "sha256": "a24ca304c1a517529a4aefa8bf1e47e6e49f9f5c1ae342d38f894d72d3b8853a"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S1_forced_b4/Myeloid_bestofn_S1_forced_b4_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S1_forced_b4/Myeloid_bestofn_S1_forced_b4_seed20260931.json",
+   "bytes": 1859,
+   "sha256": "8abd3300da08c23109c3904f439201d995ee081d8a666ebb16e1d55515619b98"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S1_forced_b4/Myeloid_bestofn_S1_forced_b4_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S1_forced_b4/Myeloid_bestofn_S1_forced_b4_seed20260932.json",
+   "bytes": 1935,
+   "sha256": "312b5dedd27cbdb49565aa4a609823b5e28c7a63433636891958da05c220113e"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S1_forced_b4/Myeloid_bestofn_S1_forced_b4_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S1_forced_b4/Myeloid_bestofn_S1_forced_b4_seed20260933.json",
+   "bytes": 1940,
+   "sha256": "69cb07bbe010981b5cf7752d28ec4043d2eb0b335ab269186e95c4ccda7ca4f7"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S1_forced_b8/Myeloid_bestofn_S1_forced_b8_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S1_forced_b8/Myeloid_bestofn_S1_forced_b8_seed20260931.json",
+   "bytes": 1547,
+   "sha256": "53d2de3041da693d07f6342c7e1a2f0ad41ae73c18893a6a7c55b5e379799e07"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S1_forced_b8/Myeloid_bestofn_S1_forced_b8_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S1_forced_b8/Myeloid_bestofn_S1_forced_b8_seed20260932.json",
+   "bytes": 1616,
+   "sha256": "d696398f0faabbc580c192cf22c31440ee839bcfda35f19256b4a5aec5618341"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S1_forced_b8/Myeloid_bestofn_S1_forced_b8_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S1_forced_b8/Myeloid_bestofn_S1_forced_b8_seed20260933.json",
+   "bytes": 1620,
+   "sha256": "c5fb0c5ed750c2156d4f197eb9cc277ee180c2488ed71bf901a7062a17a220ae"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S1_thresh_b16/Myeloid_bestofn_S1_thresh_b16_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S1_thresh_b16/Myeloid_bestofn_S1_thresh_b16_seed20260931.json",
+   "bytes": 1798,
+   "sha256": "0d281194b834c12d6153d294bf0893aae860e3bc7723403e0307b322e473dcfc"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S1_thresh_b16/Myeloid_bestofn_S1_thresh_b16_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S1_thresh_b16/Myeloid_bestofn_S1_thresh_b16_seed20260932.json",
+   "bytes": 1912,
+   "sha256": "76e55ef619c5a11f31a7208958d1147e8f6a67359f1e840a606a5ca013ef0dd9"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S1_thresh_b16/Myeloid_bestofn_S1_thresh_b16_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S1_thresh_b16/Myeloid_bestofn_S1_thresh_b16_seed20260933.json",
+   "bytes": 1887,
+   "sha256": "65f0110514a0bcda7336b7423cb3ccc9c283f896003f73bf623faffbf8bd3859"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S1_thresh_b8/Myeloid_bestofn_S1_thresh_b8_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S1_thresh_b8/Myeloid_bestofn_S1_thresh_b8_seed20260931.json",
+   "bytes": 1794,
+   "sha256": "c55a5769dc78b8044e8b4e83e2974510d9a6d9e308173c911bfab349ef5092d5"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S1_thresh_b8/Myeloid_bestofn_S1_thresh_b8_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S1_thresh_b8/Myeloid_bestofn_S1_thresh_b8_seed20260932.json",
+   "bytes": 1908,
+   "sha256": "242e9ab4df53a7a9d2b5c42d72f265157b4da5d67df93b68ff6c2cde0098ee02"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S1_thresh_b8/Myeloid_bestofn_S1_thresh_b8_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S1_thresh_b8/Myeloid_bestofn_S1_thresh_b8_seed20260933.json",
+   "bytes": 1883,
+   "sha256": "af0d8b175d1bfc028c0a7dbe6714bcd1f1db0f7341b67f5ced57a04f0f805f01"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S2_forced_b1/Myeloid_bestofn_S2_forced_b1_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S2_forced_b1/Myeloid_bestofn_S2_forced_b1_seed20260931.json",
+   "bytes": 1883,
+   "sha256": "a44a674950b94dfc2873e54d39e9e4f138e587ab220d7556aaaffe88215252ca"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S2_forced_b1/Myeloid_bestofn_S2_forced_b1_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S2_forced_b1/Myeloid_bestofn_S2_forced_b1_seed20260932.json",
+   "bytes": 1921,
+   "sha256": "31175e365fdc473c562ff8a610bb96b937989c5fcba33bc974b1b7aa114df97a"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S2_forced_b1/Myeloid_bestofn_S2_forced_b1_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S2_forced_b1/Myeloid_bestofn_S2_forced_b1_seed20260933.json",
+   "bytes": 1846,
+   "sha256": "0ba156d850bdd7005f1562bd3e5f31ed7bb29ecd07bee11bc36cb3c04860834f"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S2_forced_b16/Myeloid_bestofn_S2_forced_b16_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S2_forced_b16/Myeloid_bestofn_S2_forced_b16_seed20260931.json",
+   "bytes": 1544,
+   "sha256": "0b8797acc6b42d43d3b163bdd140b2a006516bb202169adc0cff8d7d8a91a5b0"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S2_forced_b16/Myeloid_bestofn_S2_forced_b16_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S2_forced_b16/Myeloid_bestofn_S2_forced_b16_seed20260932.json",
+   "bytes": 1481,
+   "sha256": "4cc8a7d733f2866fae8f13a749c3274c2637f4133c897a1a8f5019ea1b17207c"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S2_forced_b16/Myeloid_bestofn_S2_forced_b16_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S2_forced_b16/Myeloid_bestofn_S2_forced_b16_seed20260933.json",
+   "bytes": 1496,
+   "sha256": "31962dd25b8a9fa282039daee258dddff085154fd355827ee93bc651510876df"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S2_forced_b2/Myeloid_bestofn_S2_forced_b2_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S2_forced_b2/Myeloid_bestofn_S2_forced_b2_seed20260931.json",
+   "bytes": 1888,
+   "sha256": "37eb895b03a4676255c4299d4f75276d6541ebfd11b91ebd5c6a76c5899871b7"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S2_forced_b2/Myeloid_bestofn_S2_forced_b2_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S2_forced_b2/Myeloid_bestofn_S2_forced_b2_seed20260932.json",
+   "bytes": 1922,
+   "sha256": "e5e3200a671b0248fd8d20a2320d6c6866b989e03291ca8286082197cb78f372"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S2_forced_b2/Myeloid_bestofn_S2_forced_b2_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S2_forced_b2/Myeloid_bestofn_S2_forced_b2_seed20260933.json",
+   "bytes": 1895,
+   "sha256": "d7826ac25e90459a60b1b117801afa1763c3a14066f1c8014516b3dacee7040d"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S2_forced_b4/Myeloid_bestofn_S2_forced_b4_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S2_forced_b4/Myeloid_bestofn_S2_forced_b4_seed20260931.json",
+   "bytes": 1849,
+   "sha256": "a18e29a0a4cfd741514bb7d405cba6bba387001700835a633f2e82bd69677b76"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S2_forced_b4/Myeloid_bestofn_S2_forced_b4_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S2_forced_b4/Myeloid_bestofn_S2_forced_b4_seed20260932.json",
+   "bytes": 1914,
+   "sha256": "c22e21aa5390a5dc5308d72e186768948daea615003f3d6b3ea1010c69bd2005"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S2_forced_b4/Myeloid_bestofn_S2_forced_b4_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S2_forced_b4/Myeloid_bestofn_S2_forced_b4_seed20260933.json",
+   "bytes": 1890,
+   "sha256": "2e17d3a2370fd73fa0c0314a41efa77ca7fd82f466380f7fd17a56be643f7815"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S2_forced_b8/Myeloid_bestofn_S2_forced_b8_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S2_forced_b8/Myeloid_bestofn_S2_forced_b8_seed20260931.json",
+   "bytes": 1698,
+   "sha256": "c7b436c503191ad30357aa848aa87f154af1b203801bb48db4595dac4d30205d"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S2_forced_b8/Myeloid_bestofn_S2_forced_b8_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S2_forced_b8/Myeloid_bestofn_S2_forced_b8_seed20260932.json",
+   "bytes": 1664,
+   "sha256": "ff3d049d9100c0e58c779876101d65c067ad3738a4d1516c03c65f5002a6dd36"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S2_forced_b8/Myeloid_bestofn_S2_forced_b8_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S2_forced_b8/Myeloid_bestofn_S2_forced_b8_seed20260933.json",
+   "bytes": 1720,
+   "sha256": "171fc4afe05de6c6be96439aaf577a11e6d8beff28f330da5ea474acb0c3f0b9"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S2_thresh_b16/Myeloid_bestofn_S2_thresh_b16_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S2_thresh_b16/Myeloid_bestofn_S2_thresh_b16_seed20260931.json",
+   "bytes": 1822,
+   "sha256": "724adc91b780be7e2b5c63ad72b6a8664900bfa5f6315c2c9716fe4992a27b8c"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S2_thresh_b16/Myeloid_bestofn_S2_thresh_b16_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S2_thresh_b16/Myeloid_bestofn_S2_thresh_b16_seed20260932.json",
+   "bytes": 1800,
+   "sha256": "63accdfefc31e25b5df7e4fefdf3f5794ad4559a7546e1db49305042152e4db5"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S2_thresh_b16/Myeloid_bestofn_S2_thresh_b16_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S2_thresh_b16/Myeloid_bestofn_S2_thresh_b16_seed20260933.json",
+   "bytes": 1842,
+   "sha256": "be69e5263ecb9fc12e3fc8d46961b9182cc8854f5dbd87c999a538fddb61a376"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S2_thresh_b8/Myeloid_bestofn_S2_thresh_b8_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S2_thresh_b8/Myeloid_bestofn_S2_thresh_b8_seed20260931.json",
+   "bytes": 1818,
+   "sha256": "d7f6b7fecbdd654fa9521136d5a7d491f021c7a34506e060a391495b249bd4f9"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S2_thresh_b8/Myeloid_bestofn_S2_thresh_b8_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S2_thresh_b8/Myeloid_bestofn_S2_thresh_b8_seed20260932.json",
+   "bytes": 1796,
+   "sha256": "ba596577fb2e199c573f2bab6d3c1172bb9272e6bc6b98ca414ab1ae1c48c240"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_bestofn_S2_thresh_b8/Myeloid_bestofn_S2_thresh_b8_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_bestofn_S2_thresh_b8/Myeloid_bestofn_S2_thresh_b8_seed20260933.json",
+   "bytes": 1838,
+   "sha256": "c6345a188a22edf7fd88f1d5c6699b52d41031a0e82ea0c6f02c5115c838be8f"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_vgr_clean_g1p0/Myeloid_vgr_clean_g1p0_M2500_N2500_J16_K32_seed20260987.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_vgr_clean_g1p0/Myeloid_vgr_clean_g1p0_M2500_N2500_J16_K32_seed20260987.json",
+   "bytes": 1811,
+   "sha256": "36a767aab8c4d83ff685b918bfd5a113c423633710646c8dd0e38889f6d557ff"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_vgr_clean_g1p0/Myeloid_vgr_clean_g1p0_M2500_N2500_J16_K32_seed20260988.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_vgr_clean_g1p0/Myeloid_vgr_clean_g1p0_M2500_N2500_J16_K32_seed20260988.json",
+   "bytes": 1783,
+   "sha256": "058c04b8e3038f30ab28d403ef869556f62af34c53d3397a0d206bdd554c9d50"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_vgr_clean_g1p0/Myeloid_vgr_clean_g1p0_M2500_N2500_J16_K32_seed20260989.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_vgr_clean_g1p0/Myeloid_vgr_clean_g1p0_M2500_N2500_J16_K32_seed20260989.json",
+   "bytes": 1906,
+   "sha256": "cfcaca9485da635c05ef5e82a11b2392190d965177765cbd11083d63eb3d7a59"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_vgr_clean_g2p0/Myeloid_vgr_clean_g2p0_M2500_N2500_J16_K32_seed20260987.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_vgr_clean_g2p0/Myeloid_vgr_clean_g2p0_M2500_N2500_J16_K32_seed20260987.json",
+   "bytes": 1869,
+   "sha256": "e6063a8c448a1b0d79cff466697d363c26ff6dd3b94dcdf188b4a3b99f64d378"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_vgr_clean_g2p0/Myeloid_vgr_clean_g2p0_M2500_N2500_J16_K32_seed20260988.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_vgr_clean_g2p0/Myeloid_vgr_clean_g2p0_M2500_N2500_J16_K32_seed20260988.json",
+   "bytes": 1805,
+   "sha256": "1350a98ea08c53733f3f7a7739404d3e2ac100a21fc3eacea9d2161b6407f46f"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_vgr_clean_g2p0/Myeloid_vgr_clean_g2p0_M2500_N2500_J16_K32_seed20260989.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_vgr_clean_g2p0/Myeloid_vgr_clean_g2p0_M2500_N2500_J16_K32_seed20260989.json",
+   "bytes": 1835,
+   "sha256": "552d6cd29d85a6f1b6ed33162fe7c1ca17691b03aea2ca52cbbc5cec73b9475f"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_vgr_clean_g4p0/Myeloid_vgr_clean_g4p0_M2500_N2500_J16_K32_seed20260987.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_vgr_clean_g4p0/Myeloid_vgr_clean_g4p0_M2500_N2500_J16_K32_seed20260987.json",
+   "bytes": 1809,
+   "sha256": "4809b3305df22cc3babd18d9fd9f19a222aa40370b2e863b42e484262082c513"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_vgr_clean_g4p0/Myeloid_vgr_clean_g4p0_M2500_N2500_J16_K32_seed20260988.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_vgr_clean_g4p0/Myeloid_vgr_clean_g4p0_M2500_N2500_J16_K32_seed20260988.json",
+   "bytes": 1823,
+   "sha256": "ead99ac78093d9508f6d34a981ce6e5971141693ce3b37f8d5f2de0168895b47"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_vgr_clean_g4p0/Myeloid_vgr_clean_g4p0_M2500_N2500_J16_K32_seed20260989.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_vgr_clean_g4p0/Myeloid_vgr_clean_g4p0_M2500_N2500_J16_K32_seed20260989.json",
+   "bytes": 1775,
+   "sha256": "415f0473e964f9680d30df83f65f6ea5429cc2425e80b80b9b1377abadc9acc6"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_vgr_noised_g1p0/Myeloid_vgr_noised_g1p0_M2500_N2500_J16_K32_seed20260987.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_vgr_noised_g1p0/Myeloid_vgr_noised_g1p0_M2500_N2500_J16_K32_seed20260987.json",
+   "bytes": 1951,
+   "sha256": "362b357691511fab20b420dc5e433235b1888c9174a4fe7ab29997be1c6008d5"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_vgr_noised_g1p0/Myeloid_vgr_noised_g1p0_M2500_N2500_J16_K32_seed20260988.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_vgr_noised_g1p0/Myeloid_vgr_noised_g1p0_M2500_N2500_J16_K32_seed20260988.json",
+   "bytes": 1934,
+   "sha256": "921698c52e1c334ae9d11d33240bb1fb71fec913c6792c98792444f54e36fd49"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_vgr_noised_g1p0/Myeloid_vgr_noised_g1p0_M2500_N2500_J16_K32_seed20260989.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_vgr_noised_g1p0/Myeloid_vgr_noised_g1p0_M2500_N2500_J16_K32_seed20260989.json",
+   "bytes": 1885,
+   "sha256": "98d23edb47dbeb1f8f68c662cbc8b439250066902e5d4fcbd3d93d1157d57fde"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_vgr_noised_g2p0/Myeloid_vgr_noised_g2p0_M2500_N2500_J16_K32_seed20260987.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_vgr_noised_g2p0/Myeloid_vgr_noised_g2p0_M2500_N2500_J16_K32_seed20260987.json",
+   "bytes": 1807,
+   "sha256": "dd6ab3992cdb090ba24b43440f7868c75f0f10a1d5fb66d8f5dce34dad0270d1"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_vgr_noised_g2p0/Myeloid_vgr_noised_g2p0_M2500_N2500_J16_K32_seed20260988.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_vgr_noised_g2p0/Myeloid_vgr_noised_g2p0_M2500_N2500_J16_K32_seed20260988.json",
+   "bytes": 1856,
+   "sha256": "e6d606c88e8c3152334554bd0b610b5dcca28897371dd4eab47f413af9cc6841"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_vgr_noised_g2p0/Myeloid_vgr_noised_g2p0_M2500_N2500_J16_K32_seed20260989.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_vgr_noised_g2p0/Myeloid_vgr_noised_g2p0_M2500_N2500_J16_K32_seed20260989.json",
+   "bytes": 1857,
+   "sha256": "a901bd5c895e794c7193471b9762679378484862f530e3e0a27d0981b3fb50cd"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_vgr_noised_g4p0/Myeloid_vgr_noised_g4p0_M2500_N2500_J16_K32_seed20260987.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_vgr_noised_g4p0/Myeloid_vgr_noised_g4p0_M2500_N2500_J16_K32_seed20260987.json",
+   "bytes": 1693,
+   "sha256": "85fd1132206701c35fb907afd893f40d7a8390b48188bb08837618c7f1ce4374"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_vgr_noised_g4p0/Myeloid_vgr_noised_g4p0_M2500_N2500_J16_K32_seed20260988.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_vgr_noised_g4p0/Myeloid_vgr_noised_g4p0_M2500_N2500_J16_K32_seed20260988.json",
+   "bytes": 1494,
+   "sha256": "c5b54e790aef4787b9bca807a0595c045598f855e37e58f86a26d39dc5d09a63"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Myeloid_vgr_noised_g4p0/Myeloid_vgr_noised_g4p0_M2500_N2500_J16_K32_seed20260989.json",
+   "dst": "results/by_table/table10_sampler_axis/Myeloid_vgr_noised_g4p0/Myeloid_vgr_noised_g4p0_M2500_N2500_J16_K32_seed20260989.json",
+   "bytes": 1563,
+   "sha256": "9c1433eb1148891c26327a600469ba7097964314bdbbb456f33a5bb599f9c94d"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_a1/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_a1/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987.json",
+   "bytes": 974,
+   "sha256": "f9a74289256841c93ec11d8cd583a867ac6a139968a6211e37f46dd5c7e9334c"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_a1/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260988.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_a1/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260988.json",
+   "bytes": 1092,
+   "sha256": "2ffecb28053038f9133b51d8504c0486d1a5c0a716f474ca4851a63710f4d811"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_a1/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260989.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_a1/Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260989.json",
+   "bytes": 1021,
+   "sha256": "e5265be45835d9fbdbde2a2e29485166e10ad665c7a38a86b7bbf533b9eb85f0"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_aprime_v2/Neuronal_aprime_v2_N2500_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_aprime_v2/Neuronal_aprime_v2_N2500_seed20260931.json",
+   "bytes": 984,
+   "sha256": "f25f1430c13b8033aa1ac10e4c2e0a5658048267bc105200997c9bd924c0c294"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_aprime_v2/Neuronal_aprime_v2_N2500_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_aprime_v2/Neuronal_aprime_v2_N2500_seed20260932.json",
+   "bytes": 1018,
+   "sha256": "124a7a194ce38fe1af5030e600ea7a56839e0fb8e0171f047a2c4e5d1c835949"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_aprime_v2/Neuronal_aprime_v2_N2500_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_aprime_v2/Neuronal_aprime_v2_N2500_seed20260933.json",
+   "bytes": 1043,
+   "sha256": "f151e9e2a4a65f87f275a78ef70ac2d136a35cfcca80b4e37fb5117e4bbcc56e"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S1_forced_b1/Neuronal_bestofn_S1_forced_b1_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S1_forced_b1/Neuronal_bestofn_S1_forced_b1_seed20260931.json",
+   "bytes": 1808,
+   "sha256": "06ba88e9196e180b5f7b90c7c9d45fba63f6c180f58b1457261005872dc90730"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S1_forced_b1/Neuronal_bestofn_S1_forced_b1_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S1_forced_b1/Neuronal_bestofn_S1_forced_b1_seed20260932.json",
+   "bytes": 1795,
+   "sha256": "52cdf6184115b2cd4620c1e29a7cf1eadc41b886776c7433cdc708f1db96d2f4"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S1_forced_b1/Neuronal_bestofn_S1_forced_b1_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S1_forced_b1/Neuronal_bestofn_S1_forced_b1_seed20260933.json",
+   "bytes": 1753,
+   "sha256": "aa53af2ef049496f10dcc9f2fbc4bc669a09e710e2995fda549e220e16871e75"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S1_forced_b16/Neuronal_bestofn_S1_forced_b16_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S1_forced_b16/Neuronal_bestofn_S1_forced_b16_seed20260931.json",
+   "bytes": 1660,
+   "sha256": "5672b787e0e2a846eb419451bf90484969904b9dbfe1986d2f7828d2c96ba827"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S1_forced_b16/Neuronal_bestofn_S1_forced_b16_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S1_forced_b16/Neuronal_bestofn_S1_forced_b16_seed20260932.json",
+   "bytes": 1614,
+   "sha256": "6dcc3da26467ae1a1e5dead0d1ac29800dd87be1b3e1be8cfd8735cdaea707b6"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S1_forced_b16/Neuronal_bestofn_S1_forced_b16_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S1_forced_b16/Neuronal_bestofn_S1_forced_b16_seed20260933.json",
+   "bytes": 1663,
+   "sha256": "bd3b6f945fd119662656ce698152bc1f285f243c906b71d6fa465898a6d3f22f"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S1_forced_b2/Neuronal_bestofn_S1_forced_b2_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S1_forced_b2/Neuronal_bestofn_S1_forced_b2_seed20260931.json",
+   "bytes": 1776,
+   "sha256": "d3425dbad5880cde2961ca16bb92de7e47dbeb78e6deb2145668498848ecc51e"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S1_forced_b2/Neuronal_bestofn_S1_forced_b2_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S1_forced_b2/Neuronal_bestofn_S1_forced_b2_seed20260932.json",
+   "bytes": 1803,
+   "sha256": "fb9e601662d9f6062d92e97f73e7048c60e1ae74513b95b225a425600f36ca72"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S1_forced_b2/Neuronal_bestofn_S1_forced_b2_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S1_forced_b2/Neuronal_bestofn_S1_forced_b2_seed20260933.json",
+   "bytes": 1733,
+   "sha256": "bc83b6efe17a4c4f1ca37348ddbc707a786eeaee657254b498f1f61a53a3adf2"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S1_forced_b4/Neuronal_bestofn_S1_forced_b4_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S1_forced_b4/Neuronal_bestofn_S1_forced_b4_seed20260931.json",
+   "bytes": 1794,
+   "sha256": "03db34c7b53a2dc6731d5ef21cad4e1fd87d564f74478758928d62ecb50f3a02"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S1_forced_b4/Neuronal_bestofn_S1_forced_b4_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S1_forced_b4/Neuronal_bestofn_S1_forced_b4_seed20260932.json",
+   "bytes": 1763,
+   "sha256": "f1fb86bdfa76db1cbcfb894ef40d197e996a3434fbad2285a691db23dafd9648"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S1_forced_b4/Neuronal_bestofn_S1_forced_b4_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S1_forced_b4/Neuronal_bestofn_S1_forced_b4_seed20260933.json",
+   "bytes": 1720,
+   "sha256": "40dc090562bf7370de6f21a2fb852a2ca31116b0fcf782c921b8ab45c8196011"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S1_forced_b8/Neuronal_bestofn_S1_forced_b8_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S1_forced_b8/Neuronal_bestofn_S1_forced_b8_seed20260931.json",
+   "bytes": 1775,
+   "sha256": "35791aeefe5cb0480cd09193dd98c56a5524066f2407636ed7ac2a886fd5aadd"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S1_forced_b8/Neuronal_bestofn_S1_forced_b8_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S1_forced_b8/Neuronal_bestofn_S1_forced_b8_seed20260932.json",
+   "bytes": 1707,
+   "sha256": "004e0e6161cfd43c3bde9c801c40f1284fb38ce2e80678b2dd0e75f796e30b1f"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S1_forced_b8/Neuronal_bestofn_S1_forced_b8_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S1_forced_b8/Neuronal_bestofn_S1_forced_b8_seed20260933.json",
+   "bytes": 1672,
+   "sha256": "cffe2a61ed5119911f98f1edec67b0a1da2fca2fb90d2579cb520cb110311e86"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S2_forced_b1/Neuronal_bestofn_S2_forced_b1_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S2_forced_b1/Neuronal_bestofn_S2_forced_b1_seed20260931.json",
+   "bytes": 1793,
+   "sha256": "216af1b1298cdce9dca6f6e9bed5e6d5ad0488e1f63fa892211b47d33bad37b9"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S2_forced_b1/Neuronal_bestofn_S2_forced_b1_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S2_forced_b1/Neuronal_bestofn_S2_forced_b1_seed20260932.json",
+   "bytes": 1782,
+   "sha256": "5c481e4dc04564a6fd0b775ff00f84b2f13ac7b959aaa8895458b973e87d33b7"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S2_forced_b1/Neuronal_bestofn_S2_forced_b1_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S2_forced_b1/Neuronal_bestofn_S2_forced_b1_seed20260933.json",
+   "bytes": 1734,
+   "sha256": "956537c8fa3fd23c0ed1255bbcb311bd0e8c809413ca5e25bcd1054052fc4d8a"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S2_forced_b16/Neuronal_bestofn_S2_forced_b16_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S2_forced_b16/Neuronal_bestofn_S2_forced_b16_seed20260931.json",
+   "bytes": 1741,
+   "sha256": "3ddedb2d65c5799b281eed123463baa5e7f736b09f99b4a019ee66e5777d01a2"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S2_forced_b16/Neuronal_bestofn_S2_forced_b16_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S2_forced_b16/Neuronal_bestofn_S2_forced_b16_seed20260932.json",
+   "bytes": 1622,
+   "sha256": "471633d3aa6cbfaf7e4ef70a4d54bb9fcbc6fdb8b284d7967b09eeb22fbc937c"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S2_forced_b16/Neuronal_bestofn_S2_forced_b16_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S2_forced_b16/Neuronal_bestofn_S2_forced_b16_seed20260933.json",
+   "bytes": 1667,
+   "sha256": "d77086d5bc0cfe5c7f69892ddae53054c72500e26c690c568c8fbb5afe642bc9"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S2_forced_b2/Neuronal_bestofn_S2_forced_b2_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S2_forced_b2/Neuronal_bestofn_S2_forced_b2_seed20260931.json",
+   "bytes": 1796,
+   "sha256": "85bc923bae4af002f906f3ce3e8ac2f740189b1107387cad150c8450b55c2ca2"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S2_forced_b2/Neuronal_bestofn_S2_forced_b2_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S2_forced_b2/Neuronal_bestofn_S2_forced_b2_seed20260932.json",
+   "bytes": 1837,
+   "sha256": "ed50ab79b15ef785b6321d1456d754cccbe8404707b2c73b1194aa481085709b"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S2_forced_b2/Neuronal_bestofn_S2_forced_b2_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S2_forced_b2/Neuronal_bestofn_S2_forced_b2_seed20260933.json",
+   "bytes": 1726,
+   "sha256": "db63cd12dd22e2a3b00998f3c07dd2f828b3fe7c0fcc5ebe6b5566db316f9ab1"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S2_forced_b4/Neuronal_bestofn_S2_forced_b4_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S2_forced_b4/Neuronal_bestofn_S2_forced_b4_seed20260931.json",
+   "bytes": 1810,
+   "sha256": "2d07e37a4f78461ddd94861829246b391c48c4bc445acf70e3897895162f2bc4"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S2_forced_b4/Neuronal_bestofn_S2_forced_b4_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S2_forced_b4/Neuronal_bestofn_S2_forced_b4_seed20260932.json",
+   "bytes": 1843,
+   "sha256": "90159edba59919c108e89f1434173c8cbb310aa60b09df2a744f67ecd39f2995"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S2_forced_b4/Neuronal_bestofn_S2_forced_b4_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S2_forced_b4/Neuronal_bestofn_S2_forced_b4_seed20260933.json",
+   "bytes": 1699,
+   "sha256": "74d45811fd00b417e096362ada0f5b58c4c107b4c1f9b1e972eaf4b6302380f2"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S2_forced_b8/Neuronal_bestofn_S2_forced_b8_seed20260931.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S2_forced_b8/Neuronal_bestofn_S2_forced_b8_seed20260931.json",
+   "bytes": 1786,
+   "sha256": "ccf06db958376e5d979ee04b30479742247901adcfcc747f098f888f251a99ff"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S2_forced_b8/Neuronal_bestofn_S2_forced_b8_seed20260932.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S2_forced_b8/Neuronal_bestofn_S2_forced_b8_seed20260932.json",
+   "bytes": 1801,
+   "sha256": "5b3817f65b7d1cf1d309e263a0aa3f3b13b57ff70e3c456fb7773883076c170d"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_bestofn_S2_forced_b8/Neuronal_bestofn_S2_forced_b8_seed20260933.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_bestofn_S2_forced_b8/Neuronal_bestofn_S2_forced_b8_seed20260933.json",
+   "bytes": 1742,
+   "sha256": "4be578f2415c079a48afaa7ae5c0869a8985ff9483274b993d860ca40b832874"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_vgr_clean_g1p0/Neuronal_vgr_clean_g1p0_M2500_N2500_J16_K32_seed20260987.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_vgr_clean_g1p0/Neuronal_vgr_clean_g1p0_M2500_N2500_J16_K32_seed20260987.json",
+   "bytes": 1722,
+   "sha256": "46c18a9ff380b9d0b6b57e8f124c8ea1f4a863b62f08b9b896b1ace674e5679a"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_vgr_clean_g1p0/Neuronal_vgr_clean_g1p0_M2500_N2500_J16_K32_seed20260988.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_vgr_clean_g1p0/Neuronal_vgr_clean_g1p0_M2500_N2500_J16_K32_seed20260988.json",
+   "bytes": 1757,
+   "sha256": "923d1b0a5b229534fd9845cb2811dee8656800ff3f40e07644a8d6579097f620"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_vgr_clean_g1p0/Neuronal_vgr_clean_g1p0_M2500_N2500_J16_K32_seed20260989.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_vgr_clean_g1p0/Neuronal_vgr_clean_g1p0_M2500_N2500_J16_K32_seed20260989.json",
+   "bytes": 1846,
+   "sha256": "650482fca917d5768481d625478ca2677a34e67e648b0d901bcb670704422e38"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_vgr_clean_g2p0/Neuronal_vgr_clean_g2p0_M2500_N2500_J16_K32_seed20260987.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_vgr_clean_g2p0/Neuronal_vgr_clean_g2p0_M2500_N2500_J16_K32_seed20260987.json",
+   "bytes": 1685,
+   "sha256": "b0c202dd12742440a9c1c2f575d853ec9f89fbd396acbfca8961348b00dd36af"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_vgr_clean_g2p0/Neuronal_vgr_clean_g2p0_M2500_N2500_J16_K32_seed20260988.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_vgr_clean_g2p0/Neuronal_vgr_clean_g2p0_M2500_N2500_J16_K32_seed20260988.json",
+   "bytes": 1803,
+   "sha256": "497614fda97e363ecc6ea786534cd23bd97dab5868626812b90dbd8d7a1122a1"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_vgr_clean_g2p0/Neuronal_vgr_clean_g2p0_M2500_N2500_J16_K32_seed20260989.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_vgr_clean_g2p0/Neuronal_vgr_clean_g2p0_M2500_N2500_J16_K32_seed20260989.json",
+   "bytes": 1771,
+   "sha256": "7c9b83d6a7ab45bd3cac60726f1b959759afeb55c343da8c2665eddae5f423cd"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_vgr_clean_g4p0/Neuronal_vgr_clean_g4p0_M2500_N2500_J16_K32_seed20260987.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_vgr_clean_g4p0/Neuronal_vgr_clean_g4p0_M2500_N2500_J16_K32_seed20260987.json",
+   "bytes": 1707,
+   "sha256": "d6f9bfc21e8ceb229a0a9cf9b80e675023e3bf22c18a14ac95e0688e8b099efd"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_vgr_clean_g4p0/Neuronal_vgr_clean_g4p0_M2500_N2500_J16_K32_seed20260988.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_vgr_clean_g4p0/Neuronal_vgr_clean_g4p0_M2500_N2500_J16_K32_seed20260988.json",
+   "bytes": 1831,
+   "sha256": "8c92d52a28d2c72c2ebdbd87dcc3f1cb0e046a3a1ea36ff6577475a66093cd7e"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_vgr_clean_g4p0/Neuronal_vgr_clean_g4p0_M2500_N2500_J16_K32_seed20260989.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_vgr_clean_g4p0/Neuronal_vgr_clean_g4p0_M2500_N2500_J16_K32_seed20260989.json",
+   "bytes": 1796,
+   "sha256": "17642aabee5bd82edc4ef5e7d5e5556738f2e727e105cfeb3db6c021b027351e"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_vgr_noised_g1p0/Neuronal_vgr_noised_g1p0_M2500_N2500_J16_K32_seed20260987.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_vgr_noised_g1p0/Neuronal_vgr_noised_g1p0_M2500_N2500_J16_K32_seed20260987.json",
+   "bytes": 1673,
+   "sha256": "42a4060150af396fbeab937aa619a3bef0318f082a7e5b97c09062e5043d95a2"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_vgr_noised_g1p0/Neuronal_vgr_noised_g1p0_M2500_N2500_J16_K32_seed20260988.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_vgr_noised_g1p0/Neuronal_vgr_noised_g1p0_M2500_N2500_J16_K32_seed20260988.json",
+   "bytes": 1744,
+   "sha256": "332e3211f2fb1a9335dfb6bdbbae40242a7ec595cd63fa7e8c19c30ad875b88a"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_vgr_noised_g1p0/Neuronal_vgr_noised_g1p0_M2500_N2500_J16_K32_seed20260989.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_vgr_noised_g1p0/Neuronal_vgr_noised_g1p0_M2500_N2500_J16_K32_seed20260989.json",
+   "bytes": 1767,
+   "sha256": "fdec6783bba10ccc337e01d1b96dac85153bc588578b806037aad1114842e106"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_vgr_noised_g2p0/Neuronal_vgr_noised_g2p0_M2500_N2500_J16_K32_seed20260987.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_vgr_noised_g2p0/Neuronal_vgr_noised_g2p0_M2500_N2500_J16_K32_seed20260987.json",
+   "bytes": 1454,
+   "sha256": "50cca3771a33bf7aa5e1c8e4870194dab7049ed954db2a2bc5ac97000e09ab99"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_vgr_noised_g2p0/Neuronal_vgr_noised_g2p0_M2500_N2500_J16_K32_seed20260988.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_vgr_noised_g2p0/Neuronal_vgr_noised_g2p0_M2500_N2500_J16_K32_seed20260988.json",
+   "bytes": 1523,
+   "sha256": "a7db96ffba3399504eace2afd09935ea903c3e0870eb2f95a12b2e4053f673d2"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_vgr_noised_g2p0/Neuronal_vgr_noised_g2p0_M2500_N2500_J16_K32_seed20260989.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_vgr_noised_g2p0/Neuronal_vgr_noised_g2p0_M2500_N2500_J16_K32_seed20260989.json",
+   "bytes": 1481,
+   "sha256": "e047862a0c7427bd8a68282460a3b3bd677ace817af29915152a22d64a33ccfa"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_vgr_noised_g4p0/Neuronal_vgr_noised_g4p0_M2500_N2500_J16_K32_seed20260987.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_vgr_noised_g4p0/Neuronal_vgr_noised_g4p0_M2500_N2500_J16_K32_seed20260987.json",
+   "bytes": 1206,
+   "sha256": "4b546ba76e56ca680e15947d877bc97b280c07e72faa08f1de42abcc72810a78"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_vgr_noised_g4p0/Neuronal_vgr_noised_g4p0_M2500_N2500_J16_K32_seed20260988.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_vgr_noised_g4p0/Neuronal_vgr_noised_g4p0_M2500_N2500_J16_K32_seed20260988.json",
+   "bytes": 1167,
+   "sha256": "218fde8a1f4e5ba3f1317f1b6f64bceb6d7f63e399067d73d04f79059c34d4db"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/final results/table10_sampler_axis/Neuronal_vgr_noised_g4p0/Neuronal_vgr_noised_g4p0_M2500_N2500_J16_K32_seed20260989.json",
+   "dst": "results/by_table/table10_sampler_axis/Neuronal_vgr_noised_g4p0/Neuronal_vgr_noised_g4p0_M2500_N2500_J16_K32_seed20260989.json",
+   "bytes": 1094,
+   "sha256": "13394be28df287cfef78b583a2cad3b0cc16bb25dfc0fef7c8193dd8d737b90e"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/seeds/Ours/train20260625__samp20260989.json",
+   "dst": "results/table02_seeds/Ours/train20260625__samp20260989.json",
+   "bytes": 754,
+   "sha256": "d8d6fc679ea9d552756c042f30ee6a4d2241998b78d53364686e4af359605d64"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/seeds/Ours/train20260627__samp20260987.json",
+   "dst": "results/table02_seeds/Ours/train20260627__samp20260987.json",
+   "bytes": 750,
+   "sha256": "6ded290112616eac57a7affb330093f0bb2eab681a7fb57f205427edb6e5571b"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/seeds/Ours/train20260630__samp20260989.json",
+   "dst": "results/table02_seeds/Ours/train20260630__samp20260989.json",
+   "bytes": 745,
+   "sha256": "34e0424811a0f24975717714a70906e74a16ae1e4e0117f10d3f8a15461b7084"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/seeds/MDLM/train20260625__samp20260933.json",
+   "dst": "results/table02_seeds/MDLM/train20260625__samp20260933.json",
+   "bytes": 750,
+   "sha256": "94ef7b3dbd1549d51d4b387449acd7a8eee8652def164782c2ee924088f708dd"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/seeds/MDLM/train20260934__samp20260932.json",
+   "dst": "results/table02_seeds/MDLM/train20260934__samp20260932.json",
+   "bytes": 750,
+   "sha256": "aaa53f66899c8e847b2f49bed74dc06fc5f5c4e35c6270fb2c66709a2c40c0e5"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/seeds/MDLM/train20260935__samp20260932.json",
+   "dst": "results/table02_seeds/MDLM/train20260935__samp20260932.json",
+   "bytes": 778,
+   "sha256": "d9421a9fa93c9b2115d78ee2d911c899792c9e86b465cd0840b9060f57a29bc5"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/seeds/CFGen/run1__samp20260932.json",
+   "dst": "results/table02_seeds/CFGen/run1__samp20260932.json",
+   "bytes": 738,
+   "sha256": "068c23ef4d89a04fed68c54af4855fee02be63693ec25a851aa3ba5eed1375f1"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/seeds/CFGen/run2__samp20260932.json",
+   "dst": "results/table02_seeds/CFGen/run2__samp20260932.json",
+   "bytes": 773,
+   "sha256": "fe9ef253e5f42597ef22b5c72abc1d0fed4adc85fddf2844293c6aacd5750a73"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/seeds/CFGen/run3__samp20260933.json",
+   "dst": "results/table02_seeds/CFGen/run3__samp20260933.json",
+   "bytes": 745,
+   "sha256": "4e6428b95738f671506d15632ee8c3b6fec9d043a5f5f64fc387a4b0bdac85ca"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/seeds/scANVI/train20261060__samp20261065.json",
+   "dst": "results/table02_seeds/scANVI/train20261060__samp20261065.json",
+   "bytes": 762,
+   "sha256": "d3e004a4f2e26078fdf02f74688b3ea47e795a77aff90f5df438a90cee7b0a59"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/seeds/scANVI/train20261063__samp20261061.json",
+   "dst": "results/table02_seeds/scANVI/train20261063__samp20261061.json",
+   "bytes": 791,
+   "sha256": "7b512927b3275f04818af25c8b27284c1713666e3340d332a47759be36142ab5"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/seeds/scANVI/train20261064__samp20261061.json",
+   "dst": "results/table02_seeds/scANVI/train20261064__samp20261061.json",
+   "bytes": 760,
+   "sha256": "17130305fe83b703e554160e133f98887496fe5eb43e9f7099dd9b3bc5c443bb"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/seeds/scVI/train20261050__samp20261051.json",
+   "dst": "results/table02_seeds/scVI/train20261050__samp20261051.json",
+   "bytes": 757,
+   "sha256": "102056c90a677d8c106a3bf79453b6f38823a77d70b55a5b8ce89906378fbbd7"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/seeds/scVI/train20261053__samp20261055.json",
+   "dst": "results/table02_seeds/scVI/train20261053__samp20261055.json",
+   "bytes": 781,
+   "sha256": "f6eee2bc2a344935832355fb8052ce74279874de079ce05df35adfebd9976bfb"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/seeds/scVI/train20261054__samp20261055.json",
+   "dst": "results/table02_seeds/scVI/train20261054__samp20261055.json",
+   "bytes": 757,
+   "sha256": "8f53b2db2c1bcd952f5dd95a6e39332cdb32e6236f2d6a79d774b34876c8c67a"
+  },
+  {
+   "src": "CRNDIFF/Experiments/paper/Figs/code/figdata.npz",
+   "dst": "results/toy/figdata.npz",
+   "bytes": 653041,
+   "sha256": "89952d0f7da4b6e493ea54d3ac93dc831f275f40a018547907d6f72ed05bdd91"
+  },
+  {
+   "src": "CRNDIFF/Experiments/paper/Figs/code/figmeta.json",
+   "dst": "results/toy/figmeta.json",
+   "bytes": 785,
+   "sha256": "e5e582d91930f974e8a55e340897d8ce339159e2c36ec39f22ba7599b2c9f8ae"
+  },
+  {
+   "src": "CRNDIFF/Experiments/paper/Figs/code/table_toy_main.json",
+   "dst": "results/toy/table_toy_main.json",
+   "bytes": 2378,
+   "sha256": "c723457023b36289e5b314c5562917bc09aa777883bd76048e67f398d5eec24a"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/out/_193_frozen/runs_ladder/tilt_only/ladder_diag_rare_tiltonly_tilt_M10000_N1000_net2d_v1_seed20260817_seed20260901.json",
+   "dst": "results/toy/runs/tilt_only/ladder_diag_rare_tiltonly_tilt_M10000_N1000_net2d_v1_seed20260817_seed20260901.json",
+   "bytes": 4037,
+   "sha256": "a626e04e253d95f628ed6e433c38ebf0bca31574068d12acc5c692f16f0eab7a"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/out/_193_frozen/runs_ladder/tilt_only/ladder_diag_rare_tiltonly_tilt_M10000_N1000_net2d_v1_seed20260817_seed20260901.npz",
+   "dst": "results/toy/runs/tilt_only/ladder_diag_rare_tiltonly_tilt_M10000_N1000_net2d_v1_seed20260817_seed20260901.npz",
+   "bytes": 827435,
+   "sha256": "7c314a063cd5487bf7e67b42103cf6a64186efe581e7f97b12e7a855bc4bc54b"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/out/_193_frozen/runs_ladder/tilt_only/ladder_diag_rare_tiltonly_tilt_M10000_N1000_net2d_v1_seed20260817_seed20260903.json",
+   "dst": "results/toy/runs/tilt_only/ladder_diag_rare_tiltonly_tilt_M10000_N1000_net2d_v1_seed20260817_seed20260903.json",
+   "bytes": 4035,
+   "sha256": "7ce60f6308c1d1c33475fe0593926f8cc8bc8dbd9df6f54e4175fce94eeba91b"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/out/_193_frozen/runs_ladder/tilt_only/ladder_diag_rare_tiltonly_tilt_M10000_N1000_net2d_v1_seed20260817_seed20260903.npz",
+   "dst": "results/toy/runs/tilt_only/ladder_diag_rare_tiltonly_tilt_M10000_N1000_net2d_v1_seed20260817_seed20260903.npz",
+   "bytes": 827324,
+   "sha256": "721591e424c7c0f83e9223cc188595ebfdfb2c4d89d609b523d9e7660202722d"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/out/_193_frozen/runs_ladder/tilt_only/ladder_diag_rare_tiltonly_tilt_M10000_N1000_net2d_v1_seed20260817_seed20260905.json",
+   "dst": "results/toy/runs/tilt_only/ladder_diag_rare_tiltonly_tilt_M10000_N1000_net2d_v1_seed20260817_seed20260905.json",
+   "bytes": 4035,
+   "sha256": "becd2bf88bf5cbaa0d24cd8b1b57475f8344c7b26614f9f40cfb5bc696a29225"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/out/_193_frozen/runs_ladder/tilt_only/ladder_diag_rare_tiltonly_tilt_M10000_N1000_net2d_v1_seed20260817_seed20260905.npz",
+   "dst": "results/toy/runs/tilt_only/ladder_diag_rare_tiltonly_tilt_M10000_N1000_net2d_v1_seed20260817_seed20260905.npz",
+   "bytes": 827568,
+   "sha256": "8c77c3cd92b5f5190bc10103bd54bb6a4fcc3e34e0be78f2054401926809b2a2"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/out/_193_frozen/runs_ladder/tilt_off_interval8/ladder_diag_rare_notilt_J16_a1p0_th0p5_int8_M10000_N1000_untilted_odds_net2d_v1_seed20260817_seed20260901.json",
+   "dst": "results/toy/runs/tilt_off_interval8/ladder_diag_rare_notilt_J16_a1p0_th0p5_int8_M10000_N1000_untilted_odds_net2d_v1_seed20260817_seed20260901.json",
+   "bytes": 9310,
+   "sha256": "7917f1e4b70852e1f74d64f12d8a0c389f17d1d443b4945e6e12522023d9013a"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/out/_193_frozen/runs_ladder/tilt_off_interval8/ladder_diag_rare_notilt_J16_a1p0_th0p5_int8_M10000_N1000_untilted_odds_net2d_v1_seed20260817_seed20260901.npz",
+   "dst": "results/toy/runs/tilt_off_interval8/ladder_diag_rare_notilt_J16_a1p0_th0p5_int8_M10000_N1000_untilted_odds_net2d_v1_seed20260817_seed20260901.npz",
+   "bytes": 3314567,
+   "sha256": "2ccc1249bea6715ebb881ce551ee84881f546aec537b889438f511f6a47d5f63"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/out/_193_frozen/runs_ladder/tilt_off_interval8/ladder_diag_rare_notilt_J16_a1p0_th0p5_int8_M10000_N1000_untilted_odds_net2d_v1_seed20260817_seed20260902.json",
+   "dst": "results/toy/runs/tilt_off_interval8/ladder_diag_rare_notilt_J16_a1p0_th0p5_int8_M10000_N1000_untilted_odds_net2d_v1_seed20260817_seed20260902.json",
+   "bytes": 9311,
+   "sha256": "fcb9f574e871e1a3f6cab507418d989f1ca2248ccdae0fa7bbc3f69ff68f6a5b"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/out/_193_frozen/runs_ladder/tilt_off_interval8/ladder_diag_rare_notilt_J16_a1p0_th0p5_int8_M10000_N1000_untilted_odds_net2d_v1_seed20260817_seed20260902.npz",
+   "dst": "results/toy/runs/tilt_off_interval8/ladder_diag_rare_notilt_J16_a1p0_th0p5_int8_M10000_N1000_untilted_odds_net2d_v1_seed20260817_seed20260902.npz",
+   "bytes": 3311455,
+   "sha256": "9758708813b255f482e6d2e49e5c71773e7f124660cc7137d8dfa828a7b379c8"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/out/_193_frozen/runs_ladder/tilt_off_interval8/ladder_diag_rare_notilt_J16_a1p0_th0p5_int8_M10000_N1000_untilted_odds_net2d_v1_seed20260817_seed20260905.json",
+   "dst": "results/toy/runs/tilt_off_interval8/ladder_diag_rare_notilt_J16_a1p0_th0p5_int8_M10000_N1000_untilted_odds_net2d_v1_seed20260817_seed20260905.json",
+   "bytes": 9305,
+   "sha256": "53c30f13917c70f09dcf12ff9e488f73e8577f6db78316dbef01c586dcdaac2f"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/out/_193_frozen/runs_ladder/tilt_off_interval8/ladder_diag_rare_notilt_J16_a1p0_th0p5_int8_M10000_N1000_untilted_odds_net2d_v1_seed20260817_seed20260905.npz",
+   "dst": "results/toy/runs/tilt_off_interval8/ladder_diag_rare_notilt_J16_a1p0_th0p5_int8_M10000_N1000_untilted_odds_net2d_v1_seed20260817_seed20260905.npz",
+   "bytes": 3325523,
+   "sha256": "ace7eab2340712a53a8a2eaf98118d96b262c626831f05a85d8ea68bfebe77b3"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/out/_193_frozen/runs_ladder/tilt_on_interval8/ladder_diag_rare_tilt_J16_a1p0_th0p5_int8_M10000_N1000_odds_net2d_v1_seed20260817_seed20260901.json",
+   "dst": "results/toy/runs/tilt_on_interval8/ladder_diag_rare_tilt_J16_a1p0_th0p5_int8_M10000_N1000_odds_net2d_v1_seed20260817_seed20260901.json",
+   "bytes": 9265,
+   "sha256": "102f8786bd7a4bc9da25d5c6f1cf36206ec5f657ee4b10e08efcef86166e8a08"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/out/_193_frozen/runs_ladder/tilt_on_interval8/ladder_diag_rare_tilt_J16_a1p0_th0p5_int8_M10000_N1000_odds_net2d_v1_seed20260817_seed20260901.npz",
+   "dst": "results/toy/runs/tilt_on_interval8/ladder_diag_rare_tilt_J16_a1p0_th0p5_int8_M10000_N1000_odds_net2d_v1_seed20260817_seed20260901.npz",
+   "bytes": 3706005,
+   "sha256": "a659bc5a7f4f7c1bc7cbfa623413b170802495ff91717b9473b141156eb94008"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/out/_193_frozen/runs_ladder/tilt_on_interval8/ladder_diag_rare_tilt_J16_a1p0_th0p5_int8_M10000_N1000_odds_net2d_v1_seed20260817_seed20260902.json",
+   "dst": "results/toy/runs/tilt_on_interval8/ladder_diag_rare_tilt_J16_a1p0_th0p5_int8_M10000_N1000_odds_net2d_v1_seed20260817_seed20260902.json",
+   "bytes": 9273,
+   "sha256": "6c9852390cff79247a516a8f56f2623b3013f3c2494bb978960887a1a31f935b"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/out/_193_frozen/runs_ladder/tilt_on_interval8/ladder_diag_rare_tilt_J16_a1p0_th0p5_int8_M10000_N1000_odds_net2d_v1_seed20260817_seed20260902.npz",
+   "dst": "results/toy/runs/tilt_on_interval8/ladder_diag_rare_tilt_J16_a1p0_th0p5_int8_M10000_N1000_odds_net2d_v1_seed20260817_seed20260902.npz",
+   "bytes": 3706512,
+   "sha256": "2eacb4550458950bc94c3340d9498cc904ad7d7b83de875bde8552f8866e25f2"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/out/_193_frozen/runs_ladder/tilt_on_interval8/ladder_diag_rare_tilt_J16_a1p0_th0p5_int8_M10000_N1000_odds_net2d_v1_seed20260817_seed20260903.json",
+   "dst": "results/toy/runs/tilt_on_interval8/ladder_diag_rare_tilt_J16_a1p0_th0p5_int8_M10000_N1000_odds_net2d_v1_seed20260817_seed20260903.json",
+   "bytes": 9266,
+   "sha256": "f028f4f48397e6c31b70196052282ee029c302d79b193d441bf16028368c75f4"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/out/_193_frozen/runs_ladder/tilt_on_interval8/ladder_diag_rare_tilt_J16_a1p0_th0p5_int8_M10000_N1000_odds_net2d_v1_seed20260817_seed20260903.npz",
+   "dst": "results/toy/runs/tilt_on_interval8/ladder_diag_rare_tilt_J16_a1p0_th0p5_int8_M10000_N1000_odds_net2d_v1_seed20260817_seed20260903.npz",
+   "bytes": 3705608,
+   "sha256": "a5f4438b3ca07459d288f54e9de097234d9c4c05ecae23ed4010e96522695c29"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/out/_193_frozen/runs_ladder/tilt_on_interval8/ladder_diag_rare_tilt_J16_a1p0_th0p5_int8_M10000_N1000_odds_net2d_v1_seed20260817_seed20260904.json",
+   "dst": "results/toy/runs/tilt_on_interval8/ladder_diag_rare_tilt_J16_a1p0_th0p5_int8_M10000_N1000_odds_net2d_v1_seed20260817_seed20260904.json",
+   "bytes": 9276,
+   "sha256": "f901c1f415caf6026a412aa1974423569585b001a78b19a606ba57b4ac3d594c"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/out/_193_frozen/runs_ladder/tilt_on_interval8/ladder_diag_rare_tilt_J16_a1p0_th0p5_int8_M10000_N1000_odds_net2d_v1_seed20260817_seed20260904.npz",
+   "dst": "results/toy/runs/tilt_on_interval8/ladder_diag_rare_tilt_J16_a1p0_th0p5_int8_M10000_N1000_odds_net2d_v1_seed20260817_seed20260904.npz",
+   "bytes": 3706101,
+   "sha256": "fa17e5081b0e58f24ef87e6224482934f496e1c3d98ef9bcd79d1e5de7351a3e"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/out/summary/report_193.json",
+   "dst": "results/toy/report_193.json",
+   "bytes": 26965,
+   "sha256": "bcbdfd1fc42aebe8d701f236f94fe5d534ce1049330282327aa1232326f5dd65"
+  },
+  {
+   "src": "CRNDIFF/Experiments/paper/Figs/toy_delivered_2panel_v2-1.pdf",
+   "dst": "results/figures/as_published/figure_01_toy_delivered.pdf",
+   "bytes": 121152,
+   "sha256": "dc4a87c72dca344f11a210728d8fd4ab1b739eb620c260e7cd250e33d3de6a3d"
+  },
+  {
+   "src": "CRNDIFF/Experiments/paper/Figs/t1d_criterion_a.pdf",
+   "dst": "results/figures/as_published/figure_horizon_criterion_a.pdf",
+   "bytes": 19205,
+   "sha256": "635c209649cafb23f0ae020264f78a5a1e9cfb6332fb185fd06e9a8f520bd58e"
+  },
+  {
+   "src": "CRNDIFF/Experiments/paper/Figs/t1d_criterion_b.pdf",
+   "dst": "results/figures/as_published/figure_horizon_criterion_b.pdf",
+   "bytes": 19582,
+   "sha256": "343e9ff010c292d33e4f45f51be3d88843214f0e5c8ba75de8fc50d2b40ba773"
+  },
+  {
+   "src": "CRNDIFF/Experiments/paper/Figs/toy_dataset.pdf",
+   "dst": "results/figures/as_published/figure_toy_dataset.pdf",
+   "bytes": 40541,
+   "sha256": "972b74e7768948cd16a9dadf0a703782a98a0ca43f0920d9e71e9551e986ad3e"
+  },
+  {
+   "src": "CRNDIFF/Experiments/paper/Figs/toy_reverse_strip.pdf",
+   "dst": "results/figures/as_published/figure_toy_reverse_chain.pdf",
+   "bytes": 1020407,
+   "sha256": "a99fd9f8ff5d715e2c56ec5cf72ab9cb6de8b215fe157ca52f46e01fe10f2497"
+  },
+  {
+   "src": "CRNDIFF/Experiments/paper/Figs/toy_resample_dim0-1.pdf",
+   "dst": "results/figures/as_published/figure_toy_resample_marginal.pdf",
+   "bytes": 810264,
+   "sha256": "e842d4e9b103e17f39dec66dd10746dd18560fa2a2e4e07c33cf103ce5f8db04"
+  },
+  {
+   "src": "CRNDIFF/Experiments/paper/Figs/hvg_pca_baselines_all_v3-1.pdf",
+   "dst": "results/figures/as_published/figure_pca_baselines.pdf",
+   "bytes": 954640,
+   "sha256": "1c421fb9b108b40bf41366d40c14e6e6a6603101603919b2e39b0770548e2c7d"
+  },
+  {
+   "src": "CRNDIFF/Experiments/paper/Figs/hvg_umap_panels-1.pdf",
+   "dst": "results/figures/as_published/figure_umap_panels.pdf",
+   "bytes": 899110,
+   "sha256": "de9a086cb4495ba23f1f14a2e21cc962661c8f2fdbcc0b86935f2d79d51c7ed6"
+  },
+  {
+   "src": "CRNDIFF/Experiments/paper/Figs/hvg_ablation_pca_3x3-1.pdf",
+   "dst": "results/figures/as_published/figure_ablation_pca.pdf",
+   "bytes": 1731643,
+   "sha256": "ef3884e951de1800ce4a58ce67742234d3f8ce4bfc1ab4046ba29cef64a03f60"
+  },
+  {
+   "src": "CRNDIFF/Experiments/paper/Figs/ancestry_collapse.pdf",
+   "dst": "results/figures/as_published/figure_ancestry_collapse.pdf",
+   "bytes": 19175,
+   "sha256": "021ae218afbb9b515afe65cb35d95feb9f8bc8505e6563627a27783d03b1308a"
+  },
+  {
+   "src": "CRNDIFF/Experiments/paper/Figs/toy_delivered_2panel_v2.pdf",
+   "dst": "results/figures/from_scripts/figure_01_toy_delivered.pdf",
+   "bytes": 126994,
+   "sha256": "c22d9afa8ab94616767acdc64fc4f0f9e28376440720f677b0bc33d9fc5d6774"
+  },
+  {
+   "src": "CRNDIFF/Experiments/paper/Figs/toy_resample_dim0.pdf",
+   "dst": "results/figures/from_scripts/figure_toy_resample_marginal.pdf",
+   "bytes": 18478,
+   "sha256": "8e7b326ed83d57194e666ed866224f59446635724d607c5bb42103d2b761a4d2"
+  },
+  {
+   "src": "CRNDIFF/Experiments/paper/Figs/hvg_pca_baselines_all_v3.pdf",
+   "dst": "results/figures/from_scripts/figure_pca_baselines.pdf",
+   "bytes": 553805,
+   "sha256": "71433323800617282d62ae297c290061d263ca21fabf9024784035a1be48ac44"
+  },
+  {
+   "src": "CRNDIFF/Experiments/paper/Figs/hvg_umap_panels.pdf",
+   "dst": "results/figures/from_scripts/figure_umap_panels.pdf",
+   "bytes": 107620,
+   "sha256": "1b19941e2eaa23413110df388d4dab2515153f6f7c68fff43ae91ef36949a5cd"
+  },
+  {
+   "src": "CRNDIFF/Experiments/paper/Figs/hvg_ablation_pca_3x3.pdf",
+   "dst": "results/figures/from_scripts/figure_ablation_pca.pdf",
+   "bytes": 570886,
+   "sha256": "f011f558702e84b1610a91d763c0362db08232ab381c5de8d62a1e339e923890"
+  },
+  {
+   "src": "CRNDIFF/Experiments/paper/Figs/ancestry_collapse.json",
+   "dst": "results/figures/ancestry_collapse.json",
+   "bytes": 9651,
+   "sha256": "097321c4ab7952851416d9b02d0bcb67a7c4298aa27382c13b5c35411761513d"
+  },
+  {
+   "src": "CRNDIFF/Experiments/paper/Figs/t1d_criterion.json",
+   "dst": "results/figures/t1d_criterion.json",
+   "bytes": 882,
+   "sha256": "284949d366b6bee452ba380fa02eac833e4ba1eda7f42694adf7eafc3e196b82"
+  },
+  {
+   "src": "CRNDIFF/Experiments/paper/Figs/toy_dataset.json",
+   "dst": "results/figures/toy_dataset.json",
+   "bytes": 2146,
+   "sha256": "382e3a1a85f75d4e79143f2e8a74b4e7e6b8f811ca0ee08d3ca09eed865da556"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/figures/fig_ablation_pca_3x3.json",
+   "dst": "results/figures/fig_ablation_pca_3x3.json",
+   "bytes": 35411,
+   "sha256": "169f2c06b97cac3814dd42bb955222a651bbf3e99b79a47638580ef70cadd4c1"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/figures/fig_pca_baselines_all_v3.json",
+   "dst": "results/figures/fig_pca_baselines_all_v3.json",
+   "bytes": 22904,
+   "sha256": "b25fd3005028ae90799ece75a65fe269e1d7dbb302e0c914008d5b9a769b3c49"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/models/generator/logpi_nmax512_eps0.5.npy",
+   "dst": "assets/generator/logpi_nmax512_eps0.5.npy",
+   "bytes": 8208128,
+   "sha256": "c26447d6c923e81ef8ca3dc3716cb1bd403c844e1d001d69621043a72ecd135d"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/models/generator/pilot_run1c_s20260625.json",
+   "dst": "assets/generator/pilot_run1c_s20260625.json",
+   "bytes": 4915,
+   "sha256": "c51bc1405dad731da3bd709b6dcc26e5cc141a06a79a07dda3bec7f5ed99793f"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/models/generator/pilot_run1c_s20260625.pt",
+   "dst": "assets/generator/pilot_run1c_s20260625.pt",
+   "bytes": 3780498,
+   "sha256": "2b07bf5ee19b342473f8222b75b9be8d791378b325681e39036bce38b052fe77"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/models/clean_reward/Endothelial_clean_logistic.json",
+   "dst": "assets/models/clean_reward/Endothelial_clean_logistic.json",
+   "bytes": 2041,
+   "sha256": "fa74a2fdb86d730dc95128f4ee223b92ccc2f19a6c5118055cf1dea40296df68"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/models/clean_reward/Endothelial_clean_logistic.npz",
+   "dst": "assets/models/clean_reward/Endothelial_clean_logistic.npz",
+   "bytes": 13544,
+   "sha256": "db2879279b741a2ed2e9182d0e506ef6e00fa310bd262e7c10ed150263e8b6e8"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/models/clean_reward/Mesothelial_alpha_grid_blind_diag.json",
+   "dst": "assets/models/clean_reward/Mesothelial_alpha_grid_blind_diag.json",
+   "bytes": 2115,
+   "sha256": "978102918f2459b26b6130f9a3e496389bb4e2c2781e808734add0f059a50063"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/models/clean_reward/Mesothelial_clean_logistic.json",
+   "dst": "assets/models/clean_reward/Mesothelial_clean_logistic.json",
+   "bytes": 2075,
+   "sha256": "529e1cfb387023c86935a93e72562654ee2c4e095f34a5655edc4c8b3ae1e0c7"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/models/clean_reward/Mesothelial_clean_logistic.npz",
+   "dst": "assets/models/clean_reward/Mesothelial_clean_logistic.npz",
+   "bytes": 13954,
+   "sha256": "a3e3c44ed82a04ebf6831b9baf139f630b05e110a8acf964bcdc5191d773311b"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/models/clean_reward/Myeloid_alpha_grid_blind_diag.json",
+   "dst": "assets/models/clean_reward/Myeloid_alpha_grid_blind_diag.json",
+   "bytes": 2013,
+   "sha256": "4e66216f2193f5ea74b4e3812331d3849ae9d25fb291b2e9a9e1deff834ab81d"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/models/clean_reward/Myeloid_clean_logistic.json",
+   "dst": "assets/models/clean_reward/Myeloid_clean_logistic.json",
+   "bytes": 2046,
+   "sha256": "b506567197ce364a5e7d24cfb05b5b5ab9c85f656dcf1eae8a8ced4d45721bc8"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/models/clean_reward/Myeloid_clean_logistic.npz",
+   "dst": "assets/models/clean_reward/Myeloid_clean_logistic.npz",
+   "bytes": 13499,
+   "sha256": "0dcb7b50a34a1e3ae3b1aa1854d95acf09bfb51b90cc00128862d41c01229dec"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/models/clean_reward/Neuronal_alpha_grid_blind_diag.json",
+   "dst": "assets/models/clean_reward/Neuronal_alpha_grid_blind_diag.json",
+   "bytes": 2073,
+   "sha256": "8a027411b46c691ad48bb57ef7b55e284931387295b6cf7b58e6b79edb30d0f6"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/models/clean_reward/Neuronal_clean_logistic.json",
+   "dst": "assets/models/clean_reward/Neuronal_clean_logistic.json",
+   "bytes": 2062,
+   "sha256": "cfd956140f38f39f2f45d26f39560cc04733202dc11d293276e00823b8db6683"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/models/clean_reward/Neuronal_clean_logistic.npz",
+   "dst": "assets/models/clean_reward/Neuronal_clean_logistic.npz",
+   "bytes": 13656,
+   "sha256": "7d387631668a08fbf1788a436eeeed406bfc2da28f8075bea8967188b9dc78a6"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Endothelial_E1.json",
+   "dst": "assets/rulers/celltypist/celltypist_Endothelial_E1.json",
+   "bytes": 14088,
+   "sha256": "36973a8d031fda3c6befef86db3933c2f69d37a9f3201117153a2a757fee23c3"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Endothelial_ceiling_canonical.json",
+   "dst": "assets/rulers/celltypist/celltypist_Endothelial_ceiling_canonical.json",
+   "bytes": 10814,
+   "sha256": "741989e5c90f62daf0c81d55009116255c600213d2bca3e0050720ee0930ec30"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Endothelial_cfd_baseline.json",
+   "dst": "assets/rulers/celltypist/celltypist_Endothelial_cfd_baseline.json",
+   "bytes": 15396,
+   "sha256": "aa164e0a20fb1fa8a66ef574ee898f5383b48a05dd5cc14a3d00b34126600c6f"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Endothelial_cfd_cp10k_control.json",
+   "dst": "assets/rulers/celltypist/celltypist_Endothelial_cfd_cp10k_control.json",
+   "bytes": 12848,
+   "sha256": "383a953f621ab07f592c7a9f94fb064fce40c80271b524c2bea5b762afd464bf"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Endothelial_cfgen.json",
+   "dst": "assets/rulers/celltypist/celltypist_Endothelial_cfgen.json",
+   "bytes": 12931,
+   "sha256": "ff5d1cb7cbe596d86f8b5ae075bc695fafe0a8c35fbd9ad39b18fa5570f213fe"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Endothelial_cfgen_smoke.json",
+   "dst": "assets/rulers/celltypist/celltypist_Endothelial_cfgen_smoke.json",
+   "bytes": 13942,
+   "sha256": "990c3d6b48663436454a7790436a440f6e34afa68a9b4640ec6db046ac83fa73"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Endothelial_scanvi.json",
+   "dst": "assets/rulers/celltypist/celltypist_Endothelial_scanvi.json",
+   "bytes": 12904,
+   "sha256": "5085de1b36f4cdb093411dff7dfd2f56b47960b6cbe11f859bd4146ab7bf7cfc"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Endothelial_scdiffusion.json",
+   "dst": "assets/rulers/celltypist/celltypist_Endothelial_scdiffusion.json",
+   "bytes": 12829,
+   "sha256": "acd694eaffb42f49a90515fe63e92cea0fa1e63f577721b0f8c56c2f1c586805"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Endothelial_scvi.json",
+   "dst": "assets/rulers/celltypist/celltypist_Endothelial_scvi.json",
+   "bytes": 13321,
+   "sha256": "0387157a7b9369a793c9a3d709ea9d92e48cb0dbce352c244ebbc2768cd820cf"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Myeloid_E1.json",
+   "dst": "assets/rulers/celltypist/celltypist_Myeloid_E1.json",
+   "bytes": 13947,
+   "sha256": "1d64174519496b67b354389bfdaab839c0617ab31ca7c6a6fe9cc934fb29275c"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Myeloid_ceiling_canonical.json",
+   "dst": "assets/rulers/celltypist/celltypist_Myeloid_ceiling_canonical.json",
+   "bytes": 10918,
+   "sha256": "fe3c343e992e0ca654cd6486301713249c148e998bc652501cdbecdfc44c5d50"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Myeloid_cfd_baseline.json",
+   "dst": "assets/rulers/celltypist/celltypist_Myeloid_cfd_baseline.json",
+   "bytes": 15899,
+   "sha256": "d1167543b152be1a21dc15502b29e044f510c37b6c524426dffc0a89e093061f"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Myeloid_cfd_cp10k_control.json",
+   "dst": "assets/rulers/celltypist/celltypist_Myeloid_cfd_cp10k_control.json",
+   "bytes": 12977,
+   "sha256": "05eb7899cd11917668a54dff2b5bea0eb0d4e6b47f6e6a5e0178cd0215e8cc6f"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Myeloid_cfgen.json",
+   "dst": "assets/rulers/celltypist/celltypist_Myeloid_cfgen.json",
+   "bytes": 13490,
+   "sha256": "3ce93e1624a2d13ddef8a6311a8c91d66ed2ebf9ea6ea4535bb63fdf4b4281c3"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Myeloid_cfgen_smoke.json",
+   "dst": "assets/rulers/celltypist/celltypist_Myeloid_cfgen_smoke.json",
+   "bytes": 14053,
+   "sha256": "add36831a5a526fb2da9bf170fe95f2d7412dfb886b63b0cd7028072d2e0b05f"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Myeloid_scanvi.json",
+   "dst": "assets/rulers/celltypist/celltypist_Myeloid_scanvi.json",
+   "bytes": 13641,
+   "sha256": "2a7ddfd20b7fc87fc18cce5adfa235a8a7fdc0d92891fa562c57285fefa2900a"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Myeloid_scdiffusion.json",
+   "dst": "assets/rulers/celltypist/celltypist_Myeloid_scdiffusion.json",
+   "bytes": 13202,
+   "sha256": "2f805979ef535c81d3cc3354855aca2e09b10293082f2682b227185edf52adee"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Myeloid_scvi.json",
+   "dst": "assets/rulers/celltypist/celltypist_Myeloid_scvi.json",
+   "bytes": 13647,
+   "sha256": "b28a60cd336a58043fda80eb2104d0a29cb5d9ea126d316cfac7c3aa6f73d849"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Neuronal_E1.json",
+   "dst": "assets/rulers/celltypist/celltypist_Neuronal_E1.json",
+   "bytes": 11244,
+   "sha256": "4097ac2b9fc8de10bcb0e5c96b3dce4392ac2ae53c6980fff4d74f01aecaa67c"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Neuronal_ceiling_canonical.json",
+   "dst": "assets/rulers/celltypist/celltypist_Neuronal_ceiling_canonical.json",
+   "bytes": 10074,
+   "sha256": "0b912d72aa096218821362f03259746750791a799f768b08309fce5a2d7ec22d"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Neuronal_cfd_baseline.json",
+   "dst": "assets/rulers/celltypist/celltypist_Neuronal_cfd_baseline.json",
+   "bytes": 13856,
+   "sha256": "2e9d8374056ac476076279e89e5de197a16018aef3be9c547ec1a1a32c66bb59"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Neuronal_cfd_cp10k_control.json",
+   "dst": "assets/rulers/celltypist/celltypist_Neuronal_cfd_cp10k_control.json",
+   "bytes": 12173,
+   "sha256": "07726e5414a89cacd3334ebdef5eff71c2f11094d6fad944a9975abdb04c8f1d"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Neuronal_cfgen.json",
+   "dst": "assets/rulers/celltypist/celltypist_Neuronal_cfgen.json",
+   "bytes": 12171,
+   "sha256": "7a9a961e9633115f6bae6e2b8e2433a6f1b63fad0357aeb42bdc90d9622f65c2"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Neuronal_cfgen_smoke.json",
+   "dst": "assets/rulers/celltypist/celltypist_Neuronal_cfgen_smoke.json",
+   "bytes": 13242,
+   "sha256": "27106fd67629d4edf58a123ec95b0ea9e683b3ceb6556356dba83766c33d30c6"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Neuronal_scanvi.json",
+   "dst": "assets/rulers/celltypist/celltypist_Neuronal_scanvi.json",
+   "bytes": 12682,
+   "sha256": "fd2c3f6bd3480fc2510f251b213a6683b4ad680fb9cfe8a47b1f1fe222ce0fe7"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Neuronal_scdiffusion.json",
+   "dst": "assets/rulers/celltypist/celltypist_Neuronal_scdiffusion.json",
+   "bytes": 12034,
+   "sha256": "f8e8e9778a3b34be470e1ca338004f89ce3c57d93b7acd34c6e497274e5b2cf3"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_Neuronal_scvi.json",
+   "dst": "assets/rulers/celltypist/celltypist_Neuronal_scvi.json",
+   "bytes": 12515,
+   "sha256": "f21565be7a8741a395347ed94aac92f31e5f6acecde606cbf90f5e45cba0f71d"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/celltypist/celltypist_eval.py",
+   "dst": "assets/rulers/celltypist/celltypist_eval.py",
+   "bytes": 11710,
+   "sha256": "46b18abb7a84a3926287798aedd6bd595d61e960c37f079b6df10004e3519a15"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/tables/master_purity_v7.json",
+   "dst": "assets/rulers/master_purity_v7.json",
+   "bytes": 37480,
+   "sha256": "8ea88aee14297c046d62ff9681380c9389334bd05b5775b342e3241453808796"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/tables/master_purity_v8_lineage.json",
+   "dst": "assets/rulers/master_purity_v8_lineage.json",
+   "bytes": 4017,
+   "sha256": "d370996f9c8830d1faf31c8dfd9f62e7069c94fc24c3f12d77854f2c55c51419"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/tables/universality_labels.json",
+   "dst": "assets/rulers/universality_labels.json",
+   "bytes": 4305,
+   "sha256": "972c6f3e4ce9929a8775ea3be2ec894bc6c114c9a791513b476daf4c8559c018"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/tables/E25_EM_population_ruler.json",
+   "dst": "assets/rulers/E25_EM_population_ruler.json",
+   "bytes": 15338,
+   "sha256": "44061f3f4f6cb51b953d01123a1232764b279f120b2eedbe42473f2d9d31ca89"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/data/data2d_ring8_sym_v2.json",
+   "dst": "assets/toy/data/data2d_ring8_sym_v2.json",
+   "bytes": 8110,
+   "sha256": "3dc703996721e83bef6fd7901d807c1ba71a1cc7c67ad5cd37a0e8560e753ca5"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/data/data2d_ring8_sym_v2.npz",
+   "dst": "assets/toy/data/data2d_ring8_sym_v2.npz",
+   "bytes": 1295261,
+   "sha256": "3079bfa00daa7de994fad8876473f1379b019ed48d3a10661a7987bb4ff5ea6e"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/data/data2d_ring8_sym_v2_pmf.npz",
+   "dst": "assets/toy/data/data2d_ring8_sym_v2_pmf.npz",
+   "bytes": 150868,
+   "sha256": "57a1e39d2425010244309b649bc41f9b0c1d19c0f1f5aa4d1ffa797b24315b37"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/data/make_data2d_ring8_sym.py",
+   "dst": "scripts/make_toy_dataset.py",
+   "bytes": 12807,
+   "sha256": "59d785f25faed785ad004d6e9ee80a1dc28b364b72f13682fe9cd7a9c3d0ede6"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/assets/_193_frozen/models/chain_C64_CF128_K32_5ebad113.npz",
+   "dst": "assets/toy/frozen/models/chain_C64_CF128_K32_5ebad113.npz",
+   "bytes": 12976632,
+   "sha256": "1da33fcf17ec8614e471e12e967437d73beaa644ecb7b69657637cf2a1325c9b"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/assets/_193_frozen/models/discriminators_v1.joblib",
+   "dst": "assets/toy/frozen/models/discriminators_v1.joblib",
+   "bytes": 221287,
+   "sha256": "33eca6c50a5fec16a8ddd677f4f46ba4c8dba77658e8593d51cd55ab1137bf50"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/assets/_193_frozen/models/discriminators_v1_diagnostics.json",
+   "dst": "assets/toy/frozen/models/discriminators_v1_diagnostics.json",
+   "bytes": 1280,
+   "sha256": "726b76c174d270433121ef427e5b1e2381297e527501dfbb75951499fe6116dc"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/assets/_193_frozen/models/net2d_v1_C64_K32_n400000_s16000_H512_ls0.003_oh128_seed20260817.json",
+   "dst": "assets/toy/frozen/models/net2d_v1_C64_K32_n400000_s16000_H512_ls0.003_oh128_seed20260817.json",
+   "bytes": 1590,
+   "sha256": "427b61e34a8f7706001bec1bbd727749914816ea78faf89086b18919ef313d6d"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/assets/_193_frozen/models/net2d_v1_C64_K32_n400000_s16000_H512_ls0.003_oh128_seed20260817.pt",
+   "dst": "assets/toy/frozen/models/net2d_v1_C64_K32_n400000_s16000_H512_ls0.003_oh128_seed20260817.pt",
+   "bytes": 3733365,
+   "sha256": "f61e8a6b3eef028a21f6a0b2a31fe19a9089d4a0027869646e79c16254f8d5ba"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/assets/_193_frozen/models/pool_tabular_diag_rare_M400000_seed777003.npz",
+   "dst": "assets/toy/frozen/models/pool_tabular_diag_rare_M400000_seed777003.npz",
+   "bytes": 402627,
+   "sha256": "8b9a0c9a996de79f94020216d814e7676fbf507b48c7dc8cfa114b81449a35e3"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/assets/_193_frozen/models/pool_tilted_diag_rare_M40000_seed777001.npz",
+   "dst": "assets/toy/frozen/models/pool_tilted_diag_rare_M40000_seed777001.npz",
+   "bytes": 41742,
+   "sha256": "cbe4f0346eafed618b059e6bfc32637b49cfd4cef943db628a1dbf47ce540234"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/assets/_193_frozen/models/pool_untilted_M40000_seed777002.npz",
+   "dst": "assets/toy/frozen/models/pool_untilted_M40000_seed777002.npz",
+   "bytes": 50753,
+   "sha256": "63b8d1b7700d56b8ceafa65e7e97cb2b093a03cb41698c60d310310c62e7102b"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/assets/_193_frozen/models/tilts_v1.json",
+   "dst": "assets/toy/frozen/models/tilts_v1.json",
+   "bytes": 892,
+   "sha256": "022ba270b265edb6a5abae400fe1a0d673bc5f3269e3f881715d4481ce37212e"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/assets/_193_frozen/models/tilts_v1.npz",
+   "dst": "assets/toy/frozen/models/tilts_v1.npz",
+   "bytes": 3237,
+   "sha256": "522748ec6544d166d46b68dd0062ac721a46ad24c5ad9135c340abb78cbbf6e6"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/assets/_193_frozen/references/diag_rare_role0.npz",
+   "dst": "assets/toy/frozen/references/diag_rare_role0.npz",
+   "bytes": 2344,
+   "sha256": "0e40ec251998c8d32fb5da8c0fb95f46fcd494dbf8e5b8af3f1e56a06f1b216f"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/assets/_193_frozen/references/diag_rare_role1.npz",
+   "dst": "assets/toy/frozen/references/diag_rare_role1.npz",
+   "bytes": 2366,
+   "sha256": "3df788e4c3c2d7c0c102e81ad1191312068e38487a1d4782f7ffd22cc5dfb400"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/prereg/PREREG_200.md",
+   "dst": "docs/prereg/PREREG_200.md",
+   "bytes": 7124,
+   "sha256": "da44817a2211858a9224e5270a39532e0b715aaa3049a31ec19bc2e37b23d4e0"
+  },
+  {
+   "src": "CRNDIFF/Conditional generation experiments/HVG2K/universality_fk/code/e33_downstream.py",
+   "dst": "archive/universality_fk/code/e33_downstream.py",
+   "bytes": 10497,
+   "sha256": "dee8e40d722fe0acbd6c922ad21421bde5e9941101a7375346bccae3654a8007"
+  },
+  {
+   "src": "CRNDIFF/Conditional generation experiments/HVG2K/universality_fk/out/e33/E33_downstream.json",
+   "dst": "archive/universality_fk/out/e33/E33_downstream.json",
+   "bytes": 5769,
+   "sha256": "2dc127f33331e2127a88730eb15d4c0a8c87b258b7417c1fa6343a26c7652965"
+  },
+  {
+   "src": "CRNDIFF/Conditional generation experiments/HVG2K/universality_fk/out/e33/E33_prereg.json",
+   "dst": "archive/universality_fk/out/e33/E33_prereg.json",
+   "bytes": 4703,
+   "sha256": "bb254851ad5cca46af4c3b37fad534b8cccbf45cfd3bd374b3fb3d7dcb945eb4"
+  },
+  {
+   "src": "CRNDIFF/Conditional generation experiments/HVG2K/universality_fk/out/e30plus/E30plus_full_metrics.json",
+   "dst": "archive/universality_fk/out/e30plus/E30plus_full_metrics.json",
+   "bytes": 11755018,
+   "sha256": "a6e1f0240e130e6afee8237d77707a9ce8b4e7a7a944b23fbc7ea1e1a9b68bf4"
+  },
+  {
+   "src": "CRNDIFF/Conditional generation experiments/HVG2K/results/diagnostics/E21_scc_mmd.json",
+   "dst": "archive/results/diagnostics/E21_scc_mmd.json",
+   "bytes": 11667,
+   "sha256": "6ee37e75c34da84c92c2dea078ebcddc44ccd4b7153e649a61424e998d208173"
+  },
+  {
+   "src": "CRNDIFF/Conditional generation experiments/HVG2K/cond_w1/out/cond_w1.json",
+   "dst": "archive/cond_w1/out/cond_w1.json",
+   "bytes": 5997,
+   "sha256": "ea4d8da851a99c5d07d0d1342c74b568598f165f2a894b7ab602686cf01c10e1"
+  },
+  {
+   "src": "CRNDIFF/Conditional generation experiments/HVG2K/results/runs/Myeloid_residual_fkv2_fk_tiltevery_trigscheduled_K32_M5000_N2500_alpha2p0_sc1p0_int8_seed20260987.npy",
+   "dst": "archive/results/runs/Myeloid_residual_fkv2_fk_tiltevery_trigscheduled_K32_M5000_N2500_alpha2p0_sc1p0_int8_seed20260987.npy",
+   "bytes": 10000128,
+   "sha256": "caf9c59ad055cd74ffff94311aa82302a41a3fc2ff7a8bb4149967a34ecda5d3"
+  },
+  {
+   "src": "CRNDIFF/Conditional generation experiments/old/scRNA/condition/tables_kz/logc_Myeloid.npy",
+   "dst": "archive/old_scRNA/tables_kz/logc_Myeloid.npy",
+   "bytes": 8208128,
+   "sha256": "6d31278d836c80bc122514f0044239723563774961c312adb31b9364631244dd"
+  },
+  {
+   "src": "CRNDIFF/Conditional generation experiments/HVG2K/results/figure_data/F9_embedding.npz",
+   "dst": "archive/results/figure_data/F9_embedding.npz",
+   "bytes": 5359633,
+   "sha256": "a9db3aca888ef441427cb3655e209b6b1b354be2f2ed5fa949f8cc84ff2bf7a4"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/legacy_root/Processing_data/data/umap_xy_val_real.npy",
+   "dst": "assets/legacy_root/Processing_data/data/umap_xy_val_real.npy",
+   "bytes": 361288,
+   "sha256": "035f4630e81a563a1fac2cb0817d9ab225885121efd9e6e0e9af0c8f4e4da959"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/assets/legacy_root/Processing_data/diagnostics/pca50_val.npz",
+   "dst": "assets/legacy_root/Processing_data/diagnostics/pca50_val.npz",
+   "bytes": 409164,
+   "sha256": "5d605c7e13bd8eb5fd4243139f89e47344d0a9a6ce0cfce3e728929509738c88"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/212_tstr11.json",
+   "dst": "results/summary_json/212_tstr11.json",
+   "bytes": 189323,
+   "sha256": "e40ec4f6a1eda18b02575ff67fdf48324422340ec954c80e08a064dbb0db66f0"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/212_tstr11_reproduction.json",
+   "dst": "results/summary_json/212_tstr11_reproduction.json",
+   "bytes": 77145,
+   "sha256": "a407cf665207a6e0946c32de1cdc44afc0ca78383cbc4094cca0dc7cd29e4493"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/toy2d/io.py",
+   "dst": "toy2d/io.py",
+   "bytes": 3592,
+   "sha256": "79fe7a669da92a05e7ca43e5e2935984222ece3416d988ff096358bc8fc36fb1"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/toy2d/sampler.py",
+   "dst": "toy2d/sampler.py",
+   "bytes": 20784,
+   "sha256": "a68e03ecea7b650b0588ebaf96a6a4e2cc9f650be9e672ab84592a93d9d5c9ba"
+  },
+  {
+   "src": "CRNDIFF/Experiments/toy2d_rare/toy2d/verified/primitives.py",
+   "dst": "toy2d/verified/primitives.py",
+   "bytes": 8674,
+   "sha256": "eee3a895d0789a71eb891cd3bec6bbc173205610ee3da0cdcb21538c7d51e8b4"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/e21_ablation_table10_rollup.json",
+   "dst": "results/summary_json/e21_ablation_table10_rollup.json",
+   "bytes": 8989,
+   "sha256": "45ad1c5499604db23d2f9853a666b203251d876340b7eab8d684fc7afce2104a"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/e21_ablation_table10.json",
+   "dst": "results/summary_json/e21_ablation_table10.json",
+   "bytes": 26010,
+   "sha256": "699b238820fc7c8e55b6dd6d956e238e365a0c463893f24d103c2a0f58109054"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/wallclock.json",
+   "dst": "results/summary_json/wallclock.json",
+   "bytes": 33255,
+   "sha256": "0847eae2a897c6432d9a9ef5fb9283a152279734f26c0da09f1add51f452eb1c"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/w1_paper_ablation_table10.json",
+   "dst": "results/summary_json/w1_paper_ablation_table10.json",
+   "bytes": 22396,
+   "sha256": "e743a435e7740cdde865ed44163f18515b71ffbae351f5b7285babc72f630531"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/200_bestofn_e21_FINAL_scored.json",
+   "dst": "results/summary_json/200_bestofn_e21_FINAL_scored.json",
+   "bytes": 104267,
+   "sha256": "0a1df1f60bf1f993ba0f5260fcbe9bafc595d373d034c72a846824d17c551552"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/200_tableA_sampler.json",
+   "dst": "results/summary_json/200_tableA_sampler.json",
+   "bytes": 513285,
+   "sha256": "63313e51b18ea9dcaf5f56ab381226b3b3a6366fa7bb0abe50d3131e4b52d505"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/200_bestofn_e21_3seed.json",
+   "dst": "results/summary_json/200_bestofn_e21_3seed.json",
+   "bytes": 106359,
+   "sha256": "bdacfcb8943df6cf8df95ab9ea6b6c3b6d3a56d3eba96165f8baed3ec2c4f649"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/200_pool_composition_OURS_seed20260931.json",
+   "dst": "results/summary_json/200_pool_composition_OURS_seed20260931.json",
+   "bytes": 3675,
+   "sha256": "b90321748d7b0c4e29204d5c7b8094327456b13ad872320151acee7f40f4604f"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/200_pool_composition_OURS_seed20260932.json",
+   "dst": "results/summary_json/200_pool_composition_OURS_seed20260932.json",
+   "bytes": 3675,
+   "sha256": "e4f9c6e17310c01a87eedc7da850badfe7b8f3bb424c5daa9823ea3cbde6a0ca"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/200_pool_composition_OURS_seed20260933.json",
+   "dst": "results/summary_json/200_pool_composition_OURS_seed20260933.json",
+   "bytes": 3690,
+   "sha256": "f1f12ea107279383d99a6d66cd36bc63fb7800d0aa5537098a8fb276d8ca3649"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/200_pool_composition_REAL_val_seed20261200.json",
+   "dst": "results/summary_json/200_pool_composition_REAL_val_seed20261200.json",
+   "bytes": 3573,
+   "sha256": "30f2931fa6616e2ef310f15fa1871d276f089eed7cc4e35fe07e09b8ac766d61"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/200_pool_composition_cfgen_seed20260931.json",
+   "dst": "results/summary_json/200_pool_composition_cfgen_seed20260931.json",
+   "bytes": 3640,
+   "sha256": "1f1005205932de7cc2932078bc53a1c7f34e9739249b2a7f24031e3d0a4d9f2c"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/200_pool_composition_cfgen_seed20260932.json",
+   "dst": "results/summary_json/200_pool_composition_cfgen_seed20260932.json",
+   "bytes": 3663,
+   "sha256": "d0719f3f428518d7a21c0f430295826ed8878a020d3305d380d2f6c374624257"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/200_pool_composition_cfgen_seed20260933.json",
+   "dst": "results/summary_json/200_pool_composition_cfgen_seed20260933.json",
+   "bytes": 3680,
+   "sha256": "5131dbe09e20744376eb5f6148d2e71a0180ed6af8355e951dacf8a3f926b9ab"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/200_pool_composition_scanvi_seed20260931.json",
+   "dst": "results/summary_json/200_pool_composition_scanvi_seed20260931.json",
+   "bytes": 3727,
+   "sha256": "0c36733edf94e9b7cf8db28b7d7182357d1735e8d0be52f598c9427a4723345e"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/200_pool_composition_scanvi_seed20260932.json",
+   "dst": "results/summary_json/200_pool_composition_scanvi_seed20260932.json",
+   "bytes": 3698,
+   "sha256": "1bdbea6c210ca79affd2dc66294c16e81847d17128d2744444e56a11d94c170d"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/200_pool_composition_scanvi_seed20260933.json",
+   "dst": "results/summary_json/200_pool_composition_scanvi_seed20260933.json",
+   "bytes": 3727,
+   "sha256": "fd6d6b21faf4bbfe64b4df2eac749cd3f0889b95fed5c44e96f1cd89cbc1b9df"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/200_pool_composition_scvi_seed20260931.json",
+   "dst": "results/summary_json/200_pool_composition_scvi_seed20260931.json",
+   "bytes": 3681,
+   "sha256": "1d8f04a004bc810e2321a6cc0fa95a20bffdac09120606f9c95306df40d7a150"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/200_pool_composition_scvi_seed20260932.json",
+   "dst": "results/summary_json/200_pool_composition_scvi_seed20260932.json",
+   "bytes": 3690,
+   "sha256": "863272c527317fc5e192e68c72b54632304a9985c988d3d63c39894c725bf62f"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/200_pool_composition_scvi_seed20260933.json",
+   "dst": "results/summary_json/200_pool_composition_scvi_seed20260933.json",
+   "bytes": 3686,
+   "sha256": "bee708331a32046076afc14a819eb5abdc97085dfee0c17d9d548949da46d80a"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/203_pool_composition_REAL_val.json",
+   "dst": "results/summary_json/203_pool_composition_REAL_val.json",
+   "bytes": 3573,
+   "sha256": "30f2931fa6616e2ef310f15fa1871d276f089eed7cc4e35fe07e09b8ac766d61"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/202_tableB1_full.json",
+   "dst": "results/summary_json/202_tableB1_full.json",
+   "bytes": 83651,
+   "sha256": "25fa4efa6a63c34b22e16c2006c005b45bd47e11f7a5006d097e20a5a5e8ed54"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/202_pool_composition_mdlm_blackout.json",
+   "dst": "results/summary_json/202_pool_composition_mdlm_blackout.json",
+   "bytes": 23965,
+   "sha256": "e4ec578df209ff265cda44cf697dac8ccab7796a760b9b59377511fdd25c496f"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/200_pool_composition_mdlmT32_seed20260931.json",
+   "dst": "results/summary_json/200_pool_composition_mdlmT32_seed20260931.json",
+   "bytes": 3676,
+   "sha256": "c7f4574584079ffe349c93a25e6c3052a641a8c9c8f910794a3183160b0d7f29"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/200_pool_composition_mdlmT32_seed20260932.json",
+   "dst": "results/summary_json/200_pool_composition_mdlmT32_seed20260932.json",
+   "bytes": 3630,
+   "sha256": "113178e59be30808b2eb5893cd854593d3d4b025f50f92e0789bc18943504c3e"
+  },
+  {
+   "src": "CRNDIFF/Experiments/HVG/out/summary/200_pool_composition_mdlmT32_seed20260933.json",
+   "dst": "results/summary_json/200_pool_composition_mdlmT32_seed20260933.json",
+   "bytes": 3712,
+   "sha256": "c1f0b0d77d41fd818f2b6da13adb1ca9ed92beb3f314790655967842ae796e55"
+  }
+ ],
+ "missing": [],
+ "verified_identical": 166,
+ "mismatches": []
+}

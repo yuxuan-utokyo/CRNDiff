@@ -1,0 +1,3610 @@
+{
+ "ticket": 200,
+ "block": "M1-7 E21 backfill (forced_top_N ladder, 3 seeds)",
+ "prereg": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\queue\\200_M1_7_PREREG.md",
+ "resource_envelope": {
+  "cpu_only": true,
+  "CUDA_VISIBLE_DEVICES": "",
+  "priority": "psutil IDLE_PRIORITY_CLASS (was 64)",
+  "blas_threads": {
+   "OMP_NUM_THREADS": "1",
+   "MKL_NUM_THREADS": "1",
+   "OPENBLAS_NUM_THREADS": "1",
+   "NUMEXPR_NUM_THREADS": "1"
+  },
+  "sequential": true,
+  "sleep_between_runs_s": 2.0,
+  "ruler_block": 1024,
+  "rss_limit_mb": 2048.0,
+  "resumable_sidecar": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\summary\\200_bestofn_e21_3seed.rows.jsonl"
+ },
+ "ruler": {
+  "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\analysis\\_frozen\\e21_scc_mmd.py",
+  "seed": 20261071,
+  "target_sum": 10000.0,
+  "block": 1024,
+  "matched_n": {
+   "Endothelial": 10057,
+   "Myeloid": 2302,
+   "Neuronal": 396
+  },
+  "sigma": "archived per type, shared across methods, NOT refit",
+  "tolerances": {
+   "sigma_rel": 2.384185791015625e-07,
+   "mmd2_rel": 1e-06,
+   "scc": "exact equality required"
+  }
+ },
+ "ruler_self_check": {
+  "Neuronal": {
+   "archived_sigma": 51.17613220214844,
+   "recomputed_sigma": 51.17613220214844,
+   "sigma_rel_diff": 0.0,
+   "sigma_rel_tol": 2.384185791015625e-07,
+   "sigma_used": "archived (not refit)",
+   "floor_scc_exact": true,
+   "archived_floor_scc": 0.946018737193243,
+   "recomputed_floor_scc": 0.946018737193243,
+   "floor_mmd2_rel_diff": 1.1689691905817195e-07,
+   "mmd2_rel_tol": 1e-06,
+   "reference_zero_library_rows": 0,
+   "matched_n": 396,
+   "block_size": 1024,
+   "passed": true
+  },
+  "Myeloid": {
+   "archived_sigma": 55.27378463745117,
+   "recomputed_sigma": 55.27378845214844,
+   "sigma_rel_diff": 6.901458423095427e-08,
+   "sigma_rel_tol": 2.384185791015625e-07,
+   "sigma_used": "archived (not refit)",
+   "floor_scc_exact": true,
+   "archived_floor_scc": 0.9877988921359012,
+   "recomputed_floor_scc": 0.9877988921359012,
+   "floor_mmd2_rel_diff": 1.4542032620243535e-07,
+   "mmd2_rel_tol": 1e-06,
+   "reference_zero_library_rows": 0,
+   "matched_n": 2302,
+   "block_size": 1024,
+   "passed": true
+  },
+  "Endothelial": {
+   "archived_sigma": 48.82838821411133,
+   "recomputed_sigma": 48.828392028808594,
+   "sigma_rel_diff": 7.812457885969209e-08,
+   "sigma_rel_tol": 2.384185791015625e-07,
+   "sigma_used": "archived (not refit)",
+   "floor_scc_exact": true,
+   "archived_floor_scc": 0.9943867516355568,
+   "recomputed_floor_scc": 0.9943867516355568,
+   "floor_mmd2_rel_diff": 2.221289026198017e-08,
+   "mmd2_rel_tol": 1e-06,
+   "reference_zero_library_rows": 0,
+   "matched_n": 10057,
+   "block_size": 1024,
+   "passed": true
+  }
+ },
+ "scope": {
+  "variant": "forced_top_N only",
+  "threshold_scored": false,
+  "tiltfilter_scored": false,
+  "order": [
+   "Neuronal",
+   "Myeloid",
+   "Endothelial"
+  ],
+  "ladder": {
+   "Endothelial": [
+    1,
+    2,
+    4
+   ],
+   "Myeloid": [
+    1,
+    2,
+    4,
+    8,
+    16
+   ],
+   "Neuronal": [
+    1,
+    2,
+    4,
+    8,
+    16
+   ]
+  },
+  "selectors": [
+   "S1",
+   "S2"
+  ],
+  "seeds": [
+   20260931,
+   20260932,
+   20260933
+  ],
+  "delivered_index_sets": "read from out/runs/bestofn/<arm>/<stem>.npy; nothing re-derived"
+ },
+ "n_rows": 78,
+ "rows": [
+  {
+   "stem": "Endothelial_bestofn_S1_forced_b1_seed20260931",
+   "seed": 20260931,
+   "request": "Endothelial",
+   "selector": "S1",
+   "level": 1,
+   "variant": "forced_top_N",
+   "e21_matched_n": 10057,
+   "scc": 0.9850071437519431,
+   "pcc": 0.9984682287738997,
+   "mmd2_rbf_biased": 0.0011450908554286876,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "sigma": 48.82838821411133,
+   "walltime_s": 9.655416250228882,
+   "peak_rss_mb": 1420.5078125,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Endothelial_bestofn_S1_forced_b1\\Endothelial_bestofn_S1_forced_b1_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 9.815145075479258e-08,
+    "previous": {
+     "scc": 0.9850071437519431,
+     "pcc": 0.9984682287738997,
+     "mmd2_rbf_biased": 0.00114509074303637
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 9.815145075479258e-08
+   }
+  },
+  {
+   "stem": "Endothelial_bestofn_S1_forced_b1_seed20260932",
+   "seed": 20260932,
+   "request": "Endothelial",
+   "selector": "S1",
+   "level": 1,
+   "variant": "forced_top_N",
+   "e21_matched_n": 10057,
+   "scc": 0.984761621544573,
+   "pcc": 0.9983940014391672,
+   "mmd2_rbf_biased": 0.0012296160890057362,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "sigma": 48.82838821411133,
+   "walltime_s": 9.25146222114563,
+   "peak_rss_mb": 1420.5078125,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Endothelial_bestofn_S1_forced_b1\\Endothelial_bestofn_S1_forced_b1_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 9.266070407470511e-08
+   }
+  },
+  {
+   "stem": "Endothelial_bestofn_S1_forced_b1_seed20260933",
+   "seed": 20260933,
+   "request": "Endothelial",
+   "selector": "S1",
+   "level": 1,
+   "variant": "forced_top_N",
+   "e21_matched_n": 10057,
+   "scc": 0.9847400407982826,
+   "pcc": 0.9983813057251333,
+   "mmd2_rbf_biased": 0.0011068908457887439,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "sigma": 48.82838821411133,
+   "walltime_s": 9.016738414764404,
+   "peak_rss_mb": 1420.5078125,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Endothelial_bestofn_S1_forced_b1\\Endothelial_bestofn_S1_forced_b1_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 9.848138775493857e-08
+   }
+  },
+  {
+   "stem": "Endothelial_bestofn_S1_forced_b2_seed20260931",
+   "seed": 20260931,
+   "request": "Endothelial",
+   "selector": "S1",
+   "level": 2,
+   "variant": "forced_top_N",
+   "e21_matched_n": 10057,
+   "scc": 0.9855209555010835,
+   "pcc": 0.9976021260828896,
+   "mmd2_rbf_biased": 0.0034491961513427594,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "sigma": 48.82838821411133,
+   "walltime_s": 9.52090048789978,
+   "peak_rss_mb": 1420.5078125,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Endothelial_bestofn_S1_forced_b2\\Endothelial_bestofn_S1_forced_b2_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 1.0906058711611433e-07,
+    "previous": {
+     "scc": 0.9855209555010835,
+     "pcc": 0.9976021260828896,
+     "mmd2_rbf_biased": 0.003449195775171443
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 1.0906058711611433e-07
+   }
+  },
+  {
+   "stem": "Endothelial_bestofn_S1_forced_b2_seed20260932",
+   "seed": 20260932,
+   "request": "Endothelial",
+   "selector": "S1",
+   "level": 2,
+   "variant": "forced_top_N",
+   "e21_matched_n": 10057,
+   "scc": 0.9854950301450136,
+   "pcc": 0.9978060811407412,
+   "mmd2_rbf_biased": 0.0030925164039534714,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "sigma": 48.82838821411133,
+   "walltime_s": 9.519232511520386,
+   "peak_rss_mb": 1420.51171875,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Endothelial_bestofn_S1_forced_b2\\Endothelial_bestofn_S1_forced_b2_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 1.0847962426045267e-07
+   }
+  },
+  {
+   "stem": "Endothelial_bestofn_S1_forced_b2_seed20260933",
+   "seed": 20260933,
+   "request": "Endothelial",
+   "selector": "S1",
+   "level": 2,
+   "variant": "forced_top_N",
+   "e21_matched_n": 10057,
+   "scc": 0.9849961782589447,
+   "pcc": 0.9977119354557185,
+   "mmd2_rbf_biased": 0.003357058267328128,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "sigma": 48.82838821411133,
+   "walltime_s": 9.223730564117432,
+   "peak_rss_mb": 1420.51171875,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Endothelial_bestofn_S1_forced_b2\\Endothelial_bestofn_S1_forced_b2_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 1.0734001360698267e-07
+   }
+  },
+  {
+   "stem": "Endothelial_bestofn_S1_forced_b4_seed20260931",
+   "seed": 20260931,
+   "request": "Endothelial",
+   "selector": "S1",
+   "level": 4,
+   "variant": "forced_top_N",
+   "e21_matched_n": 10057,
+   "scc": 0.9772553732796982,
+   "pcc": 0.9955251992428835,
+   "mmd2_rbf_biased": 0.007916215068302979,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "sigma": 48.82838821411133,
+   "walltime_s": 9.40845799446106,
+   "peak_rss_mb": 1420.51171875,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Endothelial_bestofn_S1_forced_b4\\Endothelial_bestofn_S1_forced_b4_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 1.1078200106007827e-07,
+    "previous": {
+     "scc": 0.9772553732796982,
+     "pcc": 0.9955251992428835,
+     "mmd2_rbf_biased": 0.00791621419132893
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 1.1078200106007827e-07
+   }
+  },
+  {
+   "stem": "Endothelial_bestofn_S1_forced_b4_seed20260932",
+   "seed": 20260932,
+   "request": "Endothelial",
+   "selector": "S1",
+   "level": 4,
+   "variant": "forced_top_N",
+   "e21_matched_n": 10057,
+   "scc": 0.9759499876668446,
+   "pcc": 0.9954969145993455,
+   "mmd2_rbf_biased": 0.007763946605774619,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "sigma": 48.82838821411133,
+   "walltime_s": 9.110372066497803,
+   "peak_rss_mb": 1420.51171875,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Endothelial_bestofn_S1_forced_b4\\Endothelial_bestofn_S1_forced_b4_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 1.1184165195971802e-07
+   }
+  },
+  {
+   "stem": "Endothelial_bestofn_S1_forced_b4_seed20260933",
+   "seed": 20260933,
+   "request": "Endothelial",
+   "selector": "S1",
+   "level": 4,
+   "variant": "forced_top_N",
+   "e21_matched_n": 10057,
+   "scc": 0.9782009492405684,
+   "pcc": 0.9955941474071957,
+   "mmd2_rbf_biased": 0.008125772326006642,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "sigma": 48.82838821411133,
+   "walltime_s": 9.107967853546143,
+   "peak_rss_mb": 1420.51171875,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Endothelial_bestofn_S1_forced_b4\\Endothelial_bestofn_S1_forced_b4_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 1.115134127633618e-07
+   }
+  },
+  {
+   "stem": "Endothelial_bestofn_S2_forced_b1_seed20260931",
+   "seed": 20260931,
+   "request": "Endothelial",
+   "selector": "S2",
+   "level": 1,
+   "variant": "forced_top_N",
+   "e21_matched_n": 10057,
+   "scc": 0.9803869841577395,
+   "pcc": 0.9981073520455684,
+   "mmd2_rbf_biased": 0.0010410240985982977,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "sigma": 48.82838821411133,
+   "walltime_s": 9.513053894042969,
+   "peak_rss_mb": 1417.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Endothelial_bestofn_S2_forced_b1\\Endothelial_bestofn_S2_forced_b1_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 1.0407935693959141e-07,
+    "previous": {
+     "scc": 0.9803869841577395,
+     "pcc": 0.9981073520455684,
+     "mmd2_rbf_biased": 0.0010410239902491902
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 1.0407935693959141e-07
+   }
+  },
+  {
+   "stem": "Endothelial_bestofn_S2_forced_b1_seed20260932",
+   "seed": 20260932,
+   "request": "Endothelial",
+   "selector": "S2",
+   "level": 1,
+   "variant": "forced_top_N",
+   "e21_matched_n": 10057,
+   "scc": 0.9801406334146323,
+   "pcc": 0.9979690076924809,
+   "mmd2_rbf_biased": 0.0011274558475684593,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "sigma": 48.82838821411133,
+   "walltime_s": 9.719465017318726,
+   "peak_rss_mb": 1417.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Endothelial_bestofn_S2_forced_b1\\Endothelial_bestofn_S2_forced_b1_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 9.776884684835923e-08
+   }
+  },
+  {
+   "stem": "Endothelial_bestofn_S2_forced_b1_seed20260933",
+   "seed": 20260933,
+   "request": "Endothelial",
+   "selector": "S2",
+   "level": 1,
+   "variant": "forced_top_N",
+   "e21_matched_n": 10057,
+   "scc": 0.9796337252860008,
+   "pcc": 0.9980013115686733,
+   "mmd2_rbf_biased": 0.0010485001214870504,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "sigma": 48.82838821411133,
+   "walltime_s": 9.01925015449524,
+   "peak_rss_mb": 1417.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Endothelial_bestofn_S2_forced_b1\\Endothelial_bestofn_S2_forced_b1_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 1.0124196145938429e-07
+   }
+  },
+  {
+   "stem": "Endothelial_bestofn_S2_forced_b2_seed20260931",
+   "seed": 20260931,
+   "request": "Endothelial",
+   "selector": "S2",
+   "level": 2,
+   "variant": "forced_top_N",
+   "e21_matched_n": 10057,
+   "scc": 0.9906415851076232,
+   "pcc": 0.9992513795822557,
+   "mmd2_rbf_biased": 0.000362276510953663,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "sigma": 48.82838821411133,
+   "walltime_s": 9.38115119934082,
+   "peak_rss_mb": 1417.203125,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Endothelial_bestofn_S2_forced_b2\\Endothelial_bestofn_S2_forced_b2_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 1.299397754792425e-07,
+    "previous": {
+     "scc": 0.9906415851076232,
+     "pcc": 0.9992513795822557,
+     "mmd2_rbf_biased": 0.0003622764638795406
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 1.299397754792425e-07
+   }
+  },
+  {
+   "stem": "Endothelial_bestofn_S2_forced_b2_seed20260932",
+   "seed": 20260932,
+   "request": "Endothelial",
+   "selector": "S2",
+   "level": 2,
+   "variant": "forced_top_N",
+   "e21_matched_n": 10057,
+   "scc": 0.9905946271687432,
+   "pcc": 0.9991099740990655,
+   "mmd2_rbf_biased": 0.00040771229871716663,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "sigma": 48.82838821411133,
+   "walltime_s": 9.24657940864563,
+   "peak_rss_mb": 1417.203125,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Endothelial_bestofn_S2_forced_b2\\Endothelial_bestofn_S2_forced_b2_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 1.2176686647321767e-07
+   }
+  },
+  {
+   "stem": "Endothelial_bestofn_S2_forced_b2_seed20260933",
+   "seed": 20260933,
+   "request": "Endothelial",
+   "selector": "S2",
+   "level": 2,
+   "variant": "forced_top_N",
+   "e21_matched_n": 10057,
+   "scc": 0.98998502889133,
+   "pcc": 0.999175634985612,
+   "mmd2_rbf_biased": 0.00038787930723294117,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "sigma": 48.82838821411133,
+   "walltime_s": 9.724804401397705,
+   "peak_rss_mb": 1417.203125,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Endothelial_bestofn_S2_forced_b2\\Endothelial_bestofn_S2_forced_b2_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 1.3831788885611846e-07
+   }
+  },
+  {
+   "stem": "Endothelial_bestofn_S2_forced_b4_seed20260931",
+   "seed": 20260931,
+   "request": "Endothelial",
+   "selector": "S2",
+   "level": 4,
+   "variant": "forced_top_N",
+   "e21_matched_n": 10057,
+   "scc": 0.9903729861569656,
+   "pcc": 0.9963458734655234,
+   "mmd2_rbf_biased": 0.0018368776171748813,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "sigma": 48.82838821411133,
+   "walltime_s": 9.419527769088745,
+   "peak_rss_mb": 1417.203125,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Endothelial_bestofn_S2_forced_b4\\Endothelial_bestofn_S2_forced_b4_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 1.0273131272417908e-07,
+    "previous": {
+     "scc": 0.9903729861569656,
+     "pcc": 0.9963458734655234,
+     "mmd2_rbf_biased": 0.0018368774284700518
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 1.0273131272417908e-07
+   }
+  },
+  {
+   "stem": "Endothelial_bestofn_S2_forced_b4_seed20260932",
+   "seed": 20260932,
+   "request": "Endothelial",
+   "selector": "S2",
+   "level": 4,
+   "variant": "forced_top_N",
+   "e21_matched_n": 10057,
+   "scc": 0.9901347971927724,
+   "pcc": 0.9957633695747479,
+   "mmd2_rbf_biased": 0.002146358685830352,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "sigma": 48.82838821411133,
+   "walltime_s": 9.299402475357056,
+   "peak_rss_mb": 1417.203125,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Endothelial_bestofn_S2_forced_b4\\Endothelial_bestofn_S2_forced_b4_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 1.041477008195779e-07
+   }
+  },
+  {
+   "stem": "Endothelial_bestofn_S2_forced_b4_seed20260933",
+   "seed": 20260933,
+   "request": "Endothelial",
+   "selector": "S2",
+   "level": 4,
+   "variant": "forced_top_N",
+   "e21_matched_n": 10057,
+   "scc": 0.9897558821081286,
+   "pcc": 0.9955492497533348,
+   "mmd2_rbf_biased": 0.0022926053129841417,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "sigma": 48.82838821411133,
+   "walltime_s": 9.682241439819336,
+   "peak_rss_mb": 1417.203125,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Endothelial_bestofn_S2_forced_b4\\Endothelial_bestofn_S2_forced_b4_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 1.0616906716128538e-07
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S1_forced_b16_seed20260931",
+   "seed": 20260931,
+   "request": "Myeloid",
+   "selector": "S1",
+   "level": 16,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.9672123934571897,
+   "pcc": 0.9877369962202242,
+   "mmd2_rbf_biased": 0.00920851454845173,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.4953148365020752,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S1_forced_b16\\Myeloid_bestofn_S1_forced_b16_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 9.817684585324221e-08,
+    "previous": {
+     "scc": 0.9672123934571897,
+     "pcc": 0.9877369962202242,
+     "mmd2_rbf_biased": 0.009208513644388905
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 9.817684585324221e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S1_forced_b16_seed20260932",
+   "seed": 20260932,
+   "request": "Myeloid",
+   "selector": "S1",
+   "level": 16,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.9680780200626277,
+   "pcc": 0.9870308957518672,
+   "mmd2_rbf_biased": 0.009729648814197134,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.5523743629455566,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S1_forced_b16\\Myeloid_bestofn_S1_forced_b16_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 9.763036171143455e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S1_forced_b16_seed20260933",
+   "seed": 20260933,
+   "request": "Myeloid",
+   "selector": "S1",
+   "level": 16,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.9684863946511952,
+   "pcc": 0.9878983024696354,
+   "mmd2_rbf_biased": 0.009041104102971431,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.7228884696960449,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S1_forced_b16\\Myeloid_bestofn_S1_forced_b16_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 9.811990199947781e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S1_forced_b1_seed20260931",
+   "seed": 20260931,
+   "request": "Myeloid",
+   "selector": "S1",
+   "level": 1,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.8024870195374364,
+   "pcc": 0.6898099120020872,
+   "mmd2_rbf_biased": 0.05753892542484551,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.5416436195373535,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S1_forced_b1\\Myeloid_bestofn_S1_forced_b1_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 8.38525851038762e-08,
+    "previous": {
+     "scc": 0.8024870195374364,
+     "pcc": 0.6898099120020872,
+     "mmd2_rbf_biased": 0.057538920600058274
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 8.38525851038762e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S1_forced_b1_seed20260932",
+   "seed": 20260932,
+   "request": "Myeloid",
+   "selector": "S1",
+   "level": 1,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.8049326823767093,
+   "pcc": 0.6828220139957958,
+   "mmd2_rbf_biased": 0.059002849240025856,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.48690366744995117,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S1_forced_b1\\Myeloid_bestofn_S1_forced_b1_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 8.363696794606936e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S1_forced_b1_seed20260933",
+   "seed": 20260933,
+   "request": "Myeloid",
+   "selector": "S1",
+   "level": 1,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.8076748666725186,
+   "pcc": 0.6964745480326489,
+   "mmd2_rbf_biased": 0.05663288118838694,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.6797363758087158,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S1_forced_b1\\Myeloid_bestofn_S1_forced_b1_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 8.314921471949827e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S1_forced_b2_seed20260931",
+   "seed": 20260931,
+   "request": "Myeloid",
+   "selector": "S1",
+   "level": 2,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.8914054591577446,
+   "pcc": 0.8760769411736113,
+   "mmd2_rbf_biased": 0.03462379154341688,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.5893356800079346,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S1_forced_b2\\Myeloid_bestofn_S1_forced_b2_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 8.603630699102213e-08,
+    "previous": {
+     "scc": 0.8914054591577446,
+     "pcc": 0.8760769411736113,
+     "mmd2_rbf_biased": 0.03462378856451398
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 8.603630699102213e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S1_forced_b2_seed20260932",
+   "seed": 20260932,
+   "request": "Myeloid",
+   "selector": "S1",
+   "level": 2,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.8924593833801702,
+   "pcc": 0.8773720762388244,
+   "mmd2_rbf_biased": 0.03467554761002223,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.5394105911254883,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S1_forced_b2\\Myeloid_bestofn_S1_forced_b2_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 8.574407024152683e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S1_forced_b2_seed20260933",
+   "seed": 20260933,
+   "request": "Myeloid",
+   "selector": "S1",
+   "level": 2,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.894950378213929,
+   "pcc": 0.8796492389665442,
+   "mmd2_rbf_biased": 0.033437318032499164,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.676060676574707,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S1_forced_b2\\Myeloid_bestofn_S1_forced_b2_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 8.56016881788243e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S1_forced_b4_seed20260931",
+   "seed": 20260931,
+   "request": "Myeloid",
+   "selector": "S1",
+   "level": 4,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.9608618767231965,
+   "pcc": 0.9772404132643502,
+   "mmd2_rbf_biased": 0.009690815582459544,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.765089750289917,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S1_forced_b4\\Myeloid_bestofn_S1_forced_b4_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 8.968214185070173e-08,
+    "previous": {
+     "scc": 0.9608618767231965,
+     "pcc": 0.9772404132643502,
+     "mmd2_rbf_biased": 0.009690814713366525
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 8.968214185070173e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S1_forced_b4_seed20260932",
+   "seed": 20260932,
+   "request": "Myeloid",
+   "selector": "S1",
+   "level": 4,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.9605237406318857,
+   "pcc": 0.9763664565027068,
+   "mmd2_rbf_biased": 0.01076065563554196,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.5597240924835205,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S1_forced_b4\\Myeloid_bestofn_S1_forced_b4_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 8.780157765905764e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S1_forced_b4_seed20260933",
+   "seed": 20260933,
+   "request": "Myeloid",
+   "selector": "S1",
+   "level": 4,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.9592486115422661,
+   "pcc": 0.9746117347314629,
+   "mmd2_rbf_biased": 0.01066527265847439,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.5527474880218506,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S1_forced_b4\\Myeloid_bestofn_S1_forced_b4_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 8.801309520989488e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S1_forced_b8_seed20260931",
+   "seed": 20260931,
+   "request": "Myeloid",
+   "selector": "S1",
+   "level": 8,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.9766038859435031,
+   "pcc": 0.9955031085442289,
+   "mmd2_rbf_biased": 0.0012355411733282473,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.5235865116119385,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S1_forced_b8\\Myeloid_bestofn_S1_forced_b8_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 8.050758812955322e-08,
+    "previous": {
+     "scc": 0.9766038859435031,
+     "pcc": 0.9955031085442289,
+     "mmd2_rbf_biased": 0.0012355410738578154
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 8.050758812955322e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S1_forced_b8_seed20260932",
+   "seed": 20260932,
+   "request": "Myeloid",
+   "selector": "S1",
+   "level": 8,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.9778530332472772,
+   "pcc": 0.9950499839060858,
+   "mmd2_rbf_biased": 0.0012483147841402253,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.6121985912322998,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S1_forced_b8\\Myeloid_bestofn_S1_forced_b8_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 6.270805158999058e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S1_forced_b8_seed20260933",
+   "seed": 20260933,
+   "request": "Myeloid",
+   "selector": "S1",
+   "level": 8,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.9782936685611577,
+   "pcc": 0.9963870778089486,
+   "mmd2_rbf_biased": 0.0009517729403698549,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.6027390956878662,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S1_forced_b8\\Myeloid_bestofn_S1_forced_b8_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 8.93721196221636e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S2_forced_b16_seed20260931",
+   "seed": 20260931,
+   "request": "Myeloid",
+   "selector": "S2",
+   "level": 16,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.9746630327299096,
+   "pcc": 0.9935249758742136,
+   "mmd2_rbf_biased": 0.0030958848015611995,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.6203815937042236,
+   "peak_rss_mb": 841.1484375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S2_forced_b16\\Myeloid_bestofn_S2_forced_b16_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 1.0417916890004332e-07,
+    "previous": {
+     "scc": 0.9746630327299096,
+     "pcc": 0.9935249758742136,
+     "mmd2_rbf_biased": 0.0030958844790345275
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 1.0417916890004332e-07
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S2_forced_b16_seed20260932",
+   "seed": 20260932,
+   "request": "Myeloid",
+   "selector": "S2",
+   "level": 16,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.975919063313996,
+   "pcc": 0.9949204905380502,
+   "mmd2_rbf_biased": 0.0023778619066516793,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.5632586479187012,
+   "peak_rss_mb": 841.1484375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S2_forced_b16\\Myeloid_bestofn_S2_forced_b16_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 1.1344767690301719e-07
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S2_forced_b16_seed20260933",
+   "seed": 20260933,
+   "request": "Myeloid",
+   "selector": "S2",
+   "level": 16,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.976533691324428,
+   "pcc": 0.9951269408689003,
+   "mmd2_rbf_biased": 0.0022795860200131024,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.5722084045410156,
+   "peak_rss_mb": 841.1484375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S2_forced_b16\\Myeloid_bestofn_S2_forced_b16_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 1.2381538278075363e-07
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S2_forced_b1_seed20260931",
+   "seed": 20260931,
+   "request": "Myeloid",
+   "selector": "S2",
+   "level": 1,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.8061477441281073,
+   "pcc": 0.7198935294327332,
+   "mmd2_rbf_biased": 0.05251050193372131,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.7211110591888428,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S2_forced_b1\\Myeloid_bestofn_S2_forced_b1_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 8.359175808470594e-08,
+    "previous": {
+     "scc": 0.8061477441281073,
+     "pcc": 0.7198935294327332,
+     "mmd2_rbf_biased": 0.0525104975442765
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 8.359175808470594e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S2_forced_b1_seed20260932",
+   "seed": 20260932,
+   "request": "Myeloid",
+   "selector": "S2",
+   "level": 1,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.8084645951583254,
+   "pcc": 0.7175598413917443,
+   "mmd2_rbf_biased": 0.053616053110848716,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.6355907917022705,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S2_forced_b1\\Myeloid_bestofn_S2_forced_b1_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 8.490580263841766e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S2_forced_b1_seed20260933",
+   "seed": 20260933,
+   "request": "Myeloid",
+   "selector": "S2",
+   "level": 1,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.8121921064055092,
+   "pcc": 0.7254587318722769,
+   "mmd2_rbf_biased": 0.05166718047330665,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.602928876876831,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S2_forced_b1\\Myeloid_bestofn_S2_forced_b1_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 8.317810585442244e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S2_forced_b2_seed20260931",
+   "seed": 20260931,
+   "request": "Myeloid",
+   "selector": "S2",
+   "level": 2,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.8970804054830646,
+   "pcc": 0.8803087824479454,
+   "mmd2_rbf_biased": 0.031096968739605657,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.543372392654419,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S2_forced_b2\\Myeloid_bestofn_S2_forced_b2_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 8.61323865566167e-08,
+    "previous": {
+     "scc": 0.8970804054830646,
+     "pcc": 0.8803087824479454,
+     "mmd2_rbf_biased": 0.031096966061149756
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 8.61323865566167e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S2_forced_b2_seed20260932",
+   "seed": 20260932,
+   "request": "Myeloid",
+   "selector": "S2",
+   "level": 2,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.8990395000657374,
+   "pcc": 0.8868189339749935,
+   "mmd2_rbf_biased": 0.03093729899635478,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.5281801223754883,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S2_forced_b2\\Myeloid_bestofn_S2_forced_b2_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 8.585705164671131e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S2_forced_b2_seed20260933",
+   "seed": 20260933,
+   "request": "Myeloid",
+   "selector": "S2",
+   "level": 2,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.9020480661932667,
+   "pcc": 0.8869558024286196,
+   "mmd2_rbf_biased": 0.0294067988158635,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.5225100517272949,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S2_forced_b2\\Myeloid_bestofn_S2_forced_b2_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 8.703306499657623e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S2_forced_b4_seed20260931",
+   "seed": 20260931,
+   "request": "Myeloid",
+   "selector": "S2",
+   "level": 4,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.9593214692867528,
+   "pcc": 0.9690239873836697,
+   "mmd2_rbf_biased": 0.009496643006912553,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.5694971084594727,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S2_forced_b4\\Myeloid_bestofn_S2_forced_b4_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 8.81142291690491e-08,
+    "previous": {
+     "scc": 0.9593214692867528,
+     "pcc": 0.9690239873836697,
+     "mmd2_rbf_biased": 0.009496642170123248
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 8.81142291690491e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S2_forced_b4_seed20260932",
+   "seed": 20260932,
+   "request": "Myeloid",
+   "selector": "S2",
+   "level": 4,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.9595471224266409,
+   "pcc": 0.9685198193847586,
+   "mmd2_rbf_biased": 0.010285226942619241,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.5251989364624023,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S2_forced_b4\\Myeloid_bestofn_S2_forced_b4_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 8.894846628657882e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S2_forced_b4_seed20260933",
+   "seed": 20260933,
+   "request": "Myeloid",
+   "selector": "S2",
+   "level": 4,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.9588938545550216,
+   "pcc": 0.9668147741055991,
+   "mmd2_rbf_biased": 0.009888426861240918,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.5440330505371094,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S2_forced_b4\\Myeloid_bestofn_S2_forced_b4_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 8.728819841103606e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S2_forced_b8_seed20260931",
+   "seed": 20260931,
+   "request": "Myeloid",
+   "selector": "S2",
+   "level": 8,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.978039693211658,
+   "pcc": 0.9963171040013012,
+   "mmd2_rbf_biased": 0.0009451309776091765,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.5848939418792725,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S2_forced_b8\\Myeloid_bestofn_S2_forced_b8_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 4.588380080376208e-08,
+    "previous": {
+     "scc": 0.978039693211658,
+     "pcc": 0.9963171040013012,
+     "mmd2_rbf_biased": 0.000945130934242977
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 4.588380080376208e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S2_forced_b8_seed20260932",
+   "seed": 20260932,
+   "request": "Myeloid",
+   "selector": "S2",
+   "level": 8,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.9797720039027824,
+   "pcc": 0.9961769484672308,
+   "mmd2_rbf_biased": 0.0009609026580832403,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.5298314094543457,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S2_forced_b8\\Myeloid_bestofn_S2_forced_b8_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 6.932584059034856e-08
+   }
+  },
+  {
+   "stem": "Myeloid_bestofn_S2_forced_b8_seed20260933",
+   "seed": 20260933,
+   "request": "Myeloid",
+   "selector": "S2",
+   "level": 8,
+   "variant": "forced_top_N",
+   "e21_matched_n": 2302,
+   "scc": 0.9797592744325845,
+   "pcc": 0.997106052746664,
+   "mmd2_rbf_biased": 0.0007641853005804222,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "sigma": 55.27378463745117,
+   "walltime_s": 0.6211292743682861,
+   "peak_rss_mb": 841.08984375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Myeloid_bestofn_S2_forced_b8\\Myeloid_bestofn_S2_forced_b8_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 9.556877610811725e-08
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S1_forced_b16_seed20260931",
+   "seed": 20260931,
+   "request": "Neuronal",
+   "selector": "S1",
+   "level": 16,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.9114358696314157,
+   "pcc": 0.8946703368609645,
+   "mmd2_rbf_biased": 0.021981205570400952,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.05373525619506836,
+   "peak_rss_mb": 599.07421875,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S1_forced_b16\\Neuronal_bestofn_S1_forced_b16_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": true,
+    "mmd2_rel_diff": 0.0,
+    "previous": {
+     "scc": 0.9114358696314157,
+     "pcc": 0.8946703368609645,
+     "mmd2_rbf_biased": 0.021981205570400952
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S1_forced_b16_seed20260932",
+   "seed": 20260932,
+   "request": "Neuronal",
+   "selector": "S1",
+   "level": 16,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.9070960517966393,
+   "pcc": 0.8771557766426538,
+   "mmd2_rbf_biased": 0.02360659642716123,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.06516265869140625,
+   "peak_rss_mb": 599.078125,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S1_forced_b16\\Neuronal_bestofn_S1_forced_b16_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S1_forced_b16_seed20260933",
+   "seed": 20260933,
+   "request": "Neuronal",
+   "selector": "S1",
+   "level": 16,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.9024664750714512,
+   "pcc": 0.8768668379915854,
+   "mmd2_rbf_biased": 0.02348747934111106,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.05594158172607422,
+   "peak_rss_mb": 599.14453125,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S1_forced_b16\\Neuronal_bestofn_S1_forced_b16_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S1_forced_b1_seed20260931",
+   "seed": 20260931,
+   "request": "Neuronal",
+   "selector": "S1",
+   "level": 1,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.8733033105668707,
+   "pcc": 0.6126146573413517,
+   "mmd2_rbf_biased": 0.060658421403325447,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.02341604232788086,
+   "peak_rss_mb": 599.05859375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S1_forced_b1\\Neuronal_bestofn_S1_forced_b1_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": true,
+    "mmd2_rel_diff": 0.0,
+    "previous": {
+     "scc": 0.8733033105668707,
+     "pcc": 0.6126146573413517,
+     "mmd2_rbf_biased": 0.060658421403325447
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S1_forced_b1_seed20260932",
+   "seed": 20260932,
+   "request": "Neuronal",
+   "selector": "S1",
+   "level": 1,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.8696065557515278,
+   "pcc": 0.6090261862988522,
+   "mmd2_rbf_biased": 0.06123932875307436,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.05498361587524414,
+   "peak_rss_mb": 599.0625,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S1_forced_b1\\Neuronal_bestofn_S1_forced_b1_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S1_forced_b1_seed20260933",
+   "seed": 20260933,
+   "request": "Neuronal",
+   "selector": "S1",
+   "level": 1,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.8720063908941632,
+   "pcc": 0.6067310649358368,
+   "mmd2_rbf_biased": 0.06161536812233437,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.06312823295593262,
+   "peak_rss_mb": 599.0625,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S1_forced_b1\\Neuronal_bestofn_S1_forced_b1_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S1_forced_b2_seed20260931",
+   "seed": 20260931,
+   "request": "Neuronal",
+   "selector": "S1",
+   "level": 2,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.8804079095592905,
+   "pcc": 0.6556941464773156,
+   "mmd2_rbf_biased": 0.055175243339137925,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.06091570854187012,
+   "peak_rss_mb": 599.06640625,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S1_forced_b2\\Neuronal_bestofn_S1_forced_b2_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": true,
+    "mmd2_rel_diff": 0.0,
+    "previous": {
+     "scc": 0.8804079095592905,
+     "pcc": 0.6556941464773156,
+     "mmd2_rbf_biased": 0.055175243339137925
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S1_forced_b2_seed20260932",
+   "seed": 20260932,
+   "request": "Neuronal",
+   "selector": "S1",
+   "level": 2,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.8862721559995118,
+   "pcc": 0.663096416753761,
+   "mmd2_rbf_biased": 0.05440433339499284,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.06614446640014648,
+   "peak_rss_mb": 599.06640625,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S1_forced_b2\\Neuronal_bestofn_S1_forced_b2_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S1_forced_b2_seed20260933",
+   "seed": 20260933,
+   "request": "Neuronal",
+   "selector": "S1",
+   "level": 2,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.889216956228621,
+   "pcc": 0.6738388016328247,
+   "mmd2_rbf_biased": 0.05311929757863898,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.051728248596191406,
+   "peak_rss_mb": 599.06640625,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S1_forced_b2\\Neuronal_bestofn_S1_forced_b2_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S1_forced_b4_seed20260931",
+   "seed": 20260931,
+   "request": "Neuronal",
+   "selector": "S1",
+   "level": 4,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.8972760762986105,
+   "pcc": 0.7292580298872979,
+   "mmd2_rbf_biased": 0.045943914791296336,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.05207228660583496,
+   "peak_rss_mb": 599.06640625,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S1_forced_b4\\Neuronal_bestofn_S1_forced_b4_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": true,
+    "mmd2_rel_diff": 0.0,
+    "previous": {
+     "scc": 0.8972760762986105,
+     "pcc": 0.7292580298872979,
+     "mmd2_rbf_biased": 0.045943914791296336
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S1_forced_b4_seed20260932",
+   "seed": 20260932,
+   "request": "Neuronal",
+   "selector": "S1",
+   "level": 4,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.8957285561054026,
+   "pcc": 0.7278022133518742,
+   "mmd2_rbf_biased": 0.045881621633285574,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.05920696258544922,
+   "peak_rss_mb": 599.06640625,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S1_forced_b4\\Neuronal_bestofn_S1_forced_b4_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S1_forced_b4_seed20260933",
+   "seed": 20260933,
+   "request": "Neuronal",
+   "selector": "S1",
+   "level": 4,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.8982555428020708,
+   "pcc": 0.7346874485185444,
+   "mmd2_rbf_biased": 0.04518019886790592,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.051593780517578125,
+   "peak_rss_mb": 599.06640625,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S1_forced_b4\\Neuronal_bestofn_S1_forced_b4_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S1_forced_b8_seed20260931",
+   "seed": 20260931,
+   "request": "Neuronal",
+   "selector": "S1",
+   "level": 8,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.9047610497458866,
+   "pcc": 0.7845154904489274,
+   "mmd2_rbf_biased": 0.038134778849115314,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.0595247745513916,
+   "peak_rss_mb": 599.06640625,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S1_forced_b8\\Neuronal_bestofn_S1_forced_b8_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": true,
+    "mmd2_rel_diff": 0.0,
+    "previous": {
+     "scc": 0.9047610497458866,
+     "pcc": 0.7845154904489274,
+     "mmd2_rbf_biased": 0.038134778849115314
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S1_forced_b8_seed20260932",
+   "seed": 20260932,
+   "request": "Neuronal",
+   "selector": "S1",
+   "level": 8,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.9064769379581676,
+   "pcc": 0.7944728346503062,
+   "mmd2_rbf_biased": 0.03676454350352287,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.05577564239501953,
+   "peak_rss_mb": 599.06640625,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S1_forced_b8\\Neuronal_bestofn_S1_forced_b8_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S1_forced_b8_seed20260933",
+   "seed": 20260933,
+   "request": "Neuronal",
+   "selector": "S1",
+   "level": 8,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.9054773428117816,
+   "pcc": 0.8071765919763841,
+   "mmd2_rbf_biased": 0.03491997554135806,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.06617450714111328,
+   "peak_rss_mb": 599.0703125,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S1_forced_b8\\Neuronal_bestofn_S1_forced_b8_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S2_forced_b16_seed20260931",
+   "seed": 20260931,
+   "request": "Neuronal",
+   "selector": "S2",
+   "level": 16,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.9124997399253807,
+   "pcc": 0.8817623677027994,
+   "mmd2_rbf_biased": 0.023226219731027786,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.05585980415344238,
+   "peak_rss_mb": 599.15625,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S2_forced_b16\\Neuronal_bestofn_S2_forced_b16_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": true,
+    "mmd2_rel_diff": 0.0,
+    "previous": {
+     "scc": 0.9124997399253807,
+     "pcc": 0.8817623677027994,
+     "mmd2_rbf_biased": 0.023226219731027786
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S2_forced_b16_seed20260932",
+   "seed": 20260932,
+   "request": "Neuronal",
+   "selector": "S2",
+   "level": 16,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.9058392498529478,
+   "pcc": 0.8751622532243755,
+   "mmd2_rbf_biased": 0.023801118165669655,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.05720043182373047,
+   "peak_rss_mb": 599.1015625,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S2_forced_b16\\Neuronal_bestofn_S2_forced_b16_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S2_forced_b16_seed20260933",
+   "seed": 20260933,
+   "request": "Neuronal",
+   "selector": "S2",
+   "level": 16,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.9069432645745359,
+   "pcc": 0.8786820861540922,
+   "mmd2_rbf_biased": 0.02353188622187563,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.05148577690124512,
+   "peak_rss_mb": 599.1015625,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S2_forced_b16\\Neuronal_bestofn_S2_forced_b16_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S2_forced_b1_seed20260931",
+   "seed": 20260931,
+   "request": "Neuronal",
+   "selector": "S2",
+   "level": 1,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.8798770396468896,
+   "pcc": 0.6232483330361372,
+   "mmd2_rbf_biased": 0.05965182370563338,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.05265188217163086,
+   "peak_rss_mb": 599.1484375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S2_forced_b1\\Neuronal_bestofn_S2_forced_b1_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": true,
+    "mmd2_rel_diff": 0.0,
+    "previous": {
+     "scc": 0.8798770396468896,
+     "pcc": 0.6232483330361372,
+     "mmd2_rbf_biased": 0.05965182370563338
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S2_forced_b1_seed20260932",
+   "seed": 20260932,
+   "request": "Neuronal",
+   "selector": "S2",
+   "level": 1,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.8701785148211232,
+   "pcc": 0.6115884843247181,
+   "mmd2_rbf_biased": 0.061463974540166166,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.0529327392578125,
+   "peak_rss_mb": 599.15625,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S2_forced_b1\\Neuronal_bestofn_S2_forced_b1_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S2_forced_b1_seed20260933",
+   "seed": 20260933,
+   "request": "Neuronal",
+   "selector": "S2",
+   "level": 1,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.8777821123348033,
+   "pcc": 0.6091204383763353,
+   "mmd2_rbf_biased": 0.06145130283541422,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.04859328269958496,
+   "peak_rss_mb": 599.15625,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S2_forced_b1\\Neuronal_bestofn_S2_forced_b1_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S2_forced_b2_seed20260931",
+   "seed": 20260931,
+   "request": "Neuronal",
+   "selector": "S2",
+   "level": 2,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.8862025613731256,
+   "pcc": 0.6707744169385286,
+   "mmd2_rbf_biased": 0.05341195471644844,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.0626974105834961,
+   "peak_rss_mb": 599.15625,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S2_forced_b2\\Neuronal_bestofn_S2_forced_b2_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": true,
+    "mmd2_rel_diff": 0.0,
+    "previous": {
+     "scc": 0.8862025613731256,
+     "pcc": 0.6707744169385286,
+     "mmd2_rbf_biased": 0.05341195471644844
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S2_forced_b2_seed20260932",
+   "seed": 20260932,
+   "request": "Neuronal",
+   "selector": "S2",
+   "level": 2,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.8885541701052008,
+   "pcc": 0.6548374447241849,
+   "mmd2_rbf_biased": 0.05572367823778612,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.04873967170715332,
+   "peak_rss_mb": 599.15625,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S2_forced_b2\\Neuronal_bestofn_S2_forced_b2_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S2_forced_b2_seed20260933",
+   "seed": 20260933,
+   "request": "Neuronal",
+   "selector": "S2",
+   "level": 2,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.8829679321412336,
+   "pcc": 0.6485888053716,
+   "mmd2_rbf_biased": 0.056324168223476745,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.051126718521118164,
+   "peak_rss_mb": 599.15625,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S2_forced_b2\\Neuronal_bestofn_S2_forced_b2_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S2_forced_b4_seed20260931",
+   "seed": 20260931,
+   "request": "Neuronal",
+   "selector": "S2",
+   "level": 4,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.9027418656334538,
+   "pcc": 0.7220062420016257,
+   "mmd2_rbf_biased": 0.04686175989048458,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.05037069320678711,
+   "peak_rss_mb": 599.15234375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S2_forced_b4\\Neuronal_bestofn_S2_forced_b4_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": true,
+    "mmd2_rel_diff": 0.0,
+    "previous": {
+     "scc": 0.9027418656334538,
+     "pcc": 0.7220062420016257,
+     "mmd2_rbf_biased": 0.04686175989048458
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S2_forced_b4_seed20260932",
+   "seed": 20260932,
+   "request": "Neuronal",
+   "selector": "S2",
+   "level": 4,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.8941056676801603,
+   "pcc": 0.7256670969303001,
+   "mmd2_rbf_biased": 0.04626594874036738,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.05528903007507324,
+   "peak_rss_mb": 599.15234375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S2_forced_b4\\Neuronal_bestofn_S2_forced_b4_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S2_forced_b4_seed20260933",
+   "seed": 20260933,
+   "request": "Neuronal",
+   "selector": "S2",
+   "level": 4,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.8996925004701954,
+   "pcc": 0.7217040298329735,
+   "mmd2_rbf_biased": 0.04677706983621954,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.05405902862548828,
+   "peak_rss_mb": 599.15234375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S2_forced_b4\\Neuronal_bestofn_S2_forced_b4_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S2_forced_b8_seed20260931",
+   "seed": 20260931,
+   "request": "Neuronal",
+   "selector": "S2",
+   "level": 8,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.9067059836450325,
+   "pcc": 0.7912494691651519,
+   "mmd2_rbf_biased": 0.0369712019500934,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.05773138999938965,
+   "peak_rss_mb": 599.15234375,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S2_forced_b8\\Neuronal_bestofn_S2_forced_b8_seed20260931.npy",
+   "reproduces_one_seed_file": {
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": true,
+    "mmd2_rel_diff": 0.0,
+    "previous": {
+     "scc": 0.9067059836450325,
+     "pcc": 0.7912494691651519,
+     "mmd2_rbf_biased": 0.0369712019500934
+    }
+   },
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S2_forced_b8_seed20260932",
+   "seed": 20260932,
+   "request": "Neuronal",
+   "selector": "S2",
+   "level": 8,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.9028155479588696,
+   "pcc": 0.7766375597308046,
+   "mmd2_rbf_biased": 0.03895871368329118,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.05863523483276367,
+   "peak_rss_mb": 599.15625,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S2_forced_b8\\Neuronal_bestofn_S2_forced_b8_seed20260932.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  },
+  {
+   "stem": "Neuronal_bestofn_S2_forced_b8_seed20260933",
+   "seed": 20260933,
+   "request": "Neuronal",
+   "selector": "S2",
+   "level": 8,
+   "variant": "forced_top_N",
+   "e21_matched_n": 396,
+   "scc": 0.9071001062013115,
+   "pcc": 0.7999320673825464,
+   "mmd2_rbf_biased": 0.035806671572692794,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "sigma": 51.17613220214844,
+   "walltime_s": 0.04925107955932617,
+   "peak_rss_mb": 599.15625,
+   "npy": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\bestofn\\Neuronal_bestofn_S2_forced_b8\\Neuronal_bestofn_S2_forced_b8_seed20260933.npy",
+   "cross_check_vs_e21_FINAL": {
+    "scc_exact": true,
+    "mmd2_rel_diff": 0.0
+   }
+  }
+ ],
+ "per_arm_rollup": {
+  "Neuronal|S1|b1": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 396,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "scc": {
+    "mean": 0.8716387524041872,
+    "sd": 0.0018755979275084896,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.8733033105668707,
+     0.8696065557515278,
+     0.8720063908941632
+    ]
+   },
+   "pcc": {
+    "mean": 0.6094573028586802,
+    "sd": 0.002965393905483122,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.6126146573413517,
+     0.6090261862988522,
+     0.6067310649358368
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.061171039426244724,
+    "sd": 0.0004821144364926432,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.060658421403325447,
+     0.06123932875307436,
+     0.06161536812233437
+    ]
+   }
+  },
+  "Neuronal|S1|b2": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 396,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "scc": {
+    "mean": 0.8852990072624745,
+    "sd": 0.0044844274611045565,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.8804079095592905,
+     0.8862721559995118,
+     0.889216956228621
+    ]
+   },
+   "pcc": {
+    "mean": 0.6642097882879671,
+    "sd": 0.009123421770803499,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.6556941464773156,
+     0.663096416753761,
+     0.6738388016328247
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.05423295810425658,
+    "sd": 0.0010386314843266594,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.055175243339137925,
+     0.05440433339499284,
+     0.05311929757863898
+    ]
+   }
+  },
+  "Neuronal|S1|b4": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 396,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "scc": {
+    "mean": 0.8970867250686946,
+    "sd": 0.0012740902077511937,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.8972760762986105,
+     0.8957285561054026,
+     0.8982555428020708
+    ]
+   },
+   "pcc": {
+    "mean": 0.7305825639192388,
+    "sd": 0.0036286924127590563,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.7292580298872979,
+     0.7278022133518742,
+     0.7346874485185444
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.045668578430829276,
+    "sd": 0.0004240943969149392,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.045943914791296336,
+     0.045881621633285574,
+     0.04518019886790592
+    ]
+   }
+  },
+  "Neuronal|S1|b8": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 396,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "scc": {
+    "mean": 0.9055717768386119,
+    "sd": 0.0008618331789440657,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9047610497458866,
+     0.9064769379581676,
+     0.9054773428117816
+    ]
+   },
+   "pcc": {
+    "mean": 0.7953883056918726,
+    "sd": 0.01135825453273456,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.7845154904489274,
+     0.7944728346503062,
+     0.8071765919763841
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.036606432631332085,
+    "sd": 0.0016132232836220913,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.038134778849115314,
+     0.03676454350352287,
+     0.03491997554135806
+    ]
+   }
+  },
+  "Neuronal|S1|b16": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 396,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "scc": {
+    "mean": 0.9069994654998353,
+    "sd": 0.004485477274229337,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9114358696314157,
+     0.9070960517966393,
+     0.9024664750714512
+    ]
+   },
+   "pcc": {
+    "mean": 0.8828976504984013,
+    "sd": 0.010196468973594896,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.8946703368609645,
+     0.8771557766426538,
+     0.8768668379915854
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.023025093779557748,
+    "sd": 0.0009059934684972666,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.021981205570400952,
+     0.02360659642716123,
+     0.02348747934111106
+    ]
+   }
+  },
+  "Neuronal|S2|b1": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 396,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "scc": {
+    "mean": 0.875945888934272,
+    "sd": 0.005103345298085925,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.8798770396468896,
+     0.8701785148211232,
+     0.8777821123348033
+    ]
+   },
+   "pcc": {
+    "mean": 0.6146524185790636,
+    "sd": 0.007545867857034627,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.6232483330361372,
+     0.6115884843247181,
+     0.6091204383763353
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.06085570036040459,
+    "sd": 0.0010426070175059592,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.05965182370563338,
+     0.061463974540166166,
+     0.06145130283541422
+    ]
+   }
+  },
+  "Neuronal|S2|b2": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 396,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "scc": {
+    "mean": 0.88590822120652,
+    "sd": 0.002804726501421324,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.8862025613731256,
+     0.8885541701052008,
+     0.8829679321412336
+    ]
+   },
+   "pcc": {
+    "mean": 0.6580668890114378,
+    "sd": 0.01143994418487308,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.6707744169385286,
+     0.6548374447241849,
+     0.6485888053716
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.0551532670592371,
+    "sd": 0.0015376194464462871,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.05341195471644844,
+     0.05572367823778612,
+     0.056324168223476745
+    ]
+   }
+  },
+  "Neuronal|S2|b4": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 396,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "scc": {
+    "mean": 0.8988466779279366,
+    "sd": 0.004379787734795234,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9027418656334538,
+     0.8941056676801603,
+     0.8996925004701954
+    ]
+   },
+   "pcc": {
+    "mean": 0.7231257895882998,
+    "sd": 0.00220601797445054,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.7220062420016257,
+     0.7256670969303001,
+     0.7217040298329735
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.0466349261556905,
+    "sd": 0.0003223373249978219,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.04686175989048458,
+     0.04626594874036738,
+     0.04677706983621954
+    ]
+   }
+  },
+  "Neuronal|S2|b8": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 396,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "scc": {
+    "mean": 0.9055405459350713,
+    "sd": 0.0023681308293819086,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9067059836450325,
+     0.9028155479588696,
+     0.9071001062013115
+    ]
+   },
+   "pcc": {
+    "mean": 0.7892730320928343,
+    "sd": 0.011772351052779888,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.7912494691651519,
+     0.7766375597308046,
+     0.7999320673825464
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.03724552906869246,
+    "sd": 0.0015938268076379964,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.0369712019500934,
+     0.03895871368329118,
+     0.035806671572692794
+    ]
+   }
+  },
+  "Neuronal|S2|b16": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 396,
+   "floor_scc": 0.946018737193243,
+   "floor_pcc": 0.9926737966115312,
+   "floor_mmd2": 0.001921649884674581,
+   "scc": {
+    "mean": 0.9084274181176214,
+    "sd": 0.0035696730670797118,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9124997399253807,
+     0.9058392498529478,
+     0.9069432645745359
+    ]
+   },
+   "pcc": {
+    "mean": 0.878535569027089,
+    "sd": 0.003302495758279509,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.8817623677027994,
+     0.8751622532243755,
+     0.8786820861540922
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.02351974137285769,
+    "sd": 0.00028764157480564085,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.023226219731027786,
+     0.023801118165669655,
+     0.02353188622187563
+    ]
+   }
+  },
+  "Myeloid|S1|b1": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 2302,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "scc": {
+    "mean": 0.8050315228622215,
+    "sd": 0.002595335538119777,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.8024870195374364,
+     0.8049326823767093,
+     0.8076748666725186
+    ]
+   },
+   "pcc": {
+    "mean": 0.6897021580101773,
+    "sd": 0.006826904833007216,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.6898099120020872,
+     0.6828220139957958,
+     0.6964745480326489
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.057724885284419436,
+    "sd": 0.0011958774784554037,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.05753892542484551,
+     0.059002849240025856,
+     0.05663288118838694
+    ]
+   }
+  },
+  "Myeloid|S1|b2": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 2302,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "scc": {
+    "mean": 0.8929384069172812,
+    "sd": 0.0018203599755418107,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.8914054591577446,
+     0.8924593833801702,
+     0.894950378213929
+    ]
+   },
+   "pcc": {
+    "mean": 0.8776994187929933,
+    "sd": 0.001808505665231843,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.8760769411736113,
+     0.8773720762388244,
+     0.8796492389665442
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.03424555239531276,
+    "sd": 0.0007004296977799676,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.03462379154341688,
+     0.03467554761002223,
+     0.033437318032499164
+    ]
+   }
+  },
+  "Myeloid|S1|b4": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 2302,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "scc": {
+    "mean": 0.9602114096324494,
+    "sd": 0.0008507756025575545,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9608618767231965,
+     0.9605237406318857,
+     0.9592486115422661
+    ]
+   },
+   "pcc": {
+    "mean": 0.9760728681661733,
+    "sd": 0.0013387058268443447,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9772404132643502,
+     0.9763664565027068,
+     0.9746117347314629
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.010372247958825298,
+    "sd": 0.0005920616866072123,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.009690815582459544,
+     0.01076065563554196,
+     0.01066527265847439
+    ]
+   }
+  },
+  "Myeloid|S1|b8": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 2302,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "scc": {
+    "mean": 0.9775835292506461,
+    "sd": 0.0008765361526383682,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9766038859435031,
+     0.9778530332472772,
+     0.9782936685611577
+    ]
+   },
+   "pcc": {
+    "mean": 0.9956467234197545,
+    "sd": 0.0006800176105237442,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9955031085442289,
+     0.9950499839060858,
+     0.9963870778089486
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.0011452096326127759,
+    "sd": 0.00016764279499192875,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.0012355411733282473,
+     0.0012483147841402253,
+     0.0009517729403698549
+    ]
+   }
+  },
+  "Myeloid|S1|b16": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 2302,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "scc": {
+    "mean": 0.9679256027236708,
+    "sd": 0.0006505328927063583,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9672123934571897,
+     0.9680780200626277,
+     0.9684863946511952
+    ]
+   },
+   "pcc": {
+    "mean": 0.9875553981472422,
+    "sd": 0.0004613371853540564,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9877369962202242,
+     0.9870308957518672,
+     0.9878983024696354
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.009326422488540098,
+    "sd": 0.00035909631937842707,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.00920851454845173,
+     0.009729648814197134,
+     0.009041104102971431
+    ]
+   }
+  },
+  "Myeloid|S2|b1": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 2302,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "scc": {
+    "mean": 0.8089348152306473,
+    "sd": 0.003049493240266424,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.8061477441281073,
+     0.8084645951583254,
+     0.8121921064055092
+    ]
+   },
+   "pcc": {
+    "mean": 0.7209707008989182,
+    "sd": 0.004058120437041565,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.7198935294327332,
+     0.7175598413917443,
+     0.7254587318722769
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.05259791183929222,
+    "sd": 0.0009773722464005098,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.05251050193372131,
+     0.053616053110848716,
+     0.05166718047330665
+    ]
+   }
+  },
+  "Myeloid|S2|b2": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 2302,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "scc": {
+    "mean": 0.8993893239140229,
+    "sd": 0.002502238153442535,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.8970804054830646,
+     0.8990395000657374,
+     0.9020480661932667
+    ]
+   },
+   "pcc": {
+    "mean": 0.8846945062838528,
+    "sd": 0.003798764722516293,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.8803087824479454,
+     0.8868189339749935,
+     0.8869558024286196
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.030480355517274644,
+    "sd": 0.000933148755604397,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.031096968739605657,
+     0.03093729899635478,
+     0.0294067988158635
+    ]
+   }
+  },
+  "Myeloid|S2|b4": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 2302,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "scc": {
+    "mean": 0.9592541487561385,
+    "sd": 0.00033179627545246675,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9593214692867528,
+     0.9595471224266409,
+     0.9588938545550216
+    ]
+   },
+   "pcc": {
+    "mean": 0.9681195269580091,
+    "sd": 0.0011577268016183908,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9690239873836697,
+     0.9685198193847586,
+     0.9668147741055991
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.009890098936924238,
+    "sd": 0.0003942946268863939,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.009496643006912553,
+     0.010285226942619241,
+     0.009888426861240918
+    ]
+   }
+  },
+  "Myeloid|S2|b8": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 2302,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "scc": {
+    "mean": 0.9791903238490084,
+    "sd": 0.0009964956886809855,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.978039693211658,
+     0.9797720039027824,
+     0.9797592744325845
+    ]
+   },
+   "pcc": {
+    "mean": 0.9965333684050653,
+    "sd": 0.0005008856254344225,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9963171040013012,
+     0.9961769484672308,
+     0.997106052746664
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.000890072978757613,
+    "sd": 0.00010930675694519968,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.0009451309776091765,
+     0.0009609026580832403,
+     0.0007641853005804222
+    ]
+   }
+  },
+  "Myeloid|S2|b16": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 2302,
+   "floor_scc": 0.9877988921359012,
+   "floor_pcc": 0.9990904098445211,
+   "floor_mmd2": 0.0002579159790472296,
+   "scc": {
+    "mean": 0.9757052624561112,
+    "sd": 0.0009534799418108393,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9746630327299096,
+     0.975919063313996,
+     0.976533691324428
+    ]
+   },
+   "pcc": {
+    "mean": 0.994524135760388,
+    "sd": 0.0008714331835442628,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9935249758742136,
+     0.9949204905380502,
+     0.9951269408689003
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.0025844442427419936,
+    "sd": 0.00044563788144369606,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.0030958848015611995,
+     0.0023778619066516793,
+     0.0022795860200131024
+    ]
+   }
+  },
+  "Endothelial|S1|b1": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 10057,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "scc": {
+    "mean": 0.9848362686982662,
+    "sd": 0.0001483750151791543,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9850071437519431,
+     0.984761621544573,
+     0.9847400407982826
+    ]
+   },
+   "pcc": {
+    "mean": 0.9984145119794001,
+    "sd": 4.6951206557406784e-05,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9984682287738997,
+     0.9983940014391672,
+     0.9983813057251333
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.0011605325967410558,
+    "sd": 6.280292080577188e-05,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.0011450908554286876,
+     0.0012296160890057362,
+     0.0011068908457887439
+    ]
+   }
+  },
+  "Endothelial|S1|b2": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 10057,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "scc": {
+    "mean": 0.9853373879683472,
+    "sd": 0.00029578045974131624,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9855209555010835,
+     0.9854950301450136,
+     0.9849961782589447
+    ]
+   },
+   "pcc": {
+    "mean": 0.9977067142264499,
+    "sd": 0.00010207772691495637,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9976021260828896,
+     0.9978060811407412,
+     0.9977119354557185
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.0032995902742081196,
+    "sd": 0.0001851540931882214,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.0034491961513427594,
+     0.0030925164039534714,
+     0.003357058267328128
+    ]
+   }
+  },
+  "Endothelial|S1|b4": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 10057,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "scc": {
+    "mean": 0.9771354367290371,
+    "sd": 0.0011302635019028529,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9772553732796982,
+     0.9759499876668446,
+     0.9782009492405684
+    ]
+   },
+   "pcc": {
+    "mean": 0.9955387537498082,
+    "sd": 5.001348042361996e-05,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9955251992428835,
+     0.9954969145993455,
+     0.9955941474071957
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.007935311333361414,
+    "sd": 0.0001816671777172256,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.007916215068302979,
+     0.007763946605774619,
+     0.008125772326006642
+    ]
+   }
+  },
+  "Endothelial|S2|b1": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 10057,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "scc": {
+    "mean": 0.9800537809527908,
+    "sd": 0.0003840667188903644,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9803869841577395,
+     0.9801406334146323,
+     0.9796337252860008
+    ]
+   },
+   "pcc": {
+    "mean": 0.9980258904355742,
+    "sd": 7.237320313073838e-05,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9981073520455684,
+     0.9979690076924809,
+     0.9980013115686733
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.0010723266892179357,
+    "sd": 4.7889360038385446e-05,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.0010410240985982977,
+     0.0011274558475684593,
+     0.0010485001214870504
+    ]
+   }
+  },
+  "Endothelial|S2|b2": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 10057,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "scc": {
+    "mean": 0.9904070803892321,
+    "sd": 0.0003662606478548545,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9906415851076232,
+     0.9905946271687432,
+     0.98998502889133
+    ]
+   },
+   "pcc": {
+    "mean": 0.9991789962223111,
+    "sd": 7.076263917614628e-05,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9992513795822557,
+     0.9991099740990655,
+     0.999175634985612
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.0003859560389679236,
+    "sd": 2.2778870100093966e-05,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.000362276510953663,
+     0.00040771229871716663,
+     0.00038787930723294117
+    ]
+   }
+  },
+  "Endothelial|S2|b4": {
+   "n_seeds": 3,
+   "seeds": [
+    20260931,
+    20260932,
+    20260933
+   ],
+   "e21_matched_n": 10057,
+   "floor_scc": 0.9943867516355568,
+   "floor_pcc": 0.999854154189945,
+   "floor_mmd2": 7.619107289436045e-05,
+   "scc": {
+    "mean": 0.9900878884859555,
+    "sd": 0.0003112148323171154,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9903729861569656,
+     0.9901347971927724,
+     0.9897558821081286
+    ]
+   },
+   "pcc": {
+    "mean": 0.9958861642645354,
+    "sd": 0.0004122635523367098,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.9963458734655234,
+     0.9957633695747479,
+     0.9955492497533348
+    ]
+   },
+   "mmd2_rbf_biased": {
+    "mean": 0.0020919472053297916,
+    "sd": 0.0002326851737640402,
+    "sd_ddof": 1,
+    "n_seeds": 3,
+    "per_seed": [
+     0.0018368776171748813,
+     0.002146358685830352,
+     0.0022926053129841417
+    ]
+   }
+  }
+ },
+ "reproduction_vs_one_seed_file": {
+  "file": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\summary\\200_bestofn_e21_scored.json",
+  "n_checked": 26,
+  "n_not_reproduced": 16,
+  "not_reproduced": [
+   {
+    "stem": "Myeloid_bestofn_S1_forced_b1_seed20260931",
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 8.38525851038762e-08,
+    "previous": {
+     "scc": 0.8024870195374364,
+     "pcc": 0.6898099120020872,
+     "mmd2_rbf_biased": 0.057538920600058274
+    }
+   },
+   {
+    "stem": "Myeloid_bestofn_S1_forced_b2_seed20260931",
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 8.603630699102213e-08,
+    "previous": {
+     "scc": 0.8914054591577446,
+     "pcc": 0.8760769411736113,
+     "mmd2_rbf_biased": 0.03462378856451398
+    }
+   },
+   {
+    "stem": "Myeloid_bestofn_S1_forced_b4_seed20260931",
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 8.968214185070173e-08,
+    "previous": {
+     "scc": 0.9608618767231965,
+     "pcc": 0.9772404132643502,
+     "mmd2_rbf_biased": 0.009690814713366525
+    }
+   },
+   {
+    "stem": "Myeloid_bestofn_S1_forced_b8_seed20260931",
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 8.050758812955322e-08,
+    "previous": {
+     "scc": 0.9766038859435031,
+     "pcc": 0.9955031085442289,
+     "mmd2_rbf_biased": 0.0012355410738578154
+    }
+   },
+   {
+    "stem": "Myeloid_bestofn_S1_forced_b16_seed20260931",
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 9.817684585324221e-08,
+    "previous": {
+     "scc": 0.9672123934571897,
+     "pcc": 0.9877369962202242,
+     "mmd2_rbf_biased": 0.009208513644388905
+    }
+   },
+   {
+    "stem": "Myeloid_bestofn_S2_forced_b1_seed20260931",
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 8.359175808470594e-08,
+    "previous": {
+     "scc": 0.8061477441281073,
+     "pcc": 0.7198935294327332,
+     "mmd2_rbf_biased": 0.0525104975442765
+    }
+   },
+   {
+    "stem": "Myeloid_bestofn_S2_forced_b2_seed20260931",
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 8.61323865566167e-08,
+    "previous": {
+     "scc": 0.8970804054830646,
+     "pcc": 0.8803087824479454,
+     "mmd2_rbf_biased": 0.031096966061149756
+    }
+   },
+   {
+    "stem": "Myeloid_bestofn_S2_forced_b4_seed20260931",
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 8.81142291690491e-08,
+    "previous": {
+     "scc": 0.9593214692867528,
+     "pcc": 0.9690239873836697,
+     "mmd2_rbf_biased": 0.009496642170123248
+    }
+   },
+   {
+    "stem": "Myeloid_bestofn_S2_forced_b8_seed20260931",
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 4.588380080376208e-08,
+    "previous": {
+     "scc": 0.978039693211658,
+     "pcc": 0.9963171040013012,
+     "mmd2_rbf_biased": 0.000945130934242977
+    }
+   },
+   {
+    "stem": "Myeloid_bestofn_S2_forced_b16_seed20260931",
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 1.0417916890004332e-07,
+    "previous": {
+     "scc": 0.9746630327299096,
+     "pcc": 0.9935249758742136,
+     "mmd2_rbf_biased": 0.0030958844790345275
+    }
+   },
+   {
+    "stem": "Endothelial_bestofn_S1_forced_b1_seed20260931",
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 9.815145075479258e-08,
+    "previous": {
+     "scc": 0.9850071437519431,
+     "pcc": 0.9984682287738997,
+     "mmd2_rbf_biased": 0.00114509074303637
+    }
+   },
+   {
+    "stem": "Endothelial_bestofn_S1_forced_b2_seed20260931",
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 1.0906058711611433e-07,
+    "previous": {
+     "scc": 0.9855209555010835,
+     "pcc": 0.9976021260828896,
+     "mmd2_rbf_biased": 0.003449195775171443
+    }
+   },
+   {
+    "stem": "Endothelial_bestofn_S1_forced_b4_seed20260931",
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 1.1078200106007827e-07,
+    "previous": {
+     "scc": 0.9772553732796982,
+     "pcc": 0.9955251992428835,
+     "mmd2_rbf_biased": 0.00791621419132893
+    }
+   },
+   {
+    "stem": "Endothelial_bestofn_S2_forced_b1_seed20260931",
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 1.0407935693959141e-07,
+    "previous": {
+     "scc": 0.9803869841577395,
+     "pcc": 0.9981073520455684,
+     "mmd2_rbf_biased": 0.0010410239902491902
+    }
+   },
+   {
+    "stem": "Endothelial_bestofn_S2_forced_b2_seed20260931",
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 1.299397754792425e-07,
+    "previous": {
+     "scc": 0.9906415851076232,
+     "pcc": 0.9992513795822557,
+     "mmd2_rbf_biased": 0.0003622764638795406
+    }
+   },
+   {
+    "stem": "Endothelial_bestofn_S2_forced_b4_seed20260931",
+    "scc_exact": true,
+    "pcc_exact": true,
+    "mmd2_exact": false,
+    "mmd2_rel_diff": 1.0273131272417908e-07,
+    "previous": {
+     "scc": 0.9903729861569656,
+     "pcc": 0.9963458734655234,
+     "mmd2_rbf_biased": 0.0018368774284700518
+    }
+   }
+  ],
+  "summary": {
+   "n_checked": 26,
+   "bitwise": {
+    "n_not_reproduced": 16,
+    "criterion": "scc AND pcc AND mmd2 all exactly equal"
+   },
+   "at_ruler_tolerance": {
+    "n_not_reproduced": 0,
+    "criterion": "scc exact AND pcc exact AND mmd2 rel diff <= 1e-06 (e21's own tolerance)",
+    "max_mmd2_rel_diff_observed": 1.299397754792425e-07,
+    "n_scc_not_exact": 0,
+    "n_pcc_not_exact": 0
+   },
+   "why_the_two_differ": "本次按指令「读归档 sigma，不重新拟合」；1-seed 那份文件用的是**重算的** sigma。两者相差至多 1 个 float32 ulp（Neuronal rel 0.00e+00、Myeloid 6.90e-08、Endothelial 7.81e-08），只影响高斯核、不影响任何秩统计量。所以 SCC 与 PCC 26/26 逐位相等，只有 MMD² 有 ~1e-07 量级的差；而 sigma 相对差恰为 0 的 Neuronal，其 10 条臂正是逐位复现的那 10 条 —— 26 − 16 = 10，自洽。**不静默修正，两档都报。**"
+  },
+  "policy": "reported, never silently fixed"
+ },
+ "cross_check_vs_e21_FINAL": {
+  "file": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\summary\\200_bestofn_e21_FINAL_scored.json",
+  "n_checked": 78,
+  "n_scc_mismatch": 0,
+  "mismatches": [],
+  "note": "an independent earlier process computed the same rows tonight; this is cross-process reproduction evidence, NOT the data source"
+ },
+ "missing_arms": [],
+ "aborted": null,
+ "peak_rss_mb_overall": 0.0,
+ "written_at": "2026-09-13 00:10:14"
+}

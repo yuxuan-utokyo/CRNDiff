@@ -1,0 +1,1141 @@
+{
+ "ticket": 193,
+ "config": "config 3 = data2d_ring8_sym_v2 (frozen)",
+ "arms": {
+  "tilt_only": {
+   "purity": {
+    "mean": 0.5073981114070785,
+    "sd": 0.014502229823104264,
+    "n": 5,
+    "per_seed": [
+     0.501994083125321,
+     0.4979990291521966,
+     0.5309997291851947,
+     0.4949998208480262,
+     0.5109978947246538
+    ]
+   },
+   "composition_tv": {
+    "mean": 0.4926018885929211,
+    "sd": 0.014502229823104215,
+    "n": 5,
+    "per_seed": [
+     0.49800591687467843,
+     0.5020009708478029,
+     0.469000270814805,
+     0.5050001791519734,
+     0.4890021052753456
+    ]
+   },
+   "grid_tv": {
+    "mean": 0.5325744642003171,
+    "sd": 0.01110838163494295,
+    "n": 5,
+    "per_seed": [
+     0.5467328766411854,
+     0.527410236402253,
+     0.5185040797734125,
+     0.5403849003178554,
+     0.5298402278668789
+    ]
+   },
+   "unique_lineage_fraction": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "n": 5,
+    "per_seed": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "ess_pre_final_fraction": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "n": 5,
+    "per_seed": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "c1_share": {
+    "mean": 0.5011174220896734,
+    "sd": 0.014852988156925814,
+    "n": 5,
+    "per_seed": [
+     0.5099655607025233,
+     0.4939768062695265,
+     0.5160073378484563,
+     0.4787880220924339,
+     0.5068493835354269
+    ]
+   },
+   "n_seeds": 5,
+   "seeds": [
+    20260901,
+    20260902,
+    20260903,
+    20260904,
+    20260905
+   ],
+   "distinct_ancestors": {
+    "mean": 1000,
+    "sd": 0.0,
+    "n": 5,
+    "per_seed": [
+     1000,
+     1000,
+     1000,
+     1000,
+     1000
+    ]
+   },
+   "twin_gap": {
+    "mean": 0.014798792513418646,
+    "sd": 0.029003885368884156,
+    "n": 5,
+    "per_seed": [
+     0.003994161975910848,
+     -0.004000872707810799,
+     0.06199989651839599,
+     -0.009999079772221364,
+     0.021999856552818553
+    ]
+   },
+   "grid_tv_noise_floor": {
+    "mean": 0.14628975333283828,
+    "sd": 0.005648538885136477,
+    "n": 5,
+    "per_seed": [
+     0.14449947306580035,
+     0.14566389301735583,
+     0.1550059790998889,
+     0.14689530878151075,
+     0.13938411269963558
+    ]
+   }
+  },
+  "tilt_off_no_resampling": {
+   "purity": {
+    "mean": 0.9953076452017982,
+    "sd": 0.00165840655703802,
+    "n": 5,
+    "per_seed": [
+     0.9941617502407973,
+     0.9946225864851924,
+     0.9957769128344668,
+     0.993979562892989,
+     0.9979974135555454
+    ]
+   },
+   "composition_tv": {
+    "mean": 0.03617523600489972,
+    "sd": 0.019787256859217513,
+    "n": 5,
+    "per_seed": [
+     0.03683824355607705,
+     0.056002169763567276,
+     0.005016202043105294,
+     0.05001845697287639,
+     0.03300110768887258
+    ]
+   },
+   "grid_tv": {
+    "mean": 0.47160996948264033,
+    "sd": 0.018094942385843173,
+    "n": 5,
+    "per_seed": [
+     0.4802537812616214,
+     0.47672384137850665,
+     0.4918178408235835,
+     0.44405238549772874,
+     0.4652019984517613
+    ]
+   },
+   "unique_lineage_fraction": {
+    "mean": 0.15259999999999999,
+    "sd": 0.0058991524815010556,
+    "n": 5,
+    "per_seed": [
+     0.148,
+     0.148,
+     0.149,
+     0.16,
+     0.158
+    ]
+   },
+   "ess_pre_final_fraction": {
+    "mean": 0.009711028811764107,
+    "sd": 0.0006478701976106064,
+    "n": 5,
+    "per_seed": [
+     0.008895469361527462,
+     0.00945674707681067,
+     0.009549969554266458,
+     0.010038686816503113,
+     0.010614271249712832
+    ]
+   },
+   "c1_share": {
+    "mean": 0.5211731851595907,
+    "sd": 0.035598165098977605,
+    "n": 5,
+    "per_seed": [
+     0.5341183098909794,
+     0.553601701520335,
+     0.5029169771089295,
+     0.5472929627270734,
+     0.46793597455063607
+    ]
+   },
+   "n_seeds": 5,
+   "seeds": [
+    20260901,
+    20260902,
+    20260903,
+    20260904,
+    20260905
+   ],
+   "distinct_ancestors": {
+    "mean": 152.6,
+    "sd": 5.89915248150105,
+    "n": 5,
+    "per_seed": [
+     148,
+     148,
+     149,
+     160,
+     158
+    ]
+   },
+   "twin_gap": {
+    "mean": 0.9953076452017432,
+    "sd": 0.0016584065570914833,
+    "n": 5,
+    "per_seed": [
+     0.9941617502407544,
+     0.9946225864851924,
+     0.9957769128344653,
+     0.9939795628927586,
+     0.9979974135555454
+    ]
+   },
+   "grid_tv_noise_floor": {
+    "mean": 0.14628975333283828,
+    "sd": 0.005648538885136477,
+    "n": 5,
+    "per_seed": [
+     0.14449947306580035,
+     0.14566389301735583,
+     0.1550059790998889,
+     0.14689530878151075,
+     0.13938411269963558
+    ]
+   }
+  },
+  "tilt_off_interval8": {
+   "purity": {
+    "mean": 0.9958434936003353,
+    "sd": 0.002044204996890519,
+    "n": 5,
+    "per_seed": [
+     0.9923219585910685,
+     0.9959996033190931,
+     0.9969987060993419,
+     0.9974548020317132,
+     0.9964423979604595
+    ]
+   },
+   "composition_tv": {
+    "mean": 0.11864914406020219,
+    "sd": 0.14115774596803338,
+    "n": 5,
+    "per_seed": [
+     0.07067800625519735,
+     0.012000283247127166,
+     0.13900014803496363,
+     0.3540075733713757,
+     0.01755970939234711
+    ]
+   },
+   "grid_tv": {
+    "mean": 0.6303560463539067,
+    "sd": 0.07765399363451463,
+    "n": 5,
+    "per_seed": [
+     0.6014345168013171,
+     0.6372554560319075,
+     0.5514565651113682,
+     0.7580140011917144,
+     0.6036196926332267
+    ]
+   },
+   "unique_lineage_fraction": {
+    "mean": 0.1102,
+    "sd": 0.024447903795622238,
+    "n": 5,
+    "per_seed": [
+     0.114,
+     0.103,
+     0.131,
+     0.072,
+     0.131
+    ]
+   },
+   "ess_pre_final_fraction": {
+    "mean": 0.0021846662252205007,
+    "sd": 0.001487981768344636,
+    "n": 5,
+    "per_seed": [
+     0.0020591392082601806,
+     0.0016344526324366547,
+     0.0042774841378258755,
+     0.00022035568256742238,
+     0.0027318994650123705
+    ]
+   },
+   "c1_share": {
+    "mean": 0.5348485955687645,
+    "sd": 0.1890067523166762,
+    "n": 5,
+    "per_seed": [
+     0.4326438511492494,
+     0.510040249889005,
+     0.3620865802097299,
+     0.8536350455867694,
+     0.515837251009069
+    ]
+   },
+   "n_seeds": 5,
+   "seeds": [
+    20260901,
+    20260902,
+    20260903,
+    20260904,
+    20260905
+   ],
+   "distinct_ancestors": {
+    "mean": 110.2,
+    "sd": 24.447903795622235,
+    "n": 5,
+    "per_seed": [
+     114,
+     103,
+     131,
+     72,
+     131
+    ]
+   },
+   "twin_gap": {
+    "mean": 0.9956434936002553,
+    "sd": 0.0020197331234113086,
+    "n": 5,
+    "per_seed": [
+     0.992321958590711,
+     0.9959996033190931,
+     0.9969987060993419,
+     0.9974548020316703,
+     0.9954423979604599
+    ]
+   },
+   "grid_tv_noise_floor": {
+    "mean": 0.14628975333283828,
+    "sd": 0.005648538885136477,
+    "n": 5,
+    "per_seed": [
+     0.14449947306580035,
+     0.14566389301735583,
+     0.1550059790998889,
+     0.14689530878151075,
+     0.13938411269963558
+    ]
+   }
+  },
+  "tilt_on_interval8": {
+   "purity": {
+    "mean": 0.9881004465654701,
+    "sd": 0.00597223947923323,
+    "n": 5,
+    "per_seed": [
+     0.9849998839912893,
+     0.990988004653306,
+     0.989999211082664,
+     0.9949936152013164,
+     0.9795215178987751
+    ]
+   },
+   "composition_tv": {
+    "mean": 0.027634717784299143,
+    "sd": 0.012985132199826442,
+    "n": 5,
+    "per_seed": [
+     0.02900006936238072,
+     0.0430000251508222,
+     0.015000528741935379,
+     0.014000186790003113,
+     0.03717277887635431
+    ]
+   },
+   "grid_tv": {
+    "mean": 0.2476338907222027,
+    "sd": 0.007090642960136261,
+    "n": 5,
+    "per_seed": [
+     0.24421854879478458,
+     0.24992893812620953,
+     0.25766986067836384,
+     0.24785107921498767,
+     0.23850102679666796
+    ]
+   },
+   "unique_lineage_fraction": {
+    "mean": 0.879,
+    "sd": 0.008215838362577499,
+    "n": 5,
+    "per_seed": [
+     0.881,
+     0.879,
+     0.867,
+     0.878,
+     0.89
+    ]
+   },
+   "ess_pre_final_fraction": {
+    "mean": 0.11841509712241198,
+    "sd": 0.0024220983026966457,
+    "n": 5,
+    "per_seed": [
+     0.11896848637075998,
+     0.12155265182825617,
+     0.11541402589269846,
+     0.11949693349006829,
+     0.11664338803027702
+    ]
+   },
+   "c1_share": {
+    "mean": 0.5219648277370046,
+    "sd": 0.011881116739418374,
+    "n": 5,
+    "per_seed": [
+     0.5218274252692349,
+     0.5388440902379461,
+     0.5101011537901439,
+     0.5115548423778926,
+     0.5274966270098057
+    ]
+   },
+   "n_seeds": 5,
+   "seeds": [
+    20260901,
+    20260902,
+    20260903,
+    20260904,
+    20260905
+   ],
+   "distinct_ancestors": {
+    "mean": 879,
+    "sd": 8.215838362577491,
+    "n": 5,
+    "per_seed": [
+     881,
+     879,
+     867,
+     878,
+     890
+    ]
+   },
+   "twin_gap": {
+    "mean": 0.9763095669822482,
+    "sd": 0.011762290524240307,
+    "n": 5,
+    "per_seed": [
+     0.9700080888469248,
+     0.9819880402169738,
+     0.9799992122964084,
+     0.9899936152122522,
+     0.9595588783386819
+    ]
+   },
+   "grid_tv_noise_floor": {
+    "mean": 0.14628975333283828,
+    "sd": 0.005648538885136477,
+    "n": 5,
+    "per_seed": [
+     0.14449947306580035,
+     0.14566389301735583,
+     0.1550059790998889,
+     0.14689530878151075,
+     0.13938411269963558
+    ]
+   }
+  }
+ },
+ "c1_share_sd_ratio": {
+  "tilt_off_interval8": {
+   "sd_untilted": 0.1890067523166762,
+   "sd_tilted": 0.011881116739418374,
+   "ratio": 15.908163892507028
+  },
+  "tilt_off_no_resampling": {
+   "sd_untilted": 0.035598165098977605,
+   "sd_tilted": 0.011881116739418374,
+   "ratio": 2.99619689627932
+  }
+ },
+ "sd_ratio_prediction": 2.439816120674405,
+ "criteria": {
+  "S1": {
+   "purity": 0.5073981114070785,
+   "twin_gap": 0.014798792513418646,
+   "purity_ok": true,
+   "gap_ok": true,
+   "pass": true
+  },
+  "S2": {
+   "unique_lineage_fraction": 0.15259999999999999,
+   "grid_tv_over_floor": 3.223807264269794,
+   "lineage_ok": true,
+   "gridtv_ok": true,
+   "pass": true
+  },
+  "S3": {
+   "a_lineage": 0.879,
+   "a_ok": true,
+   "b_ess": 0.11841509712241198,
+   "b_ok": true,
+   "c_purity": 0.9881004465654701,
+   "c_ok": true,
+   "d_grid_tv_tilted": 0.2476338907222027,
+   "d_grid_tv_untilted": 0.6303560463539067,
+   "d_grid_diff": 0.38272215563170403,
+   "d_grid_pooled_sd": 0.05513809910115404,
+   "d_comp_tv_tilted": 0.027634717784299143,
+   "d_comp_tv_untilted": 0.11864914406020219,
+   "d_comp_diff": 0.09101442627590305,
+   "d_comp_pooled_sd": 0.1002350310645505,
+   "d_ok": false,
+   "comparison_arm": "tilt_off_interval8",
+   "pass": false
+  }
+ },
+ "g3_firing": {
+  "tilt_off_interval8": [
+   {
+    "seed": 20260901,
+    "fires": 3,
+    "resample_steps": [
+     24,
+     16,
+     8
+    ]
+   },
+   {
+    "seed": 20260902,
+    "fires": 3,
+    "resample_steps": [
+     24,
+     16,
+     8
+    ]
+   },
+   {
+    "seed": 20260903,
+    "fires": 3,
+    "resample_steps": [
+     24,
+     16,
+     8
+    ]
+   },
+   {
+    "seed": 20260904,
+    "fires": 3,
+    "resample_steps": [
+     24,
+     16,
+     8
+    ]
+   },
+   {
+    "seed": 20260905,
+    "fires": 3,
+    "resample_steps": [
+     24,
+     16,
+     8
+    ]
+   }
+  ],
+  "tilt_on_interval8": [
+   {
+    "seed": 20260901,
+    "fires": 0,
+    "resample_steps": []
+   },
+   {
+    "seed": 20260902,
+    "fires": 0,
+    "resample_steps": []
+   },
+   {
+    "seed": 20260903,
+    "fires": 0,
+    "resample_steps": []
+   },
+   {
+    "seed": 20260904,
+    "fires": 0,
+    "resample_steps": []
+   },
+   {
+    "seed": 20260905,
+    "fires": 0,
+    "resample_steps": []
+   }
+  ]
+ },
+ "g4_seeds_distinct": {
+  "tilt_only": true,
+  "tilt_off_no_resampling": true,
+  "tilt_off_interval8": true,
+  "tilt_on_interval8": true
+ },
+ "m_sweep": {
+  "pi_R": 0.01,
+  "rows": [
+   {
+    "arm": "tilt_off_interval8",
+    "M": 2500,
+    "M_pi_R": 25.0,
+    "n_seeds": 3,
+    "distinct_ancestors_mean": 33.666666666666664,
+    "distinct_ancestors_sd": 3.5118845842842465,
+    "ess_mean": 0.0029273936592115503,
+    "grid_tv_mean": 0.7914519622694139,
+    "purity_mean": 0.9970016425024973,
+    "walltime_mean": 6.150528192520142,
+    "per_seed": [
+     {
+      "seed": 20260901,
+      "distinct_ancestors": 34,
+      "unique_lineage_fraction": 0.034,
+      "ess_pre_final_fraction": 0.0015314044951254139,
+      "grid_tv": 0.8432209930553627,
+      "purity": 0.9960038975700511,
+      "walltime_s": 6.226989507675171
+     },
+     {
+      "seed": 20260902,
+      "distinct_ancestors": 30,
+      "unique_lineage_fraction": 0.03,
+      "ess_pre_final_fraction": 0.004728126825533879,
+      "grid_tv": 0.7545466370966032,
+      "purity": 0.9960011580119595,
+      "walltime_s": 6.1595778465271
+     },
+     {
+      "seed": 20260903,
+      "distinct_ancestors": 37,
+      "unique_lineage_fraction": 0.037,
+      "ess_pre_final_fraction": 0.002522649656975358,
+      "grid_tv": 0.7765882566562761,
+      "purity": 0.9989998719254812,
+      "walltime_s": 6.065017223358154
+     }
+    ]
+   },
+   {
+    "arm": "tilt_off_interval8",
+    "M": 5000,
+    "M_pi_R": 50.0,
+    "n_seeds": 3,
+    "distinct_ancestors_mean": 56.333333333333336,
+    "distinct_ancestors_sd": 9.865765724632494,
+    "ess_mean": 0.0037938957116541968,
+    "grid_tv_mean": 0.6296697325770184,
+    "purity_mean": 0.9931502751525042,
+    "walltime_mean": 9.635127941767374,
+    "per_seed": [
+     {
+      "seed": 20260901,
+      "distinct_ancestors": 61,
+      "unique_lineage_fraction": 0.061,
+      "ess_pre_final_fraction": 0.0035963069416160773,
+      "grid_tv": 0.6529635554344125,
+      "purity": 0.994423668102675,
+      "walltime_s": 9.572753190994263
+     },
+     {
+      "seed": 20260902,
+      "distinct_ancestors": 45,
+      "unique_lineage_fraction": 0.045,
+      "ess_pre_final_fraction": 0.0035455434231415994,
+      "grid_tv": 0.620937834309375,
+      "purity": 0.9979884884219106,
+      "walltime_s": 9.742425203323364
+     },
+     {
+      "seed": 20260903,
+      "distinct_ancestors": 63,
+      "unique_lineage_fraction": 0.063,
+      "ess_pre_final_fraction": 0.004239836770204913,
+      "grid_tv": 0.6151078079872676,
+      "purity": 0.9870386689329269,
+      "walltime_s": 9.590205430984497
+     }
+    ]
+   },
+   {
+    "arm": "tilt_off_interval8",
+    "M": 10000,
+    "M_pi_R": 100.0,
+    "n_seeds": 5,
+    "distinct_ancestors_mean": 110.2,
+    "distinct_ancestors_sd": 24.447903795622235,
+    "ess_mean": 0.0021846662252205007,
+    "grid_tv_mean": 0.6303560463539067,
+    "purity_mean": 0.9958434936003353,
+    "walltime_mean": 16.817349195480347,
+    "per_seed": [
+     {
+      "seed": 20260901,
+      "distinct_ancestors": 114,
+      "unique_lineage_fraction": 0.114,
+      "ess_pre_final_fraction": 0.0020591392082601806,
+      "grid_tv": 0.6014345168013171,
+      "purity": 0.9923219585910685,
+      "walltime_s": 17.3182692527771
+     },
+     {
+      "seed": 20260902,
+      "distinct_ancestors": 103,
+      "unique_lineage_fraction": 0.103,
+      "ess_pre_final_fraction": 0.0016344526324366547,
+      "grid_tv": 0.6372554560319075,
+      "purity": 0.9959996033190931,
+      "walltime_s": 16.780604600906372
+     },
+     {
+      "seed": 20260903,
+      "distinct_ancestors": 131,
+      "unique_lineage_fraction": 0.131,
+      "ess_pre_final_fraction": 0.0042774841378258755,
+      "grid_tv": 0.5514565651113682,
+      "purity": 0.9969987060993419,
+      "walltime_s": 16.733136653900146
+     },
+     {
+      "seed": 20260904,
+      "distinct_ancestors": 72,
+      "unique_lineage_fraction": 0.072,
+      "ess_pre_final_fraction": 0.00022035568256742238,
+      "grid_tv": 0.7580140011917144,
+      "purity": 0.9974548020317132,
+      "walltime_s": 16.661739110946655
+     },
+     {
+      "seed": 20260905,
+      "distinct_ancestors": 131,
+      "unique_lineage_fraction": 0.131,
+      "ess_pre_final_fraction": 0.0027318994650123705,
+      "grid_tv": 0.6036196926332267,
+      "purity": 0.9964423979604595,
+      "walltime_s": 16.59299635887146
+     }
+    ]
+   },
+   {
+    "arm": "tilt_off_interval8",
+    "M": 20000,
+    "M_pi_R": 200.0,
+    "n_seeds": 3,
+    "distinct_ancestors_mean": 181,
+    "distinct_ancestors_sd": 32.357379374726875,
+    "ess_mean": 0.0009180712273063211,
+    "grid_tv_mean": 0.5813606095969353,
+    "purity_mean": 0.9947021990146722,
+    "walltime_mean": 30.483235677083332,
+    "per_seed": [
+     {
+      "seed": 20260901,
+      "distinct_ancestors": 195,
+      "unique_lineage_fraction": 0.195,
+      "ess_pre_final_fraction": 0.0012279397684596969,
+      "grid_tv": 0.5188835068809263,
+      "purity": 0.9939946734112006,
+      "walltime_s": 31.209407806396484
+     },
+     {
+      "seed": 20260902,
+      "distinct_ancestors": 204,
+      "unique_lineage_fraction": 0.204,
+      "ess_pre_final_fraction": 0.001391399860469868,
+      "grid_tv": 0.5317969330027201,
+      "purity": 0.9911143324290506,
+      "walltime_s": 31.088668823242188
+     },
+     {
+      "seed": 20260903,
+      "distinct_ancestors": 144,
+      "unique_lineage_fraction": 0.144,
+      "ess_pre_final_fraction": 0.0001348740529893985,
+      "grid_tv": 0.6934013889071593,
+      "purity": 0.9989975912037652,
+      "walltime_s": 29.151630401611328
+     }
+    ]
+   },
+   {
+    "arm": "tilt_off_interval8",
+    "M": 40000,
+    "M_pi_R": 400.0,
+    "n_seeds": 3,
+    "distinct_ancestors_mean": 289.6666666666667,
+    "distinct_ancestors_sd": 23.501772982763097,
+    "ess_mean": 0.0023166955697832563,
+    "grid_tv_mean": 0.4549659898748691,
+    "purity_mean": 0.9970026136135277,
+    "walltime_mean": 59.359282890955605,
+    "per_seed": [
+     {
+      "seed": 20260901,
+      "distinct_ancestors": 313,
+      "unique_lineage_fraction": 0.313,
+      "ess_pre_final_fraction": 0.0028804651307513213,
+      "grid_tv": 0.44427307100320207,
+      "purity": 0.9944644347963352,
+      "walltime_s": 60.72645807266235
+     },
+     {
+      "seed": 20260902,
+      "distinct_ancestors": 266,
+      "unique_lineage_fraction": 0.266,
+      "ess_pre_final_fraction": 0.001442650697104602,
+      "grid_tv": 0.4878799167965992,
+      "purity": 0.9989963874449529,
+      "walltime_s": 56.365591287612915
+     },
+     {
+      "seed": 20260903,
+      "distinct_ancestors": 290,
+      "unique_lineage_fraction": 0.29,
+      "ess_pre_final_fraction": 0.002626970881493846,
+      "grid_tv": 0.43274498182480603,
+      "purity": 0.9975470185992952,
+      "walltime_s": 60.98579931259155
+     }
+    ]
+   },
+   {
+    "arm": "tilt_off_interval8",
+    "M": 80000,
+    "M_pi_R": 800.0,
+    "n_seeds": 3,
+    "distinct_ancestors_mean": 389.3333333333333,
+    "distinct_ancestors_sd": 20.033305601755625,
+    "ess_mean": 0.0002794665038900265,
+    "grid_tv_mean": 0.4534307180122731,
+    "purity_mean": 0.9966567934950271,
+    "walltime_mean": 112.85527364412944,
+    "per_seed": [
+     {
+      "seed": 20260901,
+      "distinct_ancestors": 410,
+      "unique_lineage_fraction": 0.41,
+      "ess_pre_final_fraction": 0.0002246808816985137,
+      "grid_tv": 0.46937679408178745,
+      "purity": 0.9934469820502443,
+      "walltime_s": 114.54936265945435
+     },
+     {
+      "seed": 20260902,
+      "distinct_ancestors": 388,
+      "unique_lineage_fraction": 0.388,
+      "ess_pre_final_fraction": 0.00025298204695848605,
+      "grid_tv": 0.43275227204765454,
+      "purity": 0.9975347111057145,
+      "walltime_s": 110.27505326271057
+     },
+     {
+      "seed": 20260903,
+      "distinct_ancestors": 370,
+      "unique_lineage_fraction": 0.37,
+      "ess_pre_final_fraction": 0.0003607365830130798,
+      "grid_tv": 0.4581630879073772,
+      "purity": 0.9989886873291227,
+      "walltime_s": 113.74140501022339
+     }
+    ]
+   },
+   {
+    "arm": "tilt_off_interval8",
+    "M": 160000,
+    "M_pi_R": 1600.0,
+    "n_seeds": 3,
+    "distinct_ancestors_mean": 551,
+    "distinct_ancestors_sd": 50.08991914547278,
+    "ess_mean": 0.0008693521696524234,
+    "grid_tv_mean": 0.3613082146148014,
+    "purity_mean": 0.9966263702053927,
+    "walltime_mean": 216.55103222529092,
+    "per_seed": [
+     {
+      "seed": 20260901,
+      "distinct_ancestors": 606,
+      "unique_lineage_fraction": 0.606,
+      "ess_pre_final_fraction": 0.0013808752221290473,
+      "grid_tv": 0.31533811143179535,
+      "purity": 0.9959574085598866,
+      "walltime_s": 216.52737998962402
+     },
+     {
+      "seed": 20260902,
+      "distinct_ancestors": 539,
+      "unique_lineage_fraction": 0.539,
+      "ess_pre_final_fraction": 0.0005486537486813789,
+      "grid_tv": 0.39316726595794693,
+      "purity": 0.9959728422571633,
+      "walltime_s": 215.41188621520996
+     },
+     {
+      "seed": 20260903,
+      "distinct_ancestors": 508,
+      "unique_lineage_fraction": 0.508,
+      "ess_pre_final_fraction": 0.000678527538146844,
+      "grid_tv": 0.37541926645466184,
+      "purity": 0.9979488597991281,
+      "walltime_s": 217.71383047103882
+     }
+    ]
+   },
+   {
+    "arm": "tilt_on_interval8",
+    "M": 2500,
+    "M_pi_R": 25.0,
+    "n_seeds": 3,
+    "distinct_ancestors_mean": 716,
+    "distinct_ancestors_sd": 35.76310948449533,
+    "ess_mean": 0.1165147845437798,
+    "grid_tv_mean": 0.2809259556295537,
+    "purity_mean": 0.98631319445213,
+    "walltime_mean": 6.061335563659668,
+    "per_seed": [
+     {
+      "seed": 20260901,
+      "distinct_ancestors": 721,
+      "unique_lineage_fraction": 0.721,
+      "ess_pre_final_fraction": 0.10636811229541827,
+      "grid_tv": 0.28726959343711095,
+      "purity": 0.9759876753355698,
+      "walltime_s": 6.06902813911438
+     },
+     {
+      "seed": 20260902,
+      "distinct_ancestors": 678,
+      "unique_lineage_fraction": 0.678,
+      "ess_pre_final_fraction": 0.10669633770209877,
+      "grid_tv": 0.2926114488553616,
+      "purity": 0.9909645776126166,
+      "walltime_s": 6.154703140258789
+     },
+     {
+      "seed": 20260903,
+      "distinct_ancestors": 749,
+      "unique_lineage_fraction": 0.749,
+      "ess_pre_final_fraction": 0.13647990363382234,
+      "grid_tv": 0.26289682459618857,
+      "purity": 0.9919873304082034,
+      "walltime_s": 5.960275411605835
+     }
+    ]
+   },
+   {
+    "arm": "tilt_on_interval8",
+    "M": 5000,
+    "M_pi_R": 50.0,
+    "n_seeds": 3,
+    "distinct_ancestors_mean": 812,
+    "distinct_ancestors_sd": 15.716233645501712,
+    "ess_mean": 0.12264680963200772,
+    "grid_tv_mean": 0.26404567706080195,
+    "purity_mean": 0.9869987426000588,
+    "walltime_mean": 9.376939296722412,
+    "per_seed": [
+     {
+      "seed": 20260901,
+      "distinct_ancestors": 809,
+      "unique_lineage_fraction": 0.809,
+      "ess_pre_final_fraction": 0.11936504875550352,
+      "grid_tv": 0.25761684868386275,
+      "purity": 0.9909985585614896,
+      "walltime_s": 9.230280876159668
+     },
+     {
+      "seed": 20260902,
+      "distinct_ancestors": 829,
+      "unique_lineage_fraction": 0.829,
+      "ess_pre_final_fraction": 0.13994557090344775,
+      "grid_tv": 0.2627493990268134,
+      "purity": 0.9799983076815922,
+      "walltime_s": 9.603737354278564
+     },
+     {
+      "seed": 20260903,
+      "distinct_ancestors": 798,
+      "unique_lineage_fraction": 0.798,
+      "ess_pre_final_fraction": 0.10862980923707187,
+      "grid_tv": 0.2717707834717298,
+      "purity": 0.9899993615570948,
+      "walltime_s": 9.296799659729004
+     }
+    ]
+   },
+   {
+    "arm": "tilt_on_interval8",
+    "M": 10000,
+    "M_pi_R": 100.0,
+    "n_seeds": 5,
+    "distinct_ancestors_mean": 879,
+    "distinct_ancestors_sd": 8.215838362577491,
+    "ess_mean": 0.11841509712241198,
+    "grid_tv_mean": 0.2476338907222027,
+    "purity_mean": 0.9881004465654701,
+    "walltime_mean": 18.065762853622438,
+    "per_seed": [
+     {
+      "seed": 20260901,
+      "distinct_ancestors": 881,
+      "unique_lineage_fraction": 0.881,
+      "ess_pre_final_fraction": 0.11896848637075998,
+      "grid_tv": 0.24421854879478458,
+      "purity": 0.9849998839912893,
+      "walltime_s": 16.86641001701355
+     },
+     {
+      "seed": 20260902,
+      "distinct_ancestors": 879,
+      "unique_lineage_fraction": 0.879,
+      "ess_pre_final_fraction": 0.12155265182825617,
+      "grid_tv": 0.24992893812620953,
+      "purity": 0.990988004653306,
+      "walltime_s": 18.367947578430176
+     },
+     {
+      "seed": 20260903,
+      "distinct_ancestors": 867,
+      "unique_lineage_fraction": 0.867,
+      "ess_pre_final_fraction": 0.11541402589269846,
+      "grid_tv": 0.25766986067836384,
+      "purity": 0.989999211082664,
+      "walltime_s": 18.953506231307983
+     },
+     {
+      "seed": 20260904,
+      "distinct_ancestors": 878,
+      "unique_lineage_fraction": 0.878,
+      "ess_pre_final_fraction": 0.11949693349006829,
+      "grid_tv": 0.24785107921498767,
+      "purity": 0.9949936152013164,
+      "walltime_s": 19.320789098739624
+     },
+     {
+      "seed": 20260905,
+      "distinct_ancestors": 890,
+      "unique_lineage_fraction": 0.89,
+      "ess_pre_final_fraction": 0.11664338803027702,
+      "grid_tv": 0.23850102679666796,
+      "purity": 0.9795215178987751,
+      "walltime_s": 16.82016134262085
+     }
+    ]
+   },
+   {
+    "arm": "tilt_on_interval8",
+    "M": 20000,
+    "M_pi_R": 200.0,
+    "n_seeds": 3,
+    "distinct_ancestors_mean": 936.6666666666666,
+    "distinct_ancestors_sd": 8.144527815247077,
+    "ess_mean": 0.11867569598795337,
+    "grid_tv_mean": 0.23778673489419794,
+    "purity_mean": 0.9866553717985239,
+    "walltime_mean": 29.577577114105225,
+    "per_seed": [
+     {
+      "seed": 20260901,
+      "distinct_ancestors": 933,
+      "unique_lineage_fraction": 0.933,
+      "ess_pre_final_fraction": 0.1154602214683292,
+      "grid_tv": 0.23163566918736808,
+      "purity": 0.9859990364345791,
+      "walltime_s": 29.898911476135254
+     },
+     {
+      "seed": 20260902,
+      "distinct_ancestors": 931,
+      "unique_lineage_fraction": 0.931,
+      "ess_pre_final_fraction": 0.11658864283991222,
+      "grid_tv": 0.25295716611392777,
+      "purity": 0.986983096775749,
+      "walltime_s": 29.46033763885498
+     },
+     {
+      "seed": 20260903,
+      "distinct_ancestors": 946,
+      "unique_lineage_fraction": 0.946,
+      "ess_pre_final_fraction": 0.12397822365561871,
+      "grid_tv": 0.22876736938129794,
+      "purity": 0.9869839821852437,
+      "walltime_s": 29.37348222732544
+     }
+    ]
+   },
+   {
+    "arm": "tilt_on_interval8",
+    "M": 40000,
+    "M_pi_R": 400.0,
+    "n_seeds": 3,
+    "distinct_ancestors_mean": 988.6666666666666,
+    "distinct_ancestors_sd": 4.932882862316247,
+    "ess_mean": 0.12521340114254131,
+    "grid_tv_mean": 0.23797117317404445,
+    "purity_mean": 0.9880624928169354,
+    "walltime_mean": 56.08371591567993,
+    "per_seed": [
+     {
+      "seed": 20260901,
+      "distinct_ancestors": 992,
+      "unique_lineage_fraction": 0.992,
+      "ess_pre_final_fraction": 0.13002854880069464,
+      "grid_tv": 0.2395393251683699,
+      "purity": 0.985966662232785,
+      "walltime_s": 55.45800304412842
+     },
+     {
+      "seed": 20260902,
+      "distinct_ancestors": 983,
+      "unique_lineage_fraction": 0.983,
+      "ess_pre_final_fraction": 0.12050228589445794,
+      "grid_tv": 0.23721636832920723,
+      "purity": 0.9909989419760685,
+      "walltime_s": 56.20097088813782
+     },
+     {
+      "seed": 20260903,
+      "distinct_ancestors": 991,
+      "unique_lineage_fraction": 0.991,
+      "ess_pre_final_fraction": 0.1251093687324714,
+      "grid_tv": 0.2371578260245562,
+      "purity": 0.9872218742419525,
+      "walltime_s": 56.59217381477356
+     }
+    ]
+   }
+  ]
+ }
+}

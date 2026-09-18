@@ -1,0 +1,304 @@
+{
+ "ticket": "099 s1 E21",
+ "status": "PASS",
+ "preregistration": "HVG2K\\PREREG_E21_scc_mmd_implementation.md",
+ "definitions": {
+  "representation": "library-size normalize to 10000, then log1p",
+  "scc": "Spearman correlation of 2000-gene population mean vectors",
+  "kernel": "exp(-squared_euclidean/(2*sigma^2))",
+  "bandwidth": "exact median of all non-diagonal real-real Euclidean distances",
+  "mmd2": "biased empirical Gaussian-kernel MMD squared, exact all pairs"
+ },
+ "seed": 20261071,
+ "target_sum": 10000.0,
+ "block_size": 1024,
+ "software": {
+  "python": "3.11.9",
+  "numpy": "1.26.4",
+  "scipy": "1.16.1",
+  "torch": "2.3.0",
+  "cuda_device": "NVIDIA GeForce RTX 4090"
+ },
+ "types": {
+  "Endothelial": {
+   "n": 10057,
+   "n_val": 10057,
+   "n_train": 80463,
+   "underpowered": false,
+   "reference": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\\_shared\\data\\all\\val.npy",
+   "reference_zero_library_rows": 0,
+   "bandwidth_sigma": 48.82838821411133,
+   "kernel_gamma": 0.0002097129390262821,
+   "shared_bandwidth_across_all_methods": true,
+   "rows": {
+    "floor (real train vs real val)": {
+     "scc": 0.9943867516355568,
+     "mmd2_rbf_biased": 7.619107458678442e-05,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6020818227019056,
+      "mean_Kgg": 0.6019992742395933,
+      "mean_Krg": 0.602002452933456
+     },
+     "n": 10057,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\\_shared\\data\\all\\train.npy",
+     "source_selection": "cell_type=Endothelial, without replacement seed 20261071"
+    },
+    "scVI": {
+     "scc": 0.923703817798838,
+     "mmd2_rbf_biased": 0.05154325498844314,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6020818227019056,
+      "mean_Kgg": 0.4835736180842512,
+      "mean_Krg": 0.5170560928988568
+     },
+     "n": 10057,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scvi\\out\\counts\\scvi_cond_Endothelial_n20000_seed20261051.npy"
+    },
+    "CFGen": {
+     "scc": 0.9820550148891657,
+     "mmd2_rbf_biased": 0.0037408923367516778,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6020818227019056,
+      "mean_Kgg": 0.5738530019046673,
+      "mean_Krg": 0.5860969661349106
+     },
+     "n": 10057,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_cfgen\\out\\counts\\cfgen_cond_Endothelial_n20000_seed20261061.npy"
+    },
+    "scANVI": {
+     "scc": 0.9883123071850733,
+     "mmd2_rbf_biased": 0.001550174523243797,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6020818227019056,
+      "mean_Kgg": 0.60079018713508,
+      "mean_Krg": 0.6006609176568709
+     },
+     "n": 10057,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scanvi\\out\\counts\\scanvi_cond_Endothelial_n20000_seed20261061.npy"
+    },
+    "OURS (tilt)": {
+     "scc": 0.9876272930499693,
+     "mmd2_rbf_biased": 0.005713635435107722,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6020818227019056,
+      "mean_Kgg": 0.5761266181907461,
+      "mean_Krg": 0.586247402728772
+     },
+     "n": 10057,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\\Baseline\\OURS\\results\\linspace_T_O_K32_spilot_run1c_s20260625_samp20260902_batched1_chunk256_CONDFULL_Endothelial_tables_kz_n20000_g0p4_noa4.npy"
+    },
+    "OURS (tilt+FK)": {
+     "scc": 0.9833419301930254,
+     "mmd2_rbf_biased": 0.00799105105627751,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6020818227019056,
+      "mean_Kgg": 0.6145088005131466,
+      "mean_Krg": 0.6042997860793873
+     },
+     "n": 10057,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\results\\runs\\Endothelial_clean_fkv2_fk_no_trigger_tiltevery_trigscheduled_K32_M40000_N20000_alpha1p0_sc0p25_int8_seed20260920.npy"
+    }
+   },
+   "mechanical_best_mmd2_method": "scANVI",
+   "walltime_s": 4.247654599996167
+  },
+  "Myeloid": {
+   "n": 2302,
+   "n_val": 2302,
+   "n_train": 18422,
+   "underpowered": false,
+   "reference": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\\_shared\\data\\all\\val.npy",
+   "reference_zero_library_rows": 0,
+   "bandwidth_sigma": 55.27378463745117,
+   "kernel_gamma": 0.00016365587490802165,
+   "shared_bandwidth_across_all_methods": true,
+   "rows": {
+    "floor (real train vs real val)": {
+     "scc": 0.9877988921359012,
+     "mmd2_rbf_biased": 0.0002579159415410093,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6237204638714612,
+      "mean_Kgg": 0.6245903894341278,
+      "mean_Krg": 0.6240264686820239
+     },
+     "n": 2302,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\\_shared\\data\\all\\train.npy",
+     "source_selection": "cell_type=Myeloid, without replacement seed 20261071"
+    },
+    "scVI": {
+     "scc": 0.9429226425573746,
+     "mmd2_rbf_biased": 0.01884431620270588,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6237204638714612,
+      "mean_Kgg": 0.571958124777932,
+      "mean_Krg": 0.5884171362233437
+     },
+     "n": 2302,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scvi\\out\\counts\\scvi_cond_Myeloid_n20000_seed20261051.npy"
+    },
+    "CFGen": {
+     "scc": 0.9652508297595287,
+     "mmd2_rbf_biased": 0.005045236597941205,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6237204638714612,
+      "mean_Kgg": 0.6052858233506395,
+      "mean_Krg": 0.6119805253120798
+     },
+     "n": 2302,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_cfgen\\out\\counts\\cfgen_cond_Myeloid_n20000_seed20261061.npy"
+    },
+    "scANVI": {
+     "scc": 0.9686950845933763,
+     "mmd2_rbf_biased": 0.005443893027551772,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6237204638714612,
+      "mean_Kgg": 0.5928328285672614,
+      "mean_Krg": 0.6055546997055854
+     },
+     "n": 2302,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scanvi\\out\\counts\\scanvi_cond_Myeloid_n20000_seed20261061.npy"
+    },
+    "OURS (tilt)": {
+     "scc": 0.9687826557318505,
+     "mmd2_rbf_biased": 0.017840442149519742,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6237204638714612,
+      "mean_Kgg": 0.6125121735557356,
+      "mean_Krg": 0.6091960976388385
+     },
+     "n": 2302,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\\Baseline\\OURS\\results\\linspace_T_O_K32_spilot_run1c_s20260625_samp20260902_batched1_chunk256_CONDFULL_Myeloid_tables_kz_n20000_g0p4_noa4.npy"
+    },
+    "OURS (tilt+FK)": {
+     "scc": 0.9752545352914695,
+     "mmd2_rbf_biased": 0.0029332916036373113,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6237204638714612,
+      "mean_Kgg": 0.6134170928688079,
+      "mean_Krg": 0.6171021325683159
+     },
+     "n": 2302,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\results\\runs\\Myeloid_residual_fkv2_fk_tiltevery_trigscheduled_K32_M40000_N20000_alpha2p0_sc0p5_int8_seed20260994.npy"
+    }
+   },
+   "mechanical_best_mmd2_method": "OURS (tilt+FK)",
+   "walltime_s": 1.3435734000013326
+  },
+  "Neuronal": {
+   "n": 396,
+   "n_val": 396,
+   "n_train": 3168,
+   "underpowered": true,
+   "reference": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\\_shared\\data\\all\\val.npy",
+   "reference_zero_library_rows": 0,
+   "bandwidth_sigma": 51.17613220214844,
+   "kernel_gamma": 0.00019091281665737863,
+   "shared_bandwidth_across_all_methods": true,
+   "rows": {
+    "floor (real train vs real val)": {
+     "scc": 0.946018737193243,
+     "mmd2_rbf_biased": 0.0019216501093095584,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6048192244345023,
+      "mean_Kgg": 0.5987899946568632,
+      "mean_Krg": 0.600843784491028
+     },
+     "n": 396,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\\_shared\\data\\all\\train.npy",
+     "source_selection": "cell_type=Neuronal, without replacement seed 20261071"
+    },
+    "scVI": {
+     "scc": 0.9108900352979882,
+     "mmd2_rbf_biased": 0.036774760326348854,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6048192244345023,
+      "mean_Kgg": 0.5586328468065143,
+      "mean_Krg": 0.5633386554573339
+     },
+     "n": 396,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scvi\\out\\counts\\scvi_cond_Neuronal_n20000_seed20261051.npy"
+    },
+    "CFGen": {
+     "scc": 0.9319198940435734,
+     "mmd2_rbf_biased": 0.014032642843665233,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6048192244345023,
+      "mean_Kgg": 0.572547398707904,
+      "mean_Krg": 0.5816669901493705
+     },
+     "n": 396,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_cfgen\\out\\counts\\cfgen_cond_Neuronal_n20000_seed20261061.npy"
+    },
+    "scANVI": {
+     "scc": 0.9109924076445406,
+     "mmd2_rbf_biased": 0.045018474674886955,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6048192244345023,
+      "mean_Kgg": 0.542285244699057,
+      "mean_Krg": 0.5510429972293361
+     },
+     "n": 396,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scanvi\\out\\counts\\scanvi_cond_Neuronal_n20000_seed20261061.npy"
+    },
+    "OURS (tilt)": {
+     "scc": 0.9249599902391834,
+     "mmd2_rbf_biased": 0.037173450560612054,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6048192244345023,
+      "mean_Kgg": 0.5682685633574155,
+      "mean_Krg": 0.5679571686156528
+     },
+     "n": 396,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\\Baseline\\OURS\\results\\linspace_T_O_K32_spilot_run1c_s20260625_samp20260902_batched1_chunk256_CONDFULL_Neuronal_tables_kz_n20000_g0p4_noa4.npy"
+    },
+    "OURS (tilt+FK)": {
+     "scc": 0.9050155804852102,
+     "mmd2_rbf_biased": 0.00927728643579484,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6048192244345023,
+      "mean_Kgg": 0.6025407854659577,
+      "mean_Krg": 0.5990413617323326
+     },
+     "n": 396,
+     "n_source": 2500,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\results\\runs\\Neuronal_residual_fkv2_fk_tiltevery_trigscheduled_K32_M10000_N2500_alpha2p0_sc0p5_int8_seed20261005.npy"
+    }
+   },
+   "mechanical_best_mmd2_method": "OURS (tilt+FK)",
+   "walltime_s": 0.32717419999971753
+  }
+ },
+ "walltime_s": 5.921214599999075
+}

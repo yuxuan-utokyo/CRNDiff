@@ -1,0 +1,42 @@
+{
+ "table": "Table 7",
+ "arm": "OURS",
+ "request": "Neuronal",
+ "sample_seed": "run",
+ "source_json": "ess_pre_resample.json",
+ "metrics": {
+  "stem": "Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260989",
+  "n_events": 16,
+  "ess_pre_mean": 0.1485777503846211,
+  "ess_pre_median": 0.054300889870664774,
+  "ess_pre_min": 0.0030170225821264216,
+  "ess_pre_max": 0.46235927551178585,
+  "ess_min_fraction_whole_chain": 0.0030170225821264216,
+  "ess_final_before_terminal_resample": 0.929851408100122,
+  "ess_pre_per_event": [
+   0.05068703128482675,
+   0.0030170225821264216,
+   0.012469252943543313,
+   0.006814573130659039,
+   0.01453517259758811,
+   0.0035937848115005474,
+   0.03758509385883736,
+   0.04741164795932356,
+   0.057914748456502796,
+   0.06316447839102336,
+   0.17936418706165083,
+   0.2112409012687654,
+   0.4433783048968667,
+   0.4065016902763281,
+   0.46235927551178585,
+   0.3772068411226095
+  ],
+  "checks": {
+   "threshold": 0.5,
+   "min_resample_gap": 2,
+   "n_steps_below_threshold": 28,
+   "n_events": 16,
+   "n_below_but_skipped_by_gap": 12
+  }
+ }
+}

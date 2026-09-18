@@ -1,0 +1,500 @@
+{
+ "figure": "PCA, five samplers x three requests (appendix, v3)",
+ "ticket": 212,
+ "supersedes": "fig_pca_baselines_all_v2 -- left untouched on disk",
+ "types": [
+  "Endothelial",
+  "Myeloid",
+  "Neuronal"
+ ],
+ "samplers": [
+  "scVI",
+  "CFGen",
+  "scANVI",
+  "MDLM",
+  "Ours"
+ ],
+ "what_is_new_vs_v2": {
+  "column": "CFGen",
+  "sampling_seed": 20260931,
+  "was": {
+   "Endothelial": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_cfgen\\out\\counts\\cfgen_cond_Endothelial_n20000_seed20261061.npy",
+   "Myeloid": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_cfgen\\out\\counts\\cfgen_cond_Myeloid_n20000_seed20261061.npy",
+   "Neuronal": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_cfgen\\out\\counts\\cfgen_cond_Neuronal_n20000_seed20261061.npy"
+  },
+  "why": "section 5.2 says every table and figure reads the same delivered cells; CFGen was still the archived single sample while every other arm had moved to the ticket-210 / 208 deliveries",
+  "rng_handling": "the archived CFGen draw is still CONSUMED at its v2 position and discarded, and the new CFGen panels are drawn last, so the other twelve panels keep v2's exact indices",
+  "consumed_and_discarded": {
+   "Endothelial": {
+    "archived_source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_cfgen\\out\\counts\\cfgen_cond_Endothelial_n20000_seed20261061.npy",
+    "sha256": "23d60c754034d23209c419e149d5f275405847d9d1210c3c79364b2b611c5269",
+    "n_drawn_and_discarded": 2500,
+    "why": "keeps the rng stream at exactly the position v2 had, so the other twelve panels are unchanged"
+   },
+   "Myeloid": {
+    "archived_source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_cfgen\\out\\counts\\cfgen_cond_Myeloid_n20000_seed20261061.npy",
+    "sha256": "193c4c722dd9942e32558358aec6ec368d45bc9ee259ffe2f94fd7a02eca0dbd",
+    "n_drawn_and_discarded": 2500,
+    "why": "keeps the rng stream at exactly the position v2 had, so the other twelve panels are unchanged"
+   },
+   "Neuronal": {
+    "archived_source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_cfgen\\out\\counts\\cfgen_cond_Neuronal_n20000_seed20261061.npy",
+    "sha256": "0e2215e043864565726ae1ebc6ef798cbd43adf9c0aa973ad4fd9b374d2e3aea",
+    "n_drawn_and_discarded": 2500,
+    "why": "keeps the rng stream at exactly the position v2 had, so the other twelve panels are unchanged"
+   }
+  }
+ },
+ "n_panel": 2500,
+ "subsample_seed": 20261109,
+ "zero_training": true,
+ "zero_sampling": true,
+ "pca_gate": {
+  "basis_file": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\results\\figure_data\\frozen_atlas_pca_basis.npz",
+  "basis_sha256": "cd0c9728d6352c718db888323439d7d596a3c546b71dd974533345220b99afe1",
+  "proof_file": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\results\\figure_data\\F9_embedding.npz",
+  "proof_sha256": "a9db3aca888ef441427cb3655e209b6b1b354be2f2ed5fa949f8cc84ff2bf7a4",
+  "check": "(cpm_log1p(val) - mean_) @ comp2.T  ==  F9_embedding.npz::real_pca",
+  "max_abs_delta": 2.966846983909477e-05,
+  "atol": 0.0001,
+  "passed": true,
+  "recorded_proof_max_delta_when_frozen": 2.966846983909477e-05,
+  "fit": "PCA(n_components=30, random_state=20261031).fit(cpm_log1p(val.npy)), n=45145",
+  "evr_pc1_pc2": [
+   0.13070431934771304,
+   0.049788098136474376
+  ],
+  "refitted_here": false
+ },
+ "arrays": {
+  "Endothelial/scVI": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scvi\\out\\counts\\scvi_cond_Endothelial_n20000_seed20261051.npy",
+   "sha256": "169b417a2837a7de61cee4ee70a07d40d027c51e8473f7f7bb8e89877404c1cc",
+   "n_source": 20000,
+   "n_genes": 2000,
+   "n_plotted": 2500,
+   "subsample_seed": 20261109,
+   "subsampled": true
+  },
+  "Endothelial/scANVI": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scanvi\\out\\counts\\scanvi_cond_Endothelial_n20000_seed20261061.npy",
+   "sha256": "e58dbcaf5bf4acf0bc1f2ec4b57a901028f579aad7b3818e0fdd1171f44aebf5",
+   "n_source": 20000,
+   "n_genes": 2000,
+   "n_plotted": 2500,
+   "subsample_seed": 20261109,
+   "subsampled": true
+  },
+  "Endothelial/Ours": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\table1_ours\\Endothelial_a1\\Endothelial_residual_hvgtwist_fk_tiltevery_trigany_K32_M20114_N10057_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260987.npy",
+   "sha256": "014fc9a0ff45372366804574eb343feb7b7561028d472757cb405a11363f615b",
+   "n_source": 10057,
+   "n_genes": 2000,
+   "n_plotted": 2500,
+   "subsample_seed": 20261109,
+   "subsampled": true
+  },
+  "Myeloid/scVI": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scvi\\out\\counts\\scvi_cond_Myeloid_n20000_seed20261051.npy",
+   "sha256": "a3067d8b9ca46d990c046bf8d402cb4926d1467b039db35e66d2490682c8a0e8",
+   "n_source": 20000,
+   "n_genes": 2000,
+   "n_plotted": 2500,
+   "subsample_seed": 20261109,
+   "subsampled": true
+  },
+  "Myeloid/scANVI": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scanvi\\out\\counts\\scanvi_cond_Myeloid_n20000_seed20261061.npy",
+   "sha256": "057535eab007350d2deb2e0656e18b069ae4ded5ed4315319ce63a1930c8469b",
+   "n_source": 20000,
+   "n_genes": 2000,
+   "n_plotted": 2500,
+   "subsample_seed": 20261109,
+   "subsampled": true
+  },
+  "Myeloid/Ours": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\table1_ours\\Myeloid_a1\\Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987.npy",
+   "sha256": "1785514ca24674abb556d90b41a95ac13ae0518b6aca9caed86b34418375b3a9",
+   "n_source": 2500,
+   "n_genes": 2000,
+   "n_plotted": 2500,
+   "subsample_seed": 20261109,
+   "subsampled": false
+  },
+  "Neuronal/scVI": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scvi\\out\\counts\\scvi_cond_Neuronal_n20000_seed20261051.npy",
+   "sha256": "0880c0c4ddb726a9971bed6027307f9bc680249f8fc9e1651093e7191af622a9",
+   "n_source": 20000,
+   "n_genes": 2000,
+   "n_plotted": 2500,
+   "subsample_seed": 20261109,
+   "subsampled": true
+  },
+  "Neuronal/scANVI": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scanvi\\out\\counts\\scanvi_cond_Neuronal_n20000_seed20261061.npy",
+   "sha256": "054eeed11cc5c696d11e7269cd754659403709e2b53a1e858e50bb9e798b51f8",
+   "n_source": 20000,
+   "n_genes": 2000,
+   "n_plotted": 2500,
+   "subsample_seed": 20261109,
+   "subsampled": true
+  },
+  "Neuronal/Ours": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\table1_ours\\Neuronal_a1\\Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987.npy",
+   "sha256": "54b308bd44e46461dae6af6b709f0026597d9088f25cecd55bc5c57c59368f16",
+   "n_source": 2500,
+   "n_genes": 2000,
+   "n_plotted": 2500,
+   "subsample_seed": 20261109,
+   "subsampled": false
+  },
+  "Endothelial/MDLM": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\cond_pools\\mdlm_cond_K128_Endothelial_seed20260931_n10057.npy",
+   "sha256": "850c94e4ae1a761fba5d7547d4ab2a26f6af47f2baf4600bb44e739c0cd5e070",
+   "n_source": 10057,
+   "n_genes": 2000,
+   "n_plotted": 2500,
+   "subsample_seed": 20261109,
+   "subsampled": true,
+   "sampling_seed": 20260931
+  },
+  "Myeloid/MDLM": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\cond_pools\\mdlm_cond_K128_Myeloid_seed20260931_n2500.npy",
+   "sha256": "e5c2500f41eafb6036fc1abd446d997f9ebd35d064335441bb800f83d41cbf38",
+   "n_source": 2500,
+   "n_genes": 2000,
+   "n_plotted": 2500,
+   "subsample_seed": 20261109,
+   "subsampled": false,
+   "sampling_seed": 20260931
+  },
+  "Neuronal/MDLM": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\cond_pools\\mdlm_cond_K128_Neuronal_seed20260931_n2500.npy",
+   "sha256": "7512ba3acdd8cd4374a441422c7095fb2dc269fd2b6f4aeecc1451fae05b8b97",
+   "n_source": 2500,
+   "n_genes": 2000,
+   "n_plotted": 2500,
+   "subsample_seed": 20261109,
+   "subsampled": false,
+   "sampling_seed": 20260931
+  },
+  "Endothelial/CFGen": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\cond_pools\\cfgen_cond_Endothelial_seed20260931_n10057.npy",
+   "sha256": "fdb3b15db0cfdf8b6b8ba025366f905b765bef3acba48ca73309eabae066aa8e",
+   "n_source": 10057,
+   "n_genes": 2000,
+   "n_plotted": 2500,
+   "subsample_seed": 20261109,
+   "subsampled": true,
+   "sampling_seed": 20260931,
+   "replaces": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_cfgen\\out\\counts\\cfgen_cond_Endothelial_n20000_seed20261061.npy",
+   "drawn_last": "so the other twelve panels keep v2's indices"
+  },
+  "Myeloid/CFGen": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\cond_pools\\cfgen_cond_Myeloid_seed20260931_n2500.npy",
+   "sha256": "b107fb42c9333c27b8e55ecbc283c16d605c532fe59181fee4b0cbe4411a40d4",
+   "n_source": 2500,
+   "n_genes": 2000,
+   "n_plotted": 2500,
+   "subsample_seed": 20261109,
+   "subsampled": false,
+   "sampling_seed": 20260931,
+   "replaces": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_cfgen\\out\\counts\\cfgen_cond_Myeloid_n20000_seed20261061.npy",
+   "drawn_last": "so the other twelve panels keep v2's indices"
+  },
+  "Neuronal/CFGen": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\cond_pools\\cfgen_cond_Neuronal_seed20260931_n2500.npy",
+   "sha256": "98fae70995f3bf739f00c93632927edc5e14c243b9fc132705c20bc7602c0088",
+   "n_source": 2500,
+   "n_genes": 2000,
+   "n_plotted": 2500,
+   "subsample_seed": 20261109,
+   "subsampled": false,
+   "sampling_seed": 20260931,
+   "replaces": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_cfgen\\out\\counts\\cfgen_cond_Neuronal_n20000_seed20261061.npy",
+   "drawn_last": "so the other twelve panels keep v2's indices"
+  }
+ },
+ "self_check_vs_v2": {
+  "compared_against": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\figures\\fig_pca_baselines_all_v2.json",
+  "panels": {
+   "Endothelial/scVI": {
+    "identical_to_v2": true,
+    "v2": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scvi\\out\\counts\\scvi_cond_Endothelial_n20000_seed20261051.npy",
+     "sha256": "169b417a2837a7de61cee4ee70a07d40d027c51e8473f7f7bb8e89877404c1cc",
+     "n_source": 20000,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": true
+    },
+    "v3": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scvi\\out\\counts\\scvi_cond_Endothelial_n20000_seed20261051.npy",
+     "sha256": "169b417a2837a7de61cee4ee70a07d40d027c51e8473f7f7bb8e89877404c1cc",
+     "n_source": 20000,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": true
+    }
+   },
+   "Endothelial/scANVI": {
+    "identical_to_v2": true,
+    "v2": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scanvi\\out\\counts\\scanvi_cond_Endothelial_n20000_seed20261061.npy",
+     "sha256": "e58dbcaf5bf4acf0bc1f2ec4b57a901028f579aad7b3818e0fdd1171f44aebf5",
+     "n_source": 20000,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": true
+    },
+    "v3": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scanvi\\out\\counts\\scanvi_cond_Endothelial_n20000_seed20261061.npy",
+     "sha256": "e58dbcaf5bf4acf0bc1f2ec4b57a901028f579aad7b3818e0fdd1171f44aebf5",
+     "n_source": 20000,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": true
+    }
+   },
+   "Endothelial/Ours": {
+    "identical_to_v2": true,
+    "v2": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\table1_ours\\Endothelial_a1\\Endothelial_residual_hvgtwist_fk_tiltevery_trigany_K32_M20114_N10057_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260987.npy",
+     "sha256": "014fc9a0ff45372366804574eb343feb7b7561028d472757cb405a11363f615b",
+     "n_source": 10057,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": true
+    },
+    "v3": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\table1_ours\\Endothelial_a1\\Endothelial_residual_hvgtwist_fk_tiltevery_trigany_K32_M20114_N10057_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260987.npy",
+     "sha256": "014fc9a0ff45372366804574eb343feb7b7561028d472757cb405a11363f615b",
+     "n_source": 10057,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": true
+    }
+   },
+   "Myeloid/scVI": {
+    "identical_to_v2": true,
+    "v2": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scvi\\out\\counts\\scvi_cond_Myeloid_n20000_seed20261051.npy",
+     "sha256": "a3067d8b9ca46d990c046bf8d402cb4926d1467b039db35e66d2490682c8a0e8",
+     "n_source": 20000,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": true
+    },
+    "v3": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scvi\\out\\counts\\scvi_cond_Myeloid_n20000_seed20261051.npy",
+     "sha256": "a3067d8b9ca46d990c046bf8d402cb4926d1467b039db35e66d2490682c8a0e8",
+     "n_source": 20000,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": true
+    }
+   },
+   "Myeloid/scANVI": {
+    "identical_to_v2": true,
+    "v2": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scanvi\\out\\counts\\scanvi_cond_Myeloid_n20000_seed20261061.npy",
+     "sha256": "057535eab007350d2deb2e0656e18b069ae4ded5ed4315319ce63a1930c8469b",
+     "n_source": 20000,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": true
+    },
+    "v3": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scanvi\\out\\counts\\scanvi_cond_Myeloid_n20000_seed20261061.npy",
+     "sha256": "057535eab007350d2deb2e0656e18b069ae4ded5ed4315319ce63a1930c8469b",
+     "n_source": 20000,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": true
+    }
+   },
+   "Myeloid/Ours": {
+    "identical_to_v2": true,
+    "v2": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\table1_ours\\Myeloid_a1\\Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987.npy",
+     "sha256": "1785514ca24674abb556d90b41a95ac13ae0518b6aca9caed86b34418375b3a9",
+     "n_source": 2500,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": false
+    },
+    "v3": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\table1_ours\\Myeloid_a1\\Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987.npy",
+     "sha256": "1785514ca24674abb556d90b41a95ac13ae0518b6aca9caed86b34418375b3a9",
+     "n_source": 2500,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": false
+    }
+   },
+   "Neuronal/scVI": {
+    "identical_to_v2": true,
+    "v2": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scvi\\out\\counts\\scvi_cond_Neuronal_n20000_seed20261051.npy",
+     "sha256": "0880c0c4ddb726a9971bed6027307f9bc680249f8fc9e1651093e7191af622a9",
+     "n_source": 20000,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": true
+    },
+    "v3": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scvi\\out\\counts\\scvi_cond_Neuronal_n20000_seed20261051.npy",
+     "sha256": "0880c0c4ddb726a9971bed6027307f9bc680249f8fc9e1651093e7191af622a9",
+     "n_source": 20000,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": true
+    }
+   },
+   "Neuronal/scANVI": {
+    "identical_to_v2": true,
+    "v2": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scanvi\\out\\counts\\scanvi_cond_Neuronal_n20000_seed20261061.npy",
+     "sha256": "054eeed11cc5c696d11e7269cd754659403709e2b53a1e858e50bb9e798b51f8",
+     "n_source": 20000,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": true
+    },
+    "v3": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scanvi\\out\\counts\\scanvi_cond_Neuronal_n20000_seed20261061.npy",
+     "sha256": "054eeed11cc5c696d11e7269cd754659403709e2b53a1e858e50bb9e798b51f8",
+     "n_source": 20000,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": true
+    }
+   },
+   "Neuronal/Ours": {
+    "identical_to_v2": true,
+    "v2": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\table1_ours\\Neuronal_a1\\Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987.npy",
+     "sha256": "54b308bd44e46461dae6af6b709f0026597d9088f25cecd55bc5c57c59368f16",
+     "n_source": 2500,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": false
+    },
+    "v3": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\table1_ours\\Neuronal_a1\\Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987.npy",
+     "sha256": "54b308bd44e46461dae6af6b709f0026597d9088f25cecd55bc5c57c59368f16",
+     "n_source": 2500,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": false
+    }
+   },
+   "Endothelial/MDLM": {
+    "identical_to_v2": true,
+    "v2": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\cond_pools\\mdlm_cond_K128_Endothelial_seed20260931_n10057.npy",
+     "sha256": "850c94e4ae1a761fba5d7547d4ab2a26f6af47f2baf4600bb44e739c0cd5e070",
+     "n_source": 10057,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": true,
+     "sampling_seed": 20260931,
+     "drawn_last": "appended AFTER the twelve pre-existing panels so their row indices are unchanged"
+    },
+    "v3": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\cond_pools\\mdlm_cond_K128_Endothelial_seed20260931_n10057.npy",
+     "sha256": "850c94e4ae1a761fba5d7547d4ab2a26f6af47f2baf4600bb44e739c0cd5e070",
+     "n_source": 10057,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": true,
+     "sampling_seed": 20260931
+    }
+   },
+   "Myeloid/MDLM": {
+    "identical_to_v2": true,
+    "v2": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\cond_pools\\mdlm_cond_K128_Myeloid_seed20260931_n2500.npy",
+     "sha256": "e5c2500f41eafb6036fc1abd446d997f9ebd35d064335441bb800f83d41cbf38",
+     "n_source": 2500,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": false,
+     "sampling_seed": 20260931,
+     "drawn_last": "appended AFTER the twelve pre-existing panels so their row indices are unchanged"
+    },
+    "v3": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\cond_pools\\mdlm_cond_K128_Myeloid_seed20260931_n2500.npy",
+     "sha256": "e5c2500f41eafb6036fc1abd446d997f9ebd35d064335441bb800f83d41cbf38",
+     "n_source": 2500,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": false,
+     "sampling_seed": 20260931
+    }
+   },
+   "Neuronal/MDLM": {
+    "identical_to_v2": true,
+    "v2": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\cond_pools\\mdlm_cond_K128_Neuronal_seed20260931_n2500.npy",
+     "sha256": "7512ba3acdd8cd4374a441422c7095fb2dc269fd2b6f4aeecc1451fae05b8b97",
+     "n_source": 2500,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": false,
+     "sampling_seed": 20260931,
+     "drawn_last": "appended AFTER the twelve pre-existing panels so their row indices are unchanged"
+    },
+    "v3": {
+     "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\cond_pools\\mdlm_cond_K128_Neuronal_seed20260931_n2500.npy",
+     "sha256": "7512ba3acdd8cd4374a441422c7095fb2dc269fd2b6f4aeecc1451fae05b8b97",
+     "n_source": 2500,
+     "n_genes": 2000,
+     "n_plotted": 2500,
+     "subsample_seed": 20261109,
+     "subsampled": false,
+     "sampling_seed": 20260931
+    }
+   }
+  },
+  "n_same": 12,
+  "n_diff": 0,
+  "passed": true
+ },
+ "cpu_threads": 2,
+ "priority": "BELOW_NORMAL_PRIORITY_CLASS",
+ "written_at": "2026-09-14 17:22:34",
+ "outputs": {
+  "pdf": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\figures\\fig_pca_baselines_all_v3.pdf",
+   "sha256": "71433323800617282d62ae297c290061d263ca21fabf9024784035a1be48ac44"
+  },
+  "png": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\figures\\fig_pca_baselines_all_v3.png",
+   "sha256": "2299dd64b6ba43893ab1af3e99a62b48099cced94c14ced80bca383bff5a94e3"
+  }
+ }
+}

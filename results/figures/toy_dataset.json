@@ -1,0 +1,61 @@
+{
+  "data_stem": "data2d_ring8_sym_v2",
+  "source_sha256": {
+    "data2d_ring8_sym_v2.json": "3dc703996721e83bef6fd7901d807c1ba71a1cc7c67ad5cd37a0e8560e753ca5",
+    "data2d_ring8_sym_v2_pmf.npz": "57a1e39d2425010244309b649bc41f9b0c1d19c0f1f5aa4d1ffa797b24315b37",
+    "figdata.npz": "89952d0f7da4b6e493ea54d3ac93dc831f275f40a018547907d6f72ed05bdd91"
+  },
+  "joint_TV": 0.9999999999999964,
+  "max_marginal_absolute_difference": 1.5265566588595902e-16,
+  "max_cross_dimension_difference": 1.3877787807814457e-16,
+  "prior_masses": [
+    0.245,
+    0.005,
+    0.245,
+    0.005,
+    0.245,
+    0.005,
+    0.245,
+    0.005
+  ],
+  "n_displayed_training_points": 20000,
+  "argmax_component_counts": [
+    4955,
+    92,
+    4889,
+    84,
+    4819,
+    89,
+    4969,
+    103
+  ],
+  "rendering": {
+    "left": "archived training subset, no jitter, no new draw, fixed marker size and alpha",
+    "right": "exact normalized marginals; dim0 and dim1 verified identical"
+  },
+  "dimensions_inches": [
+    7.2,
+    2.8
+  ],
+  "panel_widths_inches": [
+    2.7,
+    3.15
+  ],
+  "legend_style": {
+    "font_size_pt": 7.5,
+    "location": "upper center",
+    "frame": "white with light grey border"
+  },
+  "qa": {
+    "text_outside_canvas": [],
+    "pmf_normalization_passed": true,
+    "equal_panel_heights": true,
+    "aligned_title_baselines": true,
+    "legend_data_intersections": [
+      0,
+      0
+    ]
+  },
+  "caption": "\\textbf{Toy data and shared marginals.} (A) A fixed subset of training samples on the $64\\times64$ count grid. Orange identifies the requested components $\\{c_1,c_5\\}$, blue their marginal twin $\\{c_3,c_7\\}$, and grey the remaining components; colours use maximum posterior component responsibility. Each axial component has prior mass $0.245$ and each diagonal component $0.005$. (B) Exact normalized marginals of the equal-weight request and twin laws. Both coordinates share the same marginal, so a single overlay suffices. The two laws occupy different pairs of modes in two dimensions despite identical one-dimensional marginals.",
+  "experiments_rerun": false
+}

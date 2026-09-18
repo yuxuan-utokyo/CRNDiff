@@ -1,0 +1,165 @@
+{
+ "prereg": "cond_w1/PREREG.md",
+ "proj_seed": 20261070,
+ "n_proj": 512,
+ "subsample_seed": 20261071,
+ "metrics_source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\Toy\\_shared\\code\\metrics.py",
+ "types": {
+  "Endothelial": {
+   "common_n": 10057,
+   "n_val": 10057,
+   "n_train": 80463,
+   "underpowered": false,
+   "rows": {
+    "floor (real train vs real val, same type)": {
+     "marginal_w1_mean": 0.011448095853634285,
+     "marginal_w1_median": 0.0016903649199562494,
+     "marginal_w1_p90": 0.02804017102515661,
+     "sliced_w1": 0.047456568442848304,
+     "n": 10057
+    },
+    "unconditional": {
+     "marginal_w1_mean": 0.2480978920155116,
+     "marginal_w1_median": 0.030277418713333996,
+     "marginal_w1_p90": 0.520523018792881,
+     "sliced_w1": 0.8951843774481466,
+     "n": 10057,
+     "source": "linspace_T_O_K32_spilot_run1c_s20260625_samp20260902_batched1_chunk256_F2_K32_base_noa4.npy"
+    },
+    "product tilt (g=0.4)": {
+     "marginal_w1_mean": 0.06160589639057373,
+     "marginal_w1_median": 0.0038778959928408075,
+     "marginal_w1_p90": 0.08445858605946141,
+     "sliced_w1": 0.36118816924809266,
+     "n": 10057,
+     "source": "linspace_T_O_K32_spilot_run1c_s20260625_samp20260902_batched1_chunk256_CONDFULL_Endothelial_tables_kz_n20000_g0p4_noa4.npy"
+    },
+    "OURS": {
+     "marginal_w1_mean": 0.055085810877995425,
+     "marginal_w1_median": 0.003977329223426469,
+     "marginal_w1_p90": 0.1828477677239735,
+     "sliced_w1": 0.14279861701369667,
+     "n": 10057,
+     "source": "Endothelial_clean_fkv2_fk_no_trigger_tiltevery_trigscheduled_K32_M40000_N20000_alpha1p0_sc0p25_int8_seed20260920.npy"
+    }
+   }
+  },
+  "Myeloid": {
+   "common_n": 2302,
+   "n_val": 2302,
+   "n_train": 18422,
+   "underpowered": false,
+   "rows": {
+    "floor (real train vs real val, same type)": {
+     "marginal_w1_mean": 0.03664682884448306,
+     "marginal_w1_median": 0.0047784535186794095,
+     "marginal_w1_p90": 0.07567332754126858,
+     "sliced_w1": 0.15985085908951774,
+     "n": 2302
+    },
+    "unconditional": {
+     "marginal_w1_mean": 0.3576511728931364,
+     "marginal_w1_median": 0.05734144222415291,
+     "marginal_w1_p90": 0.7459600347523893,
+     "sliced_w1": 1.4165201439025117,
+     "n": 2302,
+     "source": "linspace_T_O_K32_spilot_run1c_s20260625_samp20260902_batched1_chunk256_F2_K32_base_noa4.npy"
+    },
+    "product tilt (g=0.4)": {
+     "marginal_w1_mean": 0.21164205039096443,
+     "marginal_w1_median": 0.015638575152041704,
+     "marginal_w1_p90": 0.36207645525629917,
+     "sliced_w1": 1.161304535407132,
+     "n": 2302,
+     "source": "linspace_T_O_K32_spilot_run1c_s20260625_samp20260902_batched1_chunk256_CONDFULL_Myeloid_tables_kz_n20000_g0p4_noa4.npy"
+    },
+    "OURS": {
+     "marginal_w1_mean": 0.1323950912250217,
+     "marginal_w1_median": 0.007819287576020852,
+     "marginal_w1_p90": 0.2046481320590791,
+     "sliced_w1": 0.7792701593152547,
+     "n": 2302,
+     "source": "Myeloid_residual_fkv2_fk_tiltevery_trigscheduled_K32_M40000_N20000_alpha2p0_sc0p5_int8_seed20260994.npy"
+    }
+   }
+  },
+  "Neuronal": {
+   "common_n": 396,
+   "n_val": 396,
+   "n_train": 3168,
+   "underpowered": true,
+   "rows": {
+    "floor (real train vs real val, same type)": {
+     "marginal_w1_mean": 0.030892676767676767,
+     "marginal_w1_median": 0.007575757575757576,
+     "marginal_w1_p90": 0.07323232323232323,
+     "sliced_w1": 0.09493875295945453,
+     "n": 396
+    },
+    "unconditional": {
+     "marginal_w1_mean": 0.15275631313131316,
+     "marginal_w1_median": 0.027777777777777776,
+     "marginal_w1_p90": 0.35378787878787915,
+     "sliced_w1": 0.5360486039058425,
+     "n": 396,
+     "source": "linspace_T_O_K32_spilot_run1c_s20260625_samp20260902_batched1_chunk256_F2_K32_base_noa4.npy"
+    },
+    "product tilt (g=0.4)": {
+     "marginal_w1_mean": 0.11282575757575757,
+     "marginal_w1_median": 0.025252525252525252,
+     "marginal_w1_p90": 0.2502525252525256,
+     "sliced_w1": 0.4632474898309865,
+     "n": 396,
+     "source": "linspace_T_O_K32_spilot_run1c_s20260625_samp20260902_batched1_chunk256_CONDFULL_Neuronal_tables_kz_n20000_g0p4_noa4.npy"
+    },
+    "OURS": {
+     "marginal_w1_mean": 0.05132702020202021,
+     "marginal_w1_median": 0.012626262626262626,
+     "marginal_w1_p90": 0.12121212121212122,
+     "sliced_w1": 0.14293202897476015,
+     "n": 396,
+     "source": "Neuronal_residual_fkv2_fk_tiltevery_trigscheduled_K32_M10000_N2500_alpha2p0_sc0p5_int8_seed20261005.npy"
+    }
+   }
+  },
+  "Mesothelial": {
+   "common_n": 71,
+   "n_val": 71,
+   "n_train": 574,
+   "underpowered": true,
+   "rows": {
+    "floor (real train vs real val, same type)": {
+     "marginal_w1_mean": 0.10903521126760564,
+     "marginal_w1_median": 0.014084507042253521,
+     "marginal_w1_p90": 0.16901408450704225,
+     "sliced_w1": 0.5423108764167403,
+     "n": 71
+    },
+    "unconditional": {
+     "marginal_w1_mean": 0.28557042253521125,
+     "marginal_w1_median": 0.04225352112676056,
+     "marginal_w1_p90": 0.5211267605633803,
+     "sliced_w1": 1.4644752596411073,
+     "n": 71,
+     "source": "linspace_T_O_K32_spilot_run1c_s20260625_samp20260902_batched1_chunk256_F2_K32_base_noa4.npy"
+    },
+    "product tilt (g=0.4)": {
+     "marginal_w1_mean": 0.3955,
+     "marginal_w1_median": 0.09859154929577464,
+     "marginal_w1_p90": 0.7338028169014104,
+     "sliced_w1": 1.5881754986314156,
+     "n": 71,
+     "source": "linspace_T_O_K32_spilot_run1c_s20260625_samp20260902_batched1_chunk256_CONDFULL_Mesothelial_tables_kz_n20000_g0p4_noa4.npy"
+    },
+    "OURS": {
+     "marginal_w1_mean": 0.271887323943662,
+     "marginal_w1_median": 0.028169014084507043,
+     "marginal_w1_p90": 0.5211267605633803,
+     "sliced_w1": 1.2806483035253173,
+     "n": 71,
+     "source": "Mesothelial_endpointIS_uncondpool_alpha2p0_K10000_N2500_seed20260984.npy"
+    }
+   }
+  }
+ }
+}

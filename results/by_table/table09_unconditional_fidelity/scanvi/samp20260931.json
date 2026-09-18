@@ -1,0 +1,42 @@
+{
+ "table": "Table 9",
+ "arm": "scanvi",
+ "sample_seed": 20260931,
+ "source_json": "200_uncond_fidelity.json",
+ "metrics": {
+  "generator": "scanvi",
+  "seed": 20260931,
+  "pool": "out\\uncond_pools\\scanvi_uncond_seed20260931_n100000.npy",
+  "pool_sha256": "9016f5e2b5ccc29da22b17b0c74dda22f65058dd813a7fd7c2788aa398236f18",
+  "n_scored": 20000,
+  "W1_per_gene_mean": 0.022162275016640493,
+  "W1_per_gene_median": 0.011258251892624074,
+  "sliced_W1": 0.03458332343092349,
+  "mmd2_rbf_biased": 0.0005574403149750662,
+  "scc": 0.9967660037190742,
+  "pcc": 0.9967271798395791,
+  "median_fano": 2.809382569175644,
+  "fano_q25_q75": [
+   1.5508936897505143,
+   5.404513994589941
+  ],
+  "NFE_per_sample": null,
+  "library_size_source": "real-train-drawn (per drawn label)",
+  "count_legality": {
+   "fraction_negative": 0.0,
+   "fraction_non_integer": 0.0
+  },
+  "diagnostic_not_ruler": {
+   "library_size_mean": 336.74,
+   "library_size_median": 165.0,
+   "library_size_mean_rel_diff_vs_real": 0.09582365527128978,
+   "gene_mean_pearson_raw": 0.9735983972528593,
+   "gene_mean_pearson_log": 0.9967271798426932,
+   "gene_mean_spearman_raw": 0.9794108921876589,
+   "zero_fraction": 0.938002925,
+   "e21_zero_library_rows": 0
+  },
+  "B_F1_passed": true,
+  "walltime_s": 6.272309303283691
+ }
+}

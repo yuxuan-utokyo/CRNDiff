@@ -1,0 +1,8 @@
+dataset_path: ${oc.env:CRNDIFF_CFGEN_DATA_DIR}/hvg2k_smoke_cfgen.h5ad
+layer_key: X_counts
+covariate_keys: [cell_type]
+subsample_frac: 1
+normalization_type: log_gexp
+is_binarized: False
+theta_covariate: cell_type
+split_rates: [0.90, 0.10]

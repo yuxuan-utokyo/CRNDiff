@@ -1,0 +1,23 @@
+{
+ "table": "Table 7",
+ "arm": "OURS",
+ "request": "Myeloid",
+ "source_json": "ess_pre_resample.json",
+ "aggregate": {
+  "target": "Myeloid",
+  "arm": "OURS",
+  "n_seeds": 3,
+  "n_events_mean": 15,
+  "n_events_sd": 0.0,
+  "ess_pre_mean_mean": 0.19747781665501193,
+  "ess_pre_mean_sd": 0.011711151238128046,
+  "ess_pre_median_mean": 0.14678157335394307,
+  "ess_pre_median_sd": 0.003823877609462401,
+  "ess_pre_min_mean": 0.0608273294155994,
+  "ess_pre_min_sd": 0.04193415405794995,
+  "ess_min_fraction_whole_chain_mean": 0.0608273294155994,
+  "ess_min_fraction_whole_chain_sd": 0.04193415405794995,
+  "ess_final_before_terminal_resample_mean": 0.8670124696982957,
+  "ess_final_before_terminal_resample_sd": 0.14616851070879044
+ }
+}

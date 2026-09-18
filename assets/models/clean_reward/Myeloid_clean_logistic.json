@@ -1,0 +1,60 @@
+{
+  "method": "clean_real_cell_binary_logistic_reward",
+  "target": "Myeloid",
+  "generator_retrained": false,
+  "uses_generated_cells_for_fit": false,
+  "seed": 20260827,
+  "gene_hash": "6f7963523c7a4c5bf1df7264c4c11e0a42fb0a9c4d52ca91d5724ae5e1eadb12",
+  "n_features": 512,
+  "splits": {
+    "train_positive": 8000,
+    "train_negative": 8000,
+    "validation_positive": 2302,
+    "validation_negative": 4000
+  },
+  "validation": {
+    "roc_auc": 0.9981220134665508,
+    "accuracy_at_0p5": 0.9901618533798794,
+    "target_recall_at_0p5": 0.9878366637706343,
+    "specificity_at_0p5": 0.9915,
+    "auc_gate": 0.9,
+    "gate_passed": true
+  },
+  "model": "Myeloid_clean_logistic.npz",
+  "audit": [
+    {
+      "alpha": 0.0,
+      "sample": "Myeloid_clean_endpoint_alpha0p0_N2500.npy",
+      "ess_fraction": 1.0000000000000009,
+      "unique_source_fraction": 1.0,
+      "reward_probability_mean": 0.47422386356642227,
+      "library_median": 166.0
+    },
+    {
+      "alpha": 1.0,
+      "sample": "Myeloid_clean_endpoint_alpha1p0_N2500.npy",
+      "ess_fraction": 0.508981887466782,
+      "unique_source_fraction": 1.0,
+      "reward_probability_mean": 0.9415366691169289,
+      "library_median": 287.0
+    },
+    {
+      "alpha": 2.0,
+      "sample": "Myeloid_clean_endpoint_alpha2p0_N2500.npy",
+      "ess_fraction": 0.4705752974533495,
+      "unique_source_fraction": 1.0,
+      "reward_probability_mean": 0.9703309844005807,
+      "library_median": 306.0
+    },
+    {
+      "alpha": 4.0,
+      "sample": "Myeloid_clean_endpoint_alpha4p0_N2500.npy",
+      "ess_fraction": 0.4455080312779938,
+      "unique_source_fraction": 1.0,
+      "reward_probability_mean": 0.9870793179759063,
+      "library_median": 317.0
+    }
+  ],
+  "audit_proposal": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\\Baseline\\OURS\\results\\linspace_T_O_K32_spilot_run1c_s20260625_samp20260902_batched1_chunk256_CONDFULL_Myeloid_tables_kz_n20000_g0p4_noa4.npy",
+  "audit_candidate_count": 10000
+}

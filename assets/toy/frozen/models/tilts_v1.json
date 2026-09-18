@@ -1,0 +1,41 @@
+{
+ "marginals": "closed",
+ "cap": 13.815510557964274,
+ "model": "net2d_v1_C64_K32_n400000_s16000_H512_ls0.003_oh128_seed20260817.pt",
+ "gamma_rule": "fixed 1.0 (prereg amendment 1: exact marginals carry no histogram noise to damp)",
+ "requests": {
+  "diag_rare": {
+   "components": [
+    "c1",
+    "c5"
+   ],
+   "weights": [
+    0.5,
+    0.5
+   ],
+   "n_role0": 2000,
+   "n_role1": 2000,
+   "quotas_role0": [
+    1000,
+    1000
+   ],
+   "quotas_role1": [
+    1000,
+    1000
+   ],
+   "closed_vs_histogram_ratio_max_abs_diff": 19.09803457215619,
+   "clip_guard_closed": {
+    "cells": 128,
+    "clipped_at_minus_cap": 44,
+    "clipped_at_plus_cap": 0
+   },
+   "clip_guard_histogram": {
+    "cells": 128,
+    "clipped_at_minus_cap": 0,
+    "clipped_at_plus_cap": 0
+   },
+   "gamma": 1.0,
+   "source": "closed marginals of the request pmf over the closed marginals of the D mixture pmf"
+  }
+ }
+}

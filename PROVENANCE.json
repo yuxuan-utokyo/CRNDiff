@@ -1,0 +1,92 @@
+{
+ "about": "Which inputs of this repository are frozen and what their bytes must be. scripts/check_assets.py reads this file and reports any mismatch.",
+ "files": [
+  {
+   "dst": "crndiff/frozen/bank_dedup.py",
+   "sha256_dst": "3a8a65d52ecc562910ac3e77018eb6e6ee74b23cc7d0fc14f241e2342ee66a5d",
+   "note": "function-level copy of the archived module; imported, never edited"
+  },
+  {
+   "dst": "crndiff/frozen/canonical_purity.py",
+   "sha256_dst": "597b0bcd96591f99bf72487d345e772aa67bd70448127d67306b1e96de6b46cd",
+   "note": "function-level copy of the archived module; imported, never edited"
+  },
+  {
+   "dst": "crndiff/frozen/config_hvg2k.py",
+   "sha256_dst": "1ef4f43b685f6f0641387b519d04c4aa2dd21ede70492c6dfc6efe9da731d238",
+   "note": "function-level copy of the archived module; imported, never edited"
+  },
+  {
+   "dst": "crndiff/frozen/e38_twist.py",
+   "sha256_dst": "c27d0150986d4ff009c4617968b3bba612910cd6dfb4384cff65e7bda31b7f77",
+   "note": "function-level copy of the archived module; imported, never edited"
+  },
+  {
+   "dst": "crndiff/frozen/fk_hvg_v2.py",
+   "sha256_dst": "ad84bfd1dbc4dfac9a183d034e81adba83237b3c8f321b1f2b6aaa5bc18d42b2",
+   "note": "function-level copy of the archived module; imported, never edited"
+  },
+  {
+   "dst": "crndiff/frozen/model_hvg2k.py",
+   "sha256_dst": "51781f0b81ea82bb1bedbfb2e6b9837097818115b13bca33e68ca55fb51e09a9",
+   "note": "function-level copy of the archived module; imported, never edited"
+  },
+  {
+   "dst": "crndiff/frozen/sample_hvg2k_noa4.py",
+   "sha256_dst": "bc5c68420dd9d90237d4699abf751e90dc7b86445d377e0202ac0a494761f71d",
+   "note": "function-level copy of the archived module; imported, never edited"
+  }
+ ],
+ "inheritance_X_to_HVG": {
+  "note": "The retired experiment tree is kept under assets/legacy_root/ with its directory shape preserved: the frozen sampler resolves its data root as parents[3] from Baseline/OURS/code, so flattening the tree would silently repoint it.",
+  "only_edit": {
+   "file": "assets/legacy_root/Baseline/OURS/code/config_hvg2k.py",
+   "what": "ROOT was an absolute path on the author machine; it is now Path(__file__).resolve().parents[3], which is the original upstream expression and lands on assets/legacy_root. No logic changed.",
+   "sha256_before_this_repo": "e7414df23b30dd0a1493f34b655349044f8f01ef46367f369c711191b24fb042",
+   "sha256_after": "63dfe33854b038e166fa80b1c7a40e5d2171efd97908ed91ba2879f2a5658947",
+   "sha256_before": "1ef4f43b685f6f0641387b519d04c4aa2dd21ede70492c6dfc6efe9da731d238",
+   "pristine_copy_kept_at": "crndiff/frozen/config_hvg2k.py"
+  },
+  "reconstructed_panel61": {
+   "why": "model_hvg2k imports the 61-gene panel package; it was rebuilt from the baseline tree and validated by gate H0, a bitwise reproduction of an archived delivery.",
+   "gate": "H0: reproduce an archived tilt arm bit for bit (the acceptance test of ticket 077, debt item 1.2). The sha256 of the samples must equal the archived one. Only then is the rebuild correct; if it fails, stop at that point and report the numbers, and do not edit the code to make it pass.",
+   "verification": {
+    "gate": "H0(b) bitwise reproduction of an archived tilt arm",
+    "reproduced_sha256": "97d9309da99ae0c6c54e3d5d731bd55b9a5a1f427452d07d2463b09b3ef8cec7",
+    "archive_sha256": "97d9309da99ae0c6c54e3d5d731bd55b9a5a1f427452d07d2463b09b3ef8cec7"
+   },
+   "sha256": {
+    "__init__.py": "4feff2fa92a6f05c61eb0f1584a331165a3cbf5cfb0c84e6ac112545bac876a6",
+    "backbone.py": "5ad00d67218ad1a643b682722f7a00e18cd1a49416ea1a14b5da49ea8f85d56b",
+    "ctx.py": "8454b73b43f1f644539be845a80a29660f5703a9657feecdba4bb84a2405d36d",
+    "d3pm_kstep.py": "7be9f312125e330223ff3fe6193663fe6286ec6ac8981b56dd80ebbcbc25c3f8",
+    "d3pm_kstep_run.py": "fdd18f53d9be23205f46137b74848738f4c2a56de295a6dcbbb1955ffdd2a13a",
+    "data.py": "ef0bbf91c644ee7d10b1380169a4efdbbbf00dc8f5ec203d2a41c7aaec701db0",
+    "earlystop.py": "846cd713e6c1722ea22cb1000e19d13634d82206ab94fe05e222ff5d53c3d4e5",
+    "evaluate_common.py": "c9eef7f8bd00121245748981414638481384406bd73f6cbe16ae7d8c8304f372",
+    "gates.py": "9f6693ff873ab0039bda22996280a2431ba8fa9c7fbec254f973fd85bf017e89",
+    "guard_audit.py": "ac658af0533b0e82e33c78dcdd8cf771dee48fe1d87b79df8f413069d53c1070",
+    "metrics.py": "73157ba639447bebe3e1badc264b0d60498eb7ff8999a29be522e583a412b2fa",
+    "metrics_canonical.py": "5be685f7a9b9bc46cb29330918beafc625da3ab598792a38af12788e368d683e",
+    "metrics_exp08.py": "bdb35b4592e44cd2ac2443971d1317cf061846592b5edb39d3aba656d01f56de",
+    "p1_plugin.py": "3005484d346c9d147cda23f904f7190133e53d760ad3845befa27d0adbaf3ac9",
+    "p2_a4_crippled.py": "8a451f83a276a6088526604e95b94042f5f1b19e149b92486409a93a05416943",
+    "p2e_clip128.py": "51ba8e14a6f34bcf043afe86a64361c9211f7f5022af2c2c4232accd14e6635f",
+    "p2f_significance.py": "91d4b7fbc05145f568a7e48d8445ad3dab6d49a94ecba686aadf8f2dfc73c55a",
+    "seeds.py": "5adb3e91723b7184ed57e77c3e0e40815e271cb22eb7de231b0bf4b85b620d1b",
+    "vendor_countsdiff.py": "7041ef96e9228b7d6d5bfbc4e10bb3dbae9605219dc4302acfa13f6add0bcd6f",
+    "vendor_ours.py": "8495d6cd1fff929a4688c2befeaca9853370d2efc99026c1262903fd4bb839b0",
+    "vendor_ours_fast.py": "7e9787e2338c1c0a262d33e252c1f7dce253cb37f0dfcdd73f983b817190d9e8"
+   }
+  }
+ },
+ "generator": {
+  "ckpt": "assets/generator/pilot_run1c_s20260625.pt",
+  "sha256": "2b07bf5ee19b342473f8222b75b9be8d791378b325681e39036bce38b052fe77"
+ },
+ "rulers": {
+  "purity_v7": "assets/rulers/master_purity_v7.json",
+  "purity_v8_lineage": "assets/rulers/master_purity_v8_lineage.json",
+  "note": "Purity is a label histogram intersected with a fixed label set. Every scored run stores its full histogram, so any ruler can be recomputed without sampling again."
+ }
+}

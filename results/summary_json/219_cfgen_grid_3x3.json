@@ -1,0 +1,1368 @@
+{
+ "ticket": 219,
+ "arm": "CFGen",
+ "generator_label": "CFGen (Palma et al.), cell-type conditioned",
+ "train_runs": [
+  1,
+  2,
+  3
+ ],
+ "sample_seeds": [
+  20260931,
+  20260932,
+  20260933
+ ],
+ "train_runs_note": "upstream CFGen has no seed control; runs 2/3 are independent re-runs of the same command on machine 2, step-aligned to run 1 (encoder 24112, flow matching 29187)",
+ "ceilings": {
+  "Endothelial": {
+   "v7": 0.9372,
+   "v8": 0.9440116289012398
+  },
+  "Myeloid": {
+   "v7": 0.8836,
+   "v8": 0.929213569321534
+  },
+  "Neuronal": {
+   "v7": 0.7045,
+   "v8": 0.9822598566308243
+  }
+ },
+ "source": "219_cfgen_cond_3runs_scored.json",
+ "self_check": {
+  "n_cells": 27,
+  "v7_recompute_max_abs_delta": 0.0,
+  "run1_vs_existing_max_abs_delta": 0.0,
+  "ingest_gate_R1_passed": true
+ },
+ "cells": {
+  "Endothelial|2|20260931": {
+   "request": "Endothelial",
+   "cfgen_run": 2,
+   "sample_seed": 20260931,
+   "stem": "cfgen_cond_Endothelial_run2_seed20260931_n10057",
+   "n_delivered": 10057,
+   "purity_abs_v8": 0.7924,
+   "purity_rel_v8": 0.8393964393450274,
+   "purity_abs_v7": 0.7924,
+   "purity_rel_v7": 0.8454972257789158,
+   "purity_over_ceiling_stored": 0.8454972257789158,
+   "W1": 0.09844009147857213,
+   "mmd2": 0.0033961338684886933,
+   "pcc": 0.993519025552348,
+   "sliced_W1": 0.3322748576948964,
+   "scc": 0.981910430388061
+  },
+  "Endothelial|2|20260932": {
+   "request": "Endothelial",
+   "cfgen_run": 2,
+   "sample_seed": 20260932,
+   "stem": "cfgen_cond_Endothelial_run2_seed20260932_n10057",
+   "n_delivered": 10057,
+   "purity_abs_v8": 0.7928,
+   "purity_rel_v8": 0.8398201629388411,
+   "purity_abs_v7": 0.7926,
+   "purity_rel_v7": 0.8457106274007682,
+   "purity_over_ceiling_stored": 0.8457106274007682,
+   "W1": 0.10061126578502536,
+   "mmd2": 0.0035470475447199057,
+   "pcc": 0.9933164652071468,
+   "sliced_W1": 0.3482808086206989,
+   "scc": 0.9816857924296274
+  },
+  "Endothelial|2|20260933": {
+   "request": "Endothelial",
+   "cfgen_run": 2,
+   "sample_seed": 20260933,
+   "stem": "cfgen_cond_Endothelial_run2_seed20260933_n10057",
+   "n_delivered": 10057,
+   "purity_abs_v8": 0.7834,
+   "purity_rel_v8": 0.8298626584842181,
+   "purity_abs_v7": 0.7833,
+   "purity_rel_v7": 0.835787451984635,
+   "purity_over_ceiling_stored": 0.835787451984635,
+   "W1": 0.09944675350502137,
+   "mmd2": 0.0034870241633642163,
+   "pcc": 0.9934212132718797,
+   "sliced_W1": 0.34243894245156614,
+   "scc": 0.9814976908362484
+  },
+  "Endothelial|3|20260931": {
+   "request": "Endothelial",
+   "cfgen_run": 3,
+   "sample_seed": 20260931,
+   "stem": "cfgen_cond_Endothelial_run3_seed20260931_n10057",
+   "n_delivered": 10057,
+   "purity_abs_v8": 0.8148,
+   "purity_rel_v8": 0.863124960598597,
+   "purity_abs_v7": 0.8145,
+   "purity_rel_v7": 0.8690781049935979,
+   "purity_over_ceiling_stored": 0.8690781049935979,
+   "W1": 0.10299890623446356,
+   "mmd2": 0.003513698949770827,
+   "pcc": 0.9931275021266357,
+   "sliced_W1": 0.35931982484662894,
+   "scc": 0.9834045622157259
+  },
+  "Endothelial|3|20260932": {
+   "request": "Endothelial",
+   "cfgen_run": 3,
+   "sample_seed": 20260932,
+   "stem": "cfgen_cond_Endothelial_run3_seed20260932_n10057",
+   "n_delivered": 10057,
+   "purity_abs_v8": 0.819,
+   "purity_rel_v8": 0.8675740583336413,
+   "purity_abs_v7": 0.8187,
+   "purity_rel_v7": 0.8735595390524967,
+   "purity_over_ceiling_stored": 0.8735595390524967,
+   "W1": 0.10124724072785125,
+   "mmd2": 0.003304301958397371,
+   "pcc": 0.9936008772556756,
+   "sliced_W1": 0.3601882467813403,
+   "scc": 0.9841381910140968
+  },
+  "Endothelial|3|20260933": {
+   "request": "Endothelial",
+   "cfgen_run": 3,
+   "sample_seed": 20260933,
+   "stem": "cfgen_cond_Endothelial_run3_seed20260933_n10057",
+   "n_delivered": 10057,
+   "purity_abs_v8": 0.8075,
+   "purity_rel_v8": 0.8553920050114961,
+   "purity_abs_v7": 0.8075,
+   "purity_rel_v7": 0.8616090482287665,
+   "purity_over_ceiling_stored": 0.8616090482287665,
+   "W1": 0.10219961221040072,
+   "mmd2": 0.0035680434770082314,
+   "pcc": 0.9930270417487206,
+   "sliced_W1": 0.3751615472439375,
+   "scc": 0.9830406127298786
+  },
+  "Endothelial|1|20260931": {
+   "request": "Endothelial",
+   "cfgen_run": 1,
+   "sample_seed": 20260931,
+   "stem": "cfgen_cond_Endothelial_seed20260931_n10057",
+   "n_delivered": 10057,
+   "purity_abs_v8": 0.7843,
+   "purity_rel_v8": 0.830816036570299,
+   "purity_abs_v7": 0.7842,
+   "purity_rel_v7": 0.8367477592829705,
+   "purity_over_ceiling_stored": 0.8367477592829705,
+   "W1": 0.10418415034304465,
+   "mmd2": 0.0036256246185282226,
+   "pcc": 0.9936886000522784,
+   "sliced_W1": 0.364784491978423,
+   "scc": 0.9825323654523754
+  },
+  "Endothelial|1|20260932": {
+   "request": "Endothelial",
+   "cfgen_run": 1,
+   "sample_seed": 20260932,
+   "stem": "cfgen_cond_Endothelial_seed20260932_n10057",
+   "n_delivered": 10057,
+   "purity_abs_v8": 0.792,
+   "purity_rel_v8": 0.8389727157512137,
+   "purity_abs_v7": 0.7918,
+   "purity_rel_v7": 0.8448570209133589,
+   "purity_over_ceiling_stored": 0.844857020913359,
+   "W1": 0.10351899174704186,
+   "mmd2": 0.003543579889380144,
+   "pcc": 0.993811046233942,
+   "sliced_W1": 0.35173120962205046,
+   "scc": 0.9822216212785505
+  },
+  "Endothelial|1|20260933": {
+   "request": "Endothelial",
+   "cfgen_run": 1,
+   "sample_seed": 20260933,
+   "stem": "cfgen_cond_Endothelial_seed20260933_n10057",
+   "n_delivered": 10057,
+   "purity_abs_v8": 0.7816,
+   "purity_rel_v8": 0.8279559023120562,
+   "purity_abs_v7": 0.7814,
+   "purity_rel_v7": 0.833760136577038,
+   "purity_over_ceiling_stored": 0.833760136577038,
+   "W1": 0.10446335885452918,
+   "mmd2": 0.0038244362623438555,
+   "pcc": 0.9933845357110435,
+   "sliced_W1": 0.3582385222783312,
+   "scc": 0.9817754028551845
+  },
+  "Myeloid|2|20260931": {
+   "request": "Myeloid",
+   "cfgen_run": 2,
+   "sample_seed": 20260931,
+   "stem": "cfgen_cond_Myeloid_run2_seed20260931_n2500",
+   "n_delivered": 2500,
+   "purity_abs_v8": 0.5956,
+   "purity_rel_v8": 0.6409721291897167,
+   "purity_abs_v7": 0.502,
+   "purity_rel_v7": 0.568130375735627,
+   "purity_over_ceiling_stored": 0.568130375735627,
+   "W1": 0.21665812337098175,
+   "mmd2": 0.005319544402560883,
+   "pcc": 0.9817976783438086,
+   "sliced_W1": 0.6979339267766174,
+   "scc": 0.959946351979772
+  },
+  "Myeloid|2|20260932": {
+   "request": "Myeloid",
+   "cfgen_run": 2,
+   "sample_seed": 20260932,
+   "stem": "cfgen_cond_Myeloid_run2_seed20260932_n2500",
+   "n_delivered": 2500,
+   "purity_abs_v8": 0.5952,
+   "purity_rel_v8": 0.6405416576455999,
+   "purity_abs_v7": 0.5064,
+   "purity_rel_v7": 0.5731100045269352,
+   "purity_over_ceiling_stored": 0.5731100045269352,
+   "W1": 0.20637358818418766,
+   "mmd2": 0.0054962087279104566,
+   "pcc": 0.9816841883917132,
+   "sliced_W1": 0.6754663610864419,
+   "scc": 0.9620775819470091
+  },
+  "Myeloid|2|20260933": {
+   "request": "Myeloid",
+   "cfgen_run": 2,
+   "sample_seed": 20260933,
+   "stem": "cfgen_cond_Myeloid_run2_seed20260933_n2500",
+   "n_delivered": 2500,
+   "purity_abs_v8": 0.5892,
+   "purity_rel_v8": 0.63408458448385,
+   "purity_abs_v7": 0.4952,
+   "purity_rel_v7": 0.5604345857854232,
+   "purity_over_ceiling_stored": 0.5604345857854232,
+   "W1": 0.21009470026064292,
+   "mmd2": 0.005237439662516996,
+   "pcc": 0.9823274603434491,
+   "sliced_W1": 0.6904425288865772,
+   "scc": 0.9620055534422827
+  },
+  "Myeloid|3|20260931": {
+   "request": "Myeloid",
+   "cfgen_run": 3,
+   "sample_seed": 20260931,
+   "stem": "cfgen_cond_Myeloid_run3_seed20260931_n2500",
+   "n_delivered": 2500,
+   "purity_abs_v8": 0.6572,
+   "purity_rel_v8": 0.7072647469836834,
+   "purity_abs_v7": 0.5792,
+   "purity_rel_v7": 0.6555002263467633,
+   "purity_over_ceiling_stored": 0.6555002263467633,
+   "W1": 0.24082189400521284,
+   "mmd2": 0.005343316909222295,
+   "pcc": 0.9808438195579089,
+   "sliced_W1": 0.8001674662711458,
+   "scc": 0.9602481623832596
+  },
+  "Myeloid|3|20260932": {
+   "request": "Myeloid",
+   "cfgen_run": 3,
+   "sample_seed": 20260932,
+   "stem": "cfgen_cond_Myeloid_run3_seed20260932_n2500",
+   "n_delivered": 2500,
+   "purity_abs_v8": 0.6664,
+   "purity_rel_v8": 0.7171655924983666,
+   "purity_abs_v7": 0.596,
+   "purity_rel_v7": 0.6745133544590312,
+   "purity_over_ceiling_stored": 0.6745133544590312,
+   "W1": 0.23803496959165943,
+   "mmd2": 0.005363807420882605,
+   "pcc": 0.980567358480092,
+   "sliced_W1": 0.7980342187277011,
+   "scc": 0.9612019224571232
+  },
+  "Myeloid|3|20260933": {
+   "request": "Myeloid",
+   "cfgen_run": 3,
+   "sample_seed": 20260933,
+   "stem": "cfgen_cond_Myeloid_run3_seed20260933_n2500",
+   "n_delivered": 2500,
+   "purity_abs_v8": 0.6492,
+   "purity_rel_v8": 0.69865531610135,
+   "purity_abs_v7": 0.5752,
+   "purity_rel_v7": 0.6509732910819376,
+   "purity_over_ceiling_stored": 0.6509732910819376,
+   "W1": 0.22785968722849698,
+   "mmd2": 0.005292349971311339,
+   "pcc": 0.9807582890548016,
+   "sliced_W1": 0.760220996776376,
+   "scc": 0.9601288575409307
+  },
+  "Myeloid|1|20260931": {
+   "request": "Myeloid",
+   "cfgen_run": 1,
+   "sample_seed": 20260931,
+   "stem": "cfgen_cond_Myeloid_seed20260931_n2500",
+   "n_delivered": 2500,
+   "purity_abs_v8": 0.6188,
+   "purity_rel_v8": 0.6659394787484834,
+   "purity_abs_v7": 0.5528,
+   "purity_rel_v7": 0.6256224535989134,
+   "purity_over_ceiling_stored": 0.6256224535989134,
+   "W1": 0.2265762380538662,
+   "mmd2": 0.0052647940985872665,
+   "pcc": 0.981125607275275,
+   "sliced_W1": 0.7350104130048238,
+   "scc": 0.9630522937343214
+  },
+  "Myeloid|1|20260932": {
+   "request": "Myeloid",
+   "cfgen_run": 1,
+   "sample_seed": 20260932,
+   "stem": "cfgen_cond_Myeloid_seed20260932_n2500",
+   "n_delivered": 2500,
+   "purity_abs_v8": 0.63,
+   "purity_rel_v8": 0.67799268198375,
+   "purity_abs_v7": 0.5568,
+   "purity_rel_v7": 0.6301493888637392,
+   "purity_over_ceiling_stored": 0.6301493888637392,
+   "W1": 0.21766007819287575,
+   "mmd2": 0.004949161828098125,
+   "pcc": 0.9823956404583494,
+   "sliced_W1": 0.7230280952479182,
+   "scc": 0.9636369227200019
+  },
+  "Myeloid|1|20260933": {
+   "request": "Myeloid",
+   "cfgen_run": 1,
+   "sample_seed": 20260933,
+   "stem": "cfgen_cond_Myeloid_seed20260933_n2500",
+   "n_delivered": 2500,
+   "purity_abs_v8": 0.618,
+   "purity_rel_v8": 0.66507853566025,
+   "purity_abs_v7": 0.5416,
+   "purity_rel_v7": 0.6129470348574014,
+   "purity_over_ceiling_stored": 0.6129470348574014,
+   "W1": 0.22033905299739356,
+   "mmd2": 0.005536620767186307,
+   "pcc": 0.9800149197564432,
+   "sliced_W1": 0.7332969845964603,
+   "scc": 0.9623133021647209
+  },
+  "Neuronal|2|20260931": {
+   "request": "Neuronal",
+   "cfgen_run": 2,
+   "sample_seed": 20260931,
+   "stem": "cfgen_cond_Neuronal_run2_seed20260931_n2500",
+   "n_delivered": 2500,
+   "purity_abs_v8": 0.7524,
+   "purity_rel_v8": 0.7659887502485856,
+   "purity_abs_v7": 0.4768,
+   "purity_rel_v7": 0.676792051100071,
+   "purity_over_ceiling_stored": 0.676792051100071,
+   "W1": 0.062396464646464644,
+   "mmd2": 0.012769279356693364,
+   "pcc": 0.9394884116950645,
+   "sliced_W1": 0.21049814080827722,
+   "scc": 0.9283126266692047
+  },
+  "Neuronal|2|20260932": {
+   "request": "Neuronal",
+   "cfgen_run": 2,
+   "sample_seed": 20260932,
+   "stem": "cfgen_cond_Neuronal_run2_seed20260932_n2500",
+   "n_delivered": 2500,
+   "purity_abs_v8": 0.7388,
+   "purity_rel_v8": 0.7521431269054427,
+   "purity_abs_v7": 0.48,
+   "purity_rel_v7": 0.6813342796309438,
+   "purity_over_ceiling_stored": 0.6813342796309438,
+   "W1": 0.06224494949494949,
+   "mmd2": 0.013075329613637221,
+   "pcc": 0.937474520169522,
+   "sliced_W1": 0.22885094477542828,
+   "scc": 0.9296490026326264
+  },
+  "Neuronal|2|20260933": {
+   "request": "Neuronal",
+   "cfgen_run": 2,
+   "sample_seed": 20260933,
+   "stem": "cfgen_cond_Neuronal_run2_seed20260933_n2500",
+   "n_delivered": 2500,
+   "purity_abs_v8": 0.7304,
+   "purity_rel_v8": 0.7435914183699721,
+   "purity_abs_v7": 0.4696,
+   "purity_rel_v7": 0.6665720369056068,
+   "purity_over_ceiling_stored": 0.6665720369056068,
+   "W1": 0.06095959595959596,
+   "mmd2": 0.01324674463757236,
+   "pcc": 0.937958577461644,
+   "sliced_W1": 0.2082884106782052,
+   "scc": 0.9332023583722303
+  },
+  "Neuronal|3|20260931": {
+   "request": "Neuronal",
+   "cfgen_run": 3,
+   "sample_seed": 20260931,
+   "stem": "cfgen_cond_Neuronal_run3_seed20260931_n2500",
+   "n_delivered": 2500,
+   "purity_abs_v8": 0.7452,
+   "purity_rel_v8": 0.7586587143610394,
+   "purity_abs_v7": 0.3876,
+   "purity_rel_v7": 0.5501774308019872,
+   "purity_over_ceiling_stored": 0.5501774308019872,
+   "W1": 0.06859090909090909,
+   "mmd2": 0.012697192363546383,
+   "pcc": 0.9498587448479487,
+   "sliced_W1": 0.29535782206201516,
+   "scc": 0.9299770344830618
+  },
+  "Neuronal|3|20260932": {
+   "request": "Neuronal",
+   "cfgen_run": 3,
+   "sample_seed": 20260932,
+   "stem": "cfgen_cond_Neuronal_run3_seed20260932_n2500",
+   "n_delivered": 2500,
+   "purity_abs_v8": 0.7436,
+   "purity_rel_v8": 0.7570298174971403,
+   "purity_abs_v7": 0.376,
+   "purity_rel_v7": 0.5337118523775727,
+   "purity_over_ceiling_stored": 0.5337118523775727,
+   "W1": 0.06852525252525253,
+   "mmd2": 0.013666356292008519,
+   "pcc": 0.9445830923779672,
+   "sliced_W1": 0.3243900624089706,
+   "scc": 0.9243868142179712
+  },
+  "Neuronal|3|20260933": {
+   "request": "Neuronal",
+   "cfgen_run": 3,
+   "sample_seed": 20260933,
+   "stem": "cfgen_cond_Neuronal_run3_seed20260933_n2500",
+   "n_delivered": 2500,
+   "purity_abs_v8": 0.7308,
+   "purity_rel_v8": 0.7439986425859468,
+   "purity_abs_v7": 0.374,
+   "purity_rel_v7": 0.5308729595457772,
+   "purity_over_ceiling_stored": 0.5308729595457772,
+   "W1": 0.06541035353535353,
+   "mmd2": 0.01262058893026885,
+   "pcc": 0.9497653155174347,
+   "sliced_W1": 0.28080165370258975,
+   "scc": 0.9284270592180695
+  },
+  "Neuronal|1|20260931": {
+   "request": "Neuronal",
+   "cfgen_run": 1,
+   "sample_seed": 20260931,
+   "stem": "cfgen_cond_Neuronal_seed20260931_n2500",
+   "n_delivered": 2500,
+   "purity_abs_v8": 0.7372,
+   "purity_rel_v8": 0.7505142300415435,
+   "purity_abs_v7": 0.3652,
+   "purity_rel_v7": 0.5183818310858765,
+   "purity_over_ceiling_stored": 0.5183818310858765,
+   "W1": 0.0632979797979798,
+   "mmd2": 0.012518761574434434,
+   "pcc": 0.9450373893036718,
+   "sliced_W1": 0.24236645748608543,
+   "scc": 0.9293578690289336
+  },
+  "Neuronal|1|20260932": {
+   "request": "Neuronal",
+   "cfgen_run": 1,
+   "sample_seed": 20260932,
+   "stem": "cfgen_cond_Neuronal_seed20260932_n2500",
+   "n_delivered": 2500,
+   "purity_abs_v8": 0.7332,
+   "purity_rel_v8": 0.7464419878817955,
+   "purity_abs_v7": 0.3524,
+   "purity_rel_v7": 0.5002129169623847,
+   "purity_over_ceiling_stored": 0.5002129169623847,
+   "W1": 0.06035353535353535,
+   "mmd2": 0.01329373586388849,
+   "pcc": 0.94258001396445,
+   "sliced_W1": 0.23079603227623557,
+   "scc": 0.9293751878707652
+  },
+  "Neuronal|1|20260933": {
+   "request": "Neuronal",
+   "cfgen_run": 1,
+   "sample_seed": 20260933,
+   "stem": "cfgen_cond_Neuronal_seed20260933_n2500",
+   "n_delivered": 2500,
+   "purity_abs_v8": 0.7404,
+   "purity_rel_v8": 0.7537720237693418,
+   "purity_abs_v7": 0.3512,
+   "purity_rel_v7": 0.4985095812633073,
+   "purity_over_ceiling_stored": 0.4985095812633073,
+   "W1": 0.06323232323232324,
+   "mmd2": 0.01399097225685142,
+   "pcc": 0.9368637639043214,
+   "sliced_W1": 0.2221995316884532,
+   "scc": 0.931110077947938
+  }
+ },
+ "by": {
+  "Endothelial": {
+   "purity_abs_v8": {
+    "n_cells": 9,
+    "complete": true,
+    "matrix_rows_run_cols_samp": [
+     [
+      0.7843,
+      0.792,
+      0.7816
+     ],
+     [
+      0.7924,
+      0.7928,
+      0.7834
+     ],
+     [
+      0.8148,
+      0.819,
+      0.8075
+     ]
+    ],
+    "C_3x3": {
+     "mean": 0.7964222222222221,
+     "sd": 0.013943168378974852,
+     "n": 9
+    },
+    "B_run1_3samp": {
+     "mean": 0.7859666666666666,
+     "sd": 0.005396603870336763,
+     "n": 3
+    },
+    "per_run_mean": [
+     0.7859666666666666,
+     0.7895333333333333,
+     0.8137666666666666
+    ],
+    "variance_decomposition": {
+     "within_training_run_sampling_var": 3.0413333333333343e-05,
+     "between_training_run_var": 0.00022880259259259306,
+     "ratio_between_over_within": 7.523101466218534
+    }
+   },
+   "purity_rel_v8": {
+    "n_cells": 9,
+    "complete": true,
+    "matrix_rows_run_cols_samp": [
+     [
+      0.830816036570299,
+      0.8389727157512137,
+      0.8279559023120562
+     ],
+     [
+      0.8393964393450274,
+      0.8398201629388411,
+      0.8298626584842181
+     ],
+     [
+      0.863124960598597,
+      0.8675740583336413,
+      0.8553920050114961
+     ]
+    ],
+    "C_3x3": {
+     "mean": 0.8436572154828211,
+     "sd": 0.014770123536723455,
+     "n": 9
+    },
+    "B_run1_3samp": {
+     "mean": 0.8325815515445228,
+     "sd": 0.005716670965820674,
+     "n": 3
+    },
+    "per_run_mean": [
+     0.8325815515445228,
+     0.8363597535893622,
+     0.8620303413145782
+    ],
+    "variance_decomposition": {
+     "within_training_run_sampling_var": 3.412788175833914e-05,
+     "between_training_run_var": 0.00025674751729509303,
+     "ratio_between_over_within": 7.523101466218507
+    }
+   },
+   "purity_abs_v7": {
+    "n_cells": 9,
+    "complete": true,
+    "matrix_rows_run_cols_samp": [
+     [
+      0.7842,
+      0.7918,
+      0.7814
+     ],
+     [
+      0.7924,
+      0.7926,
+      0.7833
+     ],
+     [
+      0.8145,
+      0.8187,
+      0.8075
+     ]
+    ],
+    "C_3x3": {
+     "mean": 0.7962666666666667,
+     "sd": 0.013896942109687296,
+     "n": 9
+    },
+    "B_run1_3samp": {
+     "mean": 0.7858,
+     "sd": 0.005381449618829461,
+     "n": 3
+    },
+    "per_run_mean": [
+     0.7858,
+     0.7894333333333333,
+     0.8135666666666667
+    ],
+    "variance_decomposition": {
+     "within_training_run_sampling_var": 2.973222222222209e-05,
+     "between_training_run_var": 0.0002277677777777772,
+     "ratio_between_over_within": 7.660637542509077
+    }
+   },
+   "purity_rel_v7": {
+    "n_cells": 9,
+    "complete": true,
+    "matrix_rows_run_cols_samp": [
+     [
+      0.8367477592829705,
+      0.8448570209133589,
+      0.833760136577038
+     ],
+     [
+      0.8454972257789158,
+      0.8457106274007682,
+      0.835787451984635
+     ],
+     [
+      0.8690781049935979,
+      0.8735595390524967,
+      0.8616090482287665
+     ]
+    ],
+    "C_3x3": {
+     "mean": 0.8496229904680609,
+     "sd": 0.014828149924975777,
+     "n": 9
+    },
+    "B_run1_3samp": {
+     "mean": 0.8384549722577891,
+     "sd": 0.005742050382873965,
+     "n": 3
+    },
+    "per_run_mean": [
+     0.8384549722577891,
+     0.8423317683881063,
+     0.868082230758287
+    ],
+    "variance_decomposition": {
+     "within_training_run_sampling_var": 3.3850322468501855e-05,
+     "between_training_run_var": 0.0002593150511282444,
+     "ratio_between_over_within": 7.660637542509094
+    }
+   },
+   "W1": {
+    "n_cells": 9,
+    "complete": true,
+    "matrix_rows_run_cols_samp": [
+     [
+      0.10418415034304465,
+      0.10351899174704186,
+      0.10446335885452918
+     ],
+     [
+      0.09844009147857213,
+      0.10061126578502536,
+      0.09944675350502137
+     ],
+     [
+      0.10299890623446356,
+      0.10124724072785125,
+      0.10219961221040072
+     ]
+    ],
+    "C_3x3": {
+     "mean": 0.10190115232066112,
+     "sd": 0.0021149158378020714,
+     "n": 9
+    },
+    "B_run1_3samp": {
+     "mean": 0.10405550031487189,
+     "sd": 0.0004851499054288541,
+     "n": 3
+    },
+    "per_run_mean": [
+     0.10405550031487189,
+     0.0994993702562063,
+     0.10214858639090518
+    ],
+    "variance_decomposition": {
+     "within_training_run_sampling_var": 7.283273424408187e-07,
+     "between_training_run_var": 5.235497992207189e-06,
+     "ratio_between_over_within": 7.188385890692559
+    }
+   },
+   "mmd2": {
+    "n_cells": 9,
+    "complete": true,
+    "matrix_rows_run_cols_samp": [
+     [
+      0.0036256246185282226,
+      0.003543579889380144,
+      0.0038244362623438555
+     ],
+     [
+      0.0033961338684886933,
+      0.0035470475447199057,
+      0.0034870241633642163
+     ],
+     [
+      0.003513698949770827,
+      0.003304301958397371,
+      0.0035680434770082314
+     ]
+    ],
+    "C_3x3": {
+     "mean": 0.0035344323035557184,
+     "sd": 0.00014515280941994007,
+     "n": 9
+    },
+    "B_run1_3samp": {
+     "mean": 0.0036645469234174075,
+     "sd": 0.0001444170520471798,
+     "n": 3
+    },
+    "per_run_mean": [
+     0.0036645469234174075,
+     0.0034767351921909384,
+     0.00346201479505881
+    ],
+    "variance_decomposition": {
+     "within_training_run_sampling_var": 1.5340917527422857e-08,
+     "between_training_run_var": 1.2751533249245755e-08,
+     "ratio_between_over_within": 0.8312105991347379
+    }
+   },
+   "pcc": {
+    "n_cells": 9,
+    "complete": true,
+    "matrix_rows_run_cols_samp": [
+     [
+      0.9936886000522784,
+      0.993811046233942,
+      0.9933845357110435
+     ],
+     [
+      0.993519025552348,
+      0.9933164652071468,
+      0.9934212132718797
+     ],
+     [
+      0.9931275021266357,
+      0.9936008772556756,
+      0.9930270417487206
+     ]
+    ],
+    "C_3x3": {
+     "mean": 0.993432923017741,
+     "sd": 0.00025446821550960353,
+     "n": 9
+    },
+    "B_run1_3samp": {
+     "mean": 0.9936280606657547,
+     "sd": 0.00021960548610248134,
+     "n": 3
+    },
+    "per_run_mean": [
+     0.9936280606657547,
+     0.9934189013437914,
+     0.9932518070436772
+    ],
+    "variance_decomposition": {
+     "within_training_run_sampling_var": 5.0799611069346e-08,
+     "between_training_run_var": 3.5539152536872226e-08,
+     "ratio_between_over_within": 0.6995949730472958
+    }
+   }
+  },
+  "Myeloid": {
+   "purity_abs_v8": {
+    "n_cells": 9,
+    "complete": true,
+    "matrix_rows_run_cols_samp": [
+     [
+      0.6188,
+      0.63,
+      0.618
+     ],
+     [
+      0.5956,
+      0.5952,
+      0.5892
+     ],
+     [
+      0.6572,
+      0.6664,
+      0.6492
+     ]
+    ],
+    "C_3x3": {
+     "mean": 0.6244000000000001,
+     "sd": 0.028459796204470627,
+     "n": 9
+    },
+    "B_run1_3samp": {
+     "mean": 0.6222666666666666,
+     "sd": 0.006709197666884867,
+     "n": 3
+    },
+    "per_run_mean": [
+     0.6222666666666666,
+     0.5933333333333333,
+     0.6576
+    ],
+    "variance_decomposition": {
+     "within_training_run_sampling_var": 4.398222222222226e-05,
+     "between_training_run_var": 0.0010359644444444453,
+     "ratio_between_over_within": 23.554163298302345
+    }
+   },
+   "purity_rel_v8": {
+    "n_cells": 9,
+    "complete": true,
+    "matrix_rows_run_cols_samp": [
+     [
+      0.6659394787484834,
+      0.67799268198375,
+      0.66507853566025
+     ],
+     [
+      0.6409721291897167,
+      0.6405416576455999,
+      0.63408458448385
+     ],
+     [
+      0.7072647469836834,
+      0.7171655924983666,
+      0.69865531610135
+     ]
+    ],
+    "C_3x3": {
+     "mean": 0.6719660803661167,
+     "sd": 0.0306278310434603,
+     "n": 9
+    },
+    "B_run1_3samp": {
+     "mean": 0.6696702321308278,
+     "sd": 0.007220296698619635,
+     "n": 3
+    },
+    "per_run_mean": [
+     0.6696702321308278,
+     0.6385327904397222,
+     0.7076952185278
+    ],
+    "variance_decomposition": {
+     "within_training_run_sampling_var": 5.093849180309079e-05,
+     "between_training_run_var": 0.0011998135540992436,
+     "ratio_between_over_within": 23.554163298302495
+    }
+   },
+   "purity_abs_v7": {
+    "n_cells": 9,
+    "complete": true,
+    "matrix_rows_run_cols_samp": [
+     [
+      0.5528,
+      0.5568,
+      0.5416
+     ],
+     [
+      0.502,
+      0.5064,
+      0.4952
+     ],
+     [
+      0.5792,
+      0.596,
+      0.5752
+     ]
+    ],
+    "C_3x3": {
+     "mean": 0.5450222222222222,
+     "sd": 0.03659459583660469,
+     "n": 9
+    },
+    "B_run1_3samp": {
+     "mean": 0.5503999999999999,
+     "sd": 0.00787908624143688,
+     "n": 3
+    },
+    "per_run_mean": [
+     0.5503999999999999,
+     0.5012,
+     0.5834666666666667
+    ],
+    "variance_decomposition": {
+     "within_training_run_sampling_var": 7.191111111111077e-05,
+     "between_training_run_var": 0.0017136414814814828,
+     "ratio_between_over_within": 23.829995879686987
+    }
+   },
+   "purity_rel_v7": {
+    "n_cells": 9,
+    "complete": true,
+    "matrix_rows_run_cols_samp": [
+     [
+      0.6256224535989134,
+      0.6301493888637392,
+      0.6129470348574014
+     ],
+     [
+      0.568130375735627,
+      0.5731100045269352,
+      0.5604345857854232
+     ],
+     [
+      0.6555002263467633,
+      0.6745133544590312,
+      0.6509732910819376
+     ]
+    ],
+    "C_3x3": {
+     "mean": 0.6168200794728634,
+     "sd": 0.041415341598692514,
+     "n": 9
+    },
+    "B_run1_3samp": {
+     "mean": 0.622906292440018,
+     "sd": 0.008917028340240942,
+     "n": 3
+    },
+    "per_run_mean": [
+     0.622906292440018,
+     0.5672249886826618,
+     0.6603289572959107
+    ],
+    "variance_decomposition": {
+     "within_training_run_sampling_var": 9.21052922198074e-05,
+     "between_training_run_var": 0.0021948687340953782,
+     "ratio_between_over_within": 23.829995879687008
+    }
+   },
+   "W1": {
+    "n_cells": 9,
+    "complete": true,
+    "matrix_rows_run_cols_samp": [
+     [
+      0.2265762380538662,
+      0.21766007819287575,
+      0.22033905299739356
+     ],
+     [
+      0.21665812337098175,
+      0.20637358818418766,
+      0.21009470026064292
+     ],
+     [
+      0.24082189400521284,
+      0.23803496959165943,
+      0.22785968722849698
+     ]
+    ],
+    "C_3x3": {
+     "mean": 0.22271314798725747,
+     "sd": 0.011716093806721459,
+     "n": 9
+    },
+    "B_run1_3samp": {
+     "mean": 0.2215251230813785,
+     "sd": 0.004574882331795798,
+     "n": 3
+    },
+    "per_run_mean": [
+     0.2215251230813785,
+     0.21104213727193744,
+     0.23557218360845641
+    ],
+    "variance_decomposition": {
+     "within_training_run_sampling_var": 3.153312641651247e-05,
+     "between_training_run_var": 0.00015148934570068356,
+     "ratio_between_over_within": 4.804133396089626
+    }
+   },
+   "mmd2": {
+    "n_cells": 9,
+    "complete": true,
+    "matrix_rows_run_cols_samp": [
+     [
+      0.0052647940985872665,
+      0.004949161828098125,
+      0.005536620767186307
+     ],
+     [
+      0.005319544402560883,
+      0.0054962087279104566,
+      0.005237439662516996
+     ],
+     [
+      0.005343316909222295,
+      0.005363807420882605,
+      0.005292349971311339
+     ]
+    ],
+    "C_3x3": {
+     "mean": 0.005311471532030697,
+     "sd": 0.00016879418322556156,
+     "n": 9
+    },
+    "B_run1_3samp": {
+     "mean": 0.0052501922312905664,
+     "sd": 0.0002940015513140461,
+     "n": 3
+    },
+    "per_run_mean": [
+     0.0052501922312905664,
+     0.0053510642643294455,
+     0.00533315810047208
+    ],
+    "variance_decomposition": {
+     "within_training_run_sampling_var": 3.5092112853957994e-08,
+     "between_training_run_var": 2.8965222004212493e-09,
+     "ratio_between_over_within": 0.08254054728695409
+    }
+   },
+   "pcc": {
+    "n_cells": 9,
+    "complete": true,
+    "matrix_rows_run_cols_samp": [
+     [
+      0.981125607275275,
+      0.9823956404583494,
+      0.9800149197564432
+     ],
+     [
+      0.9817976783438086,
+      0.9816841883917132,
+      0.9823274603434491
+     ],
+     [
+      0.9808438195579089,
+      0.980567358480092,
+      0.9807582890548016
+     ]
+    ],
+    "C_3x3": {
+     "mean": 0.981279440184649,
+     "sd": 0.0008191262011203465,
+     "n": 9
+    },
+    "B_run1_3samp": {
+     "mean": 0.9811787224966891,
+     "sd": 0.0011912487923102376,
+     "n": 3
+    },
+    "per_run_mean": [
+     0.9811787224966891,
+     0.9819364423596569,
+     0.9807231556976008
+    ],
+    "variance_decomposition": {
+     "within_training_run_sampling_var": 5.189994739006507e-07,
+     "between_training_run_var": 3.7562417058179565e-07,
+     "ratio_between_over_within": 0.7237467270606509
+    }
+   }
+  },
+  "Neuronal": {
+   "purity_abs_v8": {
+    "n_cells": 9,
+    "complete": true,
+    "matrix_rows_run_cols_samp": [
+     [
+      0.7372,
+      0.7332,
+      0.7404
+     ],
+     [
+      0.7524,
+      0.7388,
+      0.7304
+     ],
+     [
+      0.7452,
+      0.7436,
+      0.7308
+     ]
+    ],
+    "C_3x3": {
+     "mean": 0.7391111111111112,
+     "sd": 0.007238170425674633,
+     "n": 9
+    },
+    "B_run1_3samp": {
+     "mean": 0.7369333333333333,
+     "sd": 0.003607399802258308,
+     "n": 3
+    },
+    "per_run_mean": [
+     0.7369333333333333,
+     0.7405333333333334,
+     0.7398666666666666
+    ],
+    "variance_decomposition": {
+     "within_training_run_sampling_var": 6.61866666666663e-05,
+     "between_training_run_var": 3.6681481481481395e-06,
+     "ratio_between_over_within": 0.05542125526009509
+    }
+   },
+   "purity_rel_v8": {
+    "n_cells": 9,
+    "complete": true,
+    "matrix_rows_run_cols_samp": [
+     [
+      0.7505142300415435,
+      0.7464419878817955,
+      0.7537720237693418
+     ],
+     [
+      0.7659887502485856,
+      0.7521431269054427,
+      0.7435914183699721
+     ],
+     [
+      0.7586587143610394,
+      0.7570298174971403,
+      0.7439986425859468
+     ]
+    ],
+    "C_3x3": {
+     "mean": 0.7524598568512008,
+     "sd": 0.007368895691718219,
+     "n": 9
+    },
+    "B_run1_3samp": {
+     "mean": 0.7502427472308936,
+     "sd": 0.003672551390455692,
+     "n": 3
+    },
+    "per_run_mean": [
+     0.7502427472308936,
+     0.753907765174667,
+     0.7532290581480421
+    ],
+    "variance_decomposition": {
+     "within_training_run_sampling_var": 6.859898951222278e-05,
+     "between_training_run_var": 3.801842108341879e-06,
+     "ratio_between_over_within": 0.05542125526010084
+    }
+   },
+   "purity_abs_v7": {
+    "n_cells": 9,
+    "complete": true,
+    "matrix_rows_run_cols_samp": [
+     [
+      0.3652,
+      0.3524,
+      0.3512
+     ],
+     [
+      0.4768,
+      0.48,
+      0.4696
+     ],
+     [
+      0.3876,
+      0.376,
+      0.374
+     ]
+    ],
+    "C_3x3": {
+     "mean": 0.4036444444444445,
+     "sd": 0.05509861865580459,
+     "n": 9
+    },
+    "B_run1_3samp": {
+     "mean": 0.3562666666666667,
+     "sd": 0.007759725081040792,
+     "n": 3
+    },
+    "per_run_mean": [
+     0.3562666666666667,
+     0.4754666666666667,
+     0.3792
+    ],
+    "variance_decomposition": {
+     "within_training_run_sampling_var": 4.7502222222222225e-05,
+     "between_training_run_var": 0.004000308148148151,
+     "ratio_between_over_within": 84.21307385229547
+    }
+   },
+   "purity_rel_v7": {
+    "n_cells": 9,
+    "complete": true,
+    "matrix_rows_run_cols_samp": [
+     [
+      0.5183818310858765,
+      0.5002129169623847,
+      0.4985095812633073
+     ],
+     [
+      0.676792051100071,
+      0.6813342796309438,
+      0.6665720369056068
+     ],
+     [
+      0.5501774308019872,
+      0.5337118523775727,
+      0.5308729595457772
+     ]
+    ],
+    "C_3x3": {
+     "mean": 0.5729516599637253,
+     "sd": 0.07820953677190147,
+     "n": 9
+    },
+    "B_run1_3samp": {
+     "mean": 0.5057014431038562,
+     "sd": 0.01101451395463562,
+     "n": 3
+    },
+    "per_run_mean": [
+     0.5057014431038562,
+     0.674899455878874,
+     0.5382540809084456
+    ],
+    "variance_decomposition": {
+     "within_training_run_sampling_var": 9.570881345708172e-05,
+     "between_training_run_var": 0.008059933375976807,
+     "ratio_between_over_within": 84.21307385229561
+    }
+   },
+   "W1": {
+    "n_cells": 9,
+    "complete": true,
+    "matrix_rows_run_cols_samp": [
+     [
+      0.0632979797979798,
+      0.06035353535353535,
+      0.06323232323232324
+     ],
+     [
+      0.062396464646464644,
+      0.06224494949494949,
+      0.06095959595959596
+     ],
+     [
+      0.06859090909090909,
+      0.06852525252525253,
+      0.06541035353535353
+     ]
+    ],
+    "C_3x3": {
+     "mean": 0.06389015151515151,
+     "sd": 0.0030147409221644057,
+     "n": 9
+    },
+    "B_run1_3samp": {
+     "mean": 0.06229461279461279,
+     "sd": 0.0016813428919611494,
+     "n": 3
+    },
+    "per_run_mean": [
+     0.06229461279461279,
+     0.06186700336700337,
+     0.06750883838383838
+    ],
+    "variance_decomposition": {
+     "within_training_run_sampling_var": 2.251333657846717e-06,
+     "between_training_run_var": 9.866883445850182e-06,
+     "ratio_between_over_within": 4.382683753454537
+    }
+   },
+   "mmd2": {
+    "n_cells": 9,
+    "complete": true,
+    "matrix_rows_run_cols_samp": [
+     [
+      0.012518761574434434,
+      0.01329373586388849,
+      0.01399097225685142
+     ],
+     [
+      0.012769279356693364,
+      0.013075329613637221,
+      0.01324674463757236
+     ],
+     [
+      0.012697192363546383,
+      0.013666356292008519,
+      0.01262058893026885
+     ]
+    ],
+    "C_3x3": {
+     "mean": 0.013097662320989004,
+     "sd": 0.0005016873089751081,
+     "n": 9
+    },
+    "B_run1_3samp": {
+     "mean": 0.013267823231724781,
+     "sd": 0.0007364473312701393,
+     "n": 3
+    },
+    "per_run_mean": [
+     0.013267823231724781,
+     0.013030451202634316,
+     0.012994712528607918
+    ],
+    "variance_decomposition": {
+     "within_training_run_sampling_var": 3.1355150978680114e-07,
+     "between_training_run_var": 2.2035364862112915e-08,
+     "ratio_between_over_within": 0.07027669832333394
+    }
+   },
+   "pcc": {
+    "n_cells": 9,
+    "complete": true,
+    "matrix_rows_run_cols_samp": [
+     [
+      0.9450373893036718,
+      0.94258001396445,
+      0.9368637639043214
+     ],
+     [
+      0.9394884116950645,
+      0.937474520169522,
+      0.937958577461644
+     ],
+     [
+      0.9498587448479487,
+      0.9445830923779672,
+      0.9497653155174347
+     ]
+    ],
+    "C_3x3": {
+     "mean": 0.9426233143602251,
+     "sd": 0.005053462743917213,
+     "n": 9
+    },
+    "B_run1_3samp": {
+     "mean": 0.9414937223908143,
+     "sd": 0.004193692892838048,
+     "n": 3
+    },
+    "per_run_mean": [
+     0.9414937223908143,
+     0.9383071697754102,
+     0.9480690509144503
+    ],
+    "variance_decomposition": {
+     "within_training_run_sampling_var": 9.269416582674996e-06,
+     "between_training_run_var": 2.4780564356204344e-05,
+     "ratio_between_over_within": 2.6733682897066533
+    }
+   }
+  }
+ },
+ "written_at": "2026-09-18 00:52:32"
+}

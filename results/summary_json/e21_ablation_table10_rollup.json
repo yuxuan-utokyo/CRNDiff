@@ -1,0 +1,284 @@
+{
+ "experiment": "ablation_table10",
+ "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\summary\\e21_ablation_table10.json",
+ "source_sha256": "699b238820fc7c8e55b6dd6d956e238e365a0c463893f24d103c2a0f58109054",
+ "arm_labels_source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\summary\\purity_ablation_table10.json",
+ "arm_labels_source_sha256": "21ca0e781839fef29ad45db9dda2dff232b21f0819af23cc70e9e6cb750af0d9",
+ "arm_labels_rule": "joined on the exact stem; never parsed out of the filename",
+ "n_seeds": 3,
+ "sd": "sample standard deviation over the sampling seeds (ddof=1, the convention of analysis/score_e21.py:196)",
+ "metrics_are_copied_not_recomputed": true,
+ "why_this_file_exists": "score_e21.py's own `aggregate` block pools every run in the experiment directory into one mean/sd without regard to arm. That is correct where a type has a single arm, and WRONG here: this experiment has two arms per type, so the pooled figure is a blend that no arm produced. The paper table must read this file, not that block.",
+ "pooled_aggregate_in_the_source_is_arm_blind": {
+  "Endothelial": {
+   "n_seeds": 6,
+   "pooled_pcc_mean": 0.9963997968586177,
+   "note": "do not quote this"
+  },
+  "Myeloid": {
+   "n_seeds": 6,
+   "pooled_pcc_mean": 0.8753594774873793,
+   "note": "do not quote this"
+  },
+  "Neuronal": {
+   "n_seeds": 6,
+   "pooled_pcc_mean": 0.776002423011272,
+   "note": "do not quote this"
+  }
+ },
+ "ruler": {
+  "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\analysis\\_frozen\\e21_scc_mmd.py",
+  "seed": 20261071,
+  "target_sum": 10000.0,
+  "block": 1024,
+  "matched_n": {
+   "Endothelial": 10057,
+   "Myeloid": 2302,
+   "Neuronal": 396
+  },
+  "definitions": {
+   "representation": "library-size normalize to 10000, then log1p",
+   "scc": "Spearman of the 2000-gene population mean vectors",
+   "pcc": "Pearson of the same two mean vectors (_frozen/e21c_pcc)",
+   "kernel": "exp(-squared_euclidean/(2*sigma^2))",
+   "bandwidth": "exact median of non-diagonal real-real distances",
+   "mmd2": "biased empirical Gaussian-kernel MMD squared, exact all pairs"
+  }
+ },
+ "ruler_self_check_passed": {
+  "Endothelial": true,
+  "Myeloid": true,
+  "Neuronal": true
+ },
+ "deployed_arm": {
+  "recomputed_here": false,
+  "inherit_from": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\summary\\e21_table1_ours.json",
+  "why": "ticket 181 s2.2 -- the paper inherits that one so the two tables carry the same number"
+ },
+ "seed_count_problems": [],
+ "rows": [
+  {
+   "target": "Endothelial",
+   "arm": "Endothelial_fk_only",
+   "n_seeds": 3,
+   "seeds": [
+    20260987,
+    20260988,
+    20260989
+   ],
+   "matched_n": 10057,
+   "stems": [
+    "Endothelial_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M20114_N10057_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260987",
+    "Endothelial_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M20114_N10057_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260988",
+    "Endothelial_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M20114_N10057_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260989"
+   ],
+   "mmd2_mean": 0.0005359596317122683,
+   "mmd2_sd": 0.00025216012557634264,
+   "mmd2_per_seed": [
+    0.0008029984718271876,
+    0.0005029510187017916,
+    0.0003019294046078258
+   ],
+   "pcc_mean": 0.9991152155187105,
+   "pcc_sd": 0.0003001033803222261,
+   "pcc_per_seed": [
+    0.9987908273214244,
+    0.9991718574407917,
+    0.9993829617939154
+   ],
+   "scc_mean": 0.9893717772803061,
+   "scc_sd": 0.0001758892824260557,
+   "scc_per_seed": [
+    0.9892731263641913,
+    0.9892673560725959,
+    0.989574849404131
+   ]
+  },
+  {
+   "target": "Endothelial",
+   "arm": "Endothelial_tilt_only",
+   "n_seeds": 3,
+   "seeds": [
+    20260987,
+    20260988,
+    20260989
+   ],
+   "matched_n": 10057,
+   "stems": [
+    "Endothelial_hvgtilt_only_tilt_K32_M20114_N10057_tau0p4_cc256_seed20260987",
+    "Endothelial_hvgtilt_only_tilt_K32_M20114_N10057_tau0p4_cc256_seed20260988",
+    "Endothelial_hvgtilt_only_tilt_K32_M20114_N10057_tau0p4_cc256_seed20260989"
+   ],
+   "mmd2_mean": 0.005509373507665376,
+   "mmd2_sd": 0.00017238120967309333,
+   "mmd2_per_seed": [
+    0.005386181149603875,
+    0.00570636914620315,
+    0.0054355702271891015
+   ],
+   "pcc_mean": 0.993684378198525,
+   "pcc_sd": 0.00011505459498432171,
+   "pcc_per_seed": [
+    0.993662089957738,
+    0.9935820983991793,
+    0.9938089462386575
+   ],
+   "scc_mean": 0.9871886052948932,
+   "scc_sd": 0.00028395786945005757,
+   "scc_per_seed": [
+    0.9868651598536953,
+    0.9873969043673116,
+    0.9873037516636728
+   ]
+  },
+  {
+   "target": "Myeloid",
+   "arm": "Myeloid_fk_only",
+   "n_seeds": 3,
+   "seeds": [
+    20260987,
+    20260988,
+    20260989
+   ],
+   "matched_n": 2302,
+   "stems": [
+    "Myeloid_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987",
+    "Myeloid_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260988",
+    "Myeloid_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260989"
+   ],
+   "mmd2_mean": 0.006404659231788716,
+   "mmd2_sd": 0.0047850554880844625,
+   "mmd2_per_seed": [
+    0.0023111733196365947,
+    0.005237481554229539,
+    0.011665322821500013
+   ],
+   "pcc_mean": 0.9869650472006635,
+   "pcc_sd": 0.006875507699434122,
+   "pcc_per_seed": [
+    0.9933682162383219,
+    0.9878282106237561,
+    0.9796987147399125
+   ],
+   "scc_mean": 0.9694452329831652,
+   "scc_sd": 0.006025464960450584,
+   "scc_per_seed": [
+    0.9716913930606098,
+    0.9740249857203088,
+    0.9626193201685773
+   ]
+  },
+  {
+   "target": "Myeloid",
+   "arm": "Myeloid_tilt_only",
+   "n_seeds": 3,
+   "seeds": [
+    20260987,
+    20260988,
+    20260989
+   ],
+   "matched_n": 2302,
+   "stems": [
+    "Myeloid_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260987",
+    "Myeloid_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260988",
+    "Myeloid_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260989"
+   ],
+   "mmd2_mean": 0.05036598205340511,
+   "mmd2_sd": 0.0011420300198074463,
+   "mmd2_per_seed": [
+    0.05090166521260997,
+    0.04905458154837028,
+    0.051141699399235074
+   ],
+   "pcc_mean": 0.7637539077740949,
+   "pcc_sd": 0.007628590397543341,
+   "pcc_per_seed": [
+    0.7648408439637893,
+    0.7707807315324817,
+    0.7556401478260139
+   ],
+   "scc_mean": 0.8719503946467629,
+   "scc_sd": 0.004496656620294293,
+   "scc_per_seed": [
+    0.873920986666218,
+    0.8751253265250821,
+    0.8668048707489887
+   ]
+  },
+  {
+   "target": "Neuronal",
+   "arm": "Neuronal_fk_only",
+   "n_seeds": 3,
+   "seeds": [
+    20260987,
+    20260988,
+    20260989
+   ],
+   "matched_n": 396,
+   "stems": [
+    "Neuronal_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987",
+    "Neuronal_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260988",
+    "Neuronal_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260989"
+   ],
+   "mmd2_mean": 0.01791325664925081,
+   "mmd2_sd": 0.010536880223120828,
+   "mmd2_per_seed": [
+    0.01204054021299239,
+    0.011621438120000827,
+    0.03007779161475921
+   ],
+   "pcc_mean": 0.9226737609571067,
+   "pcc_sd": 0.04349304163117587,
+   "pcc_per_seed": [
+    0.9472947204092406,
+    0.9482710764329964,
+    0.8724554860290832
+   ],
+   "scc_mean": 0.8822220447914749,
+   "scc_sd": 0.008540767238721077,
+   "scc_per_seed": [
+    0.880616193533574,
+    0.891451751319982,
+    0.8745981895208684
+   ]
+  },
+  {
+   "target": "Neuronal",
+   "arm": "Neuronal_tilt_only",
+   "n_seeds": 3,
+   "seeds": [
+    20260987,
+    20260988,
+    20260989
+   ],
+   "matched_n": 396,
+   "stems": [
+    "Neuronal_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260987",
+    "Neuronal_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260988",
+    "Neuronal_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260989"
+   ],
+   "mmd2_mean": 0.05876411140216923,
+   "mmd2_sd": 0.00030214079281564615,
+   "mmd2_per_seed": [
+    0.05871867062291147,
+    0.058487264753610324,
+    0.0590863988299859
+   ],
+   "pcc_mean": 0.6293310850654371,
+   "pcc_sd": 0.0027209871504261405,
+   "pcc_per_seed": [
+    0.6299469595875969,
+    0.6316913485094204,
+    0.626354947099294
+   ],
+   "scc_mean": 0.8834097580868577,
+   "scc_sd": 0.002773282776239287,
+   "scc_per_seed": [
+    0.8851168482426957,
+    0.8802098371317899,
+    0.8849025888860879
+   ]
+  }
+ ],
+ "written_at": "2026-09-07 22:09:52"
+}

@@ -1,0 +1,23 @@
+{
+ "table": "Table 7",
+ "arm": "Residual Correction",
+ "request": "Endothelial",
+ "source_json": "ess_pre_resample.json",
+ "aggregate": {
+  "target": "Endothelial",
+  "arm": "Residual Correction",
+  "n_seeds": 3,
+  "n_events_mean": 11.333333333333334,
+  "n_events_sd": 0.5773502691896257,
+  "ess_pre_mean_mean": 0.3800737454132162,
+  "ess_pre_mean_sd": 0.019702979333718597,
+  "ess_pre_median_mean": 0.37910491364514454,
+  "ess_pre_median_sd": 0.017085417995383226,
+  "ess_pre_min_mean": 0.260395491608545,
+  "ess_pre_min_sd": 0.06692124306937829,
+  "ess_min_fraction_whole_chain_mean": 0.260395491608545,
+  "ess_min_fraction_whole_chain_sd": 0.06692124306937829,
+  "ess_final_before_terminal_resample_mean": 0.6025904910628197,
+  "ess_final_before_terminal_resample_sd": 0.12567855505716832
+ }
+}

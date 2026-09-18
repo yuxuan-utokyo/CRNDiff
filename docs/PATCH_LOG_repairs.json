@@ -1,0 +1,313 @@
+{
+ "stage": "B -- repair of references the restructure made stale",
+ "written_at": "2026-09-18 03:53:47",
+ "rule": "Only paths, module names and imports were changed. No model logic, experiment setting, seed, metric or number was touched. Every entry was found by resolving the reference, not by reading the file name.",
+ "asset_locations": [
+  {
+   "file": "crndiff/config.py",
+   "from": "GENERATOR = ASSETS / \"models\" / \"generator\"",
+   "to": "GENERATOR = ASSETS / \"generator\"",
+   "why": "the checkpoint and the LA prior are shipped at assets/generator/; the old path resolved to nothing, so GENERATOR_CKPT and LOGPI_LA were both unreachable"
+  },
+  {
+   "file": "crndiff/config.py",
+   "from": "MASTER_PURITY_V7 = ASSETS / \"tables\" / \"master_purity_v7.json\"",
+   "to": "MASTER_PURITY_V7 = RULERS / \"master_purity_v7.json\"",
+   "why": "the purity label sets are shipped at assets/rulers/; every purity scoring resolved a missing file"
+  },
+  {
+   "file": "crndiff/config.py",
+   "from": "(new constant)",
+   "to": "MASTER_PURITY_V8 = RULERS / \"master_purity_v8_lineage.json\"",
+   "why": "the v8 lineage ruler was addressed by four scripts through a hard-coded old path; they now share one constant"
+  },
+  {
+   "file": "crndiff/config.py",
+   "from": "CELLTYPIST = ASSETS / \"celltypist\"",
+   "to": "CELLTYPIST = RULERS / \"celltypist\"",
+   "why": "the archived CellTypist histograms are shipped at assets/rulers/celltypist/"
+  },
+  {
+   "file": "scripts/build_conditional_fidelity_grid.py, scripts/build_grid_mdlm.py, scripts/build_lineage_purity_ruler.py, scripts/rescore_purity_lineage_ruler.py",
+   "from": "C.ASSETS / \"tables\" / \"master_purity_v{7,8}*.json\"",
+   "to": "C.MASTER_PURITY_V7 / C.MASTER_PURITY_V8",
+   "why": "same move, addressed through the config constants so there is one authority"
+  },
+  {
+   "file": "scripts/audit_paper_numbers.py",
+   "from": "\"ruler_file\": \"assets/tables/master_purity_v8_lineage.json\"",
+   "to": "\"ruler_file\": \"assets/rulers/master_purity_v8_lineage.json\"",
+   "why": "provenance string in the audit output; it named a path that does not exist in this repository"
+  },
+  {
+   "file": "evaluation/score_wasserstein_raw_counts.py",
+   "from": "FROZEN = ROOT / \"analysis\" / \"_frozen\"",
+   "to": "FROZEN = ROOT / \"evaluation\" / \"frozen\"",
+   "why": "the frozen distance rulers moved with the analysis package; load_frozen() could not find any of them"
+  },
+  {
+   "file": "toy2d/config.py",
+   "from": "DATA = ROOT / \"data\"; MODELS = ROOT / \"assets\" / \"models\"; REFERENCES = ROOT / \"assets\" / \"references\"",
+   "to": "ASSETS = ROOT / \"assets\" / \"toy\"; DATA = ASSETS / \"data\"; MODELS = ASSETS / \"frozen\" / \"models\"; REFERENCES = ASSETS / \"frozen\" / \"references\"",
+   "why": "the toy assets are shipped under assets/toy/; toy2d.chain could not load the network, the tilts, the discriminators or the reference draws"
+  },
+  {
+   "file": "scripts/build_sampler_axis_tables.py",
+   "from": "str(ROOT / \"prereg\" / \"PREREG_200.md\")",
+   "to": "str(ROOT / \"docs\" / \"prereg\" / \"PREREG_200.md\")",
+   "why": "recorded provenance path; the pre-registration is shipped under docs/prereg/"
+  },
+  {
+   "file": "scripts/sample_baseline_cfgen.py, scripts/sample_unconditional_pool.py",
+   "from": "C.ARCHIVE / \"code\" / \"overnight\" / \"cfgen\" / \"generate_cfgen.py\"",
+   "to": "C.BASELINES / \"cfgen\" / \"code\" / \"generate_cfgen.py\"",
+   "why": "the CFGen sampler is shipped under baselines/cfgen/code/"
+  }
+ ],
+ "module_names": [
+  {
+   "file": "experiments/run_one.py",
+   "from": "from crndiff.multicluster import ...",
+   "to": "from crndiff.multicluster_sampler import ...",
+   "why": "the module was renamed; run_one, the single sampling entry point, failed at import"
+  },
+  {
+   "file": "scripts/sample_value_guided.py",
+   "from": "from crndiff.sampler_vgr import VGRSampler",
+   "to": "from crndiff.sampler_value_guided import VGRSampler",
+   "why": "the module was renamed"
+  },
+  {
+   "file": "scripts/train_conditional_generator.py",
+   "from": "from crndiff import model_conditional as MC",
+   "to": "from crndiff import conditional_model as MC",
+   "why": "the module was renamed"
+  },
+  {
+   "file": "scripts/run_mdlm_baseline.py",
+   "from": "from crndiff import model_masked_mdlm as MD",
+   "to": "from baselines.mdlm import model_masked_mdlm as MD",
+   "why": "the MDLM port moved into baselines/mdlm/ with the other baselines"
+  },
+  {
+   "file": "baselines/mdlm/model_masked_mdlm.py",
+   "from": "from . import config as C",
+   "to": "from crndiff import config as C",
+   "why": "the relative import pointed at the package it left; baselines/__init__.py and baselines/mdlm/__init__.py were added so the module is importable where it now lives"
+  },
+  {
+   "file": "figures/ablation_pca_grid_3x3.py",
+   "from": "H.sha256(ROOT / \"figures\" / \"fig_ablation_pca.py\")",
+   "to": "H.sha256(ROOT / \"figures\" / \"ablation_pca_base.py\")",
+   "why": "the sidecar records the sha256 of the script it inherits from; the old name raised FileNotFoundError"
+  },
+  {
+   "file": "scripts/build_grid_scvi_scanvi.py (3x), scripts/run_ours_downstream_chain.py (4x), scripts/run_ours_training_seed.py, scripts/score_pool_composition_batch.py, scripts/score_tilt_exponent_sweep.py",
+   "from": "subprocess \"-m\", \"tools.<ticket name>\"",
+   "to": "subprocess \"-m\", \"scripts.<functional name>\"",
+   "why": "ten subprocess invocations still named the retired tools package and its ticket-numbered modules"
+  },
+  {
+   "file": "scripts/run_ours_downstream_chain.py",
+   "from": "src = ROOT / \"tools\" / tiltdir.name / ...",
+   "to": "src = ROOT / \"scripts\" / tiltdir.name / ...",
+   "why": "the tilt-table builder writes next to its own module, which now lives in scripts/"
+  },
+  {
+   "file": "evaluation/score_distances_frozen_ruler.py",
+   "from": "python -m analysis.score_e21 (usage line)",
+   "to": "python -m evaluation.score_distances_frozen_ruler",
+   "why": "the usage line named the retired module"
+  },
+  {
+   "file": "scripts/build_conditional_fidelity_grid.py, scripts/rescore_purity_lineage_ruler.py",
+   "from": "\"run tools.t215_lineage_ruler first\" (error message)",
+   "to": "\"run scripts.build_lineage_purity_ruler first\"",
+   "why": "the error told the reader to run a module that no longer exists"
+  }
+ ],
+ "added_because_something_referenced_them": [
+  {
+   "file": "scripts/build_tilt_reference_table.py",
+   "source": "HVG/tools/build_ref_table.py",
+   "why": "run_ours_downstream_chain.py runs it as a subprocess for every training seed; it had not been copied",
+   "edits": [
+    "the docstring header and usage line name the new path",
+    "the --x-root default was an absolute path on the author machine; it is now assets/legacy_root, which is the same tree"
+   ]
+  },
+  {
+   "file": "scripts/export_classifier_to_numpy.py",
+   "source": "HVG/tools/export_hgbt_portable.py",
+   "why": "run_ours_downstream_chain.py runs it as a subprocess to export each fitted discriminator; it had not been copied",
+   "edits": [
+    "none -- copied byte for byte"
+   ]
+  },
+  {
+   "file": "archive/universality_fk/out/e30plus/E30plus_manifest.json",
+   "source": "HVG2K/universality_fk/out/e30plus/E30plus_manifest.json",
+   "why": "the archived e33 body loads it on every downstream run; without it evaluation/downstream_multiseed.py stops at load_manifest()",
+   "edits": [
+    "none -- copied byte for byte"
+   ]
+  }
+ ],
+ "other": [
+  {
+   "file": "evaluation/score_purity_external.py",
+   "from": "SCORER_SHA = fe563c20...f524",
+   "to": "SCORER_SHA = 35aa524e...e654",
+   "why": "the guard hashes evaluation/score_purity.py, whose bytes moved when the module was renamed (hvg -> crndiff, analysis -> evaluation) and its comments were translated. The scoring code itself is unchanged; the old digest is recorded in the comment above the constant"
+  },
+  {
+   "file": "evaluation/downstream_deployed_arm.py",
+   "from": "REPO = C.ROOT.parents[1]; WIN_PREFIX = \"...CRNDIFF\\\\\"",
+   "to": "REPO = C.ARCHIVE; WIN_PREFIX = \"...CRNDIFF\\\\Conditional generation experiments\\\\HVG2K\\\\\"",
+   "why": "every array path in the archived manifest is an absolute Windows path under the old HVG2K tree, which is mirrored here as archive/. The arrays themselves (about 7.6 GB) are not shipped"
+  },
+  {
+   "file": "scripts/reproduce/build_toy_figure_data.py",
+   "from": "wrote results/toy/figdata.npz in place",
+   "to": "writes out/toy/figdata.npz and compares its sha256 against the shipped copy",
+   "why": "a rebuild overwrote a shipped artefact. The rebuild is bitwise identical (89952d0f7da4b6e493ea54d3ac93dc831f275f40a018547907d6f72ed05bdd91), and results/ is now read-only to this script"
+  },
+  {
+   "file": "PROVENANCE.json",
+   "from": "the H0 gate description was the original Chinese ticket text",
+   "to": "the same description in English",
+   "why": "nothing reads this field; it is documentation"
+  },
+  {
+   "file": "(repository)",
+   "from": "15 __pycache__ directories were committed",
+   "to": "removed",
+   "why": ".gitignore already excludes them"
+  }
+ ],
+ "stage_c_public_release": {
+  "written_at": "2026-09-18 04:22:12",
+  "what": "A second pass, driven by a clean-clone smoke test: the repository was exported through a git index into an empty directory, installed into a fresh virtual environment from requirements.txt alone, and every documented command was run there.",
+  "found_and_fixed": [
+   {
+    "file": ".gitignore",
+    "from": "out/",
+    "to": "/out/",
+    "why": "the unanchored rule also matched archive/universality_fk/out/, so four archived artefacts the scorers read -- E30plus_manifest.json, E30plus_full_metrics.json, E33_downstream.json and E33_prereg.json -- would never have been committed. Verified with git check-ignore"
+   },
+   {
+    "file": ".gitattributes",
+    "from": "(absent)",
+    "to": "* -text, plus binary markers",
+    "why": "git line-ending normalisation would have rewritten the frozen modules on checkout and broken every sha256 guard. Two sha-asserted files (crndiff/frozen/fk_hvg_v2.py, evaluation/frozen/e30plus_eval_cpu_worker.py) are stored with CRLF, so this is not hypothetical"
+   },
+   {
+    "file": "scripts/train_and_sample_scvi_scanvi.py, scripts/build_grid_scvi_scanvi.py",
+    "from": "C.ARCHIVE / \"baseline_scvi\" / \"code\" / ...",
+    "to": "C.BASELINES / \"scvi\" / \"code\" / ...",
+    "why": "the six driver paths for the scVI and scANVI baselines still pointed into the retired tree; the drivers are shipped under baselines/"
+   },
+   {
+    "file": "scripts/score_deliveries.py",
+    "from": "str(ROOT / \"analysis\" / \"score_purity.py\")",
+    "to": "str(ROOT / \"evaluation\" / \"score_purity.py\")",
+    "why": "recorded ruler path in the scoring output named a directory that no longer exists"
+   },
+   {
+    "file": "scripts/fit_residual_discriminator.py",
+    "from": "-o default = scripts/out_Endothelial",
+    "to": "-o default = out/residual_Endothelial",
+    "why": "the default output directory was inside the code tree"
+   },
+   {
+    "file": "scripts/check_assets.py",
+    "from": "exit 1 whenever anything is MISSING",
+    "to": "exit 1 only on a MISMATCH; --strict restores the old behaviour",
+    "why": "a fresh clone is missing the large arrays by design, so the old exit code made the first command in the README look like a failure and could not be used in CI"
+   },
+   {
+    "file": "LICENSE",
+    "from": "(absent)",
+    "to": "MIT for the code, CC-BY-4.0 noted for the redistributed panel arrays",
+    "why": "a public repository without a licence cannot legally be used or reproduced"
+   }
+  ],
+  "added": [
+   {
+    "file": "scripts/run_smoke_test.py",
+    "why": "one command that runs all fifteen offline entry points and compares the rebuilt toy figure extract against the shipped copy by sha256"
+   },
+   {
+    "file": ".github/workflows/smoke.yml",
+    "why": "runs check_assets, the smoke test and compileall on push, on Python 3.10 and 3.12"
+   },
+   {
+    "file": "archive/results/runs/Myeloid_..._seed20260987.json and archive/results/runs/sample_log_K032_..._UNI_DONOR_D1_n10000_g0p4_noa4.json",
+    "why": "acceptance gates G2 and G3 name them as their archived references; only the .npy had been copied. The 40 MB G3 reference array is still not shipped and is documented"
+   }
+  ],
+  "verified_in_the_clean_clone": [
+   "618 files, 148 MB, nothing unexpectedly ignored by git",
+   "pip install -r requirements.txt in an empty venv: numpy 2.2.6, scipy 1.15.3, matplotlib 3.10.9, pandas 2.3.3",
+   "all ten tables produce LaTeX identical to the reference environment, byte for byte",
+   "all five offline figures rebuild at the published byte sizes",
+   "results/toy/figdata.npz rebuilds to the same sha256 as the shipped copy",
+   "results/ and assets/ are unchanged by a full run",
+   "the scripts also run from a foreign working directory",
+   "the README recipe that copies results/summary_json/ into out/summary/ lets the table builders outside scripts/reproduce/ run on the published numbers"
+  ],
+  "left_as_is_by_decision": [
+   "58 result JSON files record the absolute Windows paths of the machine the runs were made on. They are provenance inside artefacts whose sha256 is asserted, they carry no user name, and rewriting them would mean editing delivered results. README section 8 says so.",
+   "docs/prereg/PREREG_200.md keeps its original wording and language: it is the dated record the sweep was registered against."
+  ]
+ },
+ "stage_d_first_run_experience": {
+  "written_at": "2026-09-18 04:38:50",
+  "what": "Every command the README documents was run in a clean export of the repository, in a virtual environment holding only requirements.txt, and the output a first-time user would see was recorded for each one.",
+  "found_and_fixed": [
+   {
+    "what": "eight entry points answered --help with a ModuleNotFoundError traceback",
+    "fix": "the top-level torch / joblib / scikit-learn import of thirteen modules is wrapped in try/except ModuleNotFoundError, which raises SystemExit naming the package and the README section. No logic changed; only the message when a package is absent.",
+    "files": [
+     "crndiff/sampler.py",
+     "crndiff/sampler_value_guided.py",
+     "crndiff/conditional_model.py",
+     "baselines/mdlm/model_masked_mdlm.py",
+     "evaluation/downstream_tstr_11class.py",
+     "scripts/fit_noised_value_classifier.py",
+     "scripts/run_mdlm_baseline.py",
+     "scripts/sample_value_guided.py",
+     "scripts/train_conditional_generator.py",
+     "scripts/fit_residual_discriminator.py",
+     "scripts/export_classifier_to_numpy.py",
+     "scripts/fit_selection_classifier.py"
+    ]
+   },
+   {
+    "what": "the earlier translation pass matched CJK ideographs only, so full-width punctuation survived in 19 modules, and at several seams the English sentence had been truncated, duplicated ('FAIL -- FAIL:', 'v7 recomputed v7') or had lost a space",
+    "fix": "every one of those lines was rewritten against the original wording in the working tree, not guessed. Numbers that the truncation had dropped were restored from the original (for example the A' degeneracy note and the E21 cpu-path tolerances).",
+    "verified": "zero CJK or full-width characters remain outside the frozen, archived and result files; the repository-wide scan now covers U+3000-U+303F, U+4E00-U+9FFF and U+FF00-U+FFEF"
+   },
+   {
+    "what": "one format string had lost a placeholder in translation, so build_sampler_axis_tables.py would have written the wrong numbers into the A' verdict",
+    "fix": "the three placeholders match .format(ratio, slope, fraction) again; a repository-wide check now confirms every .format() call's placeholder count matches its argument count"
+   },
+   {
+    "what": "the README promised --help on three scripts that take no arguments, where --help runs the script instead",
+    "fix": "those lines say what the script reads and that it takes no arguments; the README also says how to list all thirteen such scripts"
+   }
+  ],
+  "executed_for_real_in_the_clean_clone": [
+   "the ten table scripts and the five offline figure scripts (fifteen entry points)",
+   "scripts/check_assets.py and scripts/run_smoke_test.py",
+   "scripts/export_classifier_to_numpy.py, on a HistGradientBoostingClassifier fitted here: its own identity gate against predict_proba passed at 1.1e-16 under scikit-learn 1.7.2",
+   "fit_selection_classifier.export_portable, the same private-sklearn-API path, on the same classifier: 40 trees, 2388 nodes, identity error 1.1e-16",
+   "argument parsing of every other documented entry point"
+  ],
+  "not_executed": {
+   "what": "the training, sampling and scoring numerics",
+   "why": "they need PyTorch, which no package index reachable from this environment serves, and the 1.7 GB of atlas counts plus the fitted discriminators and tilt tables, none of which are redistributed",
+   "what_was_checked_instead": "import resolution, path resolution, argument parsing, and the message each entry point gives when a package or an input is absent"
+  }
+ }
+}

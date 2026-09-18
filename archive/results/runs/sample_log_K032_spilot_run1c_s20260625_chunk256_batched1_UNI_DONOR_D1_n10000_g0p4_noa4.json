@@ -1,0 +1,28 @@
+{
+ "ckpt": "pilot_run1c_s20260625.pt",
+ "T": 5.2021,
+ "NMAX": 512,
+ "dim": 2000,
+ "no_a4": true,
+ "tau": 0.4,
+ "last_only": false,
+ "n_gen": 10000,
+ "cell_chunk": 256,
+ "batched": true,
+ "cells": {
+  "K32|samp20261043": {
+   "K": 32,
+   "nfe": 32,
+   "samp_seed": 20261043,
+   "walltime_s": 320.9224536418915,
+   "s_per_step": 10.028826676309109,
+   "gen_file": "linspace_T_O_K32_spilot_run1c_s20260625_samp20261043_batched1_chunk256_UNI_DONOR_D1_n10000_g0p4_noa4.npy",
+   "batched": true,
+   "cell_chunk": 256,
+   "peak_alloc_gb": 7.82814884185791,
+   "mean": 0.11881395,
+   "max": 512,
+   "zerofrac": 0.9561301
+  }
+ }
+}

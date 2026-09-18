@@ -1,0 +1,810 @@
+{
+ "ticket": 202,
+ "block": "Stage 4 -- pool composition pi_hat for the 13 new pools",
+ "code_path": "tools/t200_pool_composition.py, unmodified -- the same path that produced 200_pool_composition_*.json; this file only aggregates",
+ "prereg": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\queue\\202_MDLM_BLACKOUT_PREREG.md",
+ "diagnostic_not_ruler": true,
+ "selected_T_per_method": {
+  "mdlm": 128,
+  "blackout": 32
+ },
+ "n_pools": 13,
+ "ceil_by_budget_caveat": "ceil_by_budget comes from the unmodified scorer, which compares b*B1 against the GLOBAL constant 200_derived_constants.json::N_pool (the 100000-cell pool size), not against this pool's own n_pool of 20000. For these 13 pools the achievable budgets are therefore narrower than ceil_by_budget suggests. The computation was NOT altered; the C-ladder restriction is handled separately by PREREG R3 (these generators enter only C in {6250, 12500}).",
+ "rows": [
+  {
+   "generator": "blackoutT128",
+   "method_family": "blackout",
+   "T_sampling_steps": 128,
+   "seed": 20260931,
+   "pool": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\uncond_pools\\blackout_uncond_T128_seed20260931_n20000.npy",
+   "pool_sha256": "26768782080d52dac2721a0658a181ce41c58ee677d4345360e8f5b73584d010",
+   "n_pool": 20000,
+   "selected_for_main_table": false,
+   "arm_role": "additional_arms",
+   "source_json": "200_pool_composition_blackoutT128_seed20260931.json",
+   "types": {
+    "Endothelial": {
+     "n_labelled_as_type": 2740,
+     "pi_hat_pool": 0.137,
+     "N": 10057,
+     "B1": 39599,
+     "ceil_by_budget": {
+      "1": 0.5394315402207418,
+      "2": 1.0,
+      "4": 1.0,
+      "8": null,
+      "16": null
+     }
+    },
+    "Myeloid": {
+     "n_labelled_as_type": 298,
+     "pi_hat_pool": 0.0149,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.05866428,
+      "2": 0.11732856,
+      "4": 0.23465712,
+      "8": 0.46931424,
+      "16": 0.93862848
+     }
+    },
+    "Neuronal": {
+     "n_labelled_as_type": 0,
+     "pi_hat_pool": 0.0,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.0,
+      "2": 0.0,
+      "4": 0.0,
+      "8": 0.0,
+      "16": 0.0
+     }
+    }
+   },
+   "celltypist": {
+    "celltypist_version": "1.7.1",
+    "model_sha256": "b62e39304a6bb5699a09f474defaf78b9313e2d88a8cdf624fb5e67548222035",
+    "model_date": "2023-02-27 16:03:27.613149",
+    "model_version": "v1",
+    "verified_by": "gate G5",
+    "g5_reference": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\assets\\celltypist\\celltypist_Myeloid_ceiling_canonical.json"
+   }
+  },
+  {
+   "generator": "blackoutT128",
+   "method_family": "blackout",
+   "T_sampling_steps": 128,
+   "seed": 20260932,
+   "pool": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\uncond_pools\\blackout_uncond_T128_seed20260932_n20000.npy",
+   "pool_sha256": "b22cc2efedca034fad8eb00162bda1bc3af88c08f564952eda3c1fbd2b8c07e0",
+   "n_pool": 20000,
+   "selected_for_main_table": false,
+   "arm_role": "additional_arms",
+   "source_json": "200_pool_composition_blackoutT128_seed20260932.json",
+   "types": {
+    "Endothelial": {
+     "n_labelled_as_type": 2777,
+     "pi_hat_pool": 0.13885,
+     "N": 10057,
+     "B1": 39599,
+     "ceil_by_budget": {
+      "1": 0.5467158347419707,
+      "2": 1.0,
+      "4": 1.0,
+      "8": null,
+      "16": null
+     }
+    },
+    "Myeloid": {
+     "n_labelled_as_type": 282,
+     "pi_hat_pool": 0.0141,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.05551451999999999,
+      "2": 0.11102903999999998,
+      "4": 0.22205807999999996,
+      "8": 0.4441161599999999,
+      "16": 0.8882323199999999
+     }
+    },
+    "Neuronal": {
+     "n_labelled_as_type": 1,
+     "pi_hat_pool": 5e-05,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.00019686,
+      "2": 0.00039372,
+      "4": 0.00078744,
+      "8": 0.00157488,
+      "16": 0.00314976
+     }
+    }
+   },
+   "celltypist": {
+    "celltypist_version": "1.7.1",
+    "model_sha256": "b62e39304a6bb5699a09f474defaf78b9313e2d88a8cdf624fb5e67548222035",
+    "model_date": "2023-02-27 16:03:27.613149",
+    "model_version": "v1",
+    "verified_by": "gate G5",
+    "g5_reference": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\assets\\celltypist\\celltypist_Myeloid_ceiling_canonical.json"
+   }
+  },
+  {
+   "generator": "blackoutT128",
+   "method_family": "blackout",
+   "T_sampling_steps": 128,
+   "seed": 20260933,
+   "pool": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\uncond_pools\\blackout_uncond_T128_seed20260933_n20000.npy",
+   "pool_sha256": "f8bcd0841efdc3a5527c14c0816050bfeaa44c2bd96fec044bb5adb1265a9341",
+   "n_pool": 20000,
+   "selected_for_main_table": false,
+   "arm_role": "additional_arms",
+   "source_json": "200_pool_composition_blackoutT128_seed20260933.json",
+   "types": {
+    "Endothelial": {
+     "n_labelled_as_type": 2724,
+     "pi_hat_pool": 0.1362,
+     "N": 10057,
+     "B1": 39599,
+     "ceil_by_budget": {
+      "1": 0.5362815750223724,
+      "2": 1.0,
+      "4": 1.0,
+      "8": null,
+      "16": null
+     }
+    },
+    "Myeloid": {
+     "n_labelled_as_type": 256,
+     "pi_hat_pool": 0.0128,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.05039616,
+      "2": 0.10079232,
+      "4": 0.20158464,
+      "8": 0.40316928,
+      "16": 0.80633856
+     }
+    },
+    "Neuronal": {
+     "n_labelled_as_type": 0,
+     "pi_hat_pool": 0.0,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.0,
+      "2": 0.0,
+      "4": 0.0,
+      "8": 0.0,
+      "16": 0.0
+     }
+    }
+   },
+   "celltypist": {
+    "celltypist_version": "1.7.1",
+    "model_sha256": "b62e39304a6bb5699a09f474defaf78b9313e2d88a8cdf624fb5e67548222035",
+    "model_date": "2023-02-27 16:03:27.613149",
+    "model_version": "v1",
+    "verified_by": "gate G5",
+    "g5_reference": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\assets\\celltypist\\celltypist_Myeloid_ceiling_canonical.json"
+   }
+  },
+  {
+   "generator": "blackoutT256",
+   "method_family": "blackout",
+   "T_sampling_steps": 256,
+   "seed": 20260931,
+   "pool": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\uncond_pools\\blackout_uncond_T256_seed20260931_n20000.npy",
+   "pool_sha256": "d4c9687b11cab8c213d3af3f78f06b5fd1f4e169a700e22c6fd4ead8f15efabb",
+   "n_pool": 20000,
+   "selected_for_main_table": false,
+   "arm_role": "additional_arms_only",
+   "source_json": "200_pool_composition_blackoutT256_seed20260931.json",
+   "types": {
+    "Endothelial": {
+     "n_labelled_as_type": 2649,
+     "pi_hat_pool": 0.13245,
+     "N": 10057,
+     "B1": 39599,
+     "ceil_by_budget": {
+      "1": 0.5215161131550164,
+      "2": 1.0,
+      "4": 1.0,
+      "8": null,
+      "16": null
+     }
+    },
+    "Myeloid": {
+     "n_labelled_as_type": 310,
+     "pi_hat_pool": 0.0155,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.06102659999999999,
+      "2": 0.12205319999999999,
+      "4": 0.24410639999999997,
+      "8": 0.48821279999999995,
+      "16": 0.9764255999999999
+     }
+    },
+    "Neuronal": {
+     "n_labelled_as_type": 0,
+     "pi_hat_pool": 0.0,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.0,
+      "2": 0.0,
+      "4": 0.0,
+      "8": 0.0,
+      "16": 0.0
+     }
+    }
+   },
+   "celltypist": {
+    "celltypist_version": "1.7.1",
+    "model_sha256": "b62e39304a6bb5699a09f474defaf78b9313e2d88a8cdf624fb5e67548222035",
+    "model_date": "2023-02-27 16:03:27.613149",
+    "model_version": "v1",
+    "verified_by": "gate G5",
+    "g5_reference": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\assets\\celltypist\\celltypist_Myeloid_ceiling_canonical.json"
+   }
+  },
+  {
+   "generator": "blackoutT32",
+   "method_family": "blackout",
+   "T_sampling_steps": 32,
+   "seed": 20260931,
+   "pool": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\uncond_pools\\blackout_uncond_T32_seed20260931_n20000.npy",
+   "pool_sha256": "a6822edad9e4f513c647a71bca13496af04a35cc8c7c43c7c9fb5df0d2ef7ab2",
+   "n_pool": 20000,
+   "selected_for_main_table": true,
+   "arm_role": "main_table",
+   "source_json": "200_pool_composition_blackoutT32_seed20260931.json",
+   "types": {
+    "Endothelial": {
+     "n_labelled_as_type": 3311,
+     "pi_hat_pool": 0.16555,
+     "N": 10057,
+     "B1": 39599,
+     "ceil_by_budget": {
+      "1": 0.651845923237546,
+      "2": 1.0,
+      "4": 1.0,
+      "8": null,
+      "16": null
+     }
+    },
+    "Myeloid": {
+     "n_labelled_as_type": 285,
+     "pi_hat_pool": 0.01425,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.056105100000000005,
+      "2": 0.11221020000000001,
+      "4": 0.22442040000000002,
+      "8": 0.44884080000000004,
+      "16": 0.8976816000000001
+     }
+    },
+    "Neuronal": {
+     "n_labelled_as_type": 0,
+     "pi_hat_pool": 0.0,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.0,
+      "2": 0.0,
+      "4": 0.0,
+      "8": 0.0,
+      "16": 0.0
+     }
+    }
+   },
+   "celltypist": {
+    "celltypist_version": "1.7.1",
+    "model_sha256": "b62e39304a6bb5699a09f474defaf78b9313e2d88a8cdf624fb5e67548222035",
+    "model_date": "2023-02-27 16:03:27.613149",
+    "model_version": "v1",
+    "verified_by": "gate G5",
+    "g5_reference": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\assets\\celltypist\\celltypist_Myeloid_ceiling_canonical.json"
+   }
+  },
+  {
+   "generator": "blackoutT32",
+   "method_family": "blackout",
+   "T_sampling_steps": 32,
+   "seed": 20260932,
+   "pool": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\uncond_pools\\blackout_uncond_T32_seed20260932_n20000.npy",
+   "pool_sha256": "08dc5bdddecf687d50a650a84d4020c9a8f58d2b00f1e0831083659501b84c06",
+   "n_pool": 20000,
+   "selected_for_main_table": true,
+   "arm_role": "main_table",
+   "source_json": "200_pool_composition_blackoutT32_seed20260932.json",
+   "types": {
+    "Endothelial": {
+     "n_labelled_as_type": 3221,
+     "pi_hat_pool": 0.16105,
+     "N": 10057,
+     "B1": 39599,
+     "ceil_by_budget": {
+      "1": 0.6341273689967187,
+      "2": 1.0,
+      "4": 1.0,
+      "8": null,
+      "16": null
+     }
+    },
+    "Myeloid": {
+     "n_labelled_as_type": 275,
+     "pi_hat_pool": 0.01375,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.054136500000000004,
+      "2": 0.10827300000000001,
+      "4": 0.21654600000000002,
+      "8": 0.43309200000000003,
+      "16": 0.8661840000000001
+     }
+    },
+    "Neuronal": {
+     "n_labelled_as_type": 0,
+     "pi_hat_pool": 0.0,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.0,
+      "2": 0.0,
+      "4": 0.0,
+      "8": 0.0,
+      "16": 0.0
+     }
+    }
+   },
+   "celltypist": {
+    "celltypist_version": "1.7.1",
+    "model_sha256": "b62e39304a6bb5699a09f474defaf78b9313e2d88a8cdf624fb5e67548222035",
+    "model_date": "2023-02-27 16:03:27.613149",
+    "model_version": "v1",
+    "verified_by": "gate G5",
+    "g5_reference": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\assets\\celltypist\\celltypist_Myeloid_ceiling_canonical.json"
+   }
+  },
+  {
+   "generator": "blackoutT32",
+   "method_family": "blackout",
+   "T_sampling_steps": 32,
+   "seed": 20260933,
+   "pool": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\uncond_pools\\blackout_uncond_T32_seed20260933_n20000.npy",
+   "pool_sha256": "20f3c7495e194dac59900bff15f6132abe5ba5efe6cbe933974d36c62bfa1a71",
+   "n_pool": 20000,
+   "selected_for_main_table": true,
+   "arm_role": "main_table",
+   "source_json": "200_pool_composition_blackoutT32_seed20260933.json",
+   "types": {
+    "Endothelial": {
+     "n_labelled_as_type": 3202,
+     "pi_hat_pool": 0.1601,
+     "N": 10057,
+     "B1": 39599,
+     "ceil_by_budget": {
+      "1": 0.6303867853236552,
+      "2": 1.0,
+      "4": 1.0,
+      "8": null,
+      "16": null
+     }
+    },
+    "Myeloid": {
+     "n_labelled_as_type": 312,
+     "pi_hat_pool": 0.0156,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.061420319999999994,
+      "2": 0.12284063999999999,
+      "4": 0.24568127999999997,
+      "8": 0.49136255999999995,
+      "16": 0.9827251199999999
+     }
+    },
+    "Neuronal": {
+     "n_labelled_as_type": 0,
+     "pi_hat_pool": 0.0,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.0,
+      "2": 0.0,
+      "4": 0.0,
+      "8": 0.0,
+      "16": 0.0
+     }
+    }
+   },
+   "celltypist": {
+    "celltypist_version": "1.7.1",
+    "model_sha256": "b62e39304a6bb5699a09f474defaf78b9313e2d88a8cdf624fb5e67548222035",
+    "model_date": "2023-02-27 16:03:27.613149",
+    "model_version": "v1",
+    "verified_by": "gate G5",
+    "g5_reference": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\assets\\celltypist\\celltypist_Myeloid_ceiling_canonical.json"
+   }
+  },
+  {
+   "generator": "mdlmT128",
+   "method_family": "mdlm",
+   "T_sampling_steps": 128,
+   "seed": 20260931,
+   "pool": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\uncond_pools\\mdlm_uncond_T128_seed20260931_n20000.npy",
+   "pool_sha256": "9c732858e819d6c9fe520ab42fbf2e6af6f8449db0a8fe0f76062de03644ef11",
+   "n_pool": 20000,
+   "selected_for_main_table": true,
+   "arm_role": "main_table",
+   "source_json": "200_pool_composition_mdlmT128_seed20260931.json",
+   "types": {
+    "Endothelial": {
+     "n_labelled_as_type": 5121,
+     "pi_hat_pool": 0.25605,
+     "N": 10057,
+     "B1": 39599,
+     "ceil_by_budget": {
+      "1": 1.0,
+      "2": 1.0,
+      "4": 1.0,
+      "8": null,
+      "16": null
+     }
+    },
+    "Myeloid": {
+     "n_labelled_as_type": 958,
+     "pi_hat_pool": 0.0479,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.18859188,
+      "2": 0.37718376,
+      "4": 0.75436752,
+      "8": 1.0,
+      "16": 1.0
+     }
+    },
+    "Neuronal": {
+     "n_labelled_as_type": 60,
+     "pi_hat_pool": 0.003,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.0118116,
+      "2": 0.0236232,
+      "4": 0.0472464,
+      "8": 0.0944928,
+      "16": 0.1889856
+     }
+    }
+   },
+   "celltypist": {
+    "celltypist_version": "1.7.1",
+    "model_sha256": "b62e39304a6bb5699a09f474defaf78b9313e2d88a8cdf624fb5e67548222035",
+    "model_date": "2023-02-27 16:03:27.613149",
+    "model_version": "v1",
+    "verified_by": "gate G5",
+    "g5_reference": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\assets\\celltypist\\celltypist_Myeloid_ceiling_canonical.json"
+   }
+  },
+  {
+   "generator": "mdlmT128",
+   "method_family": "mdlm",
+   "T_sampling_steps": 128,
+   "seed": 20260932,
+   "pool": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\uncond_pools\\mdlm_uncond_T128_seed20260932_n20000.npy",
+   "pool_sha256": "324ba128ec51b5d4e6c3669c3b5481582e7fb38a8c84408c5b2e74d065ed16f2",
+   "n_pool": 20000,
+   "selected_for_main_table": true,
+   "arm_role": "main_table",
+   "source_json": "200_pool_composition_mdlmT128_seed20260932.json",
+   "types": {
+    "Endothelial": {
+     "n_labelled_as_type": 5036,
+     "pi_hat_pool": 0.2518,
+     "N": 10057,
+     "B1": 39599,
+     "ceil_by_budget": {
+      "1": 0.9914515461867357,
+      "2": 1.0,
+      "4": 1.0,
+      "8": null,
+      "16": null
+     }
+    },
+    "Myeloid": {
+     "n_labelled_as_type": 1046,
+     "pi_hat_pool": 0.0523,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.20591556,
+      "2": 0.41183112,
+      "4": 0.82366224,
+      "8": 1.0,
+      "16": 1.0
+     }
+    },
+    "Neuronal": {
+     "n_labelled_as_type": 68,
+     "pi_hat_pool": 0.0034,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.013386480000000001,
+      "2": 0.026772960000000002,
+      "4": 0.053545920000000004,
+      "8": 0.10709184000000001,
+      "16": 0.21418368000000002
+     }
+    }
+   },
+   "celltypist": {
+    "celltypist_version": "1.7.1",
+    "model_sha256": "b62e39304a6bb5699a09f474defaf78b9313e2d88a8cdf624fb5e67548222035",
+    "model_date": "2023-02-27 16:03:27.613149",
+    "model_version": "v1",
+    "verified_by": "gate G5",
+    "g5_reference": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\assets\\celltypist\\celltypist_Myeloid_ceiling_canonical.json"
+   }
+  },
+  {
+   "generator": "mdlmT128",
+   "method_family": "mdlm",
+   "T_sampling_steps": 128,
+   "seed": 20260933,
+   "pool": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\uncond_pools\\mdlm_uncond_T128_seed20260933_n20000.npy",
+   "pool_sha256": "1bfb3b7bca753382eea3c0b02216084cea522354c4a7a59ec6e6a3cad886bb64",
+   "n_pool": 20000,
+   "selected_for_main_table": true,
+   "arm_role": "main_table",
+   "source_json": "200_pool_composition_mdlmT128_seed20260933.json",
+   "types": {
+    "Endothelial": {
+     "n_labelled_as_type": 5101,
+     "pi_hat_pool": 0.25505,
+     "N": 10057,
+     "B1": 39599,
+     "ceil_by_budget": {
+      "1": 1.0,
+      "2": 1.0,
+      "4": 1.0,
+      "8": null,
+      "16": null
+     }
+    },
+    "Myeloid": {
+     "n_labelled_as_type": 965,
+     "pi_hat_pool": 0.04825,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.1899699,
+      "2": 0.3799398,
+      "4": 0.7598796,
+      "8": 1.0,
+      "16": 1.0
+     }
+    },
+    "Neuronal": {
+     "n_labelled_as_type": 77,
+     "pi_hat_pool": 0.00385,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.01515822,
+      "2": 0.03031644,
+      "4": 0.06063288,
+      "8": 0.12126576,
+      "16": 0.24253152
+     }
+    }
+   },
+   "celltypist": {
+    "celltypist_version": "1.7.1",
+    "model_sha256": "b62e39304a6bb5699a09f474defaf78b9313e2d88a8cdf624fb5e67548222035",
+    "model_date": "2023-02-27 16:03:27.613149",
+    "model_version": "v1",
+    "verified_by": "gate G5",
+    "g5_reference": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\assets\\celltypist\\celltypist_Myeloid_ceiling_canonical.json"
+   }
+  },
+  {
+   "generator": "mdlmT32",
+   "method_family": "mdlm",
+   "T_sampling_steps": 32,
+   "seed": 20260931,
+   "pool": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\uncond_pools\\mdlm_uncond_T32_seed20260931_n20000.npy",
+   "pool_sha256": "ebd6e2922897eadfd578912fafdaef78cdc223383abbf942910fdd30ef368301",
+   "n_pool": 20000,
+   "selected_for_main_table": false,
+   "arm_role": "additional_arms",
+   "source_json": "200_pool_composition_mdlmT32_seed20260931.json",
+   "types": {
+    "Endothelial": {
+     "n_labelled_as_type": 5150,
+     "pi_hat_pool": 0.2575,
+     "N": 10057,
+     "B1": 39599,
+     "ceil_by_budget": {
+      "1": 1.0,
+      "2": 1.0,
+      "4": 1.0,
+      "8": null,
+      "16": null
+     }
+    },
+    "Myeloid": {
+     "n_labelled_as_type": 1081,
+     "pi_hat_pool": 0.05405,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.21280565999999998,
+      "2": 0.42561131999999996,
+      "4": 0.8512226399999999,
+      "8": 1.0,
+      "16": 1.0
+     }
+    },
+    "Neuronal": {
+     "n_labelled_as_type": 75,
+     "pi_hat_pool": 0.00375,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.014764499999999998,
+      "2": 0.029528999999999996,
+      "4": 0.05905799999999999,
+      "8": 0.11811599999999998,
+      "16": 0.23623199999999997
+     }
+    }
+   },
+   "celltypist": {
+    "celltypist_version": "1.7.1",
+    "model_sha256": "b62e39304a6bb5699a09f474defaf78b9313e2d88a8cdf624fb5e67548222035",
+    "model_date": "2023-02-27 16:03:27.613149",
+    "model_version": "v1",
+    "verified_by": "gate G5",
+    "g5_reference": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\assets\\celltypist\\celltypist_Myeloid_ceiling_canonical.json"
+   }
+  },
+  {
+   "generator": "mdlmT32",
+   "method_family": "mdlm",
+   "T_sampling_steps": 32,
+   "seed": 20260932,
+   "pool": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\uncond_pools\\mdlm_uncond_T32_seed20260932_n20000.npy",
+   "pool_sha256": "102b7c9996330d6538f487fad867708e513da51a34d069aa594f4c9eb7efda40",
+   "n_pool": 20000,
+   "selected_for_main_table": false,
+   "arm_role": "additional_arms",
+   "source_json": "200_pool_composition_mdlmT32_seed20260932.json",
+   "types": {
+    "Endothelial": {
+     "n_labelled_as_type": 5218,
+     "pi_hat_pool": 0.2609,
+     "N": 10057,
+     "B1": 39599,
+     "ceil_by_budget": {
+      "1": 1.0,
+      "2": 1.0,
+      "4": 1.0,
+      "8": null,
+      "16": null
+     }
+    },
+    "Myeloid": {
+     "n_labelled_as_type": 1089,
+     "pi_hat_pool": 0.05445,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.21438053999999998,
+      "2": 0.42876107999999996,
+      "4": 0.8575221599999999,
+      "8": 1.0,
+      "16": 1.0
+     }
+    },
+    "Neuronal": {
+     "n_labelled_as_type": 71,
+     "pi_hat_pool": 0.00355,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.01397706,
+      "2": 0.02795412,
+      "4": 0.05590824,
+      "8": 0.11181648,
+      "16": 0.22363296
+     }
+    }
+   },
+   "celltypist": {
+    "celltypist_version": "1.7.1",
+    "model_sha256": "b62e39304a6bb5699a09f474defaf78b9313e2d88a8cdf624fb5e67548222035",
+    "model_date": "2023-02-27 16:03:27.613149",
+    "model_version": "v1",
+    "verified_by": "gate G5",
+    "g5_reference": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\assets\\celltypist\\celltypist_Myeloid_ceiling_canonical.json"
+   }
+  },
+  {
+   "generator": "mdlmT32",
+   "method_family": "mdlm",
+   "T_sampling_steps": 32,
+   "seed": 20260933,
+   "pool": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\uncond_pools\\mdlm_uncond_T32_seed20260933_n20000.npy",
+   "pool_sha256": "613942c53e3e55bdeecd9129b583059a3d95f8bb10bca94b638ff38a2794ab1d",
+   "n_pool": 20000,
+   "selected_for_main_table": false,
+   "arm_role": "additional_arms",
+   "source_json": "200_pool_composition_mdlmT32_seed20260933.json",
+   "types": {
+    "Endothelial": {
+     "n_labelled_as_type": 5145,
+     "pi_hat_pool": 0.25725,
+     "N": 10057,
+     "B1": 39599,
+     "ceil_by_budget": {
+      "1": 1.0,
+      "2": 1.0,
+      "4": 1.0,
+      "8": null,
+      "16": null
+     }
+    },
+    "Myeloid": {
+     "n_labelled_as_type": 1031,
+     "pi_hat_pool": 0.05155,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.20296266000000002,
+      "2": 0.40592532000000003,
+      "4": 0.8118506400000001,
+      "8": 1.0,
+      "16": 1.0
+     }
+    },
+    "Neuronal": {
+     "n_labelled_as_type": 69,
+     "pi_hat_pool": 0.00345,
+     "N": 2500,
+     "B1": 9843,
+     "ceil_by_budget": {
+      "1": 0.013583340000000001,
+      "2": 0.027166680000000002,
+      "4": 0.054333360000000004,
+      "8": 0.10866672000000001,
+      "16": 0.21733344000000002
+     }
+    }
+   },
+   "celltypist": {
+    "celltypist_version": "1.7.1",
+    "model_sha256": "b62e39304a6bb5699a09f474defaf78b9313e2d88a8cdf624fb5e67548222035",
+    "model_date": "2023-02-27 16:03:27.613149",
+    "model_version": "v1",
+    "verified_by": "gate G5",
+    "g5_reference": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\assets\\celltypist\\celltypist_Myeloid_ceiling_canonical.json"
+   }
+  }
+ ],
+ "written_at": "2026-09-13 19:26:38",
+ "walltime_s": 63.78229546546936
+}

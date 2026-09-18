@@ -1,0 +1,23 @@
+{
+ "table": "Table 7",
+ "arm": "Residual Correction",
+ "request": "Neuronal",
+ "source_json": "ess_pre_resample.json",
+ "aggregate": {
+  "target": "Neuronal",
+  "arm": "Residual Correction",
+  "n_seeds": 3,
+  "n_events_mean": 14.333333333333334,
+  "n_events_sd": 1.5275252316519468,
+  "ess_pre_mean_mean": 0.09298779266664335,
+  "ess_pre_mean_sd": 0.016645782130315832,
+  "ess_pre_median_mean": 0.021858392824362995,
+  "ess_pre_median_sd": 0.008645504500066386,
+  "ess_pre_min_mean": 0.002829245186274033,
+  "ess_pre_min_sd": 0.0010303806958275362,
+  "ess_min_fraction_whole_chain_mean": 0.002829245186274033,
+  "ess_min_fraction_whole_chain_sd": 0.0010303806958275362,
+  "ess_final_before_terminal_resample_mean": 0.5654707975549065,
+  "ess_final_before_terminal_resample_sd": 0.29599378535568277
+ }
+}

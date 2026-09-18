@@ -1,0 +1,1376 @@
+{
+ "min_frac": 0.5,
+ "types": {
+  "Endothelial": {
+   "fixed_labels": [
+    "EC10_CMC-like",
+    "EC1_cap",
+    "EC2_cap",
+    "EC3_cap",
+    "EC4_immune",
+    "EC5_art",
+    "EC6_ven",
+    "EC7_endocardial"
+   ],
+   "borderline_labels": [],
+   "n_calls": 14,
+   "rows": [
+    {
+     "arm": "真实 val 细胞",
+     "purity_fixed": 0.9372,
+     "n": 2500,
+     "n_calls": 14,
+     "across_call_spread": 0.014799999999999924,
+     "per_call": {
+      "celltypist_Endothelial_batch0818pm.json": 0.9372,
+      "celltypist_Endothelial_clean_fk_main.json": 0.938,
+      "celltypist_Endothelial_clean_fk_pilot.json": 0.944,
+      "celltypist_Endothelial_clean_reward_audit.json": 0.9352,
+      "celltypist_Endothelial_fk_seedcompare.json": 0.9344,
+      "celltypist_Endothelial_fk_v1.json": 0.938,
+      "celltypist_Endothelial_fk_v2.json": 0.9416,
+      "celltypist_Endothelial_fk_v2_all.json": 0.9316,
+      "celltypist_Endothelial_fk_v2_res.json": 0.9292,
+      "celltypist_Endothelial_fk_v2_seeds.json": 0.9372,
+      "celltypist_Endothelial_fk_v2_t3.json": 0.9372,
+      "celltypist_Endothelial_fk_v2_T4.json": 0.9352,
+      "celltypist_Endothelial_production_v3.json": 0.9344,
+      "celltypist_Endothelial_residual_v3.json": 0.9352
+     }
+    },
+    {
+     "arm": "Endothelial_clean_fk_K32_M1000_N500_alpha1p0_sc0p25_seed2026",
+     "purity_fixed": 0.928,
+     "n": 500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_clean_fk_pilot.json": 0.928
+     }
+    },
+    {
+     "arm": "Endothelial_clean_endpoint_alpha4p0_N2500.npy",
+     "purity_fixed": 0.9244,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_clean_reward_audit.json": 0.9244
+     }
+    },
+    {
+     "arm": "PM_E6_sub2.npy",
+     "purity_fixed": 0.9208,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_batch0818pm.json": 0.9208
+     }
+    },
+    {
+     "arm": "PM_E6_sub1.npy",
+     "purity_fixed": 0.918,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_batch0818pm.json": 0.918
+     }
+    },
+    {
+     "arm": "E_T4_sub1.npy",
+     "purity_fixed": 0.9172,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_fk_v2_T4.json": 0.9172
+     }
+    },
+    {
+     "arm": "Endothelial_clean_endpoint_alpha2p0_N2500.npy",
+     "purity_fixed": 0.9128,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_clean_reward_audit.json": 0.9128
+     }
+    },
+    {
+     "arm": "PM_E7_sub0.npy",
+     "purity_fixed": 0.9128,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_batch0818pm.json": 0.9128
+     }
+    },
+    {
+     "arm": "PM_E7_sub2.npy",
+     "purity_fixed": 0.9112,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_batch0818pm.json": 0.9112
+     }
+    },
+    {
+     "arm": "E_fkv2_int8_sched_s10.npy",
+     "purity_fixed": 0.9104,
+     "n": 2500,
+     "n_calls": 4,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_fk_v2_all.json": 0.9104,
+      "celltypist_Endothelial_fk_v2_res.json": 0.9104,
+      "celltypist_Endothelial_fk_v2_seeds.json": 0.9104,
+      "celltypist_Endothelial_fk_v2_T4.json": 0.9104
+     }
+    },
+    {
+     "arm": "Endothelial_clean_fkv2_fk_no_trigger_tiltevery_trigscheduled",
+     "purity_fixed": 0.9104,
+     "n": 2500,
+     "n_calls": 2,
+     "across_call_spread": 0.0023999999999999577,
+     "per_call": {
+      "celltypist_Endothelial_fk_v2.json": 0.9104,
+      "celltypist_Endothelial_fk_v2_t3.json": 0.908
+     }
+    },
+    {
+     "arm": "E_T4_sub2.npy",
+     "purity_fixed": 0.91,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_fk_v2_T4.json": 0.91
+     }
+    },
+    {
+     "arm": "E_T4_sub0.npy",
+     "purity_fixed": 0.9096,
+     "n": 2500,
+     "n_calls": 2,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_batch0818pm.json": 0.9096,
+      "celltypist_Endothelial_fk_v2_T4.json": 0.9096
+     }
+    },
+    {
+     "arm": "PM_E7_sub1.npy",
+     "purity_fixed": 0.9092,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_batch0818pm.json": 0.9092
+     }
+    },
+    {
+     "arm": "E_fkv2_int8_sched_s13.npy",
+     "purity_fixed": 0.908,
+     "n": 2500,
+     "n_calls": 2,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_fk_v2_all.json": 0.908,
+      "celltypist_Endothelial_fk_v2_seeds.json": 0.908
+     }
+    },
+    {
+     "arm": "Endothelial_residual_alpha2p0_n2500.npy",
+     "purity_fixed": 0.9076,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_residual_v3.json": 0.9076
+     }
+    },
+    {
+     "arm": "E_fkv2_int8_any_s15.npy",
+     "purity_fixed": 0.9072,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_fk_v2_all.json": 0.9072
+     }
+    },
+    {
+     "arm": "Endothelial_clean_fkv2_fk_no_trigger_tiltevery_trigany_K32_M",
+     "purity_fixed": 0.9072,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_fk_v2_t3.json": 0.9072
+     }
+    },
+    {
+     "arm": "E_endpoint_tilted_a1.npy",
+     "purity_fixed": 0.9068,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_fk_v2_all.json": 0.9068
+     }
+    },
+    {
+     "arm": "Endothelial_clean_endpoint_alpha1p0_N2500.npy",
+     "purity_fixed": 0.9068,
+     "n": 2500,
+     "n_calls": 4,
+     "across_call_spread": 0.021199999999999997,
+     "per_call": {
+      "celltypist_Endothelial_clean_fk_main.json": 0.9068,
+      "celltypist_Endothelial_clean_fk_pilot.json": 0.928,
+      "celltypist_Endothelial_clean_reward_audit.json": 0.9068,
+      "celltypist_Endothelial_fk_v2.json": 0.9068
+     }
+    },
+    {
+     "arm": "E_fkv2_int4_any_s14.npy",
+     "purity_fixed": 0.9056,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_fk_v2_all.json": 0.9056
+     }
+    },
+    {
+     "arm": "E_fkv2_int4_sched_s12.npy",
+     "purity_fixed": 0.9052,
+     "n": 2500,
+     "n_calls": 2,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_fk_v2_all.json": 0.9052,
+      "celltypist_Endothelial_fk_v2_seeds.json": 0.9052
+     }
+    },
+    {
+     "arm": "E_fklast_s75.npy",
+     "purity_fixed": 0.9048,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_fk_v2_seeds.json": 0.9048
+     }
+    },
+    {
+     "arm": "E_fklast_v1_s31.npy",
+     "purity_fixed": 0.9012,
+     "n": 2500,
+     "n_calls": 3,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_fk_v2_all.json": 0.9012,
+      "celltypist_Endothelial_fk_v2_res.json": 0.9012,
+      "celltypist_Endothelial_fk_v2_seeds.json": 0.9012
+     }
+    },
+    {
+     "arm": "Endothelial_clean_fk_K32_M5000_N2500_alpha1p0_sc0p25_seed202",
+     "purity_fixed": 0.9012,
+     "n": 2500,
+     "n_calls": 3,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_clean_fk_main.json": 0.9012,
+      "celltypist_Endothelial_fk_v2.json": 0.9012,
+      "celltypist_Endothelial_fk_v2_t3.json": 0.9012
+     }
+    },
+    {
+     "arm": "PM_E6_sub0.npy",
+     "purity_fixed": 0.8948,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_batch0818pm.json": 0.8948
+     }
+    },
+    {
+     "arm": "E_endpointIS_uncond_a1.npy",
+     "purity_fixed": 0.89,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_fk_v2_all.json": 0.89
+     }
+    },
+    {
+     "arm": "Endothelial_endpointIS_uncondpool_alpha1p0_K10000_N2500_seed",
+     "purity_fixed": 0.89,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_fk_v2_t3.json": 0.89
+     }
+    },
+    {
+     "arm": "Endothelial_residual_alpha1p0_n2500.npy",
+     "purity_fixed": 0.8864,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_residual_v3.json": 0.8864
+     }
+    },
+    {
+     "arm": "E_res_fkv2_s51.npy",
+     "purity_fixed": 0.884,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_fk_v2_res.json": 0.884
+     }
+    },
+    {
+     "arm": "E_fklast_s76.npy",
+     "purity_fixed": 0.8828,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_fk_v2_seeds.json": 0.8828
+     }
+    },
+    {
+     "arm": "Endothelial_residual_PRODUCTION_alpha1p00_n2500.npy",
+     "purity_fixed": 0.8816,
+     "n": 2500,
+     "n_calls": 2,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_fk_v1.json": 0.8816,
+      "celltypist_Endothelial_production_v3.json": 0.8816
+     }
+    },
+    {
+     "arm": "E_fklast_s74.npy",
+     "purity_fixed": 0.87,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_fk_v2_seeds.json": 0.87
+     }
+    },
+    {
+     "arm": "Endothelial_clean_fk_K32_M1000_N500_alpha1p0_sc0p11_seed2026",
+     "purity_fixed": 0.864,
+     "n": 500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_clean_fk_pilot.json": 0.864
+     }
+    },
+    {
+     "arm": "Endothelial_residual_alpha0p5_n2500.npy",
+     "purity_fixed": 0.8192,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_residual_v3.json": 0.8192
+     }
+    },
+    {
+     "arm": "Endothelial_fk_K32_M5000_N2500_alpha1p0_sc4p0_seed20260826.n",
+     "purity_fixed": 0.78,
+     "n": 2500,
+     "n_calls": 2,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_fk_seedcompare.json": 0.78,
+      "celltypist_Endothelial_fk_v1.json": 0.78
+     }
+    },
+    {
+     "arm": "Endothelial_fk_K32_M5000_N2500_alpha1p0_sc0p5_seed20260823.n",
+     "purity_fixed": 0.7716,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_fk_seedcompare.json": 0.7716
+     }
+    },
+    {
+     "arm": "Endothelial_residual_alpha0p0_n2500.npy",
+     "purity_fixed": 0.6828,
+     "n": 2500,
+     "n_calls": 2,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_production_v3.json": 0.6828,
+      "celltypist_Endothelial_residual_v3.json": 0.6828
+     }
+    },
+    {
+     "arm": "E_product_pool.npy",
+     "purity_fixed": 0.6688,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_fk_v2_all.json": 0.6688
+     }
+    },
+    {
+     "arm": "linspace_T_O_K32_spilot_run1c_s20260625_samp20260902_batched",
+     "purity_fixed": 0.6688,
+     "n": 2500,
+     "n_calls": 3,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_clean_fk_main.json": 0.6688,
+      "celltypist_Endothelial_fk_v1.json": 0.6688,
+      "celltypist_Endothelial_fk_v2.json": 0.6688
+     }
+    },
+    {
+     "arm": "Endothelial_clean_endpoint_alpha0p0_N2500.npy",
+     "purity_fixed": 0.6636,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Endothelial_clean_reward_audit.json": 0.6636
+     }
+    },
+    {
+     "arm": "真实 val（建映射用）",
+     "purity_fixed": 0.23145,
+     "n": 20000,
+     "n_calls": 14,
+     "across_call_spread": 0.0072500000000000064,
+     "per_call": {
+      "celltypist_Endothelial_batch0818pm.json": 0.23145,
+      "celltypist_Endothelial_clean_fk_main.json": 0.2288,
+      "celltypist_Endothelial_clean_fk_pilot.json": 0.22985,
+      "celltypist_Endothelial_clean_reward_audit.json": 0.23105,
+      "celltypist_Endothelial_fk_seedcompare.json": 0.23365,
+      "celltypist_Endothelial_fk_v1.json": 0.2288,
+      "celltypist_Endothelial_fk_v2.json": 0.2264,
+      "celltypist_Endothelial_fk_v2_all.json": 0.231,
+      "celltypist_Endothelial_fk_v2_res.json": 0.23075,
+      "celltypist_Endothelial_fk_v2_seeds.json": 0.23145,
+      "celltypist_Endothelial_fk_v2_t3.json": 0.23145,
+      "celltypist_Endothelial_fk_v2_T4.json": 0.23105,
+      "celltypist_Endothelial_production_v3.json": 0.23365,
+      "celltypist_Endothelial_residual_v3.json": 0.23105
+     }
+    },
+    {
+     "arm": "空操作(无条件)",
+     "purity_fixed": 0.224,
+     "n": 2500,
+     "n_calls": 14,
+     "across_call_spread": 0.006000000000000005,
+     "per_call": {
+      "celltypist_Endothelial_batch0818pm.json": 0.224,
+      "celltypist_Endothelial_clean_fk_main.json": 0.224,
+      "celltypist_Endothelial_clean_fk_pilot.json": 0.23,
+      "celltypist_Endothelial_clean_reward_audit.json": 0.224,
+      "celltypist_Endothelial_fk_seedcompare.json": 0.224,
+      "celltypist_Endothelial_fk_v1.json": 0.224,
+      "celltypist_Endothelial_fk_v2.json": 0.224,
+      "celltypist_Endothelial_fk_v2_all.json": 0.224,
+      "celltypist_Endothelial_fk_v2_res.json": 0.224,
+      "celltypist_Endothelial_fk_v2_seeds.json": 0.224,
+      "celltypist_Endothelial_fk_v2_t3.json": 0.224,
+      "celltypist_Endothelial_fk_v2_T4.json": 0.224,
+      "celltypist_Endothelial_production_v3.json": 0.224,
+      "celltypist_Endothelial_residual_v3.json": 0.224
+     }
+    }
+   ]
+  },
+  "Mesothelial": {
+   "fixed_labels": [
+    "Meso"
+   ],
+   "borderline_labels": [],
+   "n_calls": 1,
+   "rows": [
+    {
+     "arm": "真实 val 细胞",
+     "purity_fixed": 0.9154929577464789,
+     "n": 71,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Mesothelial_fk_v2.json": 0.9154929577464789
+     }
+    },
+    {
+     "arm": "S_endpoint_tilted_a2.npy",
+     "purity_fixed": 0.5608,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Mesothelial_fk_v2.json": 0.5608
+     }
+    },
+    {
+     "arm": "S_fkevery_s80.npy",
+     "purity_fixed": 0.546,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Mesothelial_fk_v2.json": 0.546
+     }
+    },
+    {
+     "arm": "S_endpointIS_uncond.npy",
+     "purity_fixed": 0.522,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Mesothelial_fk_v2.json": 0.522
+     }
+    },
+    {
+     "arm": "S_fklast_s81.npy",
+     "purity_fixed": 0.2792,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Mesothelial_fk_v2.json": 0.2792
+     }
+    },
+    {
+     "arm": "真实 val（建映射用）",
+     "purity_fixed": 0.0016613135452431056,
+     "n": 45145,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Mesothelial_fk_v2.json": 0.0016613135452431056
+     }
+    },
+    {
+     "arm": "空操作(无条件)",
+     "purity_fixed": 0.0,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Mesothelial_fk_v2.json": 0.0
+     }
+    }
+   ]
+  },
+  "Myeloid": {
+   "fixed_labels": [
+    "CD14+Mo",
+    "CD16+Mo",
+    "LYVE1+IGF1+MP",
+    "LYVE1+TIMD4+MP",
+    "Mast",
+    "MoMP"
+   ],
+   "borderline_labels": [
+    [
+     "DC",
+     4
+    ]
+   ],
+   "n_calls": 15,
+   "rows": [
+    {
+     "arm": "真实 val 细胞",
+     "purity_fixed": 0.8835794960903562,
+     "n": 2302,
+     "n_calls": 15,
+     "across_call_spread": 0.010420503909643775,
+     "per_call": {
+      "celltypist_Myeloid_batch0818pm.json": 0.8835794960903562,
+      "celltypist_Myeloid_clean_fk_main.json": 0.8835794960903562,
+      "celltypist_Myeloid_clean_fk_pilot.json": 0.894,
+      "celltypist_Myeloid_clean_reward_audit.json": 0.8835794960903562,
+      "celltypist_Myeloid_fk_v2.json": 0.8835794960903562,
+      "celltypist_Myeloid_fk_v2_b2.json": 0.8835794960903562,
+      "celltypist_Myeloid_fk_v2_r2b.json": 0.8835794960903562,
+      "celltypist_Myeloid_fk_v2_r2c.json": 0.8835794960903562,
+      "celltypist_Myeloid_fk_v2_res.json": 0.8835794960903562,
+      "celltypist_Myeloid_fk_v2_seeds.json": 0.8835794960903562,
+      "celltypist_Myeloid_fk_v2_t3.json": 0.8835794960903562,
+      "celltypist_Myeloid_fk_v2_T4.json": 0.8835794960903562,
+      "celltypist_Myeloid_fk_v2_T4promoted.json": 0.8835794960903562,
+      "celltypist_Myeloid_production_v3.json": 0.8835794960903562,
+      "celltypist_Myeloid_residual_v3.json": 0.8835794960903562
+     }
+    },
+    {
+     "arm": "M_b2_g02_a2.npy",
+     "purity_fixed": 0.8292,
+     "n": 2500,
+     "n_calls": 2,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_b2.json": 0.8292,
+      "celltypist_Myeloid_fk_v2_r2b.json": 0.8292
+     }
+    },
+    {
+     "arm": "M_r2c_s93.npy",
+     "purity_fixed": 0.8172,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_r2c.json": 0.8172
+     }
+    },
+    {
+     "arm": "M_r2b_g0p1.npy",
+     "purity_fixed": 0.804,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_r2c.json": 0.804
+     }
+    },
+    {
+     "arm": "M_r2c_s92.npy",
+     "purity_fixed": 0.7992,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_r2c.json": 0.7992
+     }
+    },
+    {
+     "arm": "PM_M8_sub1.npy",
+     "purity_fixed": 0.7984,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_batch0818pm.json": 0.7984
+     }
+    },
+    {
+     "arm": "PM_M10_sub1.npy",
+     "purity_fixed": 0.7916,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_batch0818pm.json": 0.7916
+     }
+    },
+    {
+     "arm": "PM_M8_sub2.npy",
+     "purity_fixed": 0.7916,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_batch0818pm.json": 0.7916
+     }
+    },
+    {
+     "arm": "M_T4P_sub1.npy",
+     "purity_fixed": 0.7852,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_T4promoted.json": 0.7852
+     }
+    },
+    {
+     "arm": "M_r2b_sc0p5.npy",
+     "purity_fixed": 0.7844,
+     "n": 2500,
+     "n_calls": 3,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_batch0818pm.json": 0.7844,
+      "celltypist_Myeloid_fk_v2_r2b.json": 0.7844,
+      "celltypist_Myeloid_fk_v2_r2c.json": 0.7844
+     }
+    },
+    {
+     "arm": "PM_M10_sub0.npy",
+     "purity_fixed": 0.7836,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_batch0818pm.json": 0.7836
+     }
+    },
+    {
+     "arm": "M_r2c_s91.npy",
+     "purity_fixed": 0.7832,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_r2c.json": 0.7832
+     }
+    },
+    {
+     "arm": "PM_M10_sub2.npy",
+     "purity_fixed": 0.7812,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_batch0818pm.json": 0.7812
+     }
+    },
+    {
+     "arm": "M_T4P_sub0.npy",
+     "purity_fixed": 0.7796,
+     "n": 2500,
+     "n_calls": 2,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_batch0818pm.json": 0.7796,
+      "celltypist_Myeloid_fk_v2_T4promoted.json": 0.7796
+     }
+    },
+    {
+     "arm": "PM_M8_sub0.npy",
+     "purity_fixed": 0.7788,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_batch0818pm.json": 0.7788
+     }
+    },
+    {
+     "arm": "M_fklast_v1_s04.npy",
+     "purity_fixed": 0.7744,
+     "n": 2500,
+     "n_calls": 9,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_batch0818pm.json": 0.7744,
+      "celltypist_Myeloid_fk_v2_b2.json": 0.7744,
+      "celltypist_Myeloid_fk_v2_r2b.json": 0.7744,
+      "celltypist_Myeloid_fk_v2_r2c.json": 0.7744,
+      "celltypist_Myeloid_fk_v2_res.json": 0.7744,
+      "celltypist_Myeloid_fk_v2_seeds.json": 0.7744,
+      "celltypist_Myeloid_fk_v2_t3.json": 0.7744,
+      "celltypist_Myeloid_fk_v2_T4.json": 0.7744,
+      "celltypist_Myeloid_fk_v2_T4promoted.json": 0.7744
+     }
+    },
+    {
+     "arm": "Myeloid_clean_fk_K32_M5000_N2500_alpha4p0_sc0p0625_seed20260",
+     "purity_fixed": 0.7744,
+     "n": 2500,
+     "n_calls": 2,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_clean_fk_main.json": 0.7744,
+      "celltypist_Myeloid_fk_v2.json": 0.7744
+     }
+    },
+    {
+     "arm": "M_T4P_sub2.npy",
+     "purity_fixed": 0.766,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_T4promoted.json": 0.766
+     }
+    },
+    {
+     "arm": "PM_T41_g0p1_sc0p5.npy",
+     "purity_fixed": 0.7656,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_batch0818pm.json": 0.7656
+     }
+    },
+    {
+     "arm": "M_fklast_s79.npy",
+     "purity_fixed": 0.748,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_seeds.json": 0.748
+     }
+    },
+    {
+     "arm": "M_b2_g04_a2.npy",
+     "purity_fixed": 0.7372,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_b2.json": 0.7372
+     }
+    },
+    {
+     "arm": "PM_T42c_refit.npy",
+     "purity_fixed": 0.7356,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_batch0818pm.json": 0.7356
+     }
+    },
+    {
+     "arm": "Myeloid_residual_alpha2p0_n2500.npy",
+     "purity_fixed": 0.7268,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_residual_v3.json": 0.7268
+     }
+    },
+    {
+     "arm": "M_T4_sub1.npy",
+     "purity_fixed": 0.7208,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_T4.json": 0.7208
+     }
+    },
+    {
+     "arm": "M_T4_sub2.npy",
+     "purity_fixed": 0.7092,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_T4.json": 0.7092
+     }
+    },
+    {
+     "arm": "M_b2_g02_a1.npy",
+     "purity_fixed": 0.7008,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_b2.json": 0.7008
+     }
+    },
+    {
+     "arm": "M_T4_sub0.npy",
+     "purity_fixed": 0.6984,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_T4.json": 0.6984
+     }
+    },
+    {
+     "arm": "M_fklast_s77.npy",
+     "purity_fixed": 0.6852,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_seeds.json": 0.6852
+     }
+    },
+    {
+     "arm": "M_r2b_sc1p0.npy",
+     "purity_fixed": 0.6764,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_r2b.json": 0.6764
+     }
+    },
+    {
+     "arm": "M_t3_int4_any.npy",
+     "purity_fixed": 0.674,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_t3.json": 0.674
+     }
+    },
+    {
+     "arm": "M_t3_int4_sched.npy",
+     "purity_fixed": 0.6736,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_t3.json": 0.6736
+     }
+    },
+    {
+     "arm": "M_fklast_s78.npy",
+     "purity_fixed": 0.6656,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_seeds.json": 0.6656
+     }
+    },
+    {
+     "arm": "M_b2_g04_a1.npy",
+     "purity_fixed": 0.6576,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_b2.json": 0.6576
+     }
+    },
+    {
+     "arm": "M_res_fkv2_s52.npy",
+     "purity_fixed": 0.6576,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_res.json": 0.6576
+     }
+    },
+    {
+     "arm": "M_t3_int8_sched.npy",
+     "purity_fixed": 0.6564,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_t3.json": 0.6564
+     }
+    },
+    {
+     "arm": "Myeloid_clean_endpoint_alpha4p0_N2500.npy",
+     "purity_fixed": 0.634,
+     "n": 2500,
+     "n_calls": 3,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_clean_fk_main.json": 0.634,
+      "celltypist_Myeloid_clean_reward_audit.json": 0.634,
+      "celltypist_Myeloid_fk_v2.json": 0.634
+     }
+    },
+    {
+     "arm": "Myeloid_residual_alpha1p0_n2500.npy",
+     "purity_fixed": 0.6308,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_residual_v3.json": 0.6308
+     }
+    },
+    {
+     "arm": "Myeloid_residual_PRODUCTION_alpha0p95_n2500.npy",
+     "purity_fixed": 0.6284,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_production_v3.json": 0.6284
+     }
+    },
+    {
+     "arm": "M_fkv2_int8_sched_s11.npy",
+     "purity_fixed": 0.5964,
+     "n": 2500,
+     "n_calls": 3,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_b2.json": 0.5964,
+      "celltypist_Myeloid_fk_v2_res.json": 0.5964,
+      "celltypist_Myeloid_fk_v2_seeds.json": 0.5964
+     }
+    },
+    {
+     "arm": "Myeloid_clean_fkv2_fk_tiltevery_trigscheduled_K32_M5000_N250",
+     "purity_fixed": 0.5964,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2.json": 0.5964
+     }
+    },
+    {
+     "arm": "Myeloid_clean_endpoint_alpha2p0_N2500.npy",
+     "purity_fixed": 0.5936,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_clean_reward_audit.json": 0.5936
+     }
+    },
+    {
+     "arm": "M_t3_int8_any.npy",
+     "purity_fixed": 0.5844,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_fk_v2_t3.json": 0.5844
+     }
+    },
+    {
+     "arm": "Myeloid_clean_endpoint_alpha1p0_N2500.npy",
+     "purity_fixed": 0.5688,
+     "n": 2500,
+     "n_calls": 2,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_clean_reward_audit.json": 0.5688,
+      "celltypist_Myeloid_fk_v2.json": 0.5688
+     }
+    },
+    {
+     "arm": "Myeloid_clean_fk_K32_M1000_N500_alpha4p0_sc0p0625_seed202609",
+     "purity_fixed": 0.566,
+     "n": 500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_clean_fk_pilot.json": 0.566
+     }
+    },
+    {
+     "arm": "Myeloid_residual_alpha0p5_n2500.npy",
+     "purity_fixed": 0.5104,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_residual_v3.json": 0.5104
+     }
+    },
+    {
+     "arm": "linspace_T_O_K32_spilot_run1c_s20260625_samp20260902_batched",
+     "purity_fixed": 0.2908,
+     "n": 2500,
+     "n_calls": 2,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_clean_fk_main.json": 0.2908,
+      "celltypist_Myeloid_fk_v2.json": 0.2908
+     }
+    },
+    {
+     "arm": "Myeloid_residual_alpha0p0_n2500.npy",
+     "purity_fixed": 0.2884,
+     "n": 2500,
+     "n_calls": 2,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_production_v3.json": 0.2884,
+      "celltypist_Myeloid_residual_v3.json": 0.2884
+     }
+    },
+    {
+     "arm": "Myeloid_clean_endpoint_alpha0p0_N2500.npy",
+     "purity_fixed": 0.2748,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_clean_reward_audit.json": 0.2748
+     }
+    },
+    {
+     "arm": "真实 val（建映射用）",
+     "purity_fixed": 0.0476,
+     "n": 20000,
+     "n_calls": 15,
+     "across_call_spread": 0.004199999999999995,
+     "per_call": {
+      "celltypist_Myeloid_batch0818pm.json": 0.0476,
+      "celltypist_Myeloid_clean_fk_main.json": 0.0518,
+      "celltypist_Myeloid_clean_fk_pilot.json": 0.04935,
+      "celltypist_Myeloid_clean_reward_audit.json": 0.05055,
+      "celltypist_Myeloid_fk_v2.json": 0.05015,
+      "celltypist_Myeloid_fk_v2_b2.json": 0.04995,
+      "celltypist_Myeloid_fk_v2_r2b.json": 0.05055,
+      "celltypist_Myeloid_fk_v2_r2c.json": 0.04995,
+      "celltypist_Myeloid_fk_v2_res.json": 0.04905,
+      "celltypist_Myeloid_fk_v2_seeds.json": 0.0496,
+      "celltypist_Myeloid_fk_v2_t3.json": 0.0496,
+      "celltypist_Myeloid_fk_v2_T4.json": 0.05055,
+      "celltypist_Myeloid_fk_v2_T4promoted.json": 0.05055,
+      "celltypist_Myeloid_production_v3.json": 0.05035,
+      "celltypist_Myeloid_residual_v3.json": 0.05055
+     }
+    },
+    {
+     "arm": "空操作(无条件)",
+     "purity_fixed": 0.042,
+     "n": 2500,
+     "n_calls": 15,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Myeloid_batch0818pm.json": 0.042,
+      "celltypist_Myeloid_clean_fk_main.json": 0.042,
+      "celltypist_Myeloid_clean_fk_pilot.json": 0.042,
+      "celltypist_Myeloid_clean_reward_audit.json": 0.042,
+      "celltypist_Myeloid_fk_v2.json": 0.042,
+      "celltypist_Myeloid_fk_v2_b2.json": 0.042,
+      "celltypist_Myeloid_fk_v2_r2b.json": 0.042,
+      "celltypist_Myeloid_fk_v2_r2c.json": 0.042,
+      "celltypist_Myeloid_fk_v2_res.json": 0.042,
+      "celltypist_Myeloid_fk_v2_seeds.json": 0.042,
+      "celltypist_Myeloid_fk_v2_t3.json": 0.042,
+      "celltypist_Myeloid_fk_v2_T4.json": 0.042,
+      "celltypist_Myeloid_fk_v2_T4promoted.json": 0.042,
+      "celltypist_Myeloid_production_v3.json": 0.042,
+      "celltypist_Myeloid_residual_v3.json": 0.042
+     }
+    }
+   ]
+  },
+  "Neuronal": {
+   "fixed_labels": [
+    "NC1_glial"
+   ],
+   "borderline_labels": [],
+   "n_calls": 6,
+   "rows": [
+    {
+     "arm": "真实 val 细胞",
+     "purity_fixed": 0.7045454545454546,
+     "n": 396,
+     "n_calls": 6,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Neuronal_batch0818pm.json": 0.7045454545454546,
+      "celltypist_Neuronal_clean_fk_pilot.json": 0.7045454545454546,
+      "celltypist_Neuronal_clean_reward_audit.json": 0.7045454545454546,
+      "celltypist_Neuronal_fk_v2.json": 0.7045454545454546,
+      "celltypist_Neuronal_production_v3.json": 0.7045454545454546,
+      "celltypist_Neuronal_residual_v3.json": 0.7045454545454546
+     }
+    },
+    {
+     "arm": "N_fklast_s83.npy",
+     "purity_fixed": 0.6116,
+     "n": 2500,
+     "n_calls": 2,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Neuronal_batch0818pm.json": 0.6116,
+      "celltypist_Neuronal_fk_v2.json": 0.6116
+     }
+    },
+    {
+     "arm": "PM_T43c_neu_res.npy",
+     "purity_fixed": 0.5504,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Neuronal_batch0818pm.json": 0.5504
+     }
+    },
+    {
+     "arm": "Neuronal_residual_alpha2p0_n2500.npy",
+     "purity_fixed": 0.5032,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Neuronal_residual_v3.json": 0.5032
+     }
+    },
+    {
+     "arm": "Neuronal_residual_alpha1p0_n2500.npy",
+     "purity_fixed": 0.438,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Neuronal_residual_v3.json": 0.438
+     }
+    },
+    {
+     "arm": "Neuronal_clean_endpoint_alpha4p0_N2500.npy",
+     "purity_fixed": 0.3928,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Neuronal_clean_reward_audit.json": 0.3928
+     }
+    },
+    {
+     "arm": "N_endpoint_tilted_a2.npy",
+     "purity_fixed": 0.3716,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Neuronal_fk_v2.json": 0.3716
+     }
+    },
+    {
+     "arm": "Neuronal_clean_endpoint_alpha2p0_N2500.npy",
+     "purity_fixed": 0.3716,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Neuronal_clean_reward_audit.json": 0.3716
+     }
+    },
+    {
+     "arm": "N_fkevery_s82.npy",
+     "purity_fixed": 0.3704,
+     "n": 2500,
+     "n_calls": 2,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Neuronal_batch0818pm.json": 0.3704,
+      "celltypist_Neuronal_fk_v2.json": 0.3704
+     }
+    },
+    {
+     "arm": "N_endpointIS_uncond.npy",
+     "purity_fixed": 0.3424,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Neuronal_fk_v2.json": 0.3424
+     }
+    },
+    {
+     "arm": "Neuronal_clean_endpoint_alpha1p0_N2500.npy",
+     "purity_fixed": 0.3376,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Neuronal_clean_reward_audit.json": 0.3376
+     }
+    },
+    {
+     "arm": "Neuronal_clean_fk_K32_M1000_N500_alpha4p0_sc0p0625_seed20260",
+     "purity_fixed": 0.32,
+     "n": 500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Neuronal_clean_fk_pilot.json": 0.32
+     }
+    },
+    {
+     "arm": "Neuronal_residual_alpha0p5_n2500.npy",
+     "purity_fixed": 0.2776,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Neuronal_residual_v3.json": 0.2776
+     }
+    },
+    {
+     "arm": "Neuronal_residual_PRODUCTION_alpha0p50_n2500.npy",
+     "purity_fixed": 0.2748,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Neuronal_production_v3.json": 0.2748
+     }
+    },
+    {
+     "arm": "Neuronal_clean_endpoint_alpha0p0_N2500.npy",
+     "purity_fixed": 0.082,
+     "n": 2500,
+     "n_calls": 1,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Neuronal_clean_reward_audit.json": 0.082
+     }
+    },
+    {
+     "arm": "Neuronal_residual_alpha0p0_n2500.npy",
+     "purity_fixed": 0.0812,
+     "n": 2500,
+     "n_calls": 2,
+     "across_call_spread": 0.0,
+     "per_call": {
+      "celltypist_Neuronal_production_v3.json": 0.0812,
+      "celltypist_Neuronal_residual_v3.json": 0.0812
+     }
+    },
+    {
+     "arm": "真实 val（建映射用）",
+     "purity_fixed": 0.0061,
+     "n": 20000,
+     "n_calls": 6,
+     "across_call_spread": 0.0004499999999999999,
+     "per_call": {
+      "celltypist_Neuronal_batch0818pm.json": 0.0061,
+      "celltypist_Neuronal_clean_fk_pilot.json": 0.00615,
+      "celltypist_Neuronal_clean_reward_audit.json": 0.00655,
+      "celltypist_Neuronal_fk_v2.json": 0.00655,
+      "celltypist_Neuronal_production_v3.json": 0.00615,
+      "celltypist_Neuronal_residual_v3.json": 0.00655
+     }
+    },
+    {
+     "arm": "空操作(无条件)",
+     "purity_fixed": 0.0048,
+     "n": 2500,
+     "n_calls": 6,
+     "across_call_spread": 0.0027999999999999995,
+     "per_call": {
+      "celltypist_Neuronal_batch0818pm.json": 0.0048,
+      "celltypist_Neuronal_clean_fk_pilot.json": 0.002,
+      "celltypist_Neuronal_clean_reward_audit.json": 0.0048,
+      "celltypist_Neuronal_fk_v2.json": 0.0048,
+      "celltypist_Neuronal_production_v3.json": 0.0048,
+      "celltypist_Neuronal_residual_v3.json": 0.0048
+     }
+    }
+   ]
+  }
+ }
+}

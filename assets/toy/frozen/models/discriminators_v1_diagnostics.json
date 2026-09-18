@@ -1,0 +1,49 @@
+{
+ "model": "net2d_v1_C64_K32_n400000_s16000_H512_ls0.003_oh128_seed20260817.pt",
+ "perm_seed": 20261726,
+ "auroc_gate": 0.9,
+ "smooth": 1e-06,
+ "requests": {
+  "diag_rare": {
+   "proposal_residual": {
+    "roc_auc": 0.8445617500000001,
+    "average_precision": 0.833899034672694,
+    "brier": 0.14901391825242036,
+    "mean_probability_positive": 0.7078794757698658,
+    "mean_probability_negative": 0.2990632229253718,
+    "n_train_pos": 2000,
+    "n_valid_pos": 2000
+   },
+   "proposal_untilted": {
+    "roc_auc": 0.9954152500000001,
+    "average_precision": 0.9904412513099676,
+    "brier": 0.0063045213227275725,
+    "mean_probability_positive": 0.980506201787871,
+    "mean_probability_negative": 0.01566036202437446,
+    "n_train_pos": 2000,
+    "n_valid_pos": 2000
+   },
+   "tabular": {
+    "pool_M": 400000,
+    "pool_seed": 777003,
+    "hist_zero_cells": 3600,
+    "log_rho_min": -357.17224726574926,
+    "log_rho_max": 7.5150411113611755
+   }
+  }
+ },
+ "g4_untilted_auroc_experiment_targets": {
+  "diag_rare": 0.9954152500000001
+ },
+ "g4_verdict": {
+  "diag_rare": {
+   "roc_auc": 0.9954152500000001,
+   "pi_R": 0.01,
+   "bayes_ceiling": 0.995,
+   "auroc_over_ceiling": 1.0004173366834173,
+   "rule": "absolute: AUROC >= 0.9",
+   "pass": true
+  }
+ },
+ "g4_pass": true
+}

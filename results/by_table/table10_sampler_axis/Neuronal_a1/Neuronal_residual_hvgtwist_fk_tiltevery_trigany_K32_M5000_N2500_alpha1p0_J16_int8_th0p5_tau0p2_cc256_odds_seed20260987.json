@@ -1,0 +1,39 @@
+{
+ "table": "Table 10",
+ "arm": "Neuronal_a1",
+ "request": "Neuronal",
+ "sample_seed": 20260987,
+ "stem": "Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987",
+ "source_json": "200_selftest_table1_scored.json",
+ "metrics": {
+  "purity": 0.6704,
+  "purity_whole_set": 0.6704,
+  "purity_over_ceiling": 0.951596877217885,
+  "canonical_ceiling": 0.7045,
+  "W1": 0.05461489898989899,
+  "sliced_W1": 0.20466126341793628,
+  "W1_median": 0.010101010101010102,
+  "W1_p90": 0.11868686868686869,
+  "unique_cell_fraction": 0.9932,
+  "n_delivered": 2500,
+  "walltime_s": 488.18901777267456,
+  "label_dist_whole": {
+   "Adip2": 11,
+   "EC10_CMC-like": 1,
+   "EC1_cap": 1,
+   "EC2_cap": 5,
+   "EC3_cap": 2,
+   "EC7_endocardial": 2,
+   "FB2": 1,
+   "FB3": 1,
+   "FB4_activated": 1,
+   "FB6": 1,
+   "NC1_glial": 1676,
+   "NC2_glial_NGF+": 790,
+   "PC2_atria": 1,
+   "PC3_str": 3,
+   "PC4_CMC-like": 2,
+   "vCM1": 2
+  }
+ }
+}

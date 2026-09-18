@@ -1,0 +1,98 @@
+{
+ "id": "E33",
+ "title": "Downstream utility -- does anything USEFUL survive the generated cells",
+ "ticket": "138 s5",
+ "written_before_first_run": true,
+ "written_at": "2026-08-29",
+ "new_sampling": "NONE -- everything runs on delivered arrays already on disk",
+ "which_sentence_it_changes": {
+  "current": "the paper does not contain a single sentence answering 'is it USEFUL'. Every metric answers 'does it LOOK like'.",
+  "external_pressure": "R3 called this the largest significance gap",
+  "replacement": "three downstream readings, reported independently"
+ },
+ "block_a_train_on_synthetic_test_on_real": {
+  "task": "train a cell-type classifier on DELIVERED cells only, evaluate on HELD-OUT REAL cells, report per-type F1",
+  "logic": "if our Endothelial cells really are Endothelial, a classifier that has only ever seen generated cells should still recognise real ones",
+  "controls": {
+   "ceiling": "the same classifier trained on REAL cells",
+   "baselines": "the same classifier trained on each baseline's delivered cells"
+  },
+  "must_include": "Neuronal (the rare type)",
+  "classifier_frozen_in_advance": {
+   "model": "sklearn LogisticRegression",
+   "penalty": "l2",
+   "C": 1.0,
+   "solver": "lbfgs",
+   "max_iter": 2000,
+   "multi_class": "multinomial",
+   "class_weight": "balanced",
+   "random_state": 20260833,
+   "features": "cp10k + log1p over all 2000 genes, no gene selection",
+   "why_not_tuned": "any tuning after seeing scores would make the comparison between arms meaningless; the same fixed recipe is applied to every arm including the real-cell ceiling"
+  },
+  "evaluation_split": {
+   "source": "the held-out real val split",
+   "seed": 20260833,
+   "rule": "identical held-out cells for every arm"
+  },
+  "reported": [
+   "per_type_F1",
+   "macro_F1",
+   "the confusion matrix"
+  ]
+ },
+ "block_b_differential_expression_recovery": {
+  "task": "rank genes by logFC for 'this type vs the rest' on REAL cells, repeat on DELIVERED cells, compare the two rankings",
+  "why_it_is_not_W1": "W1 and MMD measure how far apart two distributions are. DE measures whether the ANALYTICAL CONCLUSION a biologist would draw is the same.",
+  "frozen_in_advance": {
+   "logFC": "log2((mean cp10k of the type + 1) / (mean cp10k of the rest + 1))",
+   "rank_statistic": "Spearman rank correlation over all 2000 genes",
+   "overlap_statistic": "top-k marker overlap",
+   "k": 50,
+   "k_is_frozen": "k=50 is fixed here, before any DE is computed. Reporting a different k after seeing the result is forbidden."
+  },
+  "reported": [
+   "spearman_rho_all_genes",
+   "top50_overlap_fraction",
+   "per type, per arm"
+  ]
+ },
+ "block_c_intersection_specific": {
+  "why_it_is_the_most_valuable_one": "it translates the theoretical difference between tilt and tilt+FK into a conclusion a biologist can read",
+  "task": [
+   "in REAL data, split Endothelial cells by whether UAP1 (gene index 128) is detected, and characterise how the two groups differ over the OTHER 1999 genes",
+   "do the same inside the DELIVERED cells",
+   "compare the two patterns"
+  ],
+  "prediction_stated_before_running": "pure tilt moves only the UAP1 MARGINAL and destroys the coupling, so its 'positive' cells must be wrong on the remaining genes; tilt+FK preserves the coupling and therefore can be right.",
+  "frozen_comparison_statistics": [
+   "spearman rank correlation between the real and delivered UAP1+ vs UAP1- logFC vectors over the other 1999 genes",
+   "top-50 overlap of that same contrast"
+  ],
+  "no_post_hoc_statistic": "both statistics are fixed here. Running the analysis and then choosing whichever of the two looks better is forbidden.",
+  "uap1_detection_rate_in_real_endothelial": 0.0856,
+  "note_on_that_number": "computed from REAL training cells only, before any delivered array was opened; recorded here so the positive group size is auditable"
+ },
+ "reporting_rule": "the three blocks are reported independently. A block that fails is reported as a failure; a block that cannot be run for lack of a delivered array is reported as not measured, with the missing input named.",
+ "rulers": [
+  {
+   "name": "celltypist",
+   "path": "HVG2K/code/eval/celltypist_eval.py",
+   "sha256": "46b18abb7a84a3926287798aedd6bd595d61e960c37f079b6df10004e3519a15"
+  },
+  {
+   "name": "cond_w1",
+   "path": "HVG2K/cond_w1/code/eval_cond_w1.py",
+   "sha256": "acf13b5b20af8f8dd407cd018a57bfb15d98c6ae9184a20a238da51b114593db"
+  },
+  {
+   "name": "pcc",
+   "path": "HVG2K/code/eval/e21c_pcc.py",
+   "sha256": "83b19b11871875d977c8c81bd22e5cbcc5108db83fd5a7d052a92b3dc46a40dc"
+  }
+ ],
+ "run_discipline": [
+  "numbers read from json by script, never typed",
+  "CPU lane -- must not contend for the GPU"
+ ]
+}

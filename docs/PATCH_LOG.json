@@ -1,0 +1,642 @@
+[
+ {
+  "file": "evaluation/acceptance_gates.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "evaluation/acceptance_gates.py",
+  "rule": "from hvg.",
+  "count": 1
+ },
+ {
+  "file": "evaluation/acceptance_gates.py",
+  "rule": "(?:C\\.)?ROOT\\.(?:parent\\.parent|parents\\[1\\])\\s*/\\s*\"Conditional generation experiments\"\\s",
+  "count": 1
+ },
+ {
+  "file": "evaluation/downstream_cfgen_only.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "evaluation/downstream_cfgen_only.py",
+  "rule": "from analysis import e33_multiseed as",
+  "count": 1
+ },
+ {
+  "file": "evaluation/downstream_cfgen_only.py",
+  "rule": "from analysis import e33_deployed_arm as",
+  "count": 1
+ },
+ {
+  "file": "evaluation/downstream_deployed_arm.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "evaluation/downstream_deployed_arm.py",
+  "rule": "from analysis import e33_multiseed as",
+  "count": 1
+ },
+ {
+  "file": "evaluation/downstream_deployed_summary.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "evaluation/downstream_deployed_summary.py",
+  "rule": "from analysis import e33_multiseed as",
+  "count": 1
+ },
+ {
+  "file": "evaluation/downstream_multiseed.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "evaluation/downstream_multiseed.py",
+  "rule": "(?:C\\.)?ROOT\\.(?:parent\\.parent|parents\\[1\\])\\s*/\\s*\"Conditional generation experiments\"\\s",
+  "count": 1
+ },
+ {
+  "file": "evaluation/downstream_tstr_11class.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "evaluation/downstream_tstr_11class.py",
+  "rule": "from analysis import e33_multiseed as",
+  "count": 1
+ },
+ {
+  "file": "evaluation/downstream_tstr_11class.py",
+  "rule": "from analysis import e33_deployed_arm as",
+  "count": 1
+ },
+ {
+  "file": "evaluation/score_distances_frozen_ruler.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "evaluation/score_distances_frozen_ruler.py",
+  "rule": "from hvg.",
+  "count": 1
+ },
+ {
+  "file": "evaluation/score_distances_frozen_ruler.py",
+  "rule": "(?:C\\.)?ROOT\\.(?:parent\\.parent|parents\\[1\\])\\s*/\\s*\"Conditional generation experiments\"\\s",
+  "count": 1
+ },
+ {
+  "file": "evaluation/score_distances_logcp10k.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "evaluation/score_distances_logcp10k.py",
+  "rule": "from hvg.",
+  "count": 2
+ },
+ {
+  "file": "evaluation/score_purity.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "evaluation/score_purity.py",
+  "rule": "from hvg.",
+  "count": 2
+ },
+ {
+  "file": "evaluation/score_purity_external.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "evaluation/score_purity_external.py",
+  "rule": "from hvg.",
+  "count": 3
+ },
+ {
+  "file": "evaluation/score_purity_external.py",
+  "rule": "from analysis.score_purity import",
+  "count": 1
+ },
+ {
+  "file": "evaluation/score_purity_external.py",
+  "rule": "(?:C\\.)?ROOT\\.(?:parent\\.parent|parents\\[1\\])\\s*/\\s*\"Conditional generation experiments\"\\s",
+  "count": 1
+ },
+ {
+  "file": "evaluation/score_wasserstein_raw_counts.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "evaluation/score_wasserstein_raw_counts.py",
+  "rule": "from hvg.",
+  "count": 1
+ },
+ {
+  "file": "evaluation/score_wasserstein_raw_counts.py",
+  "rule": "(?:C\\.)?ROOT\\.(?:parent\\.parent|parents\\[1\\])\\s*/\\s*\"Conditional generation experiments\"\\s",
+  "count": 1
+ },
+ {
+  "file": "evaluation/summarize_ancestry.py",
+  "rule": "from hvg.",
+  "count": 2
+ },
+ {
+  "file": "figures/ablation_pca_base.py",
+  "rule": "from figures import hvgfig as",
+  "count": 1
+ },
+ {
+  "file": "figures/ablation_pca_grid_3x3.py",
+  "rule": "from figures import hvgfig as",
+  "count": 1
+ },
+ {
+  "file": "figures/ablation_pca_grid_3x3.py",
+  "rule": "from figures.fig_pca_baselines import",
+  "count": 1
+ },
+ {
+  "file": "figures/ablation_pca_grid_3x3.py",
+  "rule": "from figures.fig_ablation_pca import",
+  "count": 1
+ },
+ {
+  "file": "figures/ancestry_collapse.py",
+  "rule": "from figures import hvgfig as",
+  "count": 1
+ },
+ {
+  "file": "figures/panels.py",
+  "rule": "from hvg.",
+  "count": 1
+ },
+ {
+  "file": "figures/pca_grid_add_mdlm.py",
+  "rule": "from figures import hvgfig as",
+  "count": 1
+ },
+ {
+  "file": "figures/pca_grid_add_mdlm.py",
+  "rule": "from figures.fig_pca_baselines import",
+  "count": 1
+ },
+ {
+  "file": "figures/pca_grid_base.py",
+  "rule": "from figures import hvgfig as",
+  "count": 1
+ },
+ {
+  "file": "figures/pca_grid_swap_cfgen_pool.py",
+  "rule": "from figures import hvgfig as",
+  "count": 1
+ },
+ {
+  "file": "figures/pca_grid_swap_cfgen_pool.py",
+  "rule": "from figures.fig_pca_baselines_v2 import",
+  "count": 1
+ },
+ {
+  "file": "figures/pca_grid_swap_cfgen_pool.py",
+  "rule": "from figures.fig_pca_baselines import",
+  "count": 1
+ },
+ {
+  "file": "figures/style.py",
+  "rule": "from hvg.",
+  "count": 1
+ },
+ {
+  "file": "figures/umap_panels.py",
+  "rule": "from figures import hvgfig as",
+  "count": 1
+ },
+ {
+  "file": "experiments/manifests.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "experiments/manifests.py",
+  "rule": "from hvg.",
+  "count": 1
+ },
+ {
+  "file": "experiments/queue.py",
+  "rule": "from hvg.",
+  "count": 2
+ },
+ {
+  "file": "experiments/run_one.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "experiments/run_one.py",
+  "rule": "from hvg.",
+  "count": 5
+ },
+ {
+  "file": "scripts/audit_paper_numbers.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/audit_paper_numbers.py",
+  "rule": "from tools._summary_lock import",
+  "count": 1
+ },
+ {
+  "file": "scripts/build_conditional_fidelity_grid.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/build_conditional_fidelity_grid.py",
+  "rule": "from hvg.",
+  "count": 1
+ },
+ {
+  "file": "scripts/build_grid_cfgen.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/build_grid_cfgen.py",
+  "rule": "from hvg.",
+  "count": 1
+ },
+ {
+  "file": "scripts/build_grid_cfgen.py",
+  "rule": "from tools.t216_mdlm_grid import",
+  "count": 1
+ },
+ {
+  "file": "scripts/build_grid_mdlm.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/build_grid_mdlm.py",
+  "rule": "from hvg.",
+  "count": 1
+ },
+ {
+  "file": "scripts/build_grid_scvi_scanvi.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/build_grid_scvi_scanvi.py",
+  "rule": "(?:C\\.)?ROOT\\.(?:parent\\.parent|parents\\[1\\])\\s*/\\s*\"Conditional generation experiments\"\\s",
+  "count": 1
+ },
+ {
+  "file": "scripts/build_lineage_purity_ruler.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/build_lineage_purity_ruler.py",
+  "rule": "from hvg.",
+  "count": 1
+ },
+ {
+  "file": "scripts/build_sampler_axis_ladder.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/build_sampler_axis_tables.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/check_assets.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/check_assets.py",
+  "rule": "from hvg.",
+  "count": 1
+ },
+ {
+  "file": "scripts/collect_ancestry_diagnostics.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/collect_wallclock.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/collect_wallclock.py",
+  "rule": "from hvg.",
+  "count": 1
+ },
+ {
+  "file": "scripts/fit_noised_value_classifier.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/fit_noised_value_classifier.py",
+  "rule": "from hvg.",
+  "count": 1
+ },
+ {
+  "file": "scripts/fit_selection_classifier.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/rescore_purity_lineage_ruler.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/rescore_purity_lineage_ruler.py",
+  "rule": "from hvg.",
+  "count": 1
+ },
+ {
+  "file": "scripts/rescore_purity_lineage_ruler.py",
+  "rule": "from tools._summary_lock import",
+  "count": 1
+ },
+ {
+  "file": "scripts/run_mdlm_baseline.py",
+  "rule": "from hvg import ",
+  "count": 2
+ },
+ {
+  "file": "scripts/run_mdlm_baseline.py",
+  "rule": "from hvg.",
+  "count": 1
+ },
+ {
+  "file": "scripts/run_ours_downstream_chain.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/run_ours_training_seed.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/run_ours_training_seed.py",
+  "rule": "import tools.t214_grid as",
+  "count": 1
+ },
+ {
+  "file": "scripts/run_ours_training_seed.py",
+  "rule": "from tools.t214_ours_downstream import",
+  "count": 1
+ },
+ {
+  "file": "scripts/sample_baseline_cfgen.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/sample_baseline_cfgen.py",
+  "rule": "(?:C\\.)?ROOT\\.(?:parent\\.parent|parents\\[1\\])\\s*/\\s*\"Conditional generation experiments\"\\s",
+  "count": 2
+ },
+ {
+  "file": "scripts/sample_best_of_n.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/sample_best_of_n.py",
+  "rule": "from hvg.",
+  "count": 2
+ },
+ {
+  "file": "scripts/sample_unconditional_pool.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/sample_unconditional_pool.py",
+  "rule": "from hvg.",
+  "count": 1
+ },
+ {
+  "file": "scripts/sample_unconditional_pool.py",
+  "rule": "(?:C\\.)?ROOT\\.(?:parent\\.parent|parents\\[1\\])\\s*/\\s*\"Conditional generation experiments\"\\s",
+  "count": 1
+ },
+ {
+  "file": "scripts/sample_value_guided.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/sample_value_guided.py",
+  "rule": "from hvg.",
+  "count": 3
+ },
+ {
+  "file": "scripts/sample_value_guided.py",
+  "rule": "from tools.fit_noised_classifier import",
+  "count": 1
+ },
+ {
+  "file": "scripts/score_deliveries.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/score_deliveries.py",
+  "rule": "from hvg.",
+  "count": 2
+ },
+ {
+  "file": "scripts/score_deliveries.py",
+  "rule": "import analysis.score_w1_paper as",
+  "count": 1
+ },
+ {
+  "file": "scripts/score_deliveries.py",
+  "rule": "import analysis.score_e21 as",
+  "count": 1
+ },
+ {
+  "file": "scripts/score_deliveries.py",
+  "rule": "from analysis.score_purity import",
+  "count": 1
+ },
+ {
+  "file": "scripts/score_pool_composition.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/score_pool_composition.py",
+  "rule": "from hvg.",
+  "count": 2
+ },
+ {
+  "file": "scripts/score_pool_composition.py",
+  "rule": "from analysis.score_purity import",
+  "count": 1
+ },
+ {
+  "file": "scripts/score_pool_composition_batch.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/score_tilt_exponent_sweep.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/score_tilt_exponent_sweep.py",
+  "rule": "from tools.t201_tau_sweep import",
+  "count": 1
+ },
+ {
+  "file": "scripts/score_tilt_exponent_sweep.py",
+  "rule": "from tools.t200_tables import",
+  "count": 1
+ },
+ {
+  "file": "scripts/score_unconditional_fidelity.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/score_unconditional_fidelity.py",
+  "rule": "from hvg.",
+  "count": 1
+ },
+ {
+  "file": "scripts/score_unconditional_fidelity.py",
+  "rule": "import analysis.score_distribution as",
+  "count": 1
+ },
+ {
+  "file": "scripts/score_unconditional_fidelity.py",
+  "rule": "(?:C\\.)?ROOT\\.(?:parent\\.parent|parents\\[1\\])\\s*/\\s*\"Conditional generation experiments\"\\s",
+  "count": 1
+ },
+ {
+  "file": "scripts/sweep_tilt_exponent.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/sweep_tilt_exponent.py",
+  "rule": "from tools.t201_tau_score import",
+  "count": 1
+ },
+ {
+  "file": "scripts/train_and_sample_scvi_scanvi.py",
+  "rule": "from hvg import ",
+  "count": 1
+ },
+ {
+  "file": "scripts/train_and_sample_scvi_scanvi.py",
+  "rule": "(?:C\\.)?ROOT\\.(?:parent\\.parent|parents\\[1\\])\\s*/\\s*\"Conditional generation experiments\"\\s",
+  "count": 1
+ },
+ {
+  "file": "scripts/train_conditional_generator.py",
+  "rule": "from hvg import ",
+  "count": 2
+ },
+ {
+  "file": "scripts/train_conditional_generator.py",
+  "rule": "from hvg.",
+  "count": 1
+ },
+ {
+  "file": "crndiff/config.py",
+  "rule": "FROZEN = ROOT / \"hvg\" / \"_frozen\"",
+  "count": 1
+ },
+ {
+  "file": "crndiff/config.py",
+  "rule": "FROZEN_E21 = ROOT / \"analysis\" / \"_frozen\" / \"e21_scc_mmd.py\"",
+  "count": 1
+ },
+ {
+  "file": "crndiff/config.py",
+  "rule": "ROOT = Path(__file__).resolve().parents[1]              # .../Experiments/HVG",
+  "count": 1
+ },
+ {
+  "file": "evaluation/score_purity_external.py",
+  "rule": "SCORER = ROOT / \"analysis\" / \"score_purity.py\"",
+  "count": 1
+ },
+ {
+  "file": "figures/panels.py",
+  "rule": "CGE = ROOT.parent.parent / \"Conditional generation experiments\"\nHVG2K = CGE / \"HVG2K\"",
+  "count": 1
+ },
+ {
+  "file": "experiments/manifests.py",
+  "rule": "ROOT\\.parents\\[1\\]\\s*/\\s*\"Conditional generation experiments\"\\s*/\\s*\"old\"\\s*/\\s*\"scRNA\"\\s*",
+  "count": 1
+ },
+ {
+  "file": "scripts/fit_residual_discriminator.py",
+  "rule": "DEFAULT_X_ROOT = Path(r\"D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\")",
+  "count": 1
+ },
+ {
+  "file": "baselines/scvi/code/train_scvi.py",
+  "rule": "X = Path(r\"D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\")",
+  "count": 1
+ },
+ {
+  "file": "baselines/scvi/code/generate_scvi.py",
+  "rule": "X = Path(r\"D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\")",
+  "count": 1
+ },
+ {
+  "file": "baselines/scanvi/code/train_scanvi.py",
+  "rule": "X = Path(r\"D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\")",
+  "count": 1
+ },
+ {
+  "file": "baselines/scanvi/code/generate_scanvi.py",
+  "rule": "X = Path(r\"D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\")",
+  "count": 1
+ },
+ {
+  "file": "baselines/cfgen/code/generate_cfgen.py",
+  "rule": "X = Path(r\"D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\")",
+  "count": 1
+ },
+ {
+  "file": "baselines/cfgen/code/prepare_cfgen_data.py",
+  "rule": "X = Path(r\"D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\")",
+  "count": 1
+ },
+ {
+  "file": "archive/viz/make_F8_dispersion_baselines.py",
+  "rule": "XROOT = Path(r\"D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\")",
+  "count": 1
+ },
+ {
+  "file": "assets/legacy_root/Baseline/OURS/code/config_hvg2k.py",
+  "rule": "ROOT = Path(r\"D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\assets\\legacy_root\")",
+  "count": 1
+ }
+]

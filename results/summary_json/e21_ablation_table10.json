@@ -1,0 +1,766 @@
+{
+ "experiment": "ablation_table10",
+ "ruler": {
+  "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\analysis\\_frozen\\e21_scc_mmd.py",
+  "seed": 20261071,
+  "target_sum": 10000.0,
+  "block": 1024,
+  "matched_n": {
+   "Endothelial": 10057,
+   "Myeloid": 2302,
+   "Neuronal": 396
+  },
+  "definitions": {
+   "representation": "library-size normalize to 10000, then log1p",
+   "scc": "Spearman of the 2000-gene population mean vectors",
+   "pcc": "Pearson of the same two mean vectors (_frozen/e21c_pcc)",
+   "kernel": "exp(-squared_euclidean/(2*sigma^2))",
+   "bandwidth": "exact median of non-diagonal real-real distances",
+   "mmd2": "biased empirical Gaussian-kernel MMD squared, exact all pairs"
+  }
+ },
+ "baselines_inherited_not_rerun": true,
+ "types": {
+  "Endothelial": {
+   "n": 10057,
+   "bandwidth_sigma": 48.82838821411133,
+   "kernel_gamma": 0.0002097129390262821,
+   "reference_zero_library_rows": 0,
+   "shared_bandwidth_across_all_methods": true,
+   "ruler_self_check": {
+    "archived_sigma": 48.82838821411133,
+    "recomputed_sigma": 48.82838821411133,
+    "archived_floor_scc": 0.9943867516355568,
+    "recomputed_floor_scc": 0.9943867516355568,
+    "archived_floor_mmd2": 7.619107458678442e-05,
+    "recomputed_floor_mmd2": 7.619105606271326e-05,
+    "sigma_rel_diff": 0.0,
+    "sigma_ulps": 0.0,
+    "floor_scc_exact": true,
+    "floor_mmd2_rel_diff": 2.431265245481102e-07,
+    "tolerances": {
+     "sigma_rel": 2.384185791015625e-07,
+     "mmd2_rel": 1e-06,
+     "scc": "exact equality required",
+     "why": "the E21 pipeline is float32 throughout; these are its precision, not values chosen to make the check pass"
+    },
+    "passed": true
+   },
+   "rows": {
+    "floor (real train vs real val)": {
+     "scc": 0.9943867516355568,
+     "pcc": 0.999854154189945,
+     "mmd2_rbf_biased": 7.619105606271326e-05,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.60208184357622,
+      "mean_Kgg": 0.6019992950730193,
+      "mean_Krg": 0.6020024737965882
+     },
+     "n": 10057,
+     "source": "recomputed"
+    },
+    "scVI": {
+     "scc": 0.923703817798838,
+     "mmd2_rbf_biased": 0.05154325498844314,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6020818227019056,
+      "mean_Kgg": 0.4835736180842512,
+      "mean_Krg": 0.5170560928988568
+     },
+     "n": 10057,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scvi\\out\\counts\\scvi_cond_Endothelial_n20000_seed20261051.npy",
+     "inherited_from_archive": true
+    },
+    "CFGen": {
+     "scc": 0.9820550148891657,
+     "mmd2_rbf_biased": 0.0037408923367516778,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6020818227019056,
+      "mean_Kgg": 0.5738530019046673,
+      "mean_Krg": 0.5860969661349106
+     },
+     "n": 10057,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_cfgen\\out\\counts\\cfgen_cond_Endothelial_n20000_seed20261061.npy",
+     "inherited_from_archive": true
+    },
+    "scANVI": {
+     "scc": 0.9883123071850733,
+     "mmd2_rbf_biased": 0.001550174523243797,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6020818227019056,
+      "mean_Kgg": 0.60079018713508,
+      "mean_Krg": 0.6006609176568709
+     },
+     "n": 10057,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scanvi\\out\\counts\\scanvi_cond_Endothelial_n20000_seed20261061.npy",
+     "inherited_from_archive": true
+    },
+    "OURS (tilt)": {
+     "scc": 0.9876272930499693,
+     "mmd2_rbf_biased": 0.005713635435107722,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6020818227019056,
+      "mean_Kgg": 0.5761266181907461,
+      "mean_Krg": 0.586247402728772
+     },
+     "n": 10057,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\\Baseline\\OURS\\results\\linspace_T_O_K32_spilot_run1c_s20260625_samp20260902_batched1_chunk256_CONDFULL_Endothelial_tables_kz_n20000_g0p4_noa4.npy",
+     "inherited_from_archive": true
+    },
+    "OURS (tilt+FK)": {
+     "scc": 0.9833419301930254,
+     "mmd2_rbf_biased": 0.00799105105627751,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6020818227019056,
+      "mean_Kgg": 0.6145088005131466,
+      "mean_Krg": 0.6042997860793873
+     },
+     "n": 10057,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\results\\runs\\Endothelial_clean_fkv2_fk_no_trigger_tiltevery_trigscheduled_K32_M40000_N20000_alpha1p0_sc0p25_int8_seed20260920.npy",
+     "inherited_from_archive": true
+    },
+    "OURS (tilt+FK, this round)": {
+     "aggregate": {
+      "scc": {
+       "mean": 0.9882801912875996,
+       "sd": 0.001214289759441864,
+       "n_seeds": 6,
+       "per_seed": [
+        0.9892731263641913,
+        0.9868651598536953,
+        0.9892673560725959,
+        0.9873969043673116,
+        0.989574849404131,
+        0.9873037516636728
+       ]
+      },
+      "pcc": {
+       "mean": 0.9963997968586177,
+       "sd": 0.002981529479810548,
+       "n_seeds": 6,
+       "per_seed": [
+        0.9987908273214244,
+        0.993662089957738,
+        0.9991718574407917,
+        0.9935820983991793,
+        0.9993829617939154,
+        0.9938089462386575
+       ]
+      },
+      "mmd2_rbf_biased": {
+       "mean": 0.003022666569688822,
+       "sd": 0.002730892469250389,
+       "n_seeds": 6,
+       "per_seed": [
+        0.0008029984718271876,
+        0.005386181149603875,
+        0.0005029510187017916,
+        0.00570636914620315,
+        0.0003019294046078258,
+        0.0054355702271891015
+       ]
+      }
+     },
+     "per_run": [
+      {
+       "scc": 0.9892731263641913,
+       "pcc": 0.9987908273214244,
+       "mmd2_rbf_biased": 0.0008029984718271876,
+       "zero_library_rows": 0,
+       "kernel_terms": {
+        "mean_Krr": 0.60208184357622,
+        "mean_Kgg": 0.598199267313984,
+        "mean_Krg": 0.5997390562091884
+       },
+       "n": 10057,
+       "seed": 20260987,
+       "stem": "Endothelial_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M20114_N10057_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260987",
+       "n_generated": 10057
+      },
+      {
+       "scc": 0.9868651598536953,
+       "pcc": 0.993662089957738,
+       "mmd2_rbf_biased": 0.005386181149603875,
+       "zero_library_rows": 0,
+       "kernel_terms": {
+        "mean_Krr": 0.60208184357622,
+        "mean_Kgg": 0.5766320721348025,
+        "mean_Krg": 0.5866638672807093
+       },
+       "n": 10057,
+       "seed": 20260987,
+       "stem": "Endothelial_hvgtilt_only_tilt_K32_M20114_N10057_tau0p4_cc256_seed20260987",
+       "n_generated": 10057
+      },
+      {
+       "scc": 0.9892673560725959,
+       "pcc": 0.9991718574407917,
+       "mmd2_rbf_biased": 0.0005029510187017916,
+       "zero_library_rows": 0,
+       "kernel_terms": {
+        "mean_Krr": 0.60208184357622,
+        "mean_Kgg": 0.599445704804773,
+        "mean_Krg": 0.6005122986811456
+       },
+       "n": 10057,
+       "seed": 20260988,
+       "stem": "Endothelial_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M20114_N10057_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260988",
+       "n_generated": 10057
+      },
+      {
+       "scc": 0.9873969043673116,
+       "pcc": 0.9935820983991793,
+       "mmd2_rbf_biased": 0.00570636914620315,
+       "zero_library_rows": 0,
+       "kernel_terms": {
+        "mean_Krr": 0.60208184357622,
+        "mean_Kgg": 0.5757364591200548,
+        "mean_Krg": 0.5860559667750358
+       },
+       "n": 10057,
+       "seed": 20260988,
+       "stem": "Endothelial_hvgtilt_only_tilt_K32_M20114_N10057_tau0p4_cc256_seed20260988",
+       "n_generated": 10057
+      },
+      {
+       "scc": 0.989574849404131,
+       "pcc": 0.9993829617939154,
+       "mmd2_rbf_biased": 0.0003019294046078258,
+       "zero_library_rows": 0,
+       "kernel_terms": {
+        "mean_Krr": 0.60208184357622,
+        "mean_Kgg": 0.6043679486480803,
+        "mean_Krg": 0.6030739314098462
+       },
+       "n": 10057,
+       "seed": 20260989,
+       "stem": "Endothelial_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M20114_N10057_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260989",
+       "n_generated": 10057
+      },
+      {
+       "scc": 0.9873037516636728,
+       "pcc": 0.9938089462386575,
+       "mmd2_rbf_biased": 0.0054355702271891015,
+       "zero_library_rows": 0,
+       "kernel_terms": {
+        "mean_Krr": 0.60208184357622,
+        "mean_Kgg": 0.5766458893177266,
+        "mean_Krg": 0.5866460813333788
+       },
+       "n": 10057,
+       "seed": 20260989,
+       "stem": "Endothelial_hvgtilt_only_tilt_K32_M20114_N10057_tau0p4_cc256_seed20260989",
+       "n_generated": 10057
+      }
+     ]
+    }
+   },
+   "skipped_B6": []
+  },
+  "Myeloid": {
+   "n": 2302,
+   "bandwidth_sigma": 55.27378845214844,
+   "kernel_gamma": 0.00016365585231873967,
+   "reference_zero_library_rows": 0,
+   "shared_bandwidth_across_all_methods": true,
+   "ruler_self_check": {
+    "archived_sigma": 55.27378463745117,
+    "recomputed_sigma": 55.27378845214844,
+    "archived_floor_scc": 0.9877988921359012,
+    "recomputed_floor_scc": 0.9877988921359012,
+    "archived_floor_mmd2": 0.0002579159415410093,
+    "recomputed_floor_mmd2": 0.0002579158701059292,
+    "sigma_rel_diff": 6.901458423095427e-08,
+    "sigma_ulps": 0.5789362933964568,
+    "floor_scc_exact": true,
+    "floor_mmd2_rel_diff": 2.7697039448838445e-07,
+    "tolerances": {
+     "sigma_rel": 2.384185791015625e-07,
+     "mmd2_rel": 1e-06,
+     "scc": "exact equality required",
+     "why": "the E21 pipeline is float32 throughout; these are its precision, not values chosen to make the check pass"
+    },
+    "passed": true
+   },
+   "rows": {
+    "floor (real train vs real val)": {
+     "scc": 0.9877988921359012,
+     "pcc": 0.9990904098445211,
+     "mmd2_rbf_biased": 0.0002579158701059292,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6237204887207709,
+      "mean_Kgg": 0.6245904149409418,
+      "mean_Krg": 0.6240264938958033
+     },
+     "n": 2302,
+     "source": "recomputed"
+    },
+    "scVI": {
+     "scc": 0.9429226425573746,
+     "mmd2_rbf_biased": 0.01884431620270588,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6237204638714612,
+      "mean_Kgg": 0.571958124777932,
+      "mean_Krg": 0.5884171362233437
+     },
+     "n": 2302,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scvi\\out\\counts\\scvi_cond_Myeloid_n20000_seed20261051.npy",
+     "inherited_from_archive": true
+    },
+    "CFGen": {
+     "scc": 0.9652508297595287,
+     "mmd2_rbf_biased": 0.005045236597941205,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6237204638714612,
+      "mean_Kgg": 0.6052858233506395,
+      "mean_Krg": 0.6119805253120798
+     },
+     "n": 2302,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_cfgen\\out\\counts\\cfgen_cond_Myeloid_n20000_seed20261061.npy",
+     "inherited_from_archive": true
+    },
+    "scANVI": {
+     "scc": 0.9686950845933763,
+     "mmd2_rbf_biased": 0.005443893027551772,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6237204638714612,
+      "mean_Kgg": 0.5928328285672614,
+      "mean_Krg": 0.6055546997055854
+     },
+     "n": 2302,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scanvi\\out\\counts\\scanvi_cond_Myeloid_n20000_seed20261061.npy",
+     "inherited_from_archive": true
+    },
+    "OURS (tilt)": {
+     "scc": 0.9687826557318505,
+     "mmd2_rbf_biased": 0.017840442149519742,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6237204638714612,
+      "mean_Kgg": 0.6125121735557356,
+      "mean_Krg": 0.6091960976388385
+     },
+     "n": 2302,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\\Baseline\\OURS\\results\\linspace_T_O_K32_spilot_run1c_s20260625_samp20260902_batched1_chunk256_CONDFULL_Myeloid_tables_kz_n20000_g0p4_noa4.npy",
+     "inherited_from_archive": true
+    },
+    "OURS (tilt+FK)": {
+     "scc": 0.9752545352914695,
+     "mmd2_rbf_biased": 0.0029332916036373113,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6237204638714612,
+      "mean_Kgg": 0.6134170928688079,
+      "mean_Krg": 0.6171021325683159
+     },
+     "n": 2302,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\results\\runs\\Myeloid_residual_fkv2_fk_tiltevery_trigscheduled_K32_M40000_N20000_alpha2p0_sc0p5_int8_seed20260994.npy",
+     "inherited_from_archive": true
+    },
+    "OURS (tilt+FK, this round)": {
+     "aggregate": {
+      "scc": {
+       "mean": 0.9206978138149641,
+       "sd": 0.053611412126267965,
+       "n_seeds": 6,
+       "per_seed": [
+        0.9716913930606098,
+        0.873920986666218,
+        0.9740249857203088,
+        0.8751253265250821,
+        0.9626193201685773,
+        0.8668048707489887
+       ]
+      },
+      "pcc": {
+       "mean": 0.8753594774873793,
+       "sd": 0.1224301883861309,
+       "n_seeds": 6,
+       "per_seed": [
+        0.9933682162383219,
+        0.7648408439637893,
+        0.9878282106237561,
+        0.7707807315324817,
+        0.9796987147399125,
+        0.7556401478260139
+       ]
+      },
+      "mmd2_rbf_biased": {
+       "mean": 0.028385320642596912,
+       "sd": 0.02427879252977764,
+       "n_seeds": 6,
+       "per_seed": [
+        0.0023111733196365947,
+        0.05090166521260997,
+        0.005237481554229539,
+        0.04905458154837028,
+        0.011665322821500013,
+        0.051141699399235074
+       ]
+      }
+     },
+     "per_run": [
+      {
+       "scc": 0.9716913930606098,
+       "pcc": 0.9933682162383219,
+       "mmd2_rbf_biased": 0.0023111733196365947,
+       "zero_library_rows": 0,
+       "kernel_terms": {
+        "mean_Krr": 0.6237204887207709,
+        "mean_Kgg": 0.6263586463373252,
+        "mean_Krg": 0.6238839808692298
+       },
+       "n": 2302,
+       "seed": 20260987,
+       "stem": "Myeloid_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987",
+       "n_generated": 2500
+      },
+      {
+       "scc": 0.873920986666218,
+       "pcc": 0.7648408439637893,
+       "mmd2_rbf_biased": 0.05090166521260997,
+       "zero_library_rows": 0,
+       "kernel_terms": {
+        "mean_Krr": 0.6237204887207709,
+        "mean_Kgg": 0.6277481582273579,
+        "mean_Krg": 0.6002834908677595
+       },
+       "n": 2302,
+       "seed": 20260987,
+       "stem": "Myeloid_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260987",
+       "n_generated": 2500
+      },
+      {
+       "scc": 0.9740249857203088,
+       "pcc": 0.9878282106237561,
+       "mmd2_rbf_biased": 0.005237481554229539,
+       "zero_library_rows": 0,
+       "kernel_terms": {
+        "mean_Krr": 0.6237204887207709,
+        "mean_Kgg": 0.6405397971545709,
+        "mean_Krg": 0.6295114021605561
+       },
+       "n": 2302,
+       "seed": 20260988,
+       "stem": "Myeloid_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260988",
+       "n_generated": 2500
+      },
+      {
+       "scc": 0.8751253265250821,
+       "pcc": 0.7707807315324817,
+       "mmd2_rbf_biased": 0.04905458154837028,
+       "zero_library_rows": 0,
+       "kernel_terms": {
+        "mean_Krr": 0.6237204887207709,
+        "mean_Kgg": 0.6255359096342558,
+        "mean_Krg": 0.6001009084033282
+       },
+       "n": 2302,
+       "seed": 20260988,
+       "stem": "Myeloid_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260988",
+       "n_generated": 2500
+      },
+      {
+       "scc": 0.9626193201685773,
+       "pcc": 0.9796987147399125,
+       "mmd2_rbf_biased": 0.011665322821500013,
+       "zero_library_rows": 0,
+       "kernel_terms": {
+        "mean_Krr": 0.6237204887207709,
+        "mean_Kgg": 0.6494618867213254,
+        "mean_Krg": 0.6307585263102982
+       },
+       "n": 2302,
+       "seed": 20260989,
+       "stem": "Myeloid_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260989",
+       "n_generated": 2500
+      },
+      {
+       "scc": 0.8668048707489887,
+       "pcc": 0.7556401478260139,
+       "mmd2_rbf_biased": 0.051141699399235074,
+       "zero_library_rows": 0,
+       "kernel_terms": {
+        "mean_Krr": 0.6237204887207709,
+        "mean_Kgg": 0.6282891781041781,
+        "mean_Krg": 0.600433983712857
+       },
+       "n": 2302,
+       "seed": 20260989,
+       "stem": "Myeloid_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260989",
+       "n_generated": 2500
+      }
+     ]
+    }
+   },
+   "skipped_B6": []
+  },
+  "Neuronal": {
+   "n": 396,
+   "bandwidth_sigma": 51.17613220214844,
+   "kernel_gamma": 0.00019091281665737863,
+   "reference_zero_library_rows": 0,
+   "shared_bandwidth_across_all_methods": true,
+   "ruler_self_check": {
+    "archived_sigma": 51.17613220214844,
+    "recomputed_sigma": 51.17613220214844,
+    "archived_floor_scc": 0.946018737193243,
+    "recomputed_floor_scc": 0.946018737193243,
+    "archived_floor_mmd2": 0.0019216501093095584,
+    "recomputed_floor_mmd2": 0.0019216503480079528,
+    "sigma_rel_diff": 0.0,
+    "sigma_ulps": 0.0,
+    "floor_scc_exact": true,
+    "floor_mmd2_rel_diff": 1.2421532579069868e-07,
+    "tolerances": {
+     "sigma_rel": 2.384185791015625e-07,
+     "mmd2_rel": 1e-06,
+     "scc": "exact equality required",
+     "why": "the E21 pipeline is float32 throughout; these are its precision, not values chosen to make the check pass"
+    },
+    "passed": true
+   },
+   "rows": {
+    "floor (real train vs real val)": {
+     "scc": 0.946018737193243,
+     "pcc": 0.9926737966115312,
+     "mmd2_rbf_biased": 0.0019216503480079528,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.604819201700387,
+      "mean_Kgg": 0.5987899705479521,
+      "mean_Krg": 0.6008437609501657
+     },
+     "n": 396,
+     "source": "recomputed"
+    },
+    "scVI": {
+     "scc": 0.9108900352979882,
+     "mmd2_rbf_biased": 0.036774760326348854,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6048192244345023,
+      "mean_Kgg": 0.5586328468065143,
+      "mean_Krg": 0.5633386554573339
+     },
+     "n": 396,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scvi\\out\\counts\\scvi_cond_Neuronal_n20000_seed20261051.npy",
+     "inherited_from_archive": true
+    },
+    "CFGen": {
+     "scc": 0.9319198940435734,
+     "mmd2_rbf_biased": 0.014032642843665233,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6048192244345023,
+      "mean_Kgg": 0.572547398707904,
+      "mean_Krg": 0.5816669901493705
+     },
+     "n": 396,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_cfgen\\out\\counts\\cfgen_cond_Neuronal_n20000_seed20261061.npy",
+     "inherited_from_archive": true
+    },
+    "scANVI": {
+     "scc": 0.9109924076445406,
+     "mmd2_rbf_biased": 0.045018474674886955,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6048192244345023,
+      "mean_Kgg": 0.542285244699057,
+      "mean_Krg": 0.5510429972293361
+     },
+     "n": 396,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scanvi\\out\\counts\\scanvi_cond_Neuronal_n20000_seed20261061.npy",
+     "inherited_from_archive": true
+    },
+    "OURS (tilt)": {
+     "scc": 0.9249599902391834,
+     "mmd2_rbf_biased": 0.037173450560612054,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6048192244345023,
+      "mean_Kgg": 0.5682685633574155,
+      "mean_Krg": 0.5679571686156528
+     },
+     "n": 396,
+     "n_source": 20000,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\\Baseline\\OURS\\results\\linspace_T_O_K32_spilot_run1c_s20260625_samp20260902_batched1_chunk256_CONDFULL_Neuronal_tables_kz_n20000_g0p4_noa4.npy",
+     "inherited_from_archive": true
+    },
+    "OURS (tilt+FK)": {
+     "scc": 0.9050155804852102,
+     "mmd2_rbf_biased": 0.00927728643579484,
+     "zero_library_rows": 0,
+     "kernel_terms": {
+      "mean_Krr": 0.6048192244345023,
+      "mean_Kgg": 0.6025407854659577,
+      "mean_Krg": 0.5990413617323326
+     },
+     "n": 396,
+     "n_source": 2500,
+     "source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\results\\runs\\Neuronal_residual_fkv2_fk_tiltevery_trigscheduled_K32_M10000_N2500_alpha2p0_sc0p5_int8_seed20261005.npy",
+     "inherited_from_archive": true
+    },
+    "OURS (tilt+FK, this round)": {
+     "aggregate": {
+      "scc": {
+       "mean": 0.8828159014391663,
+       "sd": 0.00571642544032611,
+       "n_seeds": 6,
+       "per_seed": [
+        0.880616193533574,
+        0.8851168482426957,
+        0.891451751319982,
+        0.8802098371317899,
+        0.8745981895208684,
+        0.8849025888860879
+       ]
+      },
+      "pcc": {
+       "mean": 0.776002423011272,
+       "sd": 0.16301716788837647,
+       "n_seeds": 6,
+       "per_seed": [
+        0.9472947204092406,
+        0.6299469595875969,
+        0.9482710764329964,
+        0.6316913485094204,
+        0.8724554860290832,
+        0.626354947099294
+       ]
+      },
+      "mmd2_rbf_biased": {
+       "mean": 0.03833868402571002,
+       "sd": 0.023347045932435275,
+       "n_seeds": 6,
+       "per_seed": [
+        0.01204054021299239,
+        0.05871867062291147,
+        0.011621438120000827,
+        0.058487264753610324,
+        0.03007779161475921,
+        0.0590863988299859
+       ]
+      }
+     },
+     "per_run": [
+      {
+       "scc": 0.880616193533574,
+       "pcc": 0.9472947204092406,
+       "mmd2_rbf_biased": 0.01204054021299239,
+       "zero_library_rows": 0,
+       "kernel_terms": {
+        "mean_Krr": 0.604819201700387,
+        "mean_Kgg": 0.6377746067635595,
+        "mean_Krg": 0.6152766341254771
+       },
+       "n": 396,
+       "seed": 20260987,
+       "stem": "Neuronal_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987",
+       "n_generated": 2500
+      },
+      {
+       "scc": 0.8851168482426957,
+       "pcc": 0.6299469595875969,
+       "mmd2_rbf_biased": 0.05871867062291147,
+       "zero_library_rows": 0,
+       "kernel_terms": {
+        "mean_Krr": 0.604819201700387,
+        "mean_Kgg": 0.5642179848367602,
+        "mean_Krg": 0.555159257957118
+       },
+       "n": 396,
+       "seed": 20260987,
+       "stem": "Neuronal_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260987",
+       "n_generated": 2500
+      },
+      {
+       "scc": 0.891451751319982,
+       "pcc": 0.9482710764329964,
+       "mmd2_rbf_biased": 0.011621438120000827,
+       "zero_library_rows": 0,
+       "kernel_terms": {
+        "mean_Krr": 0.604819201700387,
+        "mean_Kgg": 0.6226935592253754,
+        "mean_Krg": 0.6079456614028808
+       },
+       "n": 396,
+       "seed": 20260988,
+       "stem": "Neuronal_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260988",
+       "n_generated": 2500
+      },
+      {
+       "scc": 0.8802098371317899,
+       "pcc": 0.6316913485094204,
+       "mmd2_rbf_biased": 0.058487264753610324,
+       "zero_library_rows": 0,
+       "kernel_terms": {
+        "mean_Krr": 0.604819201700387,
+        "mean_Kgg": 0.5645257671623161,
+        "mean_Krg": 0.5554288520545464
+       },
+       "n": 396,
+       "seed": 20260988,
+       "stem": "Neuronal_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260988",
+       "n_generated": 2500
+      },
+      {
+       "scc": 0.8745981895208684,
+       "pcc": 0.8724554860290832,
+       "mmd2_rbf_biased": 0.03007779161475921,
+       "zero_library_rows": 0,
+       "kernel_terms": {
+        "mean_Krr": 0.604819201700387,
+        "mean_Kgg": 0.6767198755883335,
+        "mean_Krg": 0.6257306428369807
+       },
+       "n": 396,
+       "seed": 20260989,
+       "stem": "Neuronal_residual_hvgtwist_fk_notilt_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260989",
+       "n_generated": 2500
+      },
+      {
+       "scc": 0.8849025888860879,
+       "pcc": 0.626354947099294,
+       "mmd2_rbf_biased": 0.0590863988299859,
+       "zero_library_rows": 0,
+       "kernel_terms": {
+        "mean_Krr": 0.604819201700387,
+        "mean_Kgg": 0.5670155803624032,
+        "mean_Krg": 0.5563741916164021
+       },
+       "n": 396,
+       "seed": 20260989,
+       "stem": "Neuronal_hvgtilt_only_tilt_K32_M5000_N2500_tau0p2_cc256_seed20260989",
+       "n_generated": 2500
+      }
+     ]
+    }
+   },
+   "skipped_B6": []
+  }
+ }
+}

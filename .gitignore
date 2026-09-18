@@ -1,0 +1,18 @@
+# Run outputs of THIS repository only. The rule is anchored to the repository root on purpose:
+# an unanchored "out/" would also match archive/universality_fk/out/, which holds archived
+# artefacts the scorers read and which must be committed.
+/out/
+
+# Python bytecode and virtual environments.
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# The atlas counts. Not redistributed; see README section 5 and assets/README.md.
+/assets/legacy_root/_shared/data/
+
+# Editor and OS noise.
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,407 @@
+{
+ "experiment": "E25 -- population composition ruler for endothelial+myeloid",
+ "contract": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\Paper\\adversarial\\comms\\cloud_to_cc\\104_EM_population_ruler.md",
+ "status": "USABLE",
+ "frozen_inputs_read_only": {
+  "universality_deconv.json": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\results\\diagnostics\\universality_deconv.json",
+   "md5": "a6824b82bd5a465b3b96c0e65d7cd261",
+   "sha256": "6ea8fffb721bb760d2ec51a0a54cb813813e246806961475d6fc5a777ddb201d"
+  },
+  "universality_labels.json": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\results\\diagnostics\\universality_labels.json",
+   "md5": "e19b4e2127d4adc64358a365f478d4fd",
+   "sha256": "972c6f3e4ce9929a8775ea3be2ec894bc6c114c9a791513b476daf4c8559c018"
+  },
+  "master_purity_v7.json": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\results\\tables\\master_purity_v7.json",
+   "md5": "b48af01bb0a3918070adc33bb2aed80a",
+   "sha256": "8ea88aee14297c046d62ff9681380c9389334bd05b5775b342e3241453808796"
+  }
+ },
+ "rulers": {
+  "celltypist": "Healthy_Adult_Heart.pkl; CP10K+log1p; majority_voting=False",
+  "vCM_endo": {
+   "A": "Ventricular_Cardiomyocyte",
+   "B": "Endothelial",
+   "label_sets": "universality_labels.json fixed_label_sets[*]['all']",
+   "n_labels_A": 8,
+   "n_labels_B": 10,
+   "estimator": "frozen universality_deconv.json, NOT recomputed",
+   "response_A": [
+    0.6834,
+    0.0354,
+    0.2812
+   ],
+   "response_B": [
+    0.0804,
+    0.6654,
+    0.2542
+   ]
+  },
+  "endo_mye": {
+   "A": "Endothelial",
+   "B": "Myeloid",
+   "label_sets": "master_purity_v7.json fixed_labels (canonical) -- the same sets every existing endo+mye per-cell readout uses; Myeloid has no universality_labels entry to inherit",
+   "n_labels_A": 8,
+   "n_labels_B": 6,
+   "labels_A": [
+    "EC10_CMC-like",
+    "EC1_cap",
+    "EC2_cap",
+    "EC3_cap",
+    "EC4_immune",
+    "EC5_art",
+    "EC6_ven",
+    "EC7_endocardial"
+   ],
+   "labels_B": [
+    "CD14+Mo",
+    "CD16+Mo",
+    "LYVE1+IGF1+MP",
+    "LYVE1+TIMD4+MP",
+    "Mast",
+    "MoMP"
+   ],
+   "estimator": "built by this script",
+   "response_A": [
+    0.6652,
+    0.0146,
+    0.3202
+   ],
+   "response_B": [
+    0.186,
+    0.2846,
+    0.5294000000000001
+   ]
+  },
+  "note_endothelial_two_conventions": "Endothelial is a 10-label set on the vCM/endo ruler and a 8-label set on the endo/mye ruler. Inherited, not chosen here; recorded so the two halves of the table are never silently merged."
+ },
+ "new_control_arm": {
+  "name": "CTRL_TILT_Myeloid",
+  "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\\Baseline\\OURS\\results\\linspace_T_O_K32_spilot_run1c_s20260625_samp20260902_batched1_chunk256_CONDFULL_Myeloid_tables_kz_n5000_g0p4_noa4.npy",
+  "md5": "9361cb479cbb64bac8584e27b9f25dd7",
+  "sha256": "e342982ff0f80681de07d10476cf901c7c95811a494e124dddfa1ecc66f2e30a",
+  "recipe": "identical to CTRL_TILT_Endothelial; only --type differs",
+  "driver": "scRNA/condition/scan_gamma.py",
+  "ckpt": "pilot_run1c_s20260625.pt",
+  "K": 32,
+  "n_gen": 5000,
+  "cell_chunk": 256,
+  "batched": true,
+  "no_a4": true,
+  "tau": 0.4,
+  "logpi": "scRNA/condition/tables_kz/logc_Myeloid.npy",
+  "samp_seed": 20260902,
+  "seed_rule": "every CONDFULL/CTRL_TILT arm on this machine uses samp_seed 20260902, including the existing Myeloid gamma rungs; continuing that rule means reusing it, which is also what 's2.1 identical recipe, only the type differs' requires",
+  "sampling_wall_minutes": 3.3
+ },
+ "concat_controls": {
+  "recipe_source": "code/universality/make_concat_control.py",
+  "ratio_is_weight_of": "Endothelial",
+  "n": 5000,
+  "seed": 20261047,
+  "pool_A": {
+   "name": "CTRL_TILT_Endothelial",
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\\Baseline\\OURS\\results\\linspace_T_O_K32_spilot_run1c_s20260625_samp20260902_batched1_chunk256_CONDFULL_Endothelial_tables_kz_n5000_g0p4_noa4.npy",
+   "md5": "d8bbe2b2c11c90f8c571abc041eda47f",
+   "sha256": "c58e7e40d21d6b7410103e7bb7be869fb507033acd707828dd01bbbe5645a241"
+  },
+  "pool_B": {
+   "name": "CTRL_TILT_Myeloid",
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\\Baseline\\OURS\\results\\linspace_T_O_K32_spilot_run1c_s20260625_samp20260902_batched1_chunk256_CONDFULL_Myeloid_tables_kz_n5000_g0p4_noa4.npy",
+   "md5": "9361cb479cbb64bac8584e27b9f25dd7",
+   "sha256": "e342982ff0f80681de07d10476cf901c7c95811a494e124dddfa1ecc66f2e30a"
+  },
+  "controls": {
+   "CONCAT_EM0500": {
+    "true_fraction_A": 0.5,
+    "n_Endothelial": 2500,
+    "n_Myeloid": 2500,
+    "n_total": 5000,
+    "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\results\\diagnostics\\e25_em_ruler\\concat\\CONCAT_EM0500.npy",
+    "md5": "0fbb8e24aff566384da9cd6671c4c213",
+    "sha256": "46eee156faf578e0ec004ed09c1a4709841e31340d27ea93ce4a6b3113d5410e",
+    "index_sha256_A": "1ac6b68698f38bb136091ca5b2e4f38f86f50fc6d5ba8ad197e291d9aa539aa5",
+    "index_sha256_B": "8e9390fd0bd60b8f862abc79d09981d50d657bce69d2fa0f65f1bfa7ad15d946"
+   },
+   "CONCAT_EM0700": {
+    "true_fraction_A": 0.7,
+    "n_Endothelial": 3500,
+    "n_Myeloid": 1500,
+    "n_total": 5000,
+    "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\results\\diagnostics\\e25_em_ruler\\concat\\CONCAT_EM0700.npy",
+    "md5": "26c8699129849cfa007004ad5e017751",
+    "sha256": "2d7a702e517b819a3229db07dfbd6c07d1476514278ad08108e15dbfeba72d74",
+    "index_sha256_A": "2adf7dd2c0c324bbfee92ad339662eb126b80312c9e9833475be0605142f547a",
+    "index_sha256_B": "e75b7455616469d76e5f12c89b92e3b427f354635a265494c807e52cd95f5e82"
+   },
+   "CONCAT_EM0615": {
+    "true_fraction_A": 0.615,
+    "n_Endothelial": 3075,
+    "n_Myeloid": 1925,
+    "n_total": 5000,
+    "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\results\\diagnostics\\e25_em_ruler\\concat\\CONCAT_EM0615.npy",
+    "md5": "b085cb5e6799ca9cc72ad58a073fea71",
+    "sha256": "56bd61594ee4121f5f02e348e137fb79e331e93fe805be6e0bc77a1d2c50dc41",
+    "index_sha256_A": "1c409057618d8f11c7a3669576f8a2f28fe0082887ba774b41bf598cf3725374",
+    "index_sha256_B": "e9a6614e571332a10c3f26480b061420254810fef40fa9dcc3f5fcf2edf890b6"
+   }
+  }
+ },
+ "separation_diagnostic": {
+  "what": "the unmixing solves a projection onto d = response_A - response_B, so ||d|| IS the ruler's signal length and 1/||d|| is how hard it multiplies any labelling noise. This is why the endo/mye validation error is larger, and it is a property of the pair, not of any arm.",
+  "vCM_endo": {
+   "d": [
+    0.603,
+    -0.63,
+    0.027000000000000024
+   ],
+   "d_norm": 0.8724895414845957,
+   "own_coordinate_A": 0.6834,
+   "own_coordinate_B": 0.6654
+  },
+  "endo_mye": {
+   "d": [
+    0.4792,
+    -0.27,
+    -0.2092000000000001
+   ],
+   "d_norm": 0.5884702881199696,
+   "own_coordinate_A": 0.6652,
+   "own_coordinate_B": 0.2846
+  },
+  "noise_amplification_ratio_endo_mye_over_vcm_endo": 1.4826399209924495
+ },
+ "validation": {
+  "CONCAT_EM0500": {
+   "true": 0.5,
+   "recovered": 0.5079515496050099,
+   "abs_error": 0.007951549605009878,
+   "raw_called_A": 0.4296,
+   "raw_called_B": 0.1496,
+   "raw_other": 0.4208,
+   "raw_abs_error": 0.07040000000000002
+  },
+  "CONCAT_EM0615": {
+   "true": 0.615,
+   "recovered": 0.6287857646470686,
+   "abs_error": 0.013785764647068599,
+   "raw_called_A": 0.4874,
+   "raw_called_B": 0.1158,
+   "raw_other": 0.39679999999999993,
+   "raw_abs_error": 0.1276
+  },
+  "CONCAT_EM0700": {
+   "true": 0.7,
+   "recovered": 0.6942490567641766,
+   "abs_error": 0.005750943235823369,
+   "raw_called_A": 0.5186,
+   "raw_called_B": 0.0962,
+   "raw_other": 0.38520000000000004,
+   "raw_abs_error": 0.1814
+  }
+ },
+ "validation_worst_abs_error": 0.013785764647068599,
+ "validation_reference_vcm_endo_worst": 0.004820529190607936,
+ "validation_ratio_to_vcm_endo": 2.8598031672389936,
+ "hard_gate": 0.02,
+ "estimator_validated": true,
+ "arms": {
+  "OURS_quota_D2": {
+   "requested_A": 0.5,
+   "per_cell_called_A": 0.446,
+   "per_cell_called_B": 0.3641,
+   "per_cell_neither": 0.18990000000000007,
+   "per_cell_abs_error_A": 0.05399999999999999,
+   "population_recovered_A": 0.5028927746703642,
+   "population_abs_error_A": 0.0028927746703641954
+  },
+  "OURS_equal_weight_A": {
+   "requested_A": 0.5,
+   "per_cell_called_A": 0.6154,
+   "per_cell_called_B": 0.1871,
+   "per_cell_neither": 0.19750000000000006,
+   "per_cell_abs_error_A": 0.11539999999999995,
+   "population_recovered_A": 0.8707170902410782,
+   "population_abs_error_A": 0.37071709024107824
+  },
+  "CFGen_concat_EM_0500": {
+   "requested_A": 0.5,
+   "per_cell_called_A": 0.413,
+   "per_cell_called_B": 0.2745,
+   "per_cell_neither": 0.31249999999999994,
+   "per_cell_abs_error_A": 0.08700000000000002,
+   "population_recovered_A": 0.45302371419146004,
+   "population_abs_error_A": 0.046976285808539964
+  },
+  "scANVI_concat_EM_0500": {
+   "requested_A": 0.5,
+   "per_cell_called_A": 0.453,
+   "per_cell_called_B": 0.2839,
+   "per_cell_neither": 0.26309999999999995,
+   "per_cell_abs_error_A": 0.046999999999999986,
+   "population_recovered_A": 0.5308888363200543,
+   "population_abs_error_A": 0.030888836320054347
+  }
+ },
+ "real_reference": {
+  "status": "WITHDRAWN",
+  "note": "ticket 104 s2b (real-cell reference readouts) was added and then withdrawn by Q on 2026-08-25 before it ran. The code path is retained in e25_em_population_ruler.py behind DO_REAL_REFERENCE=False and produced no number in this run.",
+  "would_have_been_size_limited": {
+   "REAL_EM_0500": "held-out Myeloid holds 2302 cells, so a 50/50 endo+mye real mixture at N=10000 without replacement is infeasible (5000 needed)"
+  }
+ },
+ "ruler_reproduction_gate": {
+  "requirement": "this CellTypist pass must reproduce the frozen response vectors and every registered per-cell readout, else the numbers would sit on a drifted ruler",
+  "passed": true,
+  "checks": [
+   {
+    "check": "response_A (CTRL_TILT_Ventricular, vCM/endo sets)",
+    "recomputed": [
+     0.6834,
+     0.0354,
+     0.2812
+    ],
+    "frozen": [
+     0.6834,
+     0.0354,
+     0.2812
+    ],
+    "identical_at_4dp": true
+   },
+   {
+    "check": "response_B (CTRL_TILT_Endothelial, vCM/endo sets)",
+    "recomputed": [
+     0.0804,
+     0.6654,
+     0.2542
+    ],
+    "frozen": [
+     0.0804,
+     0.6654,
+     0.2542
+    ],
+    "identical_at_4dp": true
+   },
+   {
+    "check": "CTRL_TILT_Endothelial, canonical 8-label set",
+    "recomputed": [
+     0.6652
+    ],
+    "frozen": [
+     0.6652
+    ],
+    "identical_at_4dp": true
+   },
+   {
+    "check": "per-cell readout OURS_quota_D2",
+    "recomputed": [
+     0.446,
+     0.3641,
+     0.1899
+    ],
+    "frozen": [
+     0.446,
+     0.3641,
+     0.1899
+    ],
+    "identical_at_4dp": true
+   },
+   {
+    "check": "per-cell readout OURS_equal_weight_A",
+    "recomputed": [
+     0.6154,
+     0.1871,
+     0.1975
+    ],
+    "frozen": [
+     0.6154,
+     0.1871,
+     0.1975
+    ],
+    "identical_at_4dp": true
+   },
+   {
+    "check": "per-cell readout CFGen_concat_EM_0500",
+    "recomputed": [
+     0.413,
+     0.2745,
+     0.3125
+    ],
+    "frozen": [
+     0.413,
+     0.2745,
+     0.3125
+    ],
+    "identical_at_4dp": true
+   },
+   {
+    "check": "per-cell readout scANVI_concat_EM_0500",
+    "recomputed": [
+     0.453,
+     0.2839,
+     0.2631
+    ],
+    "frozen": [
+     0.453,
+     0.2839,
+     0.2631
+    ],
+    "identical_at_4dp": true
+   }
+  ]
+ },
+ "files": {
+  "CTRL_TILT_Ventricular": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\scRNA\\condition\\universality\\ct_arms\\CTRL_TILT_Ventricular.npy",
+   "md5": "158dfcd3100c925c6cc9beb7125ed541",
+   "sha256": "75e99c9ba938881fdb572637fafad716b66f85e64716b03d54e6e9b40f321686"
+  },
+  "CTRL_TILT_Endothelial": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\scRNA\\condition\\universality\\ct_arms\\CTRL_TILT_Endothelial.npy",
+   "md5": "d8bbe2b2c11c90f8c571abc041eda47f",
+   "sha256": "c58e7e40d21d6b7410103e7bb7be869fb507033acd707828dd01bbbe5645a241"
+  },
+  "CTRL_TILT_Myeloid": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\X\\Baseline\\OURS\\results\\linspace_T_O_K32_spilot_run1c_s20260625_samp20260902_batched1_chunk256_CONDFULL_Myeloid_tables_kz_n5000_g0p4_noa4.npy",
+   "md5": "9361cb479cbb64bac8584e27b9f25dd7",
+   "sha256": "e342982ff0f80681de07d10476cf901c7c95811a494e124dddfa1ecc66f2e30a"
+  },
+  "CONCAT_EM0500": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\results\\diagnostics\\e25_em_ruler\\concat\\CONCAT_EM0500.npy",
+   "md5": "0fbb8e24aff566384da9cd6671c4c213",
+   "sha256": "46eee156faf578e0ec004ed09c1a4709841e31340d27ea93ce4a6b3113d5410e"
+  },
+  "CONCAT_EM0700": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\results\\diagnostics\\e25_em_ruler\\concat\\CONCAT_EM0700.npy",
+   "md5": "26c8699129849cfa007004ad5e017751",
+   "sha256": "2d7a702e517b819a3229db07dfbd6c07d1476514278ad08108e15dbfeba72d74"
+  },
+  "CONCAT_EM0615": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\results\\diagnostics\\e25_em_ruler\\concat\\CONCAT_EM0615.npy",
+   "md5": "b085cb5e6799ca9cc72ad58a073fea71",
+   "sha256": "56bd61594ee4121f5f02e348e137fb79e331e93fe805be6e0bc77a1d2c50dc41"
+  },
+  "OURS_quota_D2": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\multicluster\\out\\multicluster_D2_Endothelial0.50_Myeloid0.50_M20000_N10000_mixture_seed20261087.npy",
+   "md5": "7837a9e6a1b377d9a9cb1dae9fa1f84b",
+   "sha256": "a712a759dfd4049d5cf5058c5720a5ac917105f7e7ab4c0c105a81c9c9e8ed4f"
+  },
+  "OURS_equal_weight_A": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\multicluster\\out\\multicluster_A_Endothelial0.50_Myeloid0.50_M20000_N10000_mixture_seed20261080.npy",
+   "md5": "2431ef2a819d1527ea51528e4c60fb98",
+   "sha256": "70030772f589b4ac100d9cba99284d4c20ee860fdf883b6c28b16a70f38b3f2f"
+  },
+  "CFGen_concat_EM_0500": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_cfgen\\out\\e22\\cfgen_concat_EM_0500_n10000.npy",
+   "md5": "7c480f412bee765e548ed0b310d2f5db",
+   "sha256": "15e818226610837ed742c130a0f98fe3d7f4cf8a8f9dc0a9d1d3a7912eaf0469"
+  },
+  "scANVI_concat_EM_0500": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scanvi\\out\\e22e\\scanvi_concat_EM_0500_n10000.npy",
+   "md5": "54b08085295a27b6575c8a0683d19c2a",
+   "sha256": "d192819c209ca791ec7e948c34b4a18ec630ce671d695987bafef30d50726e05"
+  }
+ }
+}

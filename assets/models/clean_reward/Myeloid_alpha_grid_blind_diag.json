@@ -1,0 +1,60 @@
+{
+ "target": "Myeloid",
+ "m1_source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\scRNA\\condition\\targets_J2.npz",
+ "m1_caliber": "condition/RESULTS.md section 1: median |mean-m1|/m1 over m1>0",
+ "corr_features_source": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\scRNA\\condition\\residual_v3\\out_Myeloid\\split_indices.npz",
+ "corr_reference": "real train cells in target_val of the same split",
+ "seed": 20260912,
+ "n": 0,
+ "sub": 0,
+ "rows": [
+  {
+   "arm": "alpha0",
+   "file": "clean_reward\\Myeloid_clean_endpoint_alpha0p0_N2500.npy",
+   "n": 2500,
+   "m1_rel_median": 0.5692896508985748,
+   "m1_rel_p90": 3.924391172413794,
+   "m1_rel_median_fitsplit": 0.5800000000000001,
+   "corr_error": 0.6748750327568979,
+   "zero_fraction": 0.9346704,
+   "library_median": 166.0,
+   "mean": 0.2214624
+  },
+  {
+   "arm": "alpha1",
+   "file": "clean_reward\\Myeloid_clean_endpoint_alpha1p0_N2500.npy",
+   "n": 2500,
+   "m1_rel_median": 0.39162835313910893,
+   "m1_rel_p90": 2.1707619704433503,
+   "m1_rel_median_fitsplit": 0.3876106194690265,
+   "corr_error": 0.4904036892877072,
+   "zero_fraction": 0.9108494,
+   "library_median": 287.0,
+   "mean": 0.3013844
+  },
+  {
+   "arm": "alpha2",
+   "file": "clean_reward\\Myeloid_clean_endpoint_alpha2p0_N2500.npy",
+   "n": 2500,
+   "m1_rel_median": 0.38618898140438523,
+   "m1_rel_p90": 1.8377312975416171,
+   "m1_rel_median_fitsplit": 0.3762711864406779,
+   "corr_error": 0.4480844662814955,
+   "zero_fraction": 0.9073858,
+   "library_median": 306.0,
+   "mean": 0.310446
+  },
+  {
+   "arm": "alpha4",
+   "file": "clean_reward\\Myeloid_clean_endpoint_alpha4p0_N2500.npy",
+   "n": 2500,
+   "m1_rel_median": 0.42950677278113725,
+   "m1_rel_p90": 2.1580571428571425,
+   "m1_rel_median_fitsplit": 0.3998237885462555,
+   "corr_error": 0.42731780842847294,
+   "zero_fraction": 0.9043126,
+   "library_median": 317.0,
+   "mean": 0.3246178
+  }
+ ]
+}

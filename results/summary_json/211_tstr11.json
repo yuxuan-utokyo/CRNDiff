@@ -1,0 +1,5235 @@
+{
+ "ticket": 211,
+ "stage": "Stage 4 -- 11-class replacement TSTR",
+ "design": {
+  "why": "the published table trains and tests on the three target classes only, so 'neuronal' effectively means 'neither endothelial nor myeloid'. Here the three target classes are supplied ONLY by generated cells while the other eight come from real training cells, and the test set is every held-out real cell, so a delivery labelled neuronal has to win its boundary against real fibroblasts too.",
+  "train": "Endothelial / Myeloid / Neuronal: generated only, n = min(2500, pool); other 8 classes: real training cells, n = min(2500, class); no real cells in the three target classes",
+  "test": "all 45145 held-out real cells, 11 classes, not subsampled",
+  "classifier": "identical to the frozen body's fit_score except n_jobs=1",
+  "class_order": "sorted() -- dictionary order"
+ },
+ "labels": [
+  "Adipocytes",
+  "Atrial_Cardiomyocyte",
+  "Endothelial",
+  "Fibroblast",
+  "Lymphoid",
+  "Mesothelial",
+  "Myeloid",
+  "Neuronal",
+  "Pericytes",
+  "Smooth_muscle_cells",
+  "Ventricular_Cardiomyocyte"
+ ],
+ "n_classes": 11,
+ "eval_seeds": [
+  20260833,
+  20260834,
+  20260835,
+  20260836,
+  20260837
+ ],
+ "sd_convention": "ddof=1 over the five evaluation seeds",
+ "n_test": 45145,
+ "n_test_per_class": {
+  "Adipocytes": 379,
+  "Atrial_Cardiomyocyte": 2348,
+  "Endothelial": 10057,
+  "Fibroblast": 5934,
+  "Lymphoid": 1721,
+  "Mesothelial": 71,
+  "Myeloid": 2302,
+  "Neuronal": 396,
+  "Pericytes": 7785,
+  "Smooth_muscle_cells": 1624,
+  "Ventricular_Cardiomyocyte": 12528
+ },
+ "n_per_type_train": 2500,
+ "classifier_def": {
+  "model": "LogisticRegression(penalty='l2', C=1.0, solver='lbfgs', max_iter=2000, class_weight='balanced', random_state=20260833, n_jobs=1)",
+  "preprocessing": "cp10k_log1p (the body's own function object)",
+  "only_edit_vs_body": [
+   "random_state=SEED, n_jobs=-1)",
+   "random_state=seed, n_jobs=1)"
+  ],
+  "diff_file": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\summary\\211_fit_score_diff.txt"
+ },
+ "selfcheck_3class": {
+  "ticket": 211,
+  "stage": "Stage 2 -- 3-class self-check of the new script",
+  "criterion": "every number within 1e-09 of e33_deployed_arm.json block_a (prereg section 6)",
+  "what_this_proves": "the classifier, the preprocessing and the sampling logic in analysis/e33_tstr11.py are the ones the published table used; the only variable left for Stage 3 is the number of classes",
+  "reference": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\summary\\e33_deployed_arm.json",
+  "reference_sha256": "957c6d36ce25242e98496c804c5169b73c6eec1370ee801591f4c0d2c37ea7a9",
+  "n_compared": 100,
+  "n_outside_tol": 0,
+  "n_bitwise_equal": 100,
+  "worst_abs_diff": 0.0,
+  "passed": true,
+  "also_bitwise": true,
+  "n_jobs_note": "the only edit to fit_score was n_jobs=-1 -> n_jobs=1; the numbers above are the empirical check that it changes nothing on the lbfgs multinomial path",
+  "per_seed_runs": {
+   "20260833": {
+    "file": "raw_3class_seed_20260833.json",
+    "sha256": "a09f269744ef1203a36211bcdc1308531a2cdb4fdcca2751db06749038cbe860",
+    "cpu_threads": 2,
+    "priority": {
+     "nice": "BELOW_NORMAL_PRIORITY_CLASS",
+     "pid": 43064
+    },
+    "walltime_s": 13.189697265625,
+    "fit_score_changed_lines": [
+     "random_state=SEED, n_jobs=-1)",
+     "random_state=seed, n_jobs=1)"
+    ]
+   },
+   "20260834": {
+    "file": "raw_3class_seed_20260834.json",
+    "sha256": "9f8609621fca9220f85e61df225c258a0d16ea1695bd3681116baff98b753b57",
+    "cpu_threads": 2,
+    "priority": {
+     "nice": "BELOW_NORMAL_PRIORITY_CLASS",
+     "pid": 24164
+    },
+    "walltime_s": 13.324532270431519,
+    "fit_score_changed_lines": [
+     "random_state=SEED, n_jobs=-1)",
+     "random_state=seed, n_jobs=1)"
+    ]
+   },
+   "20260835": {
+    "file": "raw_3class_seed_20260835.json",
+    "sha256": "4c31328382a703bce590ee4f78ce40d51eb4aeff5acd68e64e8e4f881613a755",
+    "cpu_threads": 2,
+    "priority": {
+     "nice": "BELOW_NORMAL_PRIORITY_CLASS",
+     "pid": 4812
+    },
+    "walltime_s": 13.364304065704346,
+    "fit_score_changed_lines": [
+     "random_state=SEED, n_jobs=-1)",
+     "random_state=seed, n_jobs=1)"
+    ]
+   },
+   "20260836": {
+    "file": "raw_3class_seed_20260836.json",
+    "sha256": "e7272333604f4c777c649d85fb122338e5fbc6bfd0bcc1a9577c22c22055f233",
+    "cpu_threads": 2,
+    "priority": {
+     "nice": "BELOW_NORMAL_PRIORITY_CLASS",
+     "pid": 14092
+    },
+    "walltime_s": 13.439725160598755,
+    "fit_score_changed_lines": [
+     "random_state=SEED, n_jobs=-1)",
+     "random_state=seed, n_jobs=1)"
+    ]
+   },
+   "20260837": {
+    "file": "raw_3class_seed_20260837.json",
+    "sha256": "692d06ebbc4d7c1b1b298f443f5b6749a4c16b8de683da672ed380d962c6899d",
+    "cpu_threads": 2,
+    "priority": {
+     "nice": "BELOW_NORMAL_PRIORITY_CLASS",
+     "pid": 18320
+    },
+    "walltime_s": 13.104460716247559,
+    "fit_score_changed_lines": [
+     "random_state=SEED, n_jobs=-1)",
+     "random_state=seed, n_jobs=1)"
+    ]
+   }
+  },
+  "outside_tol": [],
+  "rows": [
+   {
+    "seed": 20260833,
+    "arm": "REAL (ceiling)",
+    "metric": "macro_F1",
+    "here": 0.9957466465796632,
+    "E33b": 0.9957466465796632,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260833,
+    "arm": "REAL (ceiling)",
+    "metric": "Endothelial",
+    "here": 0.999054491166957,
+    "E33b": 0.999054491166957,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260833,
+    "arm": "REAL (ceiling)",
+    "metric": "Myeloid",
+    "here": 0.9969683845820702,
+    "E33b": 0.9969683845820702,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260833,
+    "arm": "REAL (ceiling)",
+    "metric": "Neuronal",
+    "here": 0.9912170639899623,
+    "E33b": 0.9912170639899623,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260833,
+    "arm": "OURS",
+    "metric": "macro_F1",
+    "here": 0.9897140752147097,
+    "E33b": 0.9897140752147097,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260833,
+    "arm": "OURS",
+    "metric": "Endothelial",
+    "here": 0.9978590988299726,
+    "E33b": 0.9978590988299726,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260833,
+    "arm": "OURS",
+    "metric": "Myeloid",
+    "here": 0.9937270170884707,
+    "E33b": 0.9937270170884707,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260833,
+    "arm": "OURS",
+    "metric": "Neuronal",
+    "here": 0.9775561097256857,
+    "E33b": 0.9775561097256857,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260833,
+    "arm": "scVI",
+    "metric": "macro_F1",
+    "here": 0.9703113060082073,
+    "E33b": 0.9703113060082073,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260833,
+    "arm": "scVI",
+    "metric": "Endothelial",
+    "here": 0.9959570751185426,
+    "E33b": 0.9959570751185426,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260833,
+    "arm": "scVI",
+    "metric": "Myeloid",
+    "here": 0.9967525438406581,
+    "E33b": 0.9967525438406581,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260833,
+    "arm": "scVI",
+    "metric": "Neuronal",
+    "here": 0.9182242990654206,
+    "E33b": 0.9182242990654206,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260833,
+    "arm": "scANVI",
+    "metric": "macro_F1",
+    "here": 0.8824544818149388,
+    "E33b": 0.8824544818149388,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260833,
+    "arm": "scANVI",
+    "metric": "Endothelial",
+    "here": 0.9799705897266873,
+    "E33b": 0.9799705897266873,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260833,
+    "arm": "scANVI",
+    "metric": "Myeloid",
+    "here": 0.9922010398613518,
+    "E33b": 0.9922010398613518,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260833,
+    "arm": "scANVI",
+    "metric": "Neuronal",
+    "here": 0.6751918158567775,
+    "E33b": 0.6751918158567775,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260833,
+    "arm": "CFGen",
+    "metric": "macro_F1",
+    "here": 0.9850478803504261,
+    "E33b": 0.9850478803504261,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260833,
+    "arm": "CFGen",
+    "metric": "Endothelial",
+    "here": 0.9977084786290724,
+    "E33b": 0.9977084786290724,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260833,
+    "arm": "CFGen",
+    "metric": "Myeloid",
+    "here": 0.9939315127871695,
+    "E33b": 0.9939315127871695,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260833,
+    "arm": "CFGen",
+    "metric": "Neuronal",
+    "here": 0.9635036496350365,
+    "E33b": 0.9635036496350365,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260834,
+    "arm": "REAL (ceiling)",
+    "metric": "macro_F1",
+    "here": 0.9931782107589052,
+    "E33b": 0.9931782107589052,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260834,
+    "arm": "REAL (ceiling)",
+    "metric": "Endothelial",
+    "here": 0.9987555378565384,
+    "E33b": 0.9987555378565384,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260834,
+    "arm": "REAL (ceiling)",
+    "metric": "Myeloid",
+    "here": 0.9969683845820702,
+    "E33b": 0.9969683845820702,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260834,
+    "arm": "REAL (ceiling)",
+    "metric": "Neuronal",
+    "here": 0.9838107098381071,
+    "E33b": 0.9838107098381071,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260834,
+    "arm": "OURS",
+    "metric": "macro_F1",
+    "here": 0.9903607374728362,
+    "E33b": 0.9903607374728362,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260834,
+    "arm": "OURS",
+    "metric": "Endothelial",
+    "here": 0.997861228550112,
+    "E33b": 0.997861228550112,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260834,
+    "arm": "OURS",
+    "metric": "Myeloid",
+    "here": 0.99327110918168,
+    "E33b": 0.99327110918168,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260834,
+    "arm": "OURS",
+    "metric": "Neuronal",
+    "here": 0.9799498746867168,
+    "E33b": 0.9799498746867168,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260834,
+    "arm": "scVI",
+    "metric": "macro_F1",
+    "here": 0.9685389826499883,
+    "E33b": 0.9685389826499883,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260834,
+    "arm": "scVI",
+    "metric": "Endothelial",
+    "here": 0.995756577305177,
+    "E33b": 0.995756577305177,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260834,
+    "arm": "scVI",
+    "metric": "Myeloid",
+    "here": 0.9969683845820702,
+    "E33b": 0.9969683845820702,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260834,
+    "arm": "scVI",
+    "metric": "Neuronal",
+    "here": 0.9128919860627178,
+    "E33b": 0.9128919860627178,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260834,
+    "arm": "scANVI",
+    "metric": "macro_F1",
+    "here": 0.874160931969516,
+    "E33b": 0.874160931969516,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260834,
+    "arm": "scANVI",
+    "metric": "Endothelial",
+    "here": 0.9802788339670468,
+    "E33b": 0.9802788339670468,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260834,
+    "arm": "scANVI",
+    "metric": "Myeloid",
+    "here": 0.9838498472282846,
+    "E33b": 0.9838498472282846,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260834,
+    "arm": "scANVI",
+    "metric": "Neuronal",
+    "here": 0.6583541147132169,
+    "E33b": 0.6583541147132169,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260834,
+    "arm": "CFGen",
+    "metric": "macro_F1",
+    "here": 0.9872515776423668,
+    "E33b": 0.9872515776423668,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260834,
+    "arm": "CFGen",
+    "metric": "Endothelial",
+    "here": 0.9980572851805729,
+    "E33b": 0.9980572851805729,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260834,
+    "arm": "CFGen",
+    "metric": "Myeloid",
+    "here": 0.9943722943722944,
+    "E33b": 0.9943722943722944,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260834,
+    "arm": "CFGen",
+    "metric": "Neuronal",
+    "here": 0.9693251533742331,
+    "E33b": 0.9693251533742331,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260835,
+    "arm": "REAL (ceiling)",
+    "metric": "macro_F1",
+    "here": 0.9949749722449859,
+    "E33b": 0.9949749722449859,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260835,
+    "arm": "REAL (ceiling)",
+    "metric": "Endothelial",
+    "here": 0.9990046780133374,
+    "E33b": 0.9990046780133374,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260835,
+    "arm": "REAL (ceiling)",
+    "metric": "Myeloid",
+    "here": 0.9971843188217457,
+    "E33b": 0.9971843188217457,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260835,
+    "arm": "REAL (ceiling)",
+    "metric": "Neuronal",
+    "here": 0.9887359198998749,
+    "E33b": 0.9887359198998749,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260835,
+    "arm": "OURS",
+    "metric": "macro_F1",
+    "here": 0.9900069414768322,
+    "E33b": 0.9900069414768322,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260835,
+    "arm": "OURS",
+    "metric": "Endothelial",
+    "here": 0.997861228550112,
+    "E33b": 0.997861228550112,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260835,
+    "arm": "OURS",
+    "metric": "Myeloid",
+    "here": 0.9934895833333334,
+    "E33b": 0.9934895833333334,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260835,
+    "arm": "OURS",
+    "metric": "Neuronal",
+    "here": 0.9786700125470514,
+    "E33b": 0.9786700125470514,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260835,
+    "arm": "scVI",
+    "metric": "macro_F1",
+    "here": 0.9756341392474118,
+    "E33b": 0.9756341392474118,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260835,
+    "arm": "scVI",
+    "metric": "Endothelial",
+    "here": 0.9966581874407701,
+    "E33b": 0.9966581874407701,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260835,
+    "arm": "scVI",
+    "metric": "Myeloid",
+    "here": 0.9967525438406581,
+    "E33b": 0.9967525438406581,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260835,
+    "arm": "scVI",
+    "metric": "Neuronal",
+    "here": 0.9334916864608076,
+    "E33b": 0.9334916864608076,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260835,
+    "arm": "scANVI",
+    "metric": "macro_F1",
+    "here": 0.8766721206404888,
+    "E33b": 0.8766721206404888,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260835,
+    "arm": "scANVI",
+    "metric": "Endothelial",
+    "here": 0.9785721539555194,
+    "E33b": 0.9785721539555194,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260835,
+    "arm": "scANVI",
+    "metric": "Myeloid",
+    "here": 0.990909090909091,
+    "E33b": 0.990909090909091,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260835,
+    "arm": "scANVI",
+    "metric": "Neuronal",
+    "here": 0.6605351170568562,
+    "E33b": 0.6605351170568562,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260835,
+    "arm": "CFGen",
+    "metric": "macro_F1",
+    "here": 0.9822281616125513,
+    "E33b": 0.9822281616125513,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260835,
+    "arm": "CFGen",
+    "metric": "Endothelial",
+    "here": 0.9976086090075728,
+    "E33b": 0.9976086090075728,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260835,
+    "arm": "CFGen",
+    "metric": "Myeloid",
+    "here": 0.9937079626817097,
+    "E33b": 0.9937079626817097,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260835,
+    "arm": "CFGen",
+    "metric": "Neuronal",
+    "here": 0.9553679131483716,
+    "E33b": 0.9553679131483716,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260836,
+    "arm": "REAL (ceiling)",
+    "metric": "macro_F1",
+    "here": 0.99436881995041,
+    "E33b": 0.99436881995041,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260836,
+    "arm": "REAL (ceiling)",
+    "metric": "Endothelial",
+    "here": 0.9988553227492162,
+    "E33b": 0.9988553227492162,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260836,
+    "arm": "REAL (ceiling)",
+    "metric": "Myeloid",
+    "here": 0.9967511371020142,
+    "E33b": 0.9967511371020142,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260836,
+    "arm": "REAL (ceiling)",
+    "metric": "Neuronal",
+    "here": 0.9875,
+    "E33b": 0.9875,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260836,
+    "arm": "OURS",
+    "metric": "macro_F1",
+    "here": 0.9896887489795833,
+    "E33b": 0.9896887489795833,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260836,
+    "arm": "OURS",
+    "metric": "Endothelial",
+    "here": 0.9978610157687907,
+    "E33b": 0.9978610157687907,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260836,
+    "arm": "OURS",
+    "metric": "Myeloid",
+    "here": 0.9937052311699588,
+    "E33b": 0.9937052311699588,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260836,
+    "arm": "OURS",
+    "metric": "Neuronal",
+    "here": 0.9775,
+    "E33b": 0.9775,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260836,
+    "arm": "scVI",
+    "metric": "macro_F1",
+    "here": 0.976708207318744,
+    "E33b": 0.976708207318744,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260836,
+    "arm": "scVI",
+    "metric": "Endothelial",
+    "here": 0.9967582664206274,
+    "E33b": 0.9967582664206274,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260836,
+    "arm": "scVI",
+    "metric": "Myeloid",
+    "here": 0.9965367965367965,
+    "E33b": 0.9965367965367965,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260836,
+    "arm": "scVI",
+    "metric": "Neuronal",
+    "here": 0.9368295589988082,
+    "E33b": 0.9368295589988082,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260836,
+    "arm": "scANVI",
+    "metric": "macro_F1",
+    "here": 0.8977654047323546,
+    "E33b": 0.8977654047323546,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260836,
+    "arm": "scANVI",
+    "metric": "Endothelial",
+    "here": 0.9847582517411931,
+    "E33b": 0.9847582517411931,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260836,
+    "arm": "scANVI",
+    "metric": "Myeloid",
+    "here": 0.9902152641878669,
+    "E33b": 0.9902152641878669,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260836,
+    "arm": "scANVI",
+    "metric": "Neuronal",
+    "here": 0.7183226982680037,
+    "E33b": 0.7183226982680037,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260836,
+    "arm": "CFGen",
+    "metric": "macro_F1",
+    "here": 0.9797264756677334,
+    "E33b": 0.9797264756677334,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260836,
+    "arm": "CFGen",
+    "metric": "Endothelial",
+    "here": 0.9973102211595936,
+    "E33b": 0.9973102211595936,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260836,
+    "arm": "CFGen",
+    "metric": "Myeloid",
+    "here": 0.9910888937187567,
+    "E33b": 0.9910888937187567,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260836,
+    "arm": "CFGen",
+    "metric": "Neuronal",
+    "here": 0.9507803121248499,
+    "E33b": 0.9507803121248499,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260837,
+    "arm": "REAL (ceiling)",
+    "metric": "macro_F1",
+    "here": 0.9953159999795886,
+    "E33b": 0.9953159999795886,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260837,
+    "arm": "REAL (ceiling)",
+    "metric": "Endothelial",
+    "here": 0.9990046780133374,
+    "E33b": 0.9990046780133374,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260837,
+    "arm": "REAL (ceiling)",
+    "metric": "Myeloid",
+    "here": 0.9969683845820702,
+    "E33b": 0.9969683845820702,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260837,
+    "arm": "REAL (ceiling)",
+    "metric": "Neuronal",
+    "here": 0.9899749373433584,
+    "E33b": 0.9899749373433584,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260837,
+    "arm": "OURS",
+    "metric": "macro_F1",
+    "here": 0.9892214665880052,
+    "E33b": 0.9892214665880052,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260837,
+    "arm": "OURS",
+    "metric": "Endothelial",
+    "here": 0.9979594883790375,
+    "E33b": 0.9979594883790375,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260837,
+    "arm": "OURS",
+    "metric": "Myeloid",
+    "here": 0.9945805332755256,
+    "E33b": 0.9945805332755256,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260837,
+    "arm": "OURS",
+    "metric": "Neuronal",
+    "here": 0.9751243781094527,
+    "E33b": 0.9751243781094527,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260837,
+    "arm": "scVI",
+    "metric": "macro_F1",
+    "here": 0.961997760340103,
+    "E33b": 0.961997760340103,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260837,
+    "arm": "scVI",
+    "metric": "Endothelial",
+    "here": 0.9948025987006497,
+    "E33b": 0.9948025987006497,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260837,
+    "arm": "scVI",
+    "metric": "Myeloid",
+    "here": 0.9967525438406581,
+    "E33b": 0.9967525438406581,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260837,
+    "arm": "scVI",
+    "metric": "Neuronal",
+    "here": 0.8944381384790011,
+    "E33b": 0.8944381384790011,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260837,
+    "arm": "scANVI",
+    "metric": "macro_F1",
+    "here": 0.8934511645814386,
+    "E33b": 0.8934511645814386,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260837,
+    "arm": "scANVI",
+    "metric": "Endothelial",
+    "here": 0.9831673659202346,
+    "E33b": 0.9831673659202346,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260837,
+    "arm": "scANVI",
+    "metric": "Myeloid",
+    "here": 0.9904596704249783,
+    "E33b": 0.9904596704249783,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260837,
+    "arm": "scANVI",
+    "metric": "Neuronal",
+    "here": 0.7067264573991031,
+    "E33b": 0.7067264573991031,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260837,
+    "arm": "CFGen",
+    "metric": "macro_F1",
+    "here": 0.9802810147763849,
+    "E33b": 0.9802810147763849,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260837,
+    "arm": "CFGen",
+    "metric": "Endothelial",
+    "here": 0.9969616974647607,
+    "E33b": 0.9969616974647607,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260837,
+    "arm": "CFGen",
+    "metric": "Myeloid",
+    "here": 0.9919582699413171,
+    "E33b": 0.9919582699413171,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   },
+   {
+    "seed": 20260837,
+    "arm": "CFGen",
+    "metric": "Neuronal",
+    "here": 0.9519230769230769,
+    "E33b": 0.9519230769230769,
+    "abs_diff": 0.0,
+    "within_tol": true,
+    "bitwise_equal": true
+   }
+  ],
+  "written_at": "2026-09-14 16:29:34"
+ },
+ "arms": {
+  "REAL (ceiling)": {
+   "macro_F1_11class": {
+    "mean": 0.9514066139777688,
+    "sd": 0.0016927060726553943,
+    "n_seeds": 5,
+    "per_seed": [
+     0.9486280566035052,
+     0.9512955693681242,
+     0.952796687667987,
+     0.9515768498724179,
+     0.9527359063768099
+    ],
+    "min": 0.9486280566035052,
+    "max": 0.952796687667987
+   },
+   "Endothelial": {
+    "F1": {
+     "mean": 0.9868300970550994,
+     "sd": 0.0006587632372633475,
+     "n_seeds": 5,
+     "per_seed": [
+      0.986609373438593,
+      0.9876764955346006,
+      0.9866826275624719,
+      0.9859449760765551,
+      0.9872370126632765
+     ],
+     "min": 0.9859449760765551,
+     "max": 0.9876764955346006
+    },
+    "precision": {
+     "mean": 0.9902104828983772,
+     "sd": 0.0012429847138063213,
+     "n_seeds": 5,
+     "per_seed": [
+      0.991563724013257,
+      0.991187662727819,
+      0.9898919135308246,
+      0.988408114319976,
+      0.99000099990001
+     ],
+     "min": 0.988408114319976,
+     "max": 0.991563724013257
+    },
+    "recall": {
+     "mean": 0.9834741970766631,
+     "sd": 0.0010810363269306668,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9817042855722382,
+      0.9841901163368798,
+      0.9834940837227801,
+      0.9834940837227801,
+      0.9844884160286368
+     ],
+     "min": 0.9817042855722382,
+     "max": 0.9844884160286368
+    }
+   },
+   "Myeloid": {
+    "F1": {
+     "mean": 0.9662011769612882,
+     "sd": 0.005454014675126549,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9567307692307693,
+      0.9676445211389129,
+      0.9695661558385495,
+      0.9701169337375487,
+      0.9669475048606611
+     ],
+     "min": 0.9567307692307693,
+     "max": 0.9701169337375487
+    },
+    "precision": {
+     "mean": 0.9632210334674747,
+     "sd": 0.0024087295548157464,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9626209322779243,
+      0.9610111396743788,
+      0.9635349635349635,
+      0.9671848013816926,
+      0.9617533304684143
+     ],
+     "min": 0.9610111396743788,
+     "max": 0.9671848013816926
+    },
+    "recall": {
+     "mean": 0.969244135534318,
+     "sd": 0.010332080234917166,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9509122502172024,
+      0.974370112945265,
+      0.9756733275412685,
+      0.9730668983492615,
+      0.9721980886185926
+     ],
+     "min": 0.9509122502172024,
+     "max": 0.9756733275412685
+    }
+   },
+   "Neuronal": {
+    "F1": {
+     "mean": 0.9600251678327894,
+     "sd": 0.0052120937491137624,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9586374695863747,
+      0.9586374695863747,
+      0.9562043795620438,
+      0.9574726609963548,
+      0.969173859432799
+     ],
+     "min": 0.9562043795620438,
+     "max": 0.969173859432799
+    },
+    "precision": {
+     "mean": 0.9284010097850915,
+     "sd": 0.010451700957168443,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9248826291079812,
+      0.9248826291079812,
+      0.9225352112676056,
+      0.9227166276346604,
+      0.946987951807229
+     ],
+     "min": 0.9225352112676056,
+     "max": 0.946987951807229
+    },
+    "recall": {
+     "mean": 0.9939393939393939,
+     "sd": 0.0013831377714776706,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9949494949494949,
+      0.9949494949494949,
+      0.9924242424242424,
+      0.9949494949494949,
+      0.9924242424242424
+     ],
+     "min": 0.9924242424242424,
+     "max": 0.9949494949494949
+    }
+   },
+   "per_class_F1_all_11": {
+    "Adipocytes": {
+     "mean": 0.9680932076967815,
+     "sd": 0.0013312617127002363,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9679075738125802,
+      0.9665809768637532,
+      0.9702457956015524,
+      0.967741935483871,
+      0.967989756722151
+     ],
+     "min": 0.9665809768637532,
+     "max": 0.9702457956015524
+    },
+    "Atrial_Cardiomyocyte": {
+     "mean": 0.9938422990688031,
+     "sd": 0.00047165130907579676,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9932088285229203,
+      0.9940501487462814,
+      0.9938468067048589,
+      0.9936305732484076,
+      0.994475138121547
+     ],
+     "min": 0.9932088285229203,
+     "max": 0.994475138121547
+    },
+    "Endothelial": {
+     "mean": 0.9868300970550994,
+     "sd": 0.0006587632372633475,
+     "n_seeds": 5,
+     "per_seed": [
+      0.986609373438593,
+      0.9876764955346006,
+      0.9866826275624719,
+      0.9859449760765551,
+      0.9872370126632765
+     ],
+     "min": 0.9859449760765551,
+     "max": 0.9876764955346006
+    },
+    "Fibroblast": {
+     "mean": 0.98904605505419,
+     "sd": 0.0006449461898724606,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9885406134142232,
+      0.9899586532782044,
+      0.988352464550979,
+      0.9890258315043052,
+      0.9893527125232381
+     ],
+     "min": 0.988352464550979,
+     "max": 0.9899586532782044
+    },
+    "Lymphoid": {
+     "mean": 0.9546238208490211,
+     "sd": 0.008178283372297809,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9404693760732684,
+      0.9565724278635966,
+      0.9589758510328775,
+      0.9611594202898551,
+      0.9559420289855073
+     ],
+     "min": 0.9404693760732684,
+     "max": 0.9611594202898551
+    },
+    "Mesothelial": {
+     "mean": 0.9018008341316612,
+     "sd": 0.008206774892137083,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9054054054054054,
+      0.8918918918918919,
+      0.9115646258503401,
+      0.8947368421052632,
+      0.9054054054054054
+     ],
+     "min": 0.8918918918918919,
+     "max": 0.9115646258503401
+    },
+    "Myeloid": {
+     "mean": 0.9662011769612882,
+     "sd": 0.005454014675126549,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9567307692307693,
+      0.9676445211389129,
+      0.9695661558385495,
+      0.9701169337375487,
+      0.9669475048606611
+     ],
+     "min": 0.9567307692307693,
+     "max": 0.9701169337375487
+    },
+    "Neuronal": {
+     "mean": 0.9600251678327894,
+     "sd": 0.0052120937491137624,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9586374695863747,
+      0.9586374695863747,
+      0.9562043795620438,
+      0.9574726609963548,
+      0.969173859432799
+     ],
+     "min": 0.9562043795620438,
+     "max": 0.969173859432799
+    },
+    "Pericytes": {
+     "mean": 0.9359652314456868,
+     "sd": 0.0018137669882971725,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9333509304474066,
+      0.9383138234907273,
+      0.9367770767613038,
+      0.9356794516936866,
+      0.9357048748353096
+     ],
+     "min": 0.9333509304474066,
+     "max": 0.9383138234907273
+    },
+    "Smooth_muscle_cells": {
+     "mean": 0.8134186415097739,
+     "sd": 0.003647505868874645,
+     "n_seeds": 5,
+     "per_seed": [
+      0.8080043266630611,
+      0.8171631593331511,
+      0.8130661542684601,
+      0.8163934426229508,
+      0.8124661246612466
+     ],
+     "min": 0.8080043266630611,
+     "max": 0.8171631593331511
+    },
+    "Ventricular_Cardiomyocyte": {
+     "mean": 0.9956262221503621,
+     "sd": 0.0002730187839560433,
+     "n_seeds": 5,
+     "per_seed": [
+      0.996043956043956,
+      0.9957616953218712,
+      0.9954816266144189,
+      0.9954432808377968,
+      0.995400551933768
+     ],
+     "min": 0.995400551933768,
+     "max": 0.996043956043956
+    }
+   },
+   "n_train_per_class": [
+    2500,
+    2500,
+    2500,
+    2500,
+    2500,
+    574,
+    2500,
+    2500,
+    2500,
+    2500,
+    2500
+   ]
+  },
+  "OURS": {
+   "macro_F1_11class": {
+    "mean": 0.9405317895452641,
+    "sd": 0.0014387594373733513,
+    "n_seeds": 5,
+    "per_seed": [
+     0.9405700059844148,
+     0.9381878932945743,
+     0.9414623320605288,
+     0.9419169949469439,
+     0.9405217214398586
+    ],
+    "min": 0.9381878932945743,
+    "max": 0.9419169949469439
+   },
+   "Endothelial": {
+    "F1": {
+     "mean": 0.9802743903012532,
+     "sd": 0.0015399573121348197,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9812621795832709,
+      0.9781978197819782,
+      0.9810660938202528,
+      0.9817509124543773,
+      0.9790949458663872
+     ],
+     "min": 0.9781978197819782,
+     "max": 0.9817509124543773
+    },
+    "precision": {
+     "mean": 0.9851785030622391,
+     "sd": 0.0019097952737235982,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9862394535958217,
+      0.9839050397344331,
+      0.9858433734939759,
+      0.9873290426387772,
+      0.9825756058481875
+     ],
+     "min": 0.9825756058481875,
+     "max": 0.9873290426387772
+    },
+    "recall": {
+     "mean": 0.9754201053992244,
+     "sd": 0.001626880806382777,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9763348911206126,
+      0.9725564283583573,
+      0.9763348911206126,
+      0.9762354578900269,
+      0.9756388585065129
+     ],
+     "min": 0.9725564283583573,
+     "max": 0.9763348911206126
+    }
+   },
+   "Myeloid": {
+    "F1": {
+     "mean": 0.9425400717509783,
+     "sd": 0.0032109873869172407,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9422735346358793,
+      0.9378606302707501,
+      0.9462555066079296,
+      0.9446902654867256,
+      0.941620421753607
+     ],
+     "min": 0.9378606302707501,
+     "max": 0.9462555066079296
+    },
+    "precision": {
+     "mean": 0.9615046555752583,
+     "sd": 0.0021341901472913182,
+     "n_seeds": 5,
+     "per_seed": [
+      0.963669391462307,
+      0.9587114337568058,
+      0.9597855227882037,
+      0.9625788999098287,
+      0.9627780299591466
+     ],
+     "min": 0.9587114337568058,
+     "max": 0.963669391462307
+    },
+    "recall": {
+     "mean": 0.9243266724587315,
+     "sd": 0.005983128718228018,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9218071242397915,
+      0.9178974804517811,
+      0.9331016507384883,
+      0.9274543874891399,
+      0.921372719374457
+     ],
+     "min": 0.9178974804517811,
+     "max": 0.9331016507384883
+    }
+   },
+   "Neuronal": {
+    "F1": {
+     "mean": 0.9148480300957356,
+     "sd": 0.009457798030112527,
+     "n_seeds": 5,
+     "per_seed": [
+      0.918648310387985,
+      0.8995098039215687,
+      0.9122373300370828,
+      0.9211514392991239,
+      0.9226932668329177
+     ],
+     "min": 0.8995098039215687,
+     "max": 0.9226932668329177
+    },
+    "precision": {
+     "mean": 0.9004846765509271,
+     "sd": 0.016901794062803375,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9106699751861043,
+      0.8738095238095238,
+      0.8934624697336562,
+      0.913151364764268,
+      0.9113300492610837
+     ],
+     "min": 0.8738095238095238,
+     "max": 0.913151364764268
+    },
+    "recall": {
+     "mean": 0.9297979797979797,
+     "sd": 0.003292526467274052,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9267676767676768,
+      0.9267676767676768,
+      0.9318181818181818,
+      0.9292929292929293,
+      0.9343434343434344
+     ],
+     "min": 0.9267676767676768,
+     "max": 0.9343434343434344
+    }
+   },
+   "per_class_F1_all_11": {
+    "Adipocytes": {
+     "mean": 0.9646482971564195,
+     "sd": 0.004316541970423002,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9648894668400521,
+      0.9713541666666666,
+      0.9603072983354674,
+      0.961439588688946,
+      0.9652509652509652
+     ],
+     "min": 0.9603072983354674,
+     "max": 0.9713541666666666
+    },
+    "Atrial_Cardiomyocyte": {
+     "mean": 0.9930724766509726,
+     "sd": 0.0009630909384422464,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9936170212765958,
+      0.9923534409515717,
+      0.9927721088435374,
+      0.9921493740717165,
+      0.994470438111442
+     ],
+     "min": 0.9921493740717165,
+     "max": 0.994470438111442
+    },
+    "Endothelial": {
+     "mean": 0.9802743903012532,
+     "sd": 0.0015399573121348197,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9812621795832709,
+      0.9781978197819782,
+      0.9810660938202528,
+      0.9817509124543773,
+      0.9790949458663872
+     ],
+     "min": 0.9781978197819782,
+     "max": 0.9817509124543773
+    },
+    "Fibroblast": {
+     "mean": 0.988741411273427,
+     "sd": 0.0005714637837579522,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9887300252312868,
+      0.9886200792379668,
+      0.9882769671923758,
+      0.9897098515519568,
+      0.9883701331535479
+     ],
+     "min": 0.9882769671923758,
+     "max": 0.9897098515519568
+    },
+    "Lymphoid": {
+     "mean": 0.9290476764116988,
+     "sd": 0.004128336409037863,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9281118881118882,
+      0.9250559284116331,
+      0.9313365357445607,
+      0.934984520123839,
+      0.9257495096665733
+     ],
+     "min": 0.9250559284116331,
+     "max": 0.934984520123839
+    },
+    "Mesothelial": {
+     "mean": 0.8943128451159815,
+     "sd": 0.005866239199799154,
+     "n_seeds": 5,
+     "per_seed": [
+      0.8859060402684564,
+      0.8904109589041096,
+      0.8979591836734694,
+      0.8993288590604027,
+      0.8979591836734694
+     ],
+     "min": 0.8859060402684564,
+     "max": 0.8993288590604027
+    },
+    "Myeloid": {
+     "mean": 0.9425400717509783,
+     "sd": 0.0032109873869172407,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9422735346358793,
+      0.9378606302707501,
+      0.9462555066079296,
+      0.9446902654867256,
+      0.941620421753607
+     ],
+     "min": 0.9378606302707501,
+     "max": 0.9462555066079296
+    },
+    "Neuronal": {
+     "mean": 0.9148480300957356,
+     "sd": 0.009457798030112527,
+     "n_seeds": 5,
+     "per_seed": [
+      0.918648310387985,
+      0.8995098039215687,
+      0.9122373300370828,
+      0.9211514392991239,
+      0.9226932668329177
+     ],
+     "min": 0.8995098039215687,
+     "max": 0.9226932668329177
+    },
+    "Pericytes": {
+     "mean": 0.9300714495696447,
+     "sd": 0.0016351015587248168,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9321444961646889,
+      0.9284309870232009,
+      0.9304862023653088,
+      0.9309076579535006,
+      0.9283879043415245
+     ],
+     "min": 0.9283879043415245,
+     "max": 0.9321444961646889
+    },
+    "Smooth_muscle_cells": {
+     "mean": 0.8131481774047049,
+     "sd": 0.005238544605305574,
+     "n_seeds": 5,
+     "per_seed": [
+      0.8153252480705623,
+      0.8131147540983606,
+      0.8203870264377214,
+      0.8105320304017373,
+      0.8063818280151434
+     ],
+     "min": 0.8063818280151434,
+     "max": 0.8203870264377214
+    },
+    "Ventricular_Cardiomyocyte": {
+     "mean": 0.9951448592670881,
+     "sd": 0.0004847804384647618,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9953618552578969,
+      0.9951582569725101,
+      0.9950013996081097,
+      0.9944424453240575,
+      0.9957603391728662
+     ],
+     "min": 0.9944424453240575,
+     "max": 0.9957603391728662
+    }
+   },
+   "n_train_per_class": [
+    2500,
+    2500,
+    2500,
+    2500,
+    2500,
+    2500,
+    2500,
+    574,
+    2500,
+    2500,
+    2500
+   ]
+  },
+  "scVI": {
+   "macro_F1_11class": {
+    "mean": 0.9146807923427073,
+    "sd": 0.003342870725747244,
+    "n_seeds": 5,
+    "per_seed": [
+     0.9133692053038583,
+     0.9106785437231973,
+     0.9146715656480168,
+     0.9148131633182697,
+     0.9198714837201944
+    ],
+    "min": 0.9106785437231973,
+    "max": 0.9198714837201944
+   },
+   "Endothelial": {
+    "F1": {
+     "mean": 0.9468140725683014,
+     "sd": 0.005822523740295952,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9542880258899676,
+      0.94019728729963,
+      0.9513881826502594,
+      0.9444814681909058,
+      0.9437153988107443
+     ],
+     "min": 0.94019728729963,
+     "max": 0.9542880258899676
+    },
+    "precision": {
+     "mean": 0.9731827936930133,
+     "sd": 0.001498292542280581,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9708817779606955,
+      0.9726799192090996,
+      0.9735664481215527,
+      0.9748148148148148,
+      0.9739710083589038
+     ],
+     "min": 0.9708817779606955,
+     "max": 0.9748148148148148
+    },
+    "recall": {
+     "mean": 0.9219051406980212,
+     "sd": 0.011844371901632072,
+     "n_seeds": 5,
+     "per_seed": [
+      0.938251963806304,
+      0.9098140598588048,
+      0.9301978721288655,
+      0.9159789201551158,
+      0.9152828875410162
+     ],
+     "min": 0.9098140598588048,
+     "max": 0.938251963806304
+    }
+   },
+   "Myeloid": {
+    "F1": {
+     "mean": 0.8793311818641459,
+     "sd": 0.0180203647424402,
+     "n_seeds": 5,
+     "per_seed": [
+      0.8601161665053243,
+      0.8670353450348641,
+      0.897003745318352,
+      0.8726403823178017,
+      0.8998602701443875
+     ],
+     "min": 0.8601161665053243,
+     "max": 0.8998602701443875
+    },
+    "precision": {
+     "mean": 0.9708313195186202,
+     "sd": 0.001146775680270168,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9710382513661202,
+      0.9709208400646203,
+      0.9725888324873097,
+      0.9697291556027615,
+      0.9698795180722891
+     ],
+     "min": 0.9697291556027615,
+     "max": 0.9725888324873097
+    },
+    "recall": {
+     "mean": 0.8039965247610773,
+     "sd": 0.03008924044032974,
+     "n_seeds": 5,
+     "per_seed": [
+      0.7719374456993918,
+      0.7832319721980886,
+      0.8323197219808862,
+      0.7932232841007819,
+      0.8392701998262381
+     ],
+     "min": 0.7719374456993918,
+     "max": 0.8392701998262381
+    }
+   },
+   "Neuronal": {
+    "F1": {
+     "mean": 0.800195270198581,
+     "sd": 0.01785756332925766,
+     "n_seeds": 5,
+     "per_seed": [
+      0.8100734522560336,
+      0.7828746177370031,
+      0.7787971457696228,
+      0.8131634819532909,
+      0.8160676532769556
+     ],
+     "min": 0.7787971457696228,
+     "max": 0.8160676532769556
+    },
+    "precision": {
+     "mean": 0.6811366594705912,
+     "sd": 0.024419351428543873,
+     "n_seeds": 5,
+     "per_seed": [
+      0.6929982046678635,
+      0.6564102564102564,
+      0.652991452991453,
+      0.7014652014652014,
+      0.7018181818181818
+     ],
+     "min": 0.652991452991453,
+     "max": 0.7018181818181818
+    },
+    "recall": {
+     "mean": 0.9702020202020203,
+     "sd": 0.004517309045454103,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9747474747474747,
+      0.9696969696969697,
+      0.9646464646464646,
+      0.9671717171717171,
+      0.9747474747474747
+     ],
+     "min": 0.9646464646464646,
+     "max": 0.9747474747474747
+    }
+   },
+   "per_class_F1_all_11": {
+    "Adipocytes": {
+     "mean": 0.9637703418436188,
+     "sd": 0.003686402705136508,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9665809768637532,
+      0.9628681177976952,
+      0.9651612903225807,
+      0.9664948453608248,
+      0.9577464788732394
+     ],
+     "min": 0.9577464788732394,
+     "max": 0.9665809768637532
+    },
+    "Atrial_Cardiomyocyte": {
+     "mean": 0.9936288044540449,
+     "sd": 0.000993610278066973,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9927813163481953,
+      0.9932030586236194,
+      0.9932059447983015,
+      0.9953231292517006,
+      0.9936305732484076
+     ],
+     "min": 0.9927813163481953,
+     "max": 0.9953231292517006
+    },
+    "Endothelial": {
+     "mean": 0.9468140725683014,
+     "sd": 0.005822523740295952,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9542880258899676,
+      0.94019728729963,
+      0.9513881826502594,
+      0.9444814681909058,
+      0.9437153988107443
+     ],
+     "min": 0.94019728729963,
+     "max": 0.9542880258899676
+    },
+    "Fibroblast": {
+     "mean": 0.98886829618077,
+     "sd": 0.0009282540023022883,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9873182279337166,
+      0.9889404812157029,
+      0.9892926397436979,
+      0.9890054127198917,
+      0.98978471929084
+     ],
+     "min": 0.9873182279337166,
+     "max": 0.98978471929084
+    },
+    "Lymphoid": {
+     "mean": 0.8716400875589301,
+     "sd": 0.015059822228491235,
+     "n_seeds": 5,
+     "per_seed": [
+      0.8554002541296061,
+      0.8625350675847998,
+      0.8850302551960011,
+      0.8651714359370972,
+      0.8900634249471459
+     ],
+     "min": 0.8554002541296061,
+     "max": 0.8900634249471459
+    },
+    "Mesothelial": {
+     "mean": 0.9034954954954953,
+     "sd": 0.005715717468781989,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9054054054054054,
+      0.9066666666666666,
+      0.8933333333333333,
+      0.9054054054054054,
+      0.9066666666666666
+     ],
+     "min": 0.8933333333333333,
+     "max": 0.9066666666666666
+    },
+    "Myeloid": {
+     "mean": 0.8793311818641459,
+     "sd": 0.0180203647424402,
+     "n_seeds": 5,
+     "per_seed": [
+      0.8601161665053243,
+      0.8670353450348641,
+      0.897003745318352,
+      0.8726403823178017,
+      0.8998602701443875
+     ],
+     "min": 0.8601161665053243,
+     "max": 0.8998602701443875
+    },
+    "Neuronal": {
+     "mean": 0.800195270198581,
+     "sd": 0.01785756332925766,
+     "n_seeds": 5,
+     "per_seed": [
+      0.8100734522560336,
+      0.7828746177370031,
+      0.7787971457696228,
+      0.8131634819532909,
+      0.8160676532769556
+     ],
+     "min": 0.7787971457696228,
+     "max": 0.8160676532769556
+    },
+    "Pericytes": {
+     "mean": 0.9023038432827238,
+     "sd": 0.0050132907712765245,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9088066701406983,
+      0.8987905792488861,
+      0.9066476239937679,
+      0.8983677633256822,
+      0.8989065797045847
+     ],
+     "min": 0.8983677633256822,
+     "max": 0.9088066701406983
+    },
+    "Smooth_muscle_cells": {
+     "mean": 0.8168718149777756,
+     "sd": 0.008021487353641698,
+     "n_seeds": 5,
+     "per_seed": [
+      0.8116567728008635,
+      0.8202433628318584,
+      0.8069320335770377,
+      0.8177339901477833,
+      0.8277929155313352
+     ],
+     "min": 0.8069320335770377,
+     "max": 0.8277929155313352
+    },
+    "Ventricular_Cardiomyocyte": {
+     "mean": 0.9945695073453942,
+     "sd": 0.00039041355135534885,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9946339900688771,
+      0.994109396914446,
+      0.9945950274252312,
+      0.9951574818905831,
+      0.9943516404278332
+     ],
+     "min": 0.994109396914446,
+     "max": 0.9951574818905831
+    }
+   },
+   "n_train_per_class": [
+    2500,
+    2500,
+    2500,
+    2500,
+    2500,
+    2500,
+    2500,
+    574,
+    2500,
+    2500,
+    2500
+   ]
+  },
+  "scANVI": {
+   "macro_F1_11class": {
+    "mean": 0.8951793860536472,
+    "sd": 0.00022017265952452997,
+    "n_seeds": 5,
+    "per_seed": [
+     0.895115457282376,
+     0.8953680888791878,
+     0.8951932811223068,
+     0.894841350245363,
+     0.895378752739003
+    ],
+    "min": 0.894841350245363,
+    "max": 0.895378752739003
+   },
+   "Endothelial": {
+    "F1": {
+     "mean": 0.9701117096318752,
+     "sd": 0.0014065180554729908,
+     "n_seeds": 5,
+     "per_seed": [
+      0.969804798698658,
+      0.9704987834549879,
+      0.9717881063527501,
+      0.9679457779136728,
+      0.970521081739307
+     ],
+     "min": 0.9679457779136728,
+     "max": 0.9717881063527501
+    },
+    "precision": {
+     "mean": 0.9915721504660937,
+     "sd": 0.0011795319047505446,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9920956838273531,
+      0.9898666115189743,
+      0.9922287845819087,
+      0.9927869537946895,
+      0.9908827186075425
+     ],
+     "min": 0.9898666115189743,
+     "max": 0.9927869537946895
+    },
+    "recall": {
+     "mean": 0.9495674654469524,
+     "sd": 0.0032717914884827434,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9484935865566272,
+      0.9518743163965397,
+      0.9521726160882967,
+      0.9443173908720295,
+      0.9509794173212688
+     ],
+     "min": 0.9443173908720295,
+     "max": 0.9521726160882967
+    }
+   },
+   "Myeloid": {
+    "F1": {
+     "mean": 0.9403128814832609,
+     "sd": 0.003158615604295479,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9401898035753696,
+      0.9407114624505929,
+      0.9453193350831146,
+      0.9382716049382716,
+      0.9370722013689556
+     ],
+     "min": 0.9370722013689556,
+     "max": 0.9453193350831146
+    },
+    "precision": {
+     "mean": 0.9528250438444278,
+     "sd": 0.0016730328859420188,
+     "n_seeds": 5,
+     "per_seed": [
+      0.955585464333782,
+      0.9511545293072824,
+      0.9519823788546256,
+      0.9525514771709938,
+      0.9528513695554558
+     ],
+     "min": 0.9511545293072824,
+     "max": 0.955585464333782
+    },
+    "recall": {
+     "mean": 0.928149435273675,
+     "sd": 0.006712925724442006,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9252823631624674,
+      0.9304952215464813,
+      0.9387489139878367,
+      0.9244135534317984,
+      0.9218071242397915
+     ],
+     "min": 0.9218071242397915,
+     "max": 0.9387489139878367
+    }
+   },
+   "Neuronal": {
+    "F1": {
+     "mean": 0.4572154112593972,
+     "sd": 0.012312297030630862,
+     "n_seeds": 5,
+     "per_seed": [
+      0.47094430992736075,
+      0.45202312138728323,
+      0.4695966285370259,
+      0.44982698961937717,
+      0.44368600682593856
+     ],
+     "min": 0.44368600682593856,
+     "max": 0.47094430992736075
+    },
+    "precision": {
+     "mean": 0.2977881304583124,
+     "sd": 0.010552691631900266,
+     "n_seeds": 5,
+     "per_seed": [
+      0.30971337579617836,
+      0.29310344827586204,
+      0.308300395256917,
+      0.2914798206278027,
+      0.28634361233480177
+     ],
+     "min": 0.28634361233480177,
+     "max": 0.30971337579617836
+    },
+    "recall": {
+     "mean": 0.9848484848484848,
+     "sd": 0.0017856231848144863,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9823232323232324,
+      0.9873737373737373,
+      0.9848484848484849,
+      0.9848484848484849,
+      0.9848484848484849
+     ],
+     "min": 0.9823232323232324,
+     "max": 0.9873737373737373
+    }
+   },
+   "per_class_F1_all_11": {
+    "Adipocytes": {
+     "mean": 0.9639979080151772,
+     "sd": 0.005982749611365929,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9672346002621232,
+      0.9575289575289575,
+      0.96,
+      0.9626769626769627,
+      0.9725490196078431
+     ],
+     "min": 0.9575289575289575,
+     "max": 0.9725490196078431
+    },
+    "Atrial_Cardiomyocyte": {
+     "mean": 0.9920491166110323,
+     "sd": 0.0009244347310346371,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9921360255047822,
+      0.9927628778203491,
+      0.9906661009758168,
+      0.9917003617791019,
+      0.9929802169751116
+     ],
+     "min": 0.9906661009758168,
+     "max": 0.9929802169751116
+    },
+    "Endothelial": {
+     "mean": 0.9701117096318752,
+     "sd": 0.0014065180554729908,
+     "n_seeds": 5,
+     "per_seed": [
+      0.969804798698658,
+      0.9704987834549879,
+      0.9717881063527501,
+      0.9679457779136728,
+      0.970521081739307
+     ],
+     "min": 0.9679457779136728,
+     "max": 0.9717881063527501
+    },
+    "Fibroblast": {
+     "mean": 0.975960022164062,
+     "sd": 0.0018242541769957893,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9786871270247229,
+      0.9738534076296613,
+      0.9748760895573406,
+      0.975913905022207,
+      0.976469581586378
+     ],
+     "min": 0.9738534076296613,
+     "max": 0.9786871270247229
+    },
+    "Lymphoid": {
+     "mean": 0.9346873871725337,
+     "sd": 0.005682808731662078,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9316384180790961,
+      0.9402050113895216,
+      0.9414453013424736,
+      0.9292986425339367,
+      0.9308495625176404
+     ],
+     "min": 0.9292986425339367,
+     "max": 0.9414453013424736
+    },
+    "Mesothelial": {
+     "mean": 0.8805452087468895,
+     "sd": 0.01464252551156167,
+     "n_seeds": 5,
+     "per_seed": [
+      0.88,
+      0.8701298701298701,
+      0.8627450980392157,
+      0.8918918918918919,
+      0.8979591836734694
+     ],
+     "min": 0.8627450980392157,
+     "max": 0.8979591836734694
+    },
+    "Myeloid": {
+     "mean": 0.9403128814832609,
+     "sd": 0.003158615604295479,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9401898035753696,
+      0.9407114624505929,
+      0.9453193350831146,
+      0.9382716049382716,
+      0.9370722013689556
+     ],
+     "min": 0.9370722013689556,
+     "max": 0.9453193350831146
+    },
+    "Neuronal": {
+     "mean": 0.4572154112593972,
+     "sd": 0.012312297030630862,
+     "n_seeds": 5,
+     "per_seed": [
+      0.47094430992736075,
+      0.45202312138728323,
+      0.4695966285370259,
+      0.44982698961937717,
+      0.44368600682593856
+     ],
+     "min": 0.44368600682593856,
+     "max": 0.47094430992736075
+    },
+    "Pericytes": {
+     "mean": 0.9277264560426601,
+     "sd": 0.003010141028671732,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9232811255641094,
+      0.9314886257815618,
+      0.929010916308303,
+      0.9279249521041157,
+      0.926926660455211
+     ],
+     "min": 0.9232811255641094,
+     "max": 0.9314886257815618
+    },
+    "Smooth_muscle_cells": {
+     "mean": 0.8171088921180016,
+     "sd": 0.009456425949677646,
+     "n_seeds": 5,
+     "per_seed": [
+      0.8051877870845717,
+      0.8311688311688312,
+      0.8152444076222038,
+      0.8196538246789503,
+      0.8142896100354513
+     ],
+     "min": 0.8051877870845717,
+     "max": 0.8311688311688312
+    },
+    "Ventricular_Cardiomyocyte": {
+     "mean": 0.9872582533452317,
+     "sd": 0.0011667138072329688,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9871660343853418,
+      0.9886780289294492,
+      0.9864341085271318,
+      0.9881499395405079,
+      0.9858631553437273
+     ],
+     "min": 0.9858631553437273,
+     "max": 0.9886780289294492
+    }
+   },
+   "n_train_per_class": [
+    2500,
+    2500,
+    2500,
+    2500,
+    2500,
+    2500,
+    2500,
+    574,
+    2500,
+    2500,
+    2500
+   ]
+  },
+  "CFGen": {
+   "macro_F1_11class": {
+    "mean": 0.9357467381542174,
+    "sd": 0.0013256050976673324,
+    "n_seeds": 5,
+    "per_seed": [
+     0.9355520414482575,
+     0.9341174586268395,
+     0.9348966640077948,
+     0.936944914247886,
+     0.9372226124403092
+    ],
+    "min": 0.9341174586268395,
+    "max": 0.9372226124403092
+   },
+   "Endothelial": {
+    "F1": {
+     "mean": 0.9827386154232979,
+     "sd": 0.0015784974639573655,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9806003473083602,
+      0.9827784156142365,
+      0.9822361546499477,
+      0.9831015403020786,
+      0.9849766192418665
+     ],
+     "min": 0.9806003473083602,
+     "max": 0.9849766192418665
+    },
+    "precision": {
+     "mean": 0.9839432547881014,
+     "sd": 0.0032760839253156873,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9786096256684492,
+      0.9867682437850842,
+      0.9830677290836654,
+      0.9857057177129148,
+      0.9855649576903932
+     ],
+     "min": 0.9786096256684492,
+     "max": 0.9867682437850842
+    },
+    "recall": {
+     "mean": 0.9815451924033012,
+     "sd": 0.0021041349711834736,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9825991846475092,
+      0.978820721885254,
+      0.9814059858804812,
+      0.9805110868052103,
+      0.9843889827980511
+     ],
+     "min": 0.978820721885254,
+     "max": 0.9843889827980511
+    }
+   },
+   "Myeloid": {
+    "F1": {
+     "mean": 0.9248172590819683,
+     "sd": 0.005534274288686153,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9340124003542959,
+      0.923728813559322,
+      0.9199012788871438,
+      0.9212827988338192,
+      0.9251610037752609
+     ],
+     "min": 0.9199012788871438,
+     "max": 0.9340124003542959
+    },
+    "precision": {
+     "mean": 0.9503232731586513,
+     "sd": 0.0025784948433880744,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9525745257452575,
+      0.9491292392300642,
+      0.951276102088167,
+      0.9522484932777006,
+      0.9463880054520672
+     ],
+     "min": 0.9463880054520672,
+     "max": 0.9525745257452575
+    },
+    "recall": {
+     "mean": 0.900695047784535,
+     "sd": 0.010392177445325826,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9161598609904431,
+      0.8996524761077324,
+      0.8905299739357081,
+      0.8922675933970461,
+      0.9048653344917463
+     ],
+     "min": 0.8905299739357081,
+     "max": 0.9161598609904431
+    }
+   },
+   "Neuronal": {
+    "F1": {
+     "mean": 0.8935664538521776,
+     "sd": 0.009826419397455767,
+     "n_seeds": 5,
+     "per_seed": [
+      0.8873720136518771,
+      0.8813559322033898,
+      0.8968713789107764,
+      0.9071925754060325,
+      0.895040369088812
+     ],
+     "min": 0.8813559322033898,
+     "max": 0.9071925754060325
+    },
+    "precision": {
+     "mean": 0.8193056411532522,
+     "sd": 0.016674645673682664,
+     "n_seeds": 5,
+     "per_seed": [
+      0.8074534161490683,
+      0.7975460122699386,
+      0.828693790149893,
+      0.8390557939914163,
+      0.8237791932059448
+     ],
+     "min": 0.7975460122699386,
+     "max": 0.8390557939914163
+    },
+    "recall": {
+     "mean": 0.9828282828282828,
+     "sd": 0.004149413314433069,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9848484848484849,
+      0.9848484848484849,
+      0.9772727272727273,
+      0.9873737373737373,
+      0.9797979797979798
+     ],
+     "min": 0.9772727272727273,
+     "max": 0.9873737373737373
+    }
+   },
+   "per_class_F1_all_11": {
+    "Adipocytes": {
+     "mean": 0.9684718046491513,
+     "sd": 0.004432215330640485,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9752925877763329,
+      0.9664082687338501,
+      0.9702457956015524,
+      0.9664948453608248,
+      0.9639175257731959
+     ],
+     "min": 0.9639175257731959,
+     "max": 0.9752925877763329
+    },
+    "Atrial_Cardiomyocyte": {
+     "mean": 0.9917700772958666,
+     "sd": 0.001193103180827365,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9900275832802886,
+      0.9923599320882852,
+      0.9919423240033927,
+      0.9932088285229203,
+      0.9913117185844459
+     ],
+     "min": 0.9900275832802886,
+     "max": 0.9932088285229203
+    },
+    "Endothelial": {
+     "mean": 0.9827386154232979,
+     "sd": 0.0015784974639573655,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9806003473083602,
+      0.9827784156142365,
+      0.9822361546499477,
+      0.9831015403020786,
+      0.9849766192418665
+     ],
+     "min": 0.9806003473083602,
+     "max": 0.9849766192418665
+    },
+    "Fibroblast": {
+     "mean": 0.987919815868778,
+     "sd": 0.0011162131547834244,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9868966100262068,
+      0.9887735291635014,
+      0.9865652724968315,
+      0.9890072721122949,
+      0.9883563955450557
+     ],
+     "min": 0.9865652724968315,
+     "max": 0.9890072721122949
+    },
+    "Lymphoid": {
+     "mean": 0.91946303592298,
+     "sd": 0.005912283947587516,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9283103739105988,
+      0.9190384084001105,
+      0.9156560088202866,
+      0.9128996692392503,
+      0.9214107192446542
+     ],
+     "min": 0.9128996692392503,
+     "max": 0.9283103739105988
+    },
+    "Mesothelial": {
+     "mean": 0.894911267368456,
+     "sd": 0.005083603545409258,
+     "n_seeds": 5,
+     "per_seed": [
+      0.8874172185430463,
+      0.8979591836734694,
+      0.8993288590604027,
+      0.8979591836734694,
+      0.8918918918918919
+     ],
+     "min": 0.8874172185430463,
+     "max": 0.8993288590604027
+    },
+    "Myeloid": {
+     "mean": 0.9248172590819683,
+     "sd": 0.005534274288686153,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9340124003542959,
+      0.923728813559322,
+      0.9199012788871438,
+      0.9212827988338192,
+      0.9251610037752609
+     ],
+     "min": 0.9199012788871438,
+     "max": 0.9340124003542959
+    },
+    "Neuronal": {
+     "mean": 0.8935664538521776,
+     "sd": 0.009826419397455767,
+     "n_seeds": 5,
+     "per_seed": [
+      0.8873720136518771,
+      0.8813559322033898,
+      0.8968713789107764,
+      0.9071925754060325,
+      0.895040369088812
+     ],
+     "min": 0.8813559322033898,
+     "max": 0.9071925754060325
+    },
+    "Pericytes": {
+     "mean": 0.9281588241665144,
+     "sd": 0.0028578076348913925,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9247914581247915,
+      0.9270329379017828,
+      0.9268681501162405,
+      0.9301373481246699,
+      0.9319642265650878
+     ],
+     "min": 0.9247914581247915,
+     "max": 0.9319642265650878
+    },
+    "Smooth_muscle_cells": {
+     "mean": 0.8066801085690786,
+     "sd": 0.008672203679237205,
+     "n_seeds": 5,
+     "per_seed": [
+      0.8013918629550322,
+      0.801823545186377,
+      0.7995712754555199,
+      0.8103120759837178,
+      0.8203017832647462
+     ],
+     "min": 0.7995712754555199,
+     "max": 0.8203017832647462
+    },
+    "Ventricular_Cardiomyocyte": {
+     "mean": 0.9947168574981224,
+     "sd": 0.00041669788723676013,
+     "n_seeds": 5,
+     "per_seed": [
+      0.99496,
+      0.9940330783709103,
+      0.9946768060836502,
+      0.994797919167667,
+      0.9951164838683852
+     ],
+     "min": 0.9940330783709103,
+     "max": 0.9951164838683852
+    }
+   },
+   "n_train_per_class": [
+    2500,
+    2500,
+    2500,
+    2500,
+    2500,
+    2500,
+    2500,
+    574,
+    2500,
+    2500,
+    2500
+   ]
+  },
+  "MDLM": {
+   "macro_F1_11class": {
+    "mean": 0.9231198871560057,
+    "sd": 0.0018153234948650925,
+    "n_seeds": 5,
+    "per_seed": [
+     0.9230970734618921,
+     0.9209370329429702,
+     0.9257233631411513,
+     0.9238038794148086,
+     0.9220380868192065
+    ],
+    "min": 0.9209370329429702,
+    "max": 0.9257233631411513
+   },
+   "Endothelial": {
+    "F1": {
+     "mean": 0.9818973669994767,
+     "sd": 0.0019604287125489553,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9785803862553298,
+      0.9825703696283682,
+      0.9821607536580477,
+      0.9838,
+      0.9823753254556379
+     ],
+     "min": 0.9785803862553298,
+     "max": 0.9838
+    },
+    "precision": {
+     "mean": 0.9892407594904317,
+     "sd": 0.0010376301158129403,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9874468515893906,
+      0.9899081642950853,
+      0.9899989897969492,
+      0.9894398068993262,
+      0.989409984871407
+     ],
+     "min": 0.9874468515893906,
+     "max": 0.9899989897969492
+    },
+    "recall": {
+     "mean": 0.9746644128467734,
+     "sd": 0.0030310014940109144,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9698717311325445,
+      0.9753405588147559,
+      0.9744456597394849,
+      0.9782241225017401,
+      0.9754399920453416
+     ],
+     "min": 0.9698717311325445,
+     "max": 0.9782241225017401
+    }
+   },
+   "Myeloid": {
+    "F1": {
+     "mean": 0.9363862416022825,
+     "sd": 0.006582610978674513,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9408413672217353,
+      0.9404264673554628,
+      0.9413566739606127,
+      0.9329535495179667,
+      0.9263531499556344
+     ],
+     "min": 0.9263531499556344,
+     "max": 0.9413566739606127
+    },
+    "precision": {
+     "mean": 0.9474441287019791,
+     "sd": 0.003996571338431514,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9491600353669319,
+      0.951935914552737,
+      0.9484126984126984,
+      0.9412024756852343,
+      0.9465095194922938
+     ],
+     "min": 0.9412024756852343,
+     "max": 0.951935914552737
+    },
+    "recall": {
+     "mean": 0.925629887054735,
+     "sd": 0.01101711032781746,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9326672458731537,
+      0.9291920069504779,
+      0.9344048653344917,
+      0.924847958297133,
+      0.9070373588184187
+     ],
+     "min": 0.9070373588184187,
+     "max": 0.9344048653344917
+    }
+   },
+   "Neuronal": {
+    "F1": {
+     "mean": 0.7114344646827332,
+     "sd": 0.01924130130346124,
+     "n_seeds": 5,
+     "per_seed": [
+      0.7074707470747075,
+      0.6805194805194805,
+      0.7298050139275766,
+      0.7154620311070449,
+      0.7239150507848569
+     ],
+     "min": 0.6805194805194805,
+     "max": 0.7298050139275766
+    },
+    "precision": {
+     "mean": 0.5552203658711037,
+     "sd": 0.023346643378610137,
+     "n_seeds": 5,
+     "per_seed": [
+      0.5496503496503496,
+      0.5177865612648221,
+      0.5770925110132159,
+      0.5609756097560976,
+      0.5705967976710334
+     ],
+     "min": 0.5177865612648221,
+     "max": 0.5770925110132159
+    },
+    "recall": {
+     "mean": 0.990909090909091,
+     "sd": 0.002258654522727069,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9924242424242424,
+      0.9924242424242424,
+      0.9924242424242424,
+      0.9873737373737373,
+      0.98989898989899
+     ],
+     "min": 0.9873737373737373,
+     "max": 0.9924242424242424
+    }
+   },
+   "per_class_F1_all_11": {
+    "Adipocytes": {
+     "mean": 0.9731402048558812,
+     "sd": 0.0034061710007782598,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9689119170984456,
+      0.9726205997392438,
+      0.9712793733681462,
+      0.9752281616688396,
+      0.9776609724047306
+     ],
+     "min": 0.9689119170984456,
+     "max": 0.9776609724047306
+    },
+    "Atrial_Cardiomyocyte": {
+     "mean": 0.9868664546403284,
+     "sd": 0.0019484948035193481,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9867747440273038,
+      0.9839051249470563,
+      0.9893617021276596,
+      0.9872611464968153,
+      0.9870295556028067
+     ],
+     "min": 0.9839051249470563,
+     "max": 0.9893617021276596
+    },
+    "Endothelial": {
+     "mean": 0.9818973669994767,
+     "sd": 0.0019604287125489553,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9785803862553298,
+      0.9825703696283682,
+      0.9821607536580477,
+      0.9838,
+      0.9823753254556379
+     ],
+     "min": 0.9785803862553298,
+     "max": 0.9838
+    },
+    "Fibroblast": {
+     "mean": 0.978967029270802,
+     "sd": 0.0008930724696108198,
+     "n_seeds": 5,
+     "per_seed": [
+      0.979067392784207,
+      0.9783424283765347,
+      0.979067392784207,
+      0.9803387522342327,
+      0.9780191801748281
+     ],
+     "min": 0.9780191801748281,
+     "max": 0.9803387522342327
+    },
+    "Lymphoid": {
+     "mean": 0.9231069364906841,
+     "sd": 0.007069264373586435,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9274124679760888,
+      0.9285309132161089,
+      0.9276108726752503,
+      0.9198863636363637,
+      0.9120940649496081
+     ],
+     "min": 0.9120940649496081,
+     "max": 0.9285309132161089
+    },
+    "Mesothelial": {
+     "mean": 0.9245521997178654,
+     "sd": 0.004862443389711794,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9315068493150684,
+      0.9241379310344827,
+      0.9241379310344827,
+      0.9178082191780822,
+      0.9251700680272109
+     ],
+     "min": 0.9178082191780822,
+     "max": 0.9315068493150684
+    },
+    "Myeloid": {
+     "mean": 0.9363862416022825,
+     "sd": 0.006582610978674513,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9408413672217353,
+      0.9404264673554628,
+      0.9413566739606127,
+      0.9329535495179667,
+      0.9263531499556344
+     ],
+     "min": 0.9263531499556344,
+     "max": 0.9413566739606127
+    },
+    "Neuronal": {
+     "mean": 0.7114344646827332,
+     "sd": 0.01924130130346124,
+     "n_seeds": 5,
+     "per_seed": [
+      0.7074707470747075,
+      0.6805194805194805,
+      0.7298050139275766,
+      0.7154620311070449,
+      0.7239150507848569
+     ],
+     "min": 0.6805194805194805,
+     "max": 0.7298050139275766
+    },
+    "Pericytes": {
+     "mean": 0.9317201233082273,
+     "sd": 0.0031847285577446117,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9273970800999606,
+      0.9330708661417323,
+      0.9329832622251395,
+      0.9354902347603078,
+      0.9296591733139956
+     ],
+     "min": 0.9273970800999606,
+     "max": 0.9354902347603078
+    },
+    "Smooth_muscle_cells": {
+     "mean": 0.8144164729917959,
+     "sd": 0.005148861125731151,
+     "n_seeds": 5,
+     "per_seed": [
+      0.8142120965554651,
+      0.8156732891832229,
+      0.8127381600435493,
+      0.8218501235245677,
+      0.8076086956521739
+     ],
+     "min": 0.8076086956521739,
+     "max": 0.8218501235245677
+    },
+    "Ventricular_Cardiomyocyte": {
+     "mean": 0.9918312641559867,
+     "sd": 0.0008120773382384374,
+     "n_seeds": 5,
+     "per_seed": [
+      0.9918927596724996,
+      0.9905098922309796,
+      0.9924558587479936,
+      0.9917640914386726,
+      0.992533718689788
+     ],
+     "min": 0.9905098922309796,
+     "max": 0.992533718689788
+    }
+   },
+   "n_train_per_class": [
+    2500,
+    2500,
+    2500,
+    2500,
+    2500,
+    2500,
+    2500,
+    574,
+    2500,
+    2500,
+    2500
+   ]
+  }
+ },
+ "confusion_diagnostic": {
+  "REAL (ceiling)": {
+   "Endothelial": {
+    "direction": "rows: where the REAL test cells of this type are sent",
+    "n_real_test_cells_summed_over_seeds": 50285,
+    "n_real_test_cells_per_seed": 10057,
+    "all_destinations": {
+     "Endothelial": {
+      "count": 49454,
+      "fraction": 0.9834741970766631
+     },
+     "Pericytes": {
+      "count": 543,
+      "fraction": 0.010798448841602864
+     },
+     "Fibroblast": {
+      "count": 81,
+      "fraction": 0.00161081833548772
+     },
+     "Neuronal": {
+      "count": 44,
+      "fraction": 0.0008750124291538233
+     },
+     "Ventricular_Cardiomyocyte": {
+      "count": 41,
+      "fraction": 0.0008153524908024261
+     },
+     "Myeloid": {
+      "count": 40,
+      "fraction": 0.0007954658446852938
+     },
+     "Smooth_muscle_cells": {
+      "count": 33,
+      "fraction": 0.0006562593218653674
+     },
+     "Lymphoid": {
+      "count": 32,
+      "fraction": 0.0006363726757482351
+     },
+     "Adipocytes": {
+      "count": 6,
+      "fraction": 0.00011931987670279408
+     },
+     "Atrial_Cardiomyocyte": {
+      "count": 6,
+      "fraction": 0.00011931987670279408
+     },
+     "Mesothelial": {
+      "count": 5,
+      "fraction": 9.943323058566172e-05
+     }
+    },
+    "top3_destinations": [
+     {
+      "class": "Endothelial",
+      "count": 49454,
+      "fraction": 0.9834741970766631
+     },
+     {
+      "class": "Pericytes",
+      "count": 543,
+      "fraction": 0.010798448841602864
+     },
+     {
+      "class": "Fibroblast",
+      "count": 81,
+      "fraction": 0.00161081833548772
+     }
+    ],
+    "correct_fraction": 0.9834741970766631,
+    "top_wrong_destination": {
+     "class": "Pericytes",
+     "count": 543,
+     "fraction": 0.010798448841602864
+    },
+    "predicted_as_this_type": {
+     "direction": "columns: the true identity of every real cell the model CALLS this type -- this is what precision measures",
+     "n_predicted_summed_over_seeds": 49943,
+     "purity_of_the_prediction": 0.9902088380754059,
+     "top3_true_identities": [
+      {
+       "class": "Endothelial",
+       "count": 49454,
+       "fraction": 0.9902088380754059
+      },
+      {
+       "class": "Pericytes",
+       "count": 410,
+       "fraction": 0.008209358668882526
+      },
+      {
+       "class": "Ventricular_Cardiomyocyte",
+       "count": 26,
+       "fraction": 0.0005205934765632822
+      }
+     ],
+     "top_contaminant": {
+      "class": "Pericytes",
+      "count": 410,
+      "fraction": 0.008209358668882526
+     }
+    }
+   },
+   "Myeloid": {
+    "direction": "rows: where the REAL test cells of this type are sent",
+    "n_real_test_cells_summed_over_seeds": 11510,
+    "n_real_test_cells_per_seed": 2302,
+    "all_destinations": {
+     "Myeloid": {
+      "count": 11156,
+      "fraction": 0.969244135534318
+     },
+     "Lymphoid": {
+      "count": 343,
+      "fraction": 0.029800173761946134
+     },
+     "Atrial_Cardiomyocyte": {
+      "count": 4,
+      "fraction": 0.0003475238922675934
+     },
+     "Adipocytes": {
+      "count": 3,
+      "fraction": 0.00026064291920069505
+     },
+     "Smooth_muscle_cells": {
+      "count": 2,
+      "fraction": 0.0001737619461337967
+     },
+     "Endothelial": {
+      "count": 2,
+      "fraction": 0.0001737619461337967
+     }
+    },
+    "top3_destinations": [
+     {
+      "class": "Myeloid",
+      "count": 11156,
+      "fraction": 0.969244135534318
+     },
+     {
+      "class": "Lymphoid",
+      "count": 343,
+      "fraction": 0.029800173761946134
+     },
+     {
+      "class": "Atrial_Cardiomyocyte",
+      "count": 4,
+      "fraction": 0.0003475238922675934
+     }
+    ],
+    "correct_fraction": 0.969244135534318,
+    "top_wrong_destination": {
+     "class": "Lymphoid",
+     "count": 343,
+     "fraction": 0.029800173761946134
+    },
+    "predicted_as_this_type": {
+     "direction": "columns: the true identity of every real cell the model CALLS this type -- this is what precision measures",
+     "n_predicted_summed_over_seeds": 11582,
+     "purity_of_the_prediction": 0.9632187877741323,
+     "top3_true_identities": [
+      {
+       "class": "Myeloid",
+       "count": 11156,
+       "fraction": 0.9632187877741323
+      },
+      {
+       "class": "Lymphoid",
+       "count": 354,
+       "fraction": 0.030564669314453462
+      },
+      {
+       "class": "Endothelial",
+       "count": 40,
+       "fraction": 0.003453634950785702
+      }
+     ],
+     "top_contaminant": {
+      "class": "Lymphoid",
+      "count": 354,
+      "fraction": 0.030564669314453462
+     }
+    }
+   },
+   "Neuronal": {
+    "direction": "rows: where the REAL test cells of this type are sent",
+    "n_real_test_cells_summed_over_seeds": 1980,
+    "n_real_test_cells_per_seed": 396,
+    "all_destinations": {
+     "Neuronal": {
+      "count": 1968,
+      "fraction": 0.9939393939393939
+     },
+     "Fibroblast": {
+      "count": 8,
+      "fraction": 0.00404040404040404
+     },
+     "Atrial_Cardiomyocyte": {
+      "count": 1,
+      "fraction": 0.000505050505050505
+     },
+     "Smooth_muscle_cells": {
+      "count": 1,
+      "fraction": 0.000505050505050505
+     },
+     "Pericytes": {
+      "count": 1,
+      "fraction": 0.000505050505050505
+     },
+     "Myeloid": {
+      "count": 1,
+      "fraction": 0.000505050505050505
+     }
+    },
+    "top3_destinations": [
+     {
+      "class": "Neuronal",
+      "count": 1968,
+      "fraction": 0.9939393939393939
+     },
+     {
+      "class": "Fibroblast",
+      "count": 8,
+      "fraction": 0.00404040404040404
+     },
+     {
+      "class": "Atrial_Cardiomyocyte",
+      "count": 1,
+      "fraction": 0.000505050505050505
+     }
+    ],
+    "correct_fraction": 0.9939393939393939,
+    "top_wrong_destination": {
+     "class": "Fibroblast",
+     "count": 8,
+     "fraction": 0.00404040404040404
+    },
+    "predicted_as_this_type": {
+     "direction": "columns: the true identity of every real cell the model CALLS this type -- this is what precision measures",
+     "n_predicted_summed_over_seeds": 2120,
+     "purity_of_the_prediction": 0.9283018867924528,
+     "top3_true_identities": [
+      {
+       "class": "Neuronal",
+       "count": 1968,
+       "fraction": 0.9283018867924528
+      },
+      {
+       "class": "Fibroblast",
+       "count": 52,
+       "fraction": 0.024528301886792454
+      },
+      {
+       "class": "Endothelial",
+       "count": 44,
+       "fraction": 0.020754716981132074
+      }
+     ],
+     "top_contaminant": {
+      "class": "Fibroblast",
+      "count": 52,
+      "fraction": 0.024528301886792454
+     }
+    }
+   }
+  },
+  "OURS": {
+   "Endothelial": {
+    "direction": "rows: where the REAL test cells of this type are sent",
+    "n_real_test_cells_summed_over_seeds": 50285,
+    "n_real_test_cells_per_seed": 10057,
+    "all_destinations": {
+     "Endothelial": {
+      "count": 49049,
+      "fraction": 0.9754201053992244
+     },
+     "Pericytes": {
+      "count": 840,
+      "fraction": 0.01670478273839117
+     },
+     "Fibroblast": {
+      "count": 110,
+      "fraction": 0.002187531072884558
+     },
+     "Neuronal": {
+      "count": 76,
+      "fraction": 0.0015113851049020582
+     },
+     "Myeloid": {
+      "count": 59,
+      "fraction": 0.0011733121209108084
+     },
+     "Ventricular_Cardiomyocyte": {
+      "count": 50,
+      "fraction": 0.0009943323058566173
+     },
+     "Lymphoid": {
+      "count": 49,
+      "fraction": 0.0009744456597394849
+     },
+     "Smooth_muscle_cells": {
+      "count": 24,
+      "fraction": 0.0004772795068111763
+     },
+     "Atrial_Cardiomyocyte": {
+      "count": 11,
+      "fraction": 0.0002187531072884558
+     },
+     "Adipocytes": {
+      "count": 10,
+      "fraction": 0.00019886646117132345
+     },
+     "Mesothelial": {
+      "count": 7,
+      "fraction": 0.0001392065228199264
+     }
+    },
+    "top3_destinations": [
+     {
+      "class": "Endothelial",
+      "count": 49049,
+      "fraction": 0.9754201053992244
+     },
+     {
+      "class": "Pericytes",
+      "count": 840,
+      "fraction": 0.01670478273839117
+     },
+     {
+      "class": "Fibroblast",
+      "count": 110,
+      "fraction": 0.002187531072884558
+     }
+    ],
+    "correct_fraction": 0.9754201053992244,
+    "top_wrong_destination": {
+     "class": "Pericytes",
+     "count": 840,
+     "fraction": 0.01670478273839117
+    },
+    "predicted_as_this_type": {
+     "direction": "columns: the true identity of every real cell the model CALLS this type -- this is what precision measures",
+     "n_predicted_summed_over_seeds": 49787,
+     "purity_of_the_prediction": 0.9851768533954647,
+     "top3_true_identities": [
+      {
+       "class": "Endothelial",
+       "count": 49049,
+       "fraction": 0.9851768533954647
+      },
+      {
+       "class": "Pericytes",
+       "count": 524,
+       "fraction": 0.010524835800510174
+      },
+      {
+       "class": "Myeloid",
+       "count": 58,
+       "fraction": 0.0011649627412778437
+      }
+     ],
+     "top_contaminant": {
+      "class": "Pericytes",
+      "count": 524,
+      "fraction": 0.010524835800510174
+     }
+    }
+   },
+   "Myeloid": {
+    "direction": "rows: where the REAL test cells of this type are sent",
+    "n_real_test_cells_summed_over_seeds": 11510,
+    "n_real_test_cells_per_seed": 2302,
+    "all_destinations": {
+     "Myeloid": {
+      "count": 10639,
+      "fraction": 0.9243266724587316
+     },
+     "Lymphoid": {
+      "count": 798,
+      "fraction": 0.06933101650738488
+     },
+     "Endothelial": {
+      "count": 58,
+      "fraction": 0.005039096437880104
+     },
+     "Neuronal": {
+      "count": 4,
+      "fraction": 0.0003475238922675934
+     },
+     "Adipocytes": {
+      "count": 3,
+      "fraction": 0.00026064291920069505
+     },
+     "Smooth_muscle_cells": {
+      "count": 3,
+      "fraction": 0.00026064291920069505
+     },
+     "Atrial_Cardiomyocyte": {
+      "count": 2,
+      "fraction": 0.0001737619461337967
+     },
+     "Ventricular_Cardiomyocyte": {
+      "count": 2,
+      "fraction": 0.0001737619461337967
+     },
+     "Pericytes": {
+      "count": 1,
+      "fraction": 8.688097306689835e-05
+     }
+    },
+    "top3_destinations": [
+     {
+      "class": "Myeloid",
+      "count": 10639,
+      "fraction": 0.9243266724587316
+     },
+     {
+      "class": "Lymphoid",
+      "count": 798,
+      "fraction": 0.06933101650738488
+     },
+     {
+      "class": "Endothelial",
+      "count": 58,
+      "fraction": 0.005039096437880104
+     }
+    ],
+    "correct_fraction": 0.9243266724587316,
+    "top_wrong_destination": {
+     "class": "Lymphoid",
+     "count": 798,
+     "fraction": 0.06933101650738488
+    },
+    "predicted_as_this_type": {
+     "direction": "columns: the true identity of every real cell the model CALLS this type -- this is what precision measures",
+     "n_predicted_summed_over_seeds": 11065,
+     "purity_of_the_prediction": 0.9615002259376412,
+     "top3_true_identities": [
+      {
+       "class": "Myeloid",
+       "count": 10639,
+       "fraction": 0.9615002259376412
+      },
+      {
+       "class": "Lymphoid",
+       "count": 297,
+       "fraction": 0.02684139177586986
+      },
+      {
+       "class": "Endothelial",
+       "count": 59,
+       "fraction": 0.0053321283325802075
+      }
+     ],
+     "top_contaminant": {
+      "class": "Lymphoid",
+      "count": 297,
+      "fraction": 0.02684139177586986
+     }
+    }
+   },
+   "Neuronal": {
+    "direction": "rows: where the REAL test cells of this type are sent",
+    "n_real_test_cells_summed_over_seeds": 1980,
+    "n_real_test_cells_per_seed": 396,
+    "all_destinations": {
+     "Neuronal": {
+      "count": 1841,
+      "fraction": 0.9297979797979798
+     },
+     "Fibroblast": {
+      "count": 48,
+      "fraction": 0.024242424242424242
+     },
+     "Endothelial": {
+      "count": 22,
+      "fraction": 0.011111111111111112
+     },
+     "Ventricular_Cardiomyocyte": {
+      "count": 20,
+      "fraction": 0.010101010101010102
+     },
+     "Pericytes": {
+      "count": 13,
+      "fraction": 0.0065656565656565654
+     },
+     "Lymphoid": {
+      "count": 11,
+      "fraction": 0.005555555555555556
+     },
+     "Myeloid": {
+      "count": 9,
+      "fraction": 0.004545454545454545
+     },
+     "Smooth_muscle_cells": {
+      "count": 6,
+      "fraction": 0.0030303030303030303
+     },
+     "Adipocytes": {
+      "count": 5,
+      "fraction": 0.0025252525252525255
+     },
+     "Atrial_Cardiomyocyte": {
+      "count": 5,
+      "fraction": 0.0025252525252525255
+     }
+    },
+    "top3_destinations": [
+     {
+      "class": "Neuronal",
+      "count": 1841,
+      "fraction": 0.9297979797979798
+     },
+     {
+      "class": "Fibroblast",
+      "count": 48,
+      "fraction": 0.024242424242424242
+     },
+     {
+      "class": "Endothelial",
+      "count": 22,
+      "fraction": 0.011111111111111112
+     }
+    ],
+    "correct_fraction": 0.9297979797979798,
+    "top_wrong_destination": {
+     "class": "Fibroblast",
+     "count": 48,
+     "fraction": 0.024242424242424242
+    },
+    "predicted_as_this_type": {
+     "direction": "columns: the true identity of every real cell the model CALLS this type -- this is what precision measures",
+     "n_predicted_summed_over_seeds": 2045,
+     "purity_of_the_prediction": 0.9002444987775061,
+     "top3_true_identities": [
+      {
+       "class": "Neuronal",
+       "count": 1841,
+       "fraction": 0.9002444987775061
+      },
+      {
+       "class": "Endothelial",
+       "count": 76,
+       "fraction": 0.037163814180929094
+      },
+      {
+       "class": "Pericytes",
+       "count": 70,
+       "fraction": 0.034229828850855744
+      }
+     ],
+     "top_contaminant": {
+      "class": "Endothelial",
+      "count": 76,
+      "fraction": 0.037163814180929094
+     }
+    }
+   }
+  },
+  "scVI": {
+   "Endothelial": {
+    "direction": "rows: where the REAL test cells of this type are sent",
+    "n_real_test_cells_summed_over_seeds": 50285,
+    "n_real_test_cells_per_seed": 10057,
+    "all_destinations": {
+     "Endothelial": {
+      "count": 46358,
+      "fraction": 0.9219051406980213
+     },
+     "Pericytes": {
+      "count": 2983,
+      "fraction": 0.05932186536740579
+     },
+     "Neuronal": {
+      "count": 707,
+      "fraction": 0.014059858804812569
+     },
+     "Fibroblast": {
+      "count": 70,
+      "fraction": 0.0013920652281992642
+     },
+     "Myeloid": {
+      "count": 52,
+      "fraction": 0.001034105598090882
+     },
+     "Smooth_muscle_cells": {
+      "count": 37,
+      "fraction": 0.0007358059063338968
+     },
+     "Ventricular_Cardiomyocyte": {
+      "count": 30,
+      "fraction": 0.0005965993835139703
+     },
+     "Lymphoid": {
+      "count": 27,
+      "fraction": 0.0005369394451625733
+     },
+     "Adipocytes": {
+      "count": 10,
+      "fraction": 0.00019886646117132345
+     },
+     "Mesothelial": {
+      "count": 6,
+      "fraction": 0.00011931987670279408
+     },
+     "Atrial_Cardiomyocyte": {
+      "count": 5,
+      "fraction": 9.943323058566172e-05
+     }
+    },
+    "top3_destinations": [
+     {
+      "class": "Endothelial",
+      "count": 46358,
+      "fraction": 0.9219051406980213
+     },
+     {
+      "class": "Pericytes",
+      "count": 2983,
+      "fraction": 0.05932186536740579
+     },
+     {
+      "class": "Neuronal",
+      "count": 707,
+      "fraction": 0.014059858804812569
+     }
+    ],
+    "correct_fraction": 0.9219051406980213,
+    "top_wrong_destination": {
+     "class": "Pericytes",
+     "count": 2983,
+     "fraction": 0.05932186536740579
+    },
+    "predicted_as_this_type": {
+     "direction": "columns: the true identity of every real cell the model CALLS this type -- this is what precision measures",
+     "n_predicted_summed_over_seeds": 47636,
+     "purity_of_the_prediction": 0.9731715509278697,
+     "top3_true_identities": [
+      {
+       "class": "Endothelial",
+       "count": 46358,
+       "fraction": 0.9731715509278697
+      },
+      {
+       "class": "Pericytes",
+       "count": 921,
+       "fraction": 0.019334117054328658
+      },
+      {
+       "class": "Ventricular_Cardiomyocyte",
+       "count": 175,
+       "fraction": 0.0036736921655890504
+      }
+     ],
+     "top_contaminant": {
+      "class": "Pericytes",
+      "count": 921,
+      "fraction": 0.019334117054328658
+     }
+    }
+   },
+   "Myeloid": {
+    "direction": "rows: where the REAL test cells of this type are sent",
+    "n_real_test_cells_summed_over_seeds": 11510,
+    "n_real_test_cells_per_seed": 2302,
+    "all_destinations": {
+     "Myeloid": {
+      "count": 9254,
+      "fraction": 0.8039965247610773
+     },
+     "Lymphoid": {
+      "count": 2245,
+      "fraction": 0.19504778453518679
+     },
+     "Endothelial": {
+      "count": 7,
+      "fraction": 0.0006081668114682884
+     },
+     "Adipocytes": {
+      "count": 4,
+      "fraction": 0.0003475238922675934
+     }
+    },
+    "top3_destinations": [
+     {
+      "class": "Myeloid",
+      "count": 9254,
+      "fraction": 0.8039965247610773
+     },
+     {
+      "class": "Lymphoid",
+      "count": 2245,
+      "fraction": 0.19504778453518679
+     },
+     {
+      "class": "Endothelial",
+      "count": 7,
+      "fraction": 0.0006081668114682884
+     }
+    ],
+    "correct_fraction": 0.8039965247610773,
+    "top_wrong_destination": {
+     "class": "Lymphoid",
+     "count": 2245,
+     "fraction": 0.19504778453518679
+    },
+    "predicted_as_this_type": {
+     "direction": "columns: the true identity of every real cell the model CALLS this type -- this is what precision measures",
+     "n_predicted_summed_over_seeds": 9532,
+     "purity_of_the_prediction": 0.9708350818296265,
+     "top3_true_identities": [
+      {
+       "class": "Myeloid",
+       "count": 9254,
+       "fraction": 0.9708350818296265
+      },
+      {
+       "class": "Lymphoid",
+       "count": 180,
+       "fraction": 0.01888375996642887
+      },
+      {
+       "class": "Endothelial",
+       "count": 52,
+       "fraction": 0.005455308434746118
+      }
+     ],
+     "top_contaminant": {
+      "class": "Lymphoid",
+      "count": 180,
+      "fraction": 0.01888375996642887
+     }
+    }
+   },
+   "Neuronal": {
+    "direction": "rows: where the REAL test cells of this type are sent",
+    "n_real_test_cells_summed_over_seeds": 1980,
+    "n_real_test_cells_per_seed": 396,
+    "all_destinations": {
+     "Neuronal": {
+      "count": 1921,
+      "fraction": 0.9702020202020202
+     },
+     "Fibroblast": {
+      "count": 42,
+      "fraction": 0.021212121212121213
+     },
+     "Pericytes": {
+      "count": 8,
+      "fraction": 0.00404040404040404
+     },
+     "Myeloid": {
+      "count": 4,
+      "fraction": 0.00202020202020202
+     },
+     "Atrial_Cardiomyocyte": {
+      "count": 3,
+      "fraction": 0.0015151515151515152
+     },
+     "Smooth_muscle_cells": {
+      "count": 1,
+      "fraction": 0.000505050505050505
+     },
+     "Adipocytes": {
+      "count": 1,
+      "fraction": 0.000505050505050505
+     }
+    },
+    "top3_destinations": [
+     {
+      "class": "Neuronal",
+      "count": 1921,
+      "fraction": 0.9702020202020202
+     },
+     {
+      "class": "Fibroblast",
+      "count": 42,
+      "fraction": 0.021212121212121213
+     },
+     {
+      "class": "Pericytes",
+      "count": 8,
+      "fraction": 0.00404040404040404
+     }
+    ],
+    "correct_fraction": 0.9702020202020202,
+    "top_wrong_destination": {
+     "class": "Fibroblast",
+     "count": 42,
+     "fraction": 0.021212121212121213
+    },
+    "predicted_as_this_type": {
+     "direction": "columns: the true identity of every real cell the model CALLS this type -- this is what precision measures",
+     "n_predicted_summed_over_seeds": 2823,
+     "purity_of_the_prediction": 0.6804817569961035,
+     "top3_true_identities": [
+      {
+       "class": "Neuronal",
+       "count": 1921,
+       "fraction": 0.6804817569961035
+      },
+      {
+       "class": "Endothelial",
+       "count": 707,
+       "fraction": 0.2504427913567127
+      },
+      {
+       "class": "Ventricular_Cardiomyocyte",
+       "count": 103,
+       "fraction": 0.03648600779312788
+      }
+     ],
+     "top_contaminant": {
+      "class": "Endothelial",
+      "count": 707,
+      "fraction": 0.2504427913567127
+     }
+    }
+   }
+  },
+  "scANVI": {
+   "Endothelial": {
+    "direction": "rows: where the REAL test cells of this type are sent",
+    "n_real_test_cells_summed_over_seeds": 50285,
+    "n_real_test_cells_per_seed": 10057,
+    "all_destinations": {
+     "Endothelial": {
+      "count": 47749,
+      "fraction": 0.9495674654469524
+     },
+     "Neuronal": {
+      "count": 1503,
+      "fraction": 0.029889629114049916
+     },
+     "Pericytes": {
+      "count": 693,
+      "fraction": 0.013781445759172716
+     },
+     "Fibroblast": {
+      "count": 108,
+      "fraction": 0.0021477577806502932
+     },
+     "Myeloid": {
+      "count": 93,
+      "fraction": 0.001849458088893308
+     },
+     "Smooth_muscle_cells": {
+      "count": 42,
+      "fraction": 0.0008352391369195585
+     },
+     "Ventricular_Cardiomyocyte": {
+      "count": 36,
+      "fraction": 0.0007159192602167645
+     },
+     "Lymphoid": {
+      "count": 26,
+      "fraction": 0.000517052799045441
+     },
+     "Mesothelial": {
+      "count": 16,
+      "fraction": 0.00031818633787411755
+     },
+     "Adipocytes": {
+      "count": 10,
+      "fraction": 0.00019886646117132345
+     },
+     "Atrial_Cardiomyocyte": {
+      "count": 9,
+      "fraction": 0.0001789798150541911
+     }
+    },
+    "top3_destinations": [
+     {
+      "class": "Endothelial",
+      "count": 47749,
+      "fraction": 0.9495674654469524
+     },
+     {
+      "class": "Neuronal",
+      "count": 1503,
+      "fraction": 0.029889629114049916
+     },
+     {
+      "class": "Pericytes",
+      "count": 693,
+      "fraction": 0.013781445759172716
+     }
+    ],
+    "correct_fraction": 0.9495674654469524,
+    "top_wrong_destination": {
+     "class": "Neuronal",
+     "count": 1503,
+     "fraction": 0.029889629114049916
+    },
+    "predicted_as_this_type": {
+     "direction": "columns: the true identity of every real cell the model CALLS this type -- this is what precision measures",
+     "n_predicted_summed_over_seeds": 48155,
+     "purity_of_the_prediction": 0.9915688921191984,
+     "top3_true_identities": [
+      {
+       "class": "Endothelial",
+       "count": 47749,
+       "fraction": 0.9915688921191984
+      },
+      {
+       "class": "Pericytes",
+       "count": 359,
+       "fraction": 0.007455092929083169
+      },
+      {
+       "class": "Mesothelial",
+       "count": 15,
+       "fraction": 0.0003114941335271519
+      }
+     ],
+     "top_contaminant": {
+      "class": "Pericytes",
+      "count": 359,
+      "fraction": 0.007455092929083169
+     }
+    }
+   },
+   "Myeloid": {
+    "direction": "rows: where the REAL test cells of this type are sent",
+    "n_real_test_cells_summed_over_seeds": 11510,
+    "n_real_test_cells_per_seed": 2302,
+    "all_destinations": {
+     "Myeloid": {
+      "count": 10683,
+      "fraction": 0.9281494352736751
+     },
+     "Lymphoid": {
+      "count": 749,
+      "fraction": 0.06507384882710686
+     },
+     "Neuronal": {
+      "count": 71,
+      "fraction": 0.006168549087749783
+     },
+     "Atrial_Cardiomyocyte": {
+      "count": 5,
+      "fraction": 0.0004344048653344917
+     },
+     "Mesothelial": {
+      "count": 2,
+      "fraction": 0.0001737619461337967
+     }
+    },
+    "top3_destinations": [
+     {
+      "class": "Myeloid",
+      "count": 10683,
+      "fraction": 0.9281494352736751
+     },
+     {
+      "class": "Lymphoid",
+      "count": 749,
+      "fraction": 0.06507384882710686
+     },
+     {
+      "class": "Neuronal",
+      "count": 71,
+      "fraction": 0.006168549087749783
+     }
+    ],
+    "correct_fraction": 0.9281494352736751,
+    "top_wrong_destination": {
+     "class": "Lymphoid",
+     "count": 749,
+     "fraction": 0.06507384882710686
+    },
+    "predicted_as_this_type": {
+     "direction": "columns: the true identity of every real cell the model CALLS this type -- this is what precision measures",
+     "n_predicted_summed_over_seeds": 11212,
+     "purity_of_the_prediction": 0.9528184088476632,
+     "top3_true_identities": [
+      {
+       "class": "Myeloid",
+       "count": 10683,
+       "fraction": 0.9528184088476632
+      },
+      {
+       "class": "Lymphoid",
+       "count": 335,
+       "fraction": 0.029878701391366395
+      },
+      {
+       "class": "Endothelial",
+       "count": 93,
+       "fraction": 0.00829468426685694
+      }
+     ],
+     "top_contaminant": {
+      "class": "Lymphoid",
+      "count": 335,
+      "fraction": 0.029878701391366395
+     }
+    }
+   },
+   "Neuronal": {
+    "direction": "rows: where the REAL test cells of this type are sent",
+    "n_real_test_cells_summed_over_seeds": 1980,
+    "n_real_test_cells_per_seed": 396,
+    "all_destinations": {
+     "Neuronal": {
+      "count": 1950,
+      "fraction": 0.9848484848484849
+     },
+     "Fibroblast": {
+      "count": 19,
+      "fraction": 0.009595959595959595
+     },
+     "Pericytes": {
+      "count": 5,
+      "fraction": 0.0025252525252525255
+     },
+     "Smooth_muscle_cells": {
+      "count": 3,
+      "fraction": 0.0015151515151515152
+     },
+     "Myeloid": {
+      "count": 1,
+      "fraction": 0.000505050505050505
+     },
+     "Adipocytes": {
+      "count": 1,
+      "fraction": 0.000505050505050505
+     },
+     "Ventricular_Cardiomyocyte": {
+      "count": 1,
+      "fraction": 0.000505050505050505
+     }
+    },
+    "top3_destinations": [
+     {
+      "class": "Neuronal",
+      "count": 1950,
+      "fraction": 0.9848484848484849
+     },
+     {
+      "class": "Fibroblast",
+      "count": 19,
+      "fraction": 0.009595959595959595
+     },
+     {
+      "class": "Pericytes",
+      "count": 5,
+      "fraction": 0.0025252525252525255
+     }
+    ],
+    "correct_fraction": 0.9848484848484849,
+    "top_wrong_destination": {
+     "class": "Fibroblast",
+     "count": 19,
+     "fraction": 0.009595959595959595
+    },
+    "predicted_as_this_type": {
+     "direction": "columns: the true identity of every real cell the model CALLS this type -- this is what precision measures",
+     "n_predicted_summed_over_seeds": 6555,
+     "purity_of_the_prediction": 0.2974828375286041,
+     "top3_true_identities": [
+      {
+       "class": "Neuronal",
+       "count": 1950,
+       "fraction": 0.2974828375286041
+      },
+      {
+       "class": "Endothelial",
+       "count": 1503,
+       "fraction": 0.22929061784897026
+      },
+      {
+       "class": "Ventricular_Cardiomyocyte",
+       "count": 1178,
+       "fraction": 0.17971014492753623
+      }
+     ],
+     "top_contaminant": {
+      "class": "Endothelial",
+      "count": 1503,
+      "fraction": 0.22929061784897026
+     }
+    }
+   }
+  },
+  "CFGen": {
+   "Endothelial": {
+    "direction": "rows: where the REAL test cells of this type are sent",
+    "n_real_test_cells_summed_over_seeds": 50285,
+    "n_real_test_cells_per_seed": 10057,
+    "all_destinations": {
+     "Endothelial": {
+      "count": 49357,
+      "fraction": 0.9815451924033012
+     },
+     "Pericytes": {
+      "count": 577,
+      "fraction": 0.011474594809585363
+     },
+     "Neuronal": {
+      "count": 108,
+      "fraction": 0.0021477577806502932
+     },
+     "Myeloid": {
+      "count": 73,
+      "fraction": 0.0014517251665506611
+     },
+     "Fibroblast": {
+      "count": 73,
+      "fraction": 0.0014517251665506611
+     },
+     "Ventricular_Cardiomyocyte": {
+      "count": 30,
+      "fraction": 0.0005965993835139703
+     },
+     "Lymphoid": {
+      "count": 24,
+      "fraction": 0.0004772795068111763
+     },
+     "Smooth_muscle_cells": {
+      "count": 23,
+      "fraction": 0.00045739286069404396
+     },
+     "Atrial_Cardiomyocyte": {
+      "count": 8,
+      "fraction": 0.00015909316893705878
+     },
+     "Adipocytes": {
+      "count": 7,
+      "fraction": 0.0001392065228199264
+     },
+     "Mesothelial": {
+      "count": 5,
+      "fraction": 9.943323058566172e-05
+     }
+    },
+    "top3_destinations": [
+     {
+      "class": "Endothelial",
+      "count": 49357,
+      "fraction": 0.9815451924033012
+     },
+     {
+      "class": "Pericytes",
+      "count": 577,
+      "fraction": 0.011474594809585363
+     },
+     {
+      "class": "Neuronal",
+      "count": 108,
+      "fraction": 0.0021477577806502932
+     }
+    ],
+    "correct_fraction": 0.9815451924033012,
+    "top_wrong_destination": {
+     "class": "Pericytes",
+     "count": 577,
+     "fraction": 0.011474594809585363
+    },
+    "predicted_as_this_type": {
+     "direction": "columns: the true identity of every real cell the model CALLS this type -- this is what precision measures",
+     "n_predicted_summed_over_seeds": 50163,
+     "purity_of_the_prediction": 0.9839323804397664,
+     "top3_true_identities": [
+      {
+       "class": "Endothelial",
+       "count": 49357,
+       "fraction": 0.9839323804397664
+      },
+      {
+       "class": "Pericytes",
+       "count": 584,
+       "fraction": 0.011642046927017922
+      },
+      {
+       "class": "Ventricular_Cardiomyocyte",
+       "count": 95,
+       "fraction": 0.0018938261268265455
+      }
+     ],
+     "top_contaminant": {
+      "class": "Pericytes",
+      "count": 584,
+      "fraction": 0.011642046927017922
+     }
+    }
+   },
+   "Myeloid": {
+    "direction": "rows: where the REAL test cells of this type are sent",
+    "n_real_test_cells_summed_over_seeds": 11510,
+    "n_real_test_cells_per_seed": 2302,
+    "all_destinations": {
+     "Myeloid": {
+      "count": 10367,
+      "fraction": 0.9006950477845352
+     },
+     "Lymphoid": {
+      "count": 1107,
+      "fraction": 0.09617723718505647
+     },
+     "Neuronal": {
+      "count": 13,
+      "fraction": 0.0011294526498696784
+     },
+     "Endothelial": {
+      "count": 11,
+      "fraction": 0.0009556907037358819
+     },
+     "Atrial_Cardiomyocyte": {
+      "count": 5,
+      "fraction": 0.0004344048653344917
+     },
+     "Mesothelial": {
+      "count": 2,
+      "fraction": 0.0001737619461337967
+     },
+     "Ventricular_Cardiomyocyte": {
+      "count": 2,
+      "fraction": 0.0001737619461337967
+     },
+     "Fibroblast": {
+      "count": 1,
+      "fraction": 8.688097306689835e-05
+     },
+     "Smooth_muscle_cells": {
+      "count": 1,
+      "fraction": 8.688097306689835e-05
+     },
+     "Adipocytes": {
+      "count": 1,
+      "fraction": 8.688097306689835e-05
+     }
+    },
+    "top3_destinations": [
+     {
+      "class": "Myeloid",
+      "count": 10367,
+      "fraction": 0.9006950477845352
+     },
+     {
+      "class": "Lymphoid",
+      "count": 1107,
+      "fraction": 0.09617723718505647
+     },
+     {
+      "class": "Neuronal",
+      "count": 13,
+      "fraction": 0.0011294526498696784
+     }
+    ],
+    "correct_fraction": 0.9006950477845352,
+    "top_wrong_destination": {
+     "class": "Lymphoid",
+     "count": 1107,
+     "fraction": 0.09617723718505647
+    },
+    "predicted_as_this_type": {
+     "direction": "columns: the true identity of every real cell the model CALLS this type -- this is what precision measures",
+     "n_predicted_summed_over_seeds": 10909,
+     "purity_of_the_prediction": 0.9503162526354386,
+     "top3_true_identities": [
+      {
+       "class": "Myeloid",
+       "count": 10367,
+       "fraction": 0.9503162526354386
+      },
+      {
+       "class": "Lymphoid",
+       "count": 292,
+       "fraction": 0.026766889724081033
+      },
+      {
+       "class": "Pericytes",
+       "count": 116,
+       "fraction": 0.010633421945182877
+      }
+     ],
+     "top_contaminant": {
+      "class": "Lymphoid",
+      "count": 292,
+      "fraction": 0.026766889724081033
+     }
+    }
+   },
+   "Neuronal": {
+    "direction": "rows: where the REAL test cells of this type are sent",
+    "n_real_test_cells_summed_over_seeds": 1980,
+    "n_real_test_cells_per_seed": 396,
+    "all_destinations": {
+     "Neuronal": {
+      "count": 1946,
+      "fraction": 0.9828282828282828
+     },
+     "Fibroblast": {
+      "count": 30,
+      "fraction": 0.015151515151515152
+     },
+     "Pericytes": {
+      "count": 3,
+      "fraction": 0.0015151515151515152
+     },
+     "Myeloid": {
+      "count": 1,
+      "fraction": 0.000505050505050505
+     }
+    },
+    "top3_destinations": [
+     {
+      "class": "Neuronal",
+      "count": 1946,
+      "fraction": 0.9828282828282828
+     },
+     {
+      "class": "Fibroblast",
+      "count": 30,
+      "fraction": 0.015151515151515152
+     },
+     {
+      "class": "Pericytes",
+      "count": 3,
+      "fraction": 0.0015151515151515152
+     }
+    ],
+    "correct_fraction": 0.9828282828282828,
+    "top_wrong_destination": {
+     "class": "Fibroblast",
+     "count": 30,
+     "fraction": 0.015151515151515152
+    },
+    "predicted_as_this_type": {
+     "direction": "columns: the true identity of every real cell the model CALLS this type -- this is what precision measures",
+     "n_predicted_summed_over_seeds": 2376,
+     "purity_of_the_prediction": 0.819023569023569,
+     "top3_true_identities": [
+      {
+       "class": "Neuronal",
+       "count": 1946,
+       "fraction": 0.819023569023569
+      },
+      {
+       "class": "Pericytes",
+       "count": 115,
+       "fraction": 0.0484006734006734
+      },
+      {
+       "class": "Endothelial",
+       "count": 108,
+       "fraction": 0.045454545454545456
+      }
+     ],
+     "top_contaminant": {
+      "class": "Pericytes",
+      "count": 115,
+      "fraction": 0.0484006734006734
+     }
+    }
+   }
+  },
+  "MDLM": {
+   "Endothelial": {
+    "direction": "rows: where the REAL test cells of this type are sent",
+    "n_real_test_cells_summed_over_seeds": 50285,
+    "n_real_test_cells_per_seed": 10057,
+    "all_destinations": {
+     "Endothelial": {
+      "count": 49011,
+      "fraction": 0.9746644128467734
+     },
+     "Pericytes": {
+      "count": 820,
+      "fraction": 0.016307049816048524
+     },
+     "Fibroblast": {
+      "count": 133,
+      "fraction": 0.002644923933578602
+     },
+     "Neuronal": {
+      "count": 126,
+      "fraction": 0.0025057174107586755
+     },
+     "Myeloid": {
+      "count": 85,
+      "fraction": 0.0016903649199562494
+     },
+     "Ventricular_Cardiomyocyte": {
+      "count": 45,
+      "fraction": 0.0008948990752709556
+     },
+     "Lymphoid": {
+      "count": 27,
+      "fraction": 0.0005369394451625733
+     },
+     "Smooth_muscle_cells": {
+      "count": 26,
+      "fraction": 0.000517052799045441
+     },
+     "Adipocytes": {
+      "count": 6,
+      "fraction": 0.00011931987670279408
+     },
+     "Atrial_Cardiomyocyte": {
+      "count": 6,
+      "fraction": 0.00011931987670279408
+     }
+    },
+    "top3_destinations": [
+     {
+      "class": "Endothelial",
+      "count": 49011,
+      "fraction": 0.9746644128467734
+     },
+     {
+      "class": "Pericytes",
+      "count": 820,
+      "fraction": 0.016307049816048524
+     },
+     {
+      "class": "Fibroblast",
+      "count": 133,
+      "fraction": 0.002644923933578602
+     }
+    ],
+    "correct_fraction": 0.9746644128467734,
+    "top_wrong_destination": {
+     "class": "Pericytes",
+     "count": 820,
+     "fraction": 0.016307049816048524
+    },
+    "predicted_as_this_type": {
+     "direction": "columns: the true identity of every real cell the model CALLS this type -- this is what precision measures",
+     "n_predicted_summed_over_seeds": 49544,
+     "purity_of_the_prediction": 0.9892418860003229,
+     "top3_true_identities": [
+      {
+       "class": "Endothelial",
+       "count": 49011,
+       "fraction": 0.9892418860003229
+      },
+      {
+       "class": "Pericytes",
+       "count": 455,
+       "fraction": 0.009183755853382852
+      },
+      {
+       "class": "Fibroblast",
+       "count": 39,
+       "fraction": 0.0007871790731471016
+      }
+     ],
+     "top_contaminant": {
+      "class": "Pericytes",
+      "count": 455,
+      "fraction": 0.009183755853382852
+     }
+    }
+   },
+   "Myeloid": {
+    "direction": "rows: where the REAL test cells of this type are sent",
+    "n_real_test_cells_summed_over_seeds": 11510,
+    "n_real_test_cells_per_seed": 2302,
+    "all_destinations": {
+     "Myeloid": {
+      "count": 10654,
+      "fraction": 0.925629887054735
+     },
+     "Lymphoid": {
+      "count": 842,
+      "fraction": 0.07315377932232842
+     },
+     "Endothelial": {
+      "count": 4,
+      "fraction": 0.0003475238922675934
+     },
+     "Neuronal": {
+      "count": 4,
+      "fraction": 0.0003475238922675934
+     },
+     "Pericytes": {
+      "count": 3,
+      "fraction": 0.00026064291920069505
+     },
+     "Ventricular_Cardiomyocyte": {
+      "count": 2,
+      "fraction": 0.0001737619461337967
+     },
+     "Adipocytes": {
+      "count": 1,
+      "fraction": 8.688097306689835e-05
+     }
+    },
+    "top3_destinations": [
+     {
+      "class": "Myeloid",
+      "count": 10654,
+      "fraction": 0.925629887054735
+     },
+     {
+      "class": "Lymphoid",
+      "count": 842,
+      "fraction": 0.07315377932232842
+     },
+     {
+      "class": "Endothelial",
+      "count": 4,
+      "fraction": 0.0003475238922675934
+     }
+    ],
+    "correct_fraction": 0.925629887054735,
+    "top_wrong_destination": {
+     "class": "Lymphoid",
+     "count": 842,
+     "fraction": 0.07315377932232842
+    },
+    "predicted_as_this_type": {
+     "direction": "columns: the true identity of every real cell the model CALLS this type -- this is what precision measures",
+     "n_predicted_summed_over_seeds": 11245,
+     "purity_of_the_prediction": 0.9474433081369498,
+     "top3_true_identities": [
+      {
+       "class": "Myeloid",
+       "count": 10654,
+       "fraction": 0.9474433081369498
+      },
+      {
+       "class": "Lymphoid",
+       "count": 457,
+       "fraction": 0.04064028457092041
+      },
+      {
+       "class": "Endothelial",
+       "count": 85,
+       "fraction": 0.00755891507336594
+      }
+     ],
+     "top_contaminant": {
+      "class": "Lymphoid",
+      "count": 457,
+      "fraction": 0.04064028457092041
+     }
+    }
+   },
+   "Neuronal": {
+    "direction": "rows: where the REAL test cells of this type are sent",
+    "n_real_test_cells_summed_over_seeds": 1980,
+    "n_real_test_cells_per_seed": 396,
+    "all_destinations": {
+     "Neuronal": {
+      "count": 1962,
+      "fraction": 0.990909090909091
+     },
+     "Fibroblast": {
+      "count": 15,
+      "fraction": 0.007575757575757576
+     },
+     "Atrial_Cardiomyocyte": {
+      "count": 2,
+      "fraction": 0.00101010101010101
+     },
+     "Pericytes": {
+      "count": 1,
+      "fraction": 0.000505050505050505
+     }
+    },
+    "top3_destinations": [
+     {
+      "class": "Neuronal",
+      "count": 1962,
+      "fraction": 0.990909090909091
+     },
+     {
+      "class": "Fibroblast",
+      "count": 15,
+      "fraction": 0.007575757575757576
+     },
+     {
+      "class": "Atrial_Cardiomyocyte",
+      "count": 2,
+      "fraction": 0.00101010101010101
+     }
+    ],
+    "correct_fraction": 0.990909090909091,
+    "top_wrong_destination": {
+     "class": "Fibroblast",
+     "count": 15,
+     "fraction": 0.007575757575757576
+    },
+    "predicted_as_this_type": {
+     "direction": "columns: the true identity of every real cell the model CALLS this type -- this is what precision measures",
+     "n_predicted_summed_over_seeds": 3539,
+     "purity_of_the_prediction": 0.5543938965809551,
+     "top3_true_identities": [
+      {
+       "class": "Neuronal",
+       "count": 1962,
+       "fraction": 0.5543938965809551
+      },
+      {
+       "class": "Fibroblast",
+       "count": 631,
+       "fraction": 0.17829895450692285
+      },
+      {
+       "class": "Ventricular_Cardiomyocyte",
+       "count": 530,
+       "fraction": 0.14975981915795422
+      }
+     ],
+     "top_contaminant": {
+      "class": "Fibroblast",
+      "count": 631,
+      "fraction": 0.17829895450692285
+     }
+    }
+   }
+  }
+ },
+ "arm_arrays": {
+  "OURS|Endothelial": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\table1_ours\\Endothelial_a1\\Endothelial_residual_hvgtwist_fk_tiltevery_trigany_K32_M20114_N10057_alpha1p0_J16_int8_th0p5_tau0p4_cc256_odds_seed20260987.npy",
+   "sha256": "014fc9a0ff45372366804574eb343feb7b7561028d472757cb405a11363f615b"
+  },
+  "OURS|Myeloid": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\table1_ours\\Myeloid_a1\\Myeloid_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987.npy",
+   "sha256": "1785514ca24674abb556d90b41a95ac13ae0518b6aca9caed86b34418375b3a9"
+  },
+  "OURS|Neuronal": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\runs\\table1_ours\\Neuronal_a1\\Neuronal_residual_hvgtwist_fk_tiltevery_trigany_K32_M5000_N2500_alpha1p0_J16_int8_th0p5_tau0p2_cc256_odds_seed20260987.npy",
+   "sha256": "54b308bd44e46461dae6af6b709f0026597d9088f25cecd55bc5c57c59368f16"
+  },
+  "scVI|Endothelial": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scvi\\out\\counts\\scvi_cond_Endothelial_n20000_seed20261051.npy",
+   "sha256": "169b417a2837a7de61cee4ee70a07d40d027c51e8473f7f7bb8e89877404c1cc"
+  },
+  "scVI|Myeloid": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scvi\\out\\counts\\scvi_cond_Myeloid_n20000_seed20261051.npy",
+   "sha256": "a3067d8b9ca46d990c046bf8d402cb4926d1467b039db35e66d2490682c8a0e8"
+  },
+  "scVI|Neuronal": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scvi\\out\\counts\\scvi_cond_Neuronal_n20000_seed20261051.npy",
+   "sha256": "0880c0c4ddb726a9971bed6027307f9bc680249f8fc9e1651093e7191af622a9"
+  },
+  "scANVI|Endothelial": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scanvi\\out\\counts\\scanvi_cond_Endothelial_n20000_seed20261061.npy",
+   "sha256": "e58dbcaf5bf4acf0bc1f2ec4b57a901028f579aad7b3818e0fdd1171f44aebf5"
+  },
+  "scANVI|Myeloid": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scanvi\\out\\counts\\scanvi_cond_Myeloid_n20000_seed20261061.npy",
+   "sha256": "057535eab007350d2deb2e0656e18b069ae4ded5ed4315319ce63a1930c8469b"
+  },
+  "scANVI|Neuronal": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_scanvi\\out\\counts\\scanvi_cond_Neuronal_n20000_seed20261061.npy",
+   "sha256": "054eeed11cc5c696d11e7269cd754659403709e2b53a1e858e50bb9e798b51f8"
+  },
+  "CFGen|Endothelial": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_cfgen\\out\\counts\\cfgen_cond_Endothelial_n20000_seed20261061.npy",
+   "sha256": "23d60c754034d23209c419e149d5f275405847d9d1210c3c79364b2b611c5269"
+  },
+  "CFGen|Myeloid": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_cfgen\\out\\counts\\cfgen_cond_Myeloid_n20000_seed20261061.npy",
+   "sha256": "193c4c722dd9942e32558358aec6ec368d45bc9ee259ffe2f94fd7a02eca0dbd"
+  },
+  "CFGen|Neuronal": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Conditional generation experiments\\HVG2K\\baseline_cfgen\\out\\counts\\cfgen_cond_Neuronal_n20000_seed20261061.npy",
+   "sha256": "0e2215e043864565726ae1ebc6ef798cbd43adf9c0aa973ad4fd9b374d2e3aea"
+  },
+  "MDLM|Endothelial": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\cond_pools\\mdlm_cond_K128_Endothelial_seed20260931_n10057.npy",
+   "sha256": "850c94e4ae1a761fba5d7547d4ab2a26f6af47f2baf4600bb44e739c0cd5e070"
+  },
+  "MDLM|Myeloid": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\cond_pools\\mdlm_cond_K128_Myeloid_seed20260931_n2500.npy",
+   "sha256": "e5c2500f41eafb6036fc1abd446d997f9ebd35d064335441bb800f83d41cbf38"
+  },
+  "MDLM|Neuronal": {
+   "path": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\cond_pools\\mdlm_cond_K128_Neuronal_seed20260931_n2500.npy",
+   "sha256": "7512ba3acdd8cd4374a441422c7095fb2dc269fd2b6f4aeecc1451fae05b8b97"
+  }
+ },
+ "cpu_threads": 2,
+ "priority": {
+  "nice": "BELOW_NORMAL_PRIORITY_CLASS",
+  "pid": 45424
+ },
+ "cpu_peak_percent": 16.0,
+ "cpu_peak_process_percent": 0,
+ "n_logical_cpus": 32,
+ "run_json": "D:\\research\\Git-backup\\crndiff\\CRNDIFF\\Experiments\\HVG\\out\\e33_211\\e33_tstr11.json",
+ "run_json_sha256": "3c12d84d1cb9500635f20e83357272ffd4ea7d66347397b16919eba1fb29bb27",
+ "body_sha256": "dee8e40d722fe0acbd6c922ad21421bde5e9941101a7375346bccae3654a8007",
+ "walltime_s": 630.5479125976562,
+ "written_at": "2026-09-14 16:40:35",
+ "cpu_log": {
+  "20260833": [
+   {
+    "arm": "REAL (ceiling)",
+    "when": "before_fit",
+    "cpu_percent": 13.8,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.28
+   },
+   {
+    "arm": "REAL (ceiling)",
+    "when": "after_fit",
+    "cpu_percent": 2.4,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.33
+   },
+   {
+    "arm": "OURS",
+    "when": "before_fit",
+    "cpu_percent": 4.1,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.42
+   },
+   {
+    "arm": "OURS",
+    "when": "after_fit",
+    "cpu_percent": 3.0,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.42
+   },
+   {
+    "arm": "scVI",
+    "when": "before_fit",
+    "cpu_percent": 4.0,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.58
+   },
+   {
+    "arm": "scVI",
+    "when": "after_fit",
+    "cpu_percent": 3.8,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.58
+   },
+   {
+    "arm": "scANVI",
+    "when": "before_fit",
+    "cpu_percent": 1.6,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.65
+   },
+   {
+    "arm": "scANVI",
+    "when": "after_fit",
+    "cpu_percent": 9.4,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.65
+   },
+   {
+    "arm": "CFGen",
+    "when": "before_fit",
+    "cpu_percent": 2.8,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.71
+   },
+   {
+    "arm": "CFGen",
+    "when": "after_fit",
+    "cpu_percent": 6.5,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.71
+   },
+   {
+    "arm": "MDLM",
+    "when": "before_fit",
+    "cpu_percent": 3.7,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.67
+   },
+   {
+    "arm": "MDLM",
+    "when": "after_fit",
+    "cpu_percent": 1.9,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.68
+   }
+  ],
+  "20260834": [
+   {
+    "arm": "REAL (ceiling)",
+    "when": "before_fit",
+    "cpu_percent": 5.0,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.28
+   },
+   {
+    "arm": "REAL (ceiling)",
+    "when": "after_fit",
+    "cpu_percent": 5.0,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.33
+   },
+   {
+    "arm": "OURS",
+    "when": "before_fit",
+    "cpu_percent": 2.4,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.42
+   },
+   {
+    "arm": "OURS",
+    "when": "after_fit",
+    "cpu_percent": 9.3,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.42
+   },
+   {
+    "arm": "scVI",
+    "when": "before_fit",
+    "cpu_percent": 2.4,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.58
+   },
+   {
+    "arm": "scVI",
+    "when": "after_fit",
+    "cpu_percent": 2.2,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.58
+   },
+   {
+    "arm": "scANVI",
+    "when": "before_fit",
+    "cpu_percent": 3.2,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.65
+   },
+   {
+    "arm": "scANVI",
+    "when": "after_fit",
+    "cpu_percent": 8.0,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.65
+   },
+   {
+    "arm": "CFGen",
+    "when": "before_fit",
+    "cpu_percent": 4.8,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.71
+   },
+   {
+    "arm": "CFGen",
+    "when": "after_fit",
+    "cpu_percent": 3.1,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.71
+   },
+   {
+    "arm": "MDLM",
+    "when": "before_fit",
+    "cpu_percent": 5.5,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.68
+   },
+   {
+    "arm": "MDLM",
+    "when": "after_fit",
+    "cpu_percent": 6.9,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.68
+   }
+  ],
+  "20260835": [
+   {
+    "arm": "REAL (ceiling)",
+    "when": "before_fit",
+    "cpu_percent": 3.6,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.28
+   },
+   {
+    "arm": "REAL (ceiling)",
+    "when": "after_fit",
+    "cpu_percent": 4.2,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.33
+   },
+   {
+    "arm": "OURS",
+    "when": "before_fit",
+    "cpu_percent": 7.8,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.42
+   },
+   {
+    "arm": "OURS",
+    "when": "after_fit",
+    "cpu_percent": 9.2,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.42
+   },
+   {
+    "arm": "scVI",
+    "when": "before_fit",
+    "cpu_percent": 9.4,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.58
+   },
+   {
+    "arm": "scVI",
+    "when": "after_fit",
+    "cpu_percent": 6.0,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.58
+   },
+   {
+    "arm": "scANVI",
+    "when": "before_fit",
+    "cpu_percent": 8.6,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.65
+   },
+   {
+    "arm": "scANVI",
+    "when": "after_fit",
+    "cpu_percent": 5.1,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.65
+   },
+   {
+    "arm": "CFGen",
+    "when": "before_fit",
+    "cpu_percent": 4.2,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.71
+   },
+   {
+    "arm": "CFGen",
+    "when": "after_fit",
+    "cpu_percent": 7.0,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.71
+   },
+   {
+    "arm": "MDLM",
+    "when": "before_fit",
+    "cpu_percent": 6.2,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.68
+   },
+   {
+    "arm": "MDLM",
+    "when": "after_fit",
+    "cpu_percent": 5.9,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.68
+   }
+  ],
+  "20260836": [
+   {
+    "arm": "REAL (ceiling)",
+    "when": "before_fit",
+    "cpu_percent": 6.1,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.28
+   },
+   {
+    "arm": "REAL (ceiling)",
+    "when": "after_fit",
+    "cpu_percent": 10.0,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.33
+   },
+   {
+    "arm": "OURS",
+    "when": "before_fit",
+    "cpu_percent": 16.0,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.42
+   },
+   {
+    "arm": "OURS",
+    "when": "after_fit",
+    "cpu_percent": 4.6,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.42
+   },
+   {
+    "arm": "scVI",
+    "when": "before_fit",
+    "cpu_percent": 2.8,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.58
+   },
+   {
+    "arm": "scVI",
+    "when": "after_fit",
+    "cpu_percent": 2.3,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.58
+   },
+   {
+    "arm": "scANVI",
+    "when": "before_fit",
+    "cpu_percent": 6.0,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.65
+   },
+   {
+    "arm": "scANVI",
+    "when": "after_fit",
+    "cpu_percent": 2.7,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.65
+   },
+   {
+    "arm": "CFGen",
+    "when": "before_fit",
+    "cpu_percent": 4.1,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.71
+   },
+   {
+    "arm": "CFGen",
+    "when": "after_fit",
+    "cpu_percent": 2.9,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.71
+   },
+   {
+    "arm": "MDLM",
+    "when": "before_fit",
+    "cpu_percent": 3.9,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.67
+   },
+   {
+    "arm": "MDLM",
+    "when": "after_fit",
+    "cpu_percent": 2.9,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.68
+   }
+  ],
+  "20260837": [
+   {
+    "arm": "REAL (ceiling)",
+    "when": "before_fit",
+    "cpu_percent": 4.4,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.28
+   },
+   {
+    "arm": "REAL (ceiling)",
+    "when": "after_fit",
+    "cpu_percent": 3.5,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.33
+   },
+   {
+    "arm": "OURS",
+    "when": "before_fit",
+    "cpu_percent": 5.5,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.42
+   },
+   {
+    "arm": "OURS",
+    "when": "after_fit",
+    "cpu_percent": 6.4,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.42
+   },
+   {
+    "arm": "scVI",
+    "when": "before_fit",
+    "cpu_percent": 2.8,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.58
+   },
+   {
+    "arm": "scVI",
+    "when": "after_fit",
+    "cpu_percent": 2.9,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.58
+   },
+   {
+    "arm": "scANVI",
+    "when": "before_fit",
+    "cpu_percent": 3.3,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.65
+   },
+   {
+    "arm": "scANVI",
+    "when": "after_fit",
+    "cpu_percent": 11.8,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.65
+   },
+   {
+    "arm": "CFGen",
+    "when": "before_fit",
+    "cpu_percent": 1.8,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.71
+   },
+   {
+    "arm": "CFGen",
+    "when": "after_fit",
+    "cpu_percent": 4.8,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.71
+   },
+   {
+    "arm": "MDLM",
+    "when": "before_fit",
+    "cpu_percent": 3.0,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.68
+   },
+   {
+    "arm": "MDLM",
+    "when": "after_fit",
+    "cpu_percent": 5.7,
+    "n_logical": 32,
+    "proc_cpu_percent": 0.0,
+    "rss_gb": 1.68
+   }
+  ]
+ }
+}

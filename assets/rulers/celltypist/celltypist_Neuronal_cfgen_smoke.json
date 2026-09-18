@@ -1,0 +1,665 @@
+{
+ "model": "Healthy_Adult_Heart.pkl",
+ "n_genes_overlap": 1218,
+ "target": "Neuronal",
+ "rows": [
+  {
+   "arm": "空操作(无条件)",
+   "n": 2500,
+   "purity": 0.0048,
+   "purity_se": 0.001382311108253131,
+   "purity_strict": 0.0048
+  },
+  {
+   "arm": "cfgen_uncond_Neuronal_n3000_seed20261061.npy",
+   "n": 2500,
+   "purity": 0.0124,
+   "purity_se": 0.0022132546170741405,
+   "purity_strict": 0.0124
+  },
+  {
+   "arm": "cfgen_cond_Neuronal_n3000_seed20261061.npy",
+   "n": 2500,
+   "purity": 0.0076,
+   "purity_se": 0.0017369214144571999,
+   "purity_strict": 0.0076
+  },
+  {
+   "arm": "真实 val 细胞",
+   "n": 396,
+   "purity": 0.7045454545454546,
+   "purity_se": 0.022927265153880584,
+   "purity_strict": 0.7045454545454546
+  }
+ ],
+ "fine_to_coarse": {
+  "Adip1": "Ventricular_Cardiomyocyte",
+  "Adip2": "Fibroblast",
+  "Adip4": "Pericytes",
+  "B": "Lymphoid",
+  "B_plasma": "Lymphoid",
+  "CD14+Mo": "Myeloid",
+  "CD16+Mo": "Myeloid",
+  "CD4+T_Tfh": "Lymphoid",
+  "CD4+T_Th1": "Lymphoid",
+  "CD4+T_Th2": "Lymphoid",
+  "CD4+T_act": "Lymphoid",
+  "CD4+T_naive": "Lymphoid",
+  "CD4+T_reg": "Lymphoid",
+  "CD8+T_cytox": "Lymphoid",
+  "CD8+T_em": "Lymphoid",
+  "CD8+T_te": "Lymphoid",
+  "CD8+T_trans": "Lymphoid",
+  "DC": "Myeloid",
+  "EC10_CMC-like": "Endothelial",
+  "EC1_cap": "Endothelial",
+  "EC2_cap": "Endothelial",
+  "EC3_cap": "Endothelial",
+  "EC4_immune": "Endothelial",
+  "EC5_art": "Endothelial",
+  "EC6_ven": "Endothelial",
+  "EC7_endocardial": "Endothelial",
+  "EC8_ln": "Endothelial",
+  "EC9_FB-like": "Ventricular_Cardiomyocyte",
+  "FB1": "Fibroblast",
+  "FB2": "Fibroblast",
+  "FB3": "Fibroblast",
+  "FB4_activated": "Fibroblast",
+  "FB5": "Fibroblast",
+  "FB6": "Fibroblast",
+  "ILC": "Lymphoid",
+  "LYVE1+IGF1+MP": "Myeloid",
+  "LYVE1+MP_cycling": "Myeloid",
+  "LYVE1+TIMD4+MP": "Myeloid",
+  "MAIT-like": "Lymphoid",
+  "Mast": "Myeloid",
+  "Meso": "Mesothelial",
+  "MoMP": "Myeloid",
+  "NC1_glial": "Neuronal",
+  "NC2_glial_NGF+": "Fibroblast",
+  "NC3_glial": "Pericytes",
+  "NK_CD16hi": "Lymphoid",
+  "NK_CD56hi": "Lymphoid",
+  "Neut": "Myeloid",
+  "PC1_vent": "Pericytes",
+  "PC2_atria": "Pericytes",
+  "PC3_str": "Pericytes",
+  "PC4_CMC-like": "Pericytes",
+  "Purkinje_cell": "Ventricular_Cardiomyocyte",
+  "SMC1_basic": "Smooth_muscle_cells",
+  "SMC2_art": "Smooth_muscle_cells",
+  "T/NK_cycling": "Lymphoid",
+  "aCM1": "Atrial_Cardiomyocyte",
+  "aCM2": "Atrial_Cardiomyocyte",
+  "aCM3": "Atrial_Cardiomyocyte",
+  "aCM4": "Atrial_Cardiomyocyte",
+  "aCM5": "Atrial_Cardiomyocyte",
+  "vCM1": "Ventricular_Cardiomyocyte",
+  "vCM2": "Ventricular_Cardiomyocyte",
+  "vCM3_stressed": "Ventricular_Cardiomyocyte",
+  "vCM4": "Ventricular_Cardiomyocyte",
+  "vCM5": "Ventricular_Cardiomyocyte"
+ },
+ "label_support": {
+  "Adip1": {
+   "n": 84,
+   "major_frac": 0.7857142857142857
+  },
+  "Adip2": {
+   "n": 888,
+   "major_frac": 0.5416666666666666
+  },
+  "Adip4": {
+   "n": 6,
+   "major_frac": 0.5
+  },
+  "B": {
+   "n": 26,
+   "major_frac": 1.0
+  },
+  "B_plasma": {
+   "n": 8,
+   "major_frac": 1.0
+  },
+  "CD14+Mo": {
+   "n": 144,
+   "major_frac": 0.9166666666666666
+  },
+  "CD16+Mo": {
+   "n": 127,
+   "major_frac": 0.84251968503937
+  },
+  "CD4+T_Tfh": {
+   "n": 5,
+   "major_frac": 1.0
+  },
+  "CD4+T_Th1": {
+   "n": 3,
+   "major_frac": 0.6666666666666666
+  },
+  "CD4+T_Th2": {
+   "n": 8,
+   "major_frac": 0.375
+  },
+  "CD4+T_act": {
+   "n": 74,
+   "major_frac": 0.8783783783783784
+  },
+  "CD4+T_naive": {
+   "n": 47,
+   "major_frac": 0.5319148936170213
+  },
+  "CD4+T_reg": {
+   "n": 3,
+   "major_frac": 0.6666666666666666
+  },
+  "CD8+T_cytox": {
+   "n": 60,
+   "major_frac": 0.9833333333333333
+  },
+  "CD8+T_em": {
+   "n": 73,
+   "major_frac": 0.9726027397260274
+  },
+  "CD8+T_te": {
+   "n": 68,
+   "major_frac": 0.9117647058823529
+  },
+  "CD8+T_trans": {
+   "n": 59,
+   "major_frac": 0.9322033898305084
+  },
+  "DC": {
+   "n": 91,
+   "major_frac": 0.5494505494505495
+  },
+  "EC10_CMC-like": {
+   "n": 258,
+   "major_frac": 0.8798449612403101
+  },
+  "EC1_cap": {
+   "n": 296,
+   "major_frac": 0.9324324324324325
+  },
+  "EC2_cap": {
+   "n": 680,
+   "major_frac": 0.9808823529411764
+  },
+  "EC3_cap": {
+   "n": 1221,
+   "major_frac": 0.8566748566748567
+  },
+  "EC4_immune": {
+   "n": 237,
+   "major_frac": 0.9620253164556962
+  },
+  "EC5_art": {
+   "n": 1270,
+   "major_frac": 0.9062992125984252
+  },
+  "EC6_ven": {
+   "n": 398,
+   "major_frac": 0.9396984924623115
+  },
+  "EC7_endocardial": {
+   "n": 240,
+   "major_frac": 0.9041666666666667
+  },
+  "EC8_ln": {
+   "n": 31,
+   "major_frac": 1.0
+  },
+  "EC9_FB-like": {
+   "n": 1,
+   "major_frac": 1.0
+  },
+  "FB1": {
+   "n": 513,
+   "major_frac": 0.9337231968810916
+  },
+  "FB2": {
+   "n": 506,
+   "major_frac": 0.9565217391304348
+  },
+  "FB3": {
+   "n": 477,
+   "major_frac": 0.8825995807127882
+  },
+  "FB4_activated": {
+   "n": 336,
+   "major_frac": 0.9315476190476191
+  },
+  "FB5": {
+   "n": 192,
+   "major_frac": 0.7708333333333334
+  },
+  "FB6": {
+   "n": 405,
+   "major_frac": 0.3308641975308642
+  },
+  "ILC": {
+   "n": 3,
+   "major_frac": 1.0
+  },
+  "LYVE1+IGF1+MP": {
+   "n": 353,
+   "major_frac": 0.9008498583569405
+  },
+  "LYVE1+MP_cycling": {
+   "n": 28,
+   "major_frac": 0.6428571428571429
+  },
+  "LYVE1+TIMD4+MP": {
+   "n": 257,
+   "major_frac": 0.914396887159533
+  },
+  "MAIT-like": {
+   "n": 16,
+   "major_frac": 0.8125
+  },
+  "Mast": {
+   "n": 62,
+   "major_frac": 1.0
+  },
+  "Meso": {
+   "n": 31,
+   "major_frac": 0.9032258064516129
+  },
+  "MoMP": {
+   "n": 56,
+   "major_frac": 0.7142857142857143
+  },
+  "NC1_glial": {
+   "n": 128,
+   "major_frac": 0.9609375
+  },
+  "NC2_glial_NGF+": {
+   "n": 288,
+   "major_frac": 0.4270833333333333
+  },
+  "NC3_glial": {
+   "n": 4,
+   "major_frac": 0.5
+  },
+  "NK_CD16hi": {
+   "n": 182,
+   "major_frac": 0.989010989010989
+  },
+  "NK_CD56hi": {
+   "n": 66,
+   "major_frac": 0.9696969696969697
+  },
+  "Neut": {
+   "n": 3,
+   "major_frac": 1.0
+  },
+  "PC1_vent": {
+   "n": 689,
+   "major_frac": 0.8824383164005806
+  },
+  "PC2_atria": {
+   "n": 365,
+   "major_frac": 0.9205479452054794
+  },
+  "PC3_str": {
+   "n": 1207,
+   "major_frac": 0.7547638773819387
+  },
+  "PC4_CMC-like": {
+   "n": 1021,
+   "major_frac": 0.930460333006856
+  },
+  "Purkinje_cell": {
+   "n": 36,
+   "major_frac": 1.0
+  },
+  "SMC1_basic": {
+   "n": 439,
+   "major_frac": 0.8724373576309795
+  },
+  "SMC2_art": {
+   "n": 165,
+   "major_frac": 0.9090909090909091
+  },
+  "T/NK_cycling": {
+   "n": 11,
+   "major_frac": 0.9090909090909091
+  },
+  "aCM1": {
+   "n": 55,
+   "major_frac": 1.0
+  },
+  "aCM2": {
+   "n": 398,
+   "major_frac": 0.8316582914572864
+  },
+  "aCM3": {
+   "n": 355,
+   "major_frac": 0.8338028169014085
+  },
+  "aCM4": {
+   "n": 294,
+   "major_frac": 0.8503401360544217
+  },
+  "aCM5": {
+   "n": 5,
+   "major_frac": 0.6
+  },
+  "vCM1": {
+   "n": 268,
+   "major_frac": 0.8470149253731343
+  },
+  "vCM2": {
+   "n": 1631,
+   "major_frac": 0.9625996321275291
+  },
+  "vCM3_stressed": {
+   "n": 1329,
+   "major_frac": 0.9857035364936042
+  },
+  "vCM4": {
+   "n": 1407,
+   "major_frac": 0.9722814498933902
+  },
+  "vCM5": {
+   "n": 13,
+   "major_frac": 0.38461538461538464
+  }
+ },
+ "target_labels": [
+  "NC1_glial"
+ ],
+ "target_labels_strong": [
+  "NC1_glial"
+ ],
+ "target_labels_weak": [],
+ "label_dists": {
+  "空操作(无条件)": {
+   "Adip1": 17,
+   "Adip2": 126,
+   "Adip4": 1,
+   "CD14+Mo": 14,
+   "CD16+Mo": 9,
+   "CD4+T_Tfh": 4,
+   "CD4+T_Th2": 1,
+   "CD4+T_act": 6,
+   "CD4+T_naive": 2,
+   "CD8+T_cytox": 6,
+   "CD8+T_em": 15,
+   "CD8+T_te": 3,
+   "CD8+T_trans": 4,
+   "DC": 13,
+   "EC10_CMC-like": 36,
+   "EC1_cap": 30,
+   "EC2_cap": 70,
+   "EC3_cap": 193,
+   "EC4_immune": 31,
+   "EC5_art": 153,
+   "EC6_ven": 29,
+   "EC7_endocardial": 18,
+   "FB1": 56,
+   "FB2": 75,
+   "FB3": 61,
+   "FB4_activated": 33,
+   "FB5": 15,
+   "FB6": 67,
+   "LYVE1+IGF1+MP": 40,
+   "LYVE1+MP_cycling": 2,
+   "LYVE1+TIMD4+MP": 33,
+   "MAIT-like": 3,
+   "Mast": 6,
+   "MoMP": 3,
+   "NC1_glial": 12,
+   "NC2_glial_NGF+": 58,
+   "NK_CD16hi": 25,
+   "NK_CD56hi": 7,
+   "PC1_vent": 87,
+   "PC2_atria": 27,
+   "PC3_str": 178,
+   "PC4_CMC-like": 155,
+   "Purkinje_cell": 7,
+   "SMC1_basic": 43,
+   "SMC2_art": 14,
+   "aCM1": 5,
+   "aCM2": 55,
+   "aCM3": 50,
+   "aCM4": 38,
+   "aCM5": 2,
+   "vCM1": 43,
+   "vCM2": 170,
+   "vCM3_stressed": 147,
+   "vCM4": 198,
+   "vCM5": 4
+  },
+  "cfgen_uncond_Neuronal_n3000_seed20261061.npy": {
+   "AVN_P_cell": 7,
+   "AVN_bundle_cell": 20,
+   "Adip1": 18,
+   "Adip2": 414,
+   "Adip3": 20,
+   "Adip4": 32,
+   "B": 16,
+   "B_plasma": 6,
+   "CD14+Mo": 35,
+   "CD16+Mo": 18,
+   "CD4+T_Tfh": 7,
+   "CD4+T_Th1": 12,
+   "CD4+T_Th17": 8,
+   "CD4+T_Th2": 26,
+   "CD4+T_act": 21,
+   "CD4+T_naive": 5,
+   "CD4+T_reg": 16,
+   "CD8+T_cytox": 25,
+   "CD8+T_em": 23,
+   "CD8+T_te": 18,
+   "CD8+T_trans": 16,
+   "DC": 33,
+   "EC10_CMC-like": 38,
+   "EC2_cap": 21,
+   "EC3_cap": 9,
+   "EC4_immune": 12,
+   "EC5_art": 30,
+   "EC6_ven": 13,
+   "EC7_endocardial": 36,
+   "EC8_ln": 4,
+   "EC9_FB-like": 6,
+   "FB1": 3,
+   "FB2": 10,
+   "FB3": 22,
+   "FB4_activated": 11,
+   "FB5": 18,
+   "FB6": 7,
+   "ILC": 13,
+   "LYVE1+IGF1+MP": 23,
+   "LYVE1+MP_cycling": 71,
+   "LYVE1+TIMD4+MP": 23,
+   "MAIT-like": 14,
+   "Mast": 7,
+   "Meso": 181,
+   "MoMP": 15,
+   "NC1_glial": 31,
+   "NC2_glial_NGF+": 301,
+   "NC3_glial": 28,
+   "NC4_glial": 8,
+   "NC5_glial": 2,
+   "NC6_schwann": 10,
+   "NK_CD16hi": 29,
+   "NK_CD56hi": 38,
+   "Neut": 43,
+   "PC1_vent": 5,
+   "PC2_atria": 23,
+   "PC3_str": 8,
+   "PC4_CMC-like": 38,
+   "Purkinje_cell": 11,
+   "SAN_P_cell": 7,
+   "SMC1_basic": 20,
+   "SMC2_art": 29,
+   "T/NK_cycling": 16,
+   "aCM1": 14,
+   "aCM2": 50,
+   "aCM3": 89,
+   "aCM4": 34,
+   "aCM5": 17,
+   "gdT": 3,
+   "vCM1": 64,
+   "vCM2": 64,
+   "vCM3_stressed": 65,
+   "vCM4": 22,
+   "vCM5": 48
+  },
+  "cfgen_cond_Neuronal_n3000_seed20261061.npy": {
+   "AVN_P_cell": 6,
+   "AVN_bundle_cell": 21,
+   "Adip1": 17,
+   "Adip2": 437,
+   "Adip3": 14,
+   "Adip4": 25,
+   "B": 16,
+   "B_plasma": 11,
+   "CD14+Mo": 41,
+   "CD16+Mo": 23,
+   "CD4+T_Tfh": 10,
+   "CD4+T_Th1": 8,
+   "CD4+T_Th17": 9,
+   "CD4+T_Th2": 22,
+   "CD4+T_act": 11,
+   "CD4+T_naive": 6,
+   "CD4+T_reg": 18,
+   "CD8+T_cytox": 16,
+   "CD8+T_em": 37,
+   "CD8+T_te": 26,
+   "CD8+T_trans": 20,
+   "DC": 22,
+   "EC10_CMC-like": 34,
+   "EC1_cap": 5,
+   "EC2_cap": 18,
+   "EC3_cap": 12,
+   "EC4_immune": 19,
+   "EC5_art": 27,
+   "EC6_ven": 17,
+   "EC7_endocardial": 19,
+   "EC8_ln": 14,
+   "EC9_FB-like": 10,
+   "FB1": 1,
+   "FB2": 12,
+   "FB3": 25,
+   "FB4_activated": 7,
+   "FB5": 5,
+   "FB6": 13,
+   "ILC": 8,
+   "LYVE1+IGF1+MP": 22,
+   "LYVE1+MP_cycling": 83,
+   "LYVE1+TIMD4+MP": 26,
+   "MAIT-like": 13,
+   "Mast": 10,
+   "Meso": 161,
+   "MoMP": 14,
+   "NC1_glial": 19,
+   "NC2_glial_NGF+": 307,
+   "NC3_glial": 31,
+   "NC4_glial": 7,
+   "NC5_glial": 6,
+   "NC6_schwann": 15,
+   "NK_CD16hi": 29,
+   "NK_CD56hi": 31,
+   "Neut": 22,
+   "PC1_vent": 9,
+   "PC2_atria": 12,
+   "PC3_str": 13,
+   "PC4_CMC-like": 35,
+   "Purkinje_cell": 11,
+   "SAN_P_cell": 14,
+   "SMC1_basic": 12,
+   "SMC2_art": 35,
+   "T/NK_cycling": 21,
+   "aCM1": 12,
+   "aCM2": 59,
+   "aCM3": 86,
+   "aCM4": 30,
+   "aCM5": 25,
+   "gdT": 9,
+   "vCM1": 89,
+   "vCM2": 49,
+   "vCM3_stressed": 62,
+   "vCM4": 20,
+   "vCM5": 39
+  },
+  "真实 val（建映射用）": {
+   "Adip1": 84,
+   "Adip2": 888,
+   "Adip4": 6,
+   "B": 26,
+   "B_plasma": 8,
+   "CD14+Mo": 144,
+   "CD16+Mo": 127,
+   "CD4+T_Tfh": 5,
+   "CD4+T_Th1": 3,
+   "CD4+T_Th2": 8,
+   "CD4+T_act": 74,
+   "CD4+T_naive": 47,
+   "CD4+T_reg": 3,
+   "CD8+T_cytox": 60,
+   "CD8+T_em": 73,
+   "CD8+T_te": 68,
+   "CD8+T_trans": 59,
+   "DC": 91,
+   "EC10_CMC-like": 258,
+   "EC1_cap": 296,
+   "EC2_cap": 680,
+   "EC3_cap": 1221,
+   "EC4_immune": 237,
+   "EC5_art": 1270,
+   "EC6_ven": 398,
+   "EC7_endocardial": 240,
+   "EC8_ln": 31,
+   "EC9_FB-like": 1,
+   "FB1": 513,
+   "FB2": 506,
+   "FB3": 477,
+   "FB4_activated": 336,
+   "FB5": 192,
+   "FB6": 405,
+   "ILC": 3,
+   "LYVE1+IGF1+MP": 353,
+   "LYVE1+MP_cycling": 28,
+   "LYVE1+TIMD4+MP": 257,
+   "MAIT-like": 16,
+   "Mast": 62,
+   "Meso": 31,
+   "MoMP": 56,
+   "NC1_glial": 128,
+   "NC2_glial_NGF+": 288,
+   "NC3_glial": 4,
+   "NK_CD16hi": 182,
+   "NK_CD56hi": 66,
+   "Neut": 3,
+   "PC1_vent": 689,
+   "PC2_atria": 365,
+   "PC3_str": 1207,
+   "PC4_CMC-like": 1021,
+   "Purkinje_cell": 36,
+   "SMC1_basic": 439,
+   "SMC2_art": 165,
+   "T/NK_cycling": 11,
+   "aCM1": 55,
+   "aCM2": 398,
+   "aCM3": 355,
+   "aCM4": 294,
+   "aCM5": 5,
+   "vCM1": 268,
+   "vCM2": 1631,
+   "vCM3_stressed": 1329,
+   "vCM4": 1407,
+   "vCM5": 13
+  },
+  "真实 val 细胞": {
+   "Adip2": 2,
+   "DC": 1,
+   "FB6": 1,
+   "NC1_glial": 279,
+   "NC2_glial_NGF+": 109,
+   "NC3_glial": 1,
+   "vCM1": 3
+  }
+ }
+}

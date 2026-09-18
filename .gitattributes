@@ -1,0 +1,15 @@
+# The sha256 of many files in this repository is asserted at run time: the frozen sampler and
+# ruler modules under crndiff/frozen/ and evaluation/frozen/, the generator checkpoint, and every
+# entry of PROVENANCE.json and docs/COPY_MANIFEST.json. Git line-ending normalisation would
+# rewrite those bytes on checkout and every guard would fail, so nothing in this repository is
+# normalised: the working tree is byte-for-byte what was committed, on every platform.
+* -text
+
+# Binary artefacts, marked so no tool tries to diff or convert them.
+*.npy    binary
+*.npz    binary
+*.pt     binary
+*.pkl    binary
+*.joblib binary
+*.pdf    binary
+*.png    binary

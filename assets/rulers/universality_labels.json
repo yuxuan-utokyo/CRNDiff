@@ -1,0 +1,159 @@
+{
+ "source_eval": "celltypist_Endothelial_universality.json",
+ "extra": [],
+ "types": [
+  "Ventricular_Cardiomyocyte",
+  "Endothelial"
+ ],
+ "fixed_label_sets": {
+  "Ventricular_Cardiomyocyte": {
+   "all": [
+    "Adip1",
+    "EC9_FB-like",
+    "Purkinje_cell",
+    "vCM1",
+    "vCM2",
+    "vCM3_stressed",
+    "vCM4",
+    "vCM5"
+   ],
+   "strong": [
+    "Adip1",
+    "vCM1",
+    "vCM2",
+    "vCM3_stressed",
+    "vCM4"
+   ]
+  },
+  "Endothelial": {
+   "all": [
+    "CD4+T_Th1",
+    "EC10_CMC-like",
+    "EC1_cap",
+    "EC2_cap",
+    "EC3_cap",
+    "EC4_immune",
+    "EC5_art",
+    "EC6_ven",
+    "EC7_endocardial",
+    "EC8_ln"
+   ],
+   "strong": [
+    "EC10_CMC-like",
+    "EC1_cap",
+    "EC2_cap",
+    "EC3_cap",
+    "EC4_immune",
+    "EC5_art",
+    "EC6_ven",
+    "EC7_endocardial"
+   ]
+  }
+ },
+ "rows": {
+  "CONCAT_MIX0500.npy": {
+   "n_labelled": 5000,
+   "frac_Ventricular_Cardiomyocyte": 0.3772,
+   "frac_strict_Ventricular_Cardiomyocyte": 0.3762,
+   "frac_Endothelial": 0.3504,
+   "frac_strict_Endothelial": 0.3502,
+   "frac_other": 0.2724
+  },
+  "CONCAT_MIX0615.npy": {
+   "n_labelled": 5000,
+   "frac_Ventricular_Cardiomyocyte": 0.4536,
+   "frac_strict_Ventricular_Cardiomyocyte": 0.4518,
+   "frac_Endothelial": 0.2856,
+   "frac_strict_Endothelial": 0.2856,
+   "frac_other": 0.2607999999999999
+  },
+  "CONCAT_MIX0700.npy": {
+   "n_labelled": 5000,
+   "frac_Ventricular_Cardiomyocyte": 0.5024,
+   "frac_strict_Ventricular_Cardiomyocyte": 0.5012,
+   "frac_Endothelial": 0.2226,
+   "frac_strict_Endothelial": 0.2226,
+   "frac_other": 0.275
+  },
+  "CTRL_TILT_Endothelial.npy": {
+   "n_labelled": 5000,
+   "frac_Ventricular_Cardiomyocyte": 0.0804,
+   "frac_strict_Ventricular_Cardiomyocyte": 0.08,
+   "frac_Endothelial": 0.6654,
+   "frac_strict_Endothelial": 0.6652,
+   "frac_other": 0.2542
+  },
+  "CTRL_TILT_Ventricular.npy": {
+   "n_labelled": 5000,
+   "frac_Ventricular_Cardiomyocyte": 0.6834,
+   "frac_strict_Ventricular_Cardiomyocyte": 0.681,
+   "frac_Endothelial": 0.0354,
+   "frac_strict_Endothelial": 0.0354,
+   "frac_other": 0.2812
+  },
+  "UNI_DONOR_D1.npy": {
+   "n_labelled": 10000,
+   "frac_Ventricular_Cardiomyocyte": 0.368,
+   "frac_strict_Ventricular_Cardiomyocyte": 0.3632,
+   "frac_Endothelial": 0.1265,
+   "frac_strict_Endothelial": 0.1264,
+   "frac_other": 0.5055000000000001
+  },
+  "UNI_INTERSECT_g128.npy": {
+   "n_labelled": 10000,
+   "frac_Ventricular_Cardiomyocyte": 0.0933,
+   "frac_strict_Ventricular_Cardiomyocyte": 0.0923,
+   "frac_Endothelial": 0.6657,
+   "frac_strict_Endothelial": 0.6653,
+   "frac_other": 0.2410000000000001
+  },
+  "UNI_MIX0500.npy": {
+   "n_labelled": 10000,
+   "frac_Ventricular_Cardiomyocyte": 0.3498,
+   "frac_strict_Ventricular_Cardiomyocyte": 0.3465,
+   "frac_Endothelial": 0.3677,
+   "frac_strict_Endothelial": 0.3676,
+   "frac_other": 0.2825
+  },
+  "UNI_MIX0615.npy": {
+   "n_labelled": 10000,
+   "frac_Ventricular_Cardiomyocyte": 0.3973,
+   "frac_strict_Ventricular_Cardiomyocyte": 0.3957,
+   "frac_Endothelial": 0.3077,
+   "frac_strict_Endothelial": 0.3076,
+   "frac_other": 0.29500000000000004
+  },
+  "UNI_MIX0700.npy": {
+   "n_labelled": 10000,
+   "frac_Ventricular_Cardiomyocyte": 0.4265,
+   "frac_strict_Ventricular_Cardiomyocyte": 0.4235,
+   "frac_Endothelial": 0.2755,
+   "frac_strict_Endothelial": 0.2752,
+   "frac_other": 0.29800000000000004
+  },
+  "\u771f\u5b9e val \u7ec6\u80de": {
+   "n_labelled": 10000,
+   "frac_Ventricular_Cardiomyocyte": 0.0072,
+   "frac_strict_Ventricular_Cardiomyocyte": 0.0068,
+   "frac_Endothelial": 0.944,
+   "frac_strict_Endothelial": 0.9375,
+   "frac_other": 0.048800000000000066
+  },
+  "\u771f\u5b9e val\uff08\u5efa\u6620\u5c04\u7528\uff09": {
+   "n_labelled": 20000,
+   "frac_Ventricular_Cardiomyocyte": 0.23525,
+   "frac_strict_Ventricular_Cardiomyocyte": 0.23255,
+   "frac_Endothelial": 0.23305,
+   "frac_strict_Endothelial": 0.2318,
+   "frac_other": 0.5317000000000001
+  },
+  "\u7a7a\u64cd\u4f5c(\u65e0\u6761\u4ef6)": {
+   "n_labelled": 10000,
+   "frac_Ventricular_Cardiomyocyte": 0.2443,
+   "frac_strict_Ventricular_Cardiomyocyte": 0.2405,
+   "frac_Endothelial": 0.2273,
+   "frac_strict_Endothelial": 0.2272,
+   "frac_other": 0.5284
+  }
+ }
+}
