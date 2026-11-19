@@ -1,6 +1,6 @@
-# 搬自 cc/experiments/EXP08_toy_countsdiff/metrics.py（整文件），改动：仅在文件顶部加入本行注释；
-# 其余每一个字节逐字未动（GTReference / make_projections / swd / w1_1d / mmd_rbf /
-# median_heuristic_gamma / marginal_gammas 全部原样）。EXP134 中以 `import metrics as MET` 使用。
+# moved from cc/experiments/EXP08_toy_countsdiff/metrics.py (whole file); change: only this comment line added at the top;
+# every other byte unchanged (GTReference / make_projections / swd / w1_1d / mmd_rbf /
+# median_heuristic_gamma / marginal_gammas all unchanged). In EXP134 with `import metrics as MET` used.
 """Metrics for EXP08 — all computed vs the 200k ground-truth resample.
 
 Joint:   RBF-MMD (fixed median-heuristic bandwidth per dataset) + gamma=1 MMD

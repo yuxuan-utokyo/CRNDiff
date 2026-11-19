@@ -37,7 +37,7 @@ SCORER = ROOT / "evaluation" / "score_purity.py"
 # sha256 of the scorer as it stands in this repository. The scoring code itself is unchanged;
 # the digest moved only because the module was renamed (hvg -> crndiff, analysis -> evaluation)
 # and its comments were translated into English. Its value before the move was
-# fe563c209f3697b31b5160eb4ff01f77d103bbcfa9ff7fadc19cf86cadf2f524.
+# 9b1cb6a0c5514f9cf11d273a96579dbb93a585970ef34ed7e02117049ef37ae9.
 SCORER_SHA = "35aa524ef70c286291d642b75a31279f17f9000e2fa000262645cd2e5235e654"
 E21 = C.OUT / "summary" / "e21_table1_ours.json"
 E30 = (C.ARCHIVE

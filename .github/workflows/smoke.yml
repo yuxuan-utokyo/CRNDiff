@@ -1,0 +1,28 @@
+# Checks a fresh clone on every push: asset table, regression tests and compilation.
+# It needs no data download and no GPU.
+name: smoke
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: pip install -r requirements.txt
+      - name: asset table (missing inputs are reported, sha256 mismatches fail)
+        run: python scripts/check_assets.py
+      - name: regression tests for launchers and array comparison
+        run: python -m unittest discover -s tests -v
+      - name: every module compiles
+        run: python -m compileall -q crndiff evaluation figures toy2d horizon experiments scripts baselines assets rebuttal

@@ -16,3 +16,13 @@ venv/
 .DS_Store
 .idea/
 .vscode/
+
+# Data, model weights and results are never committed to this repository.
+*.npy
+*.npz
+*.h5ad
+*.pt
+*.ckpt
+*.joblib
+*.pkl
+/work/

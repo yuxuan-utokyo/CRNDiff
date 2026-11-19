@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""hvg2k · OURS —— 数据 / V / 网络 / 训练。新文件；不改 `_shared/code/` 与 61gene 的任何东西。
+"""hvg2k · OURS: data / V / network / training. New file; does not modify `_shared/code/` and anything of 61gene.
 
-网络直接用 `_shared/code/backbone.py::AttnX0Posterior`（与 61gene 逐字同一个类）。
-训练循环照 `EXP21::train_ours_generic` 搬，改动逐条写在 `train_ours_hvg2k` 的 docstring 里。
+the network uses directly `_shared/code/backbone.py::AttnX0Posterior`(the very same class as in 61gene).
+training loop follows `EXP21::train_ours_generic` moved; changes listed item by item in `train_ours_hvg2k` in the docstring.
 """
 from __future__ import annotations
 
@@ -23,16 +23,16 @@ HERE = Path(__file__).resolve().parent                  # .../hvg2k/OURS/code
 sys.path.insert(0, str(HERE))
 import config_hvg2k as CFG                              # noqa: E402
 
-# 077 债一(2026-08-24):这里原本**自己又算了一遍** `ROOT` 与 `G61`
+# 077 debt 1 (2026-08-24): this originally **recomputed itself** `ROOT` and `G61`
 #     ROOT = Path(__file__).resolve().parents[3]
 #     G61  = ROOT.parent / "_shared" / "panel61"
-# 与 config_hvg2k 里的同名常量是**两份互不相干的副本**。目录搬家后两份一起失效,
-# 而只修其中一份不会让另一份跟着变——这正是它们当初能各自漂掉的原因。
-# 改为**从 CFG 取唯一真源**,以后只有一个地方需要维护。
+# and the constant of the same name in config_hvg2k are **two unrelated copies**. Moving the directory breaks both,
+# and fixing only one copy does not change the other; that is exactly why they could drift apart.
+# changed to **take the single source of truth from CFG**, so there is only one place to maintain.
 ROOT = CFG.ROOT
-G61 = ROOT.parent / "_shared" / "panel61"                            # 只读
+G61 = ROOT.parent / "_shared" / "panel61"                            # read-only
 
-# 复用 61gene 冻结的 backbone（只读 import，不写那边任何文件）
+# reuse the frozen 61gene backbone (read-only import, nothing written there)
 PKG = "panel61_shared"
 SHARED61 = G61 / "_shared" / "code"
 if PKG not in sys.modules:
@@ -48,10 +48,10 @@ DEV = BB.DEV
 
 
 # =========================================================================== #
-# 数据
+# data
 # =========================================================================== #
 def quantize_log2_V(mu, lo=CFG.V_GRID_LO, hi=CFG.V_GRID_HI):
-    """把逐基因均值量化到 2^lo … 2^hi 的 log2 网格（最近档）。见 config 的 B2 判据。"""
+    """quantize the per-gene mean to the log2 grid 2^lo … 2^hi (nearest level). See the B2 criterion in config."""
     lv = 2.0 ** np.arange(lo, hi + 1, dtype=np.float64)
     m = np.maximum(np.asarray(mu, np.float64), lv[0])
     return lv[np.abs(np.log2(m)[:, None] - np.log2(lv)[None, :]).argmin(1)], lv
@@ -60,13 +60,13 @@ def quantize_log2_V(mu, lo=CFG.V_GRID_LO, hi=CFG.V_GRID_HI):
 def load_data(split=("train", "val")):
     meta = json.loads((CFG.DATA_DIR / "meta.json").read_text(encoding="utf-8"))
     assert meta["gene_hash"] == CFG.GENE_HASH, \
-        f"gene_hash 不符：{meta['gene_hash']} != {CFG.GENE_HASH}"      # 红线 §5.3
+        f"gene_hash mismatch:{meta['gene_hash']} != {CFG.GENE_HASH}"      # red line §5.3
     out = {s: np.load(CFG.DATA_DIR / f"{s}.npy") for s in split}
     return out, meta
 
 
 def derive(train):
-    """从 train 估的全部派生量。**只从 train 估，val/test 不参与。**"""
+    """all derived quantities estimated from train. **Estimated from train only; val/test not involved.**"""
     X = train.astype(np.int64)
     mu = X.mean(0)
     V, levels = quantize_log2_V(mu)
@@ -85,7 +85,7 @@ def horizon():
 
 
 def build_grid(K, T=None):
-    """linspace(T, F_BASE, K)，末尾补 0（与 model.py::gfull_nfe 同一约定）。"""
+    """linspace(T, F_BASE, K), 0 appended at the end (same convention as model.py::gfull_nfe)."""
     T = horizon() if T is None else T
     g = np.linspace(T, CFG.F_BASE, K)
     gf = np.concatenate([np.sort(np.unique(g[g > 1e-9]))[::-1], [0.0]])
@@ -93,11 +93,11 @@ def build_grid(K, T=None):
 
 
 class AttnX0PosteriorCkpt(BB.AttnX0Posterior):
-    """与 `AttnX0Posterior` **参数完全相同**的子类，只在 forward 里对 3 层 transformer
-    逐层做梯度检查点。父类文件 `_shared/code/backbone.py` 是只读的，一个字节没动；
-    参数名与形状不变，所以两者的 state_dict 可以互相加载（采样时用父类即可）。
+    """and `AttnX0Posterior` **subclass with **identical parameters**, only in forward on 3 layers transformer
+    gradient checkpointing layer by layer. Parent class file `_shared/code/backbone.py` is read-only, not a single byte changed;
+    parameter names and shapes are unchanged, so the two state_dicts can load each other (use the parent class when sampling).
 
-    只在 `self.training and CFG.USE_GRAD_CKPT` 时走检查点；推理/采样时与父类逐字相同。
+    only on `self.training and CFG.USE_GRAD_CKPT` uses checkpointing; at inference/sampling time identical to the parent class.
     """
 
     def forward(self, n_t, t):
@@ -126,24 +126,24 @@ def build_net(dim, iscale, ckpt=False):
 
 
 # =========================================================================== #
-# 训练
+# training
 # =========================================================================== #
 def train_ours_hvg2k(train, val, V, iscale, seed, steps, *, batch=None, log_fn=print,
                      eval_every=CFG.EVAL_EVERY, patience=CFG.PATIENCE, t_max=None,
                      ckpt_path=None, bf16=None, grad_ckpt=None, resume_from=None):
-    """`EXP21::train_ours_generic` 的 hvg2k 版。逐条改动：
+    """`EXP21::train_ours_generic` hvg2k version. Changes item by item:
 
-    1. `T_MAX` 从 `ours.T_MAX`（8.0）换成本数据集的视界（默认 T_O=5.2021）；
-       `T_FLOOR` 仍是 `F_BASE=0.01`。训练时 t 的采样上界**必须**与采样时的视界一致。
-    2. `x0` 在喂进二项之前先 clip 到 NMAX（`CFG.CLIP_X0_TO_NMAX`）；
-       61gene 是对二项+泊松的**和**才 clamp。理由见 config 的 `CLIP_X0_TO_NMAX`。
-    3. batch 从 1024 降到 256：logits 是 [B, 2000, 513]，B=1024 单是前向就 4.2 GB。
-    4. 加了 early stopping（主线 B5 判据：连续 `patience` 次 val 没改善就停），
-       61gene 那版是固定步数跑满。
-    5. val 评估用**独立的 CPU Generator**（固定 12345），不消耗训练用的 `g` ——
-       EXP143 踩过这个坑（val 评估动了全局 RNG 会改训练轨迹）。
+    1. `T_MAX` from `ours.T_MAX`(8.0) replaced by the horizon of this dataset (default T_O=5.2021);
+       `T_FLOOR` still `F_BASE=0.01`. At training time the upper bound of t **must** match the sampling horizon.
+    2. `x0` clip to NMAX before feeding into the binomial (`CFG.CLIP_X0_TO_NMAX`);
+       61gene clamps only the **sum** of binomial + Poisson. Reason in the config `CLIP_X0_TO_NMAX`.
+    3. batch reduced from 1024 to 256: logits are [B, 2000, 513]; with B=1024 the forward pass alone takes 4.2 GB.
+    4. added early stopping (main line B5 criterion: consecutive `patience` consecutive val evaluations without improvement stop it),
+       61gene that version ran a fixed number of steps to completion.
+    5. val evaluation uses an **independent CPU Generator** (fixed 12345) and does not consume the one used for training `g` ——
+       EXP143 fell into this pitfall (val evaluation touching the global RNG changes the training trajectory).
 
-    其余（AdamW 2e-3/1e-4、warmup 500 的 cosine、EMA 0.999、交叉熵目标）逐字未改。
+    everything else (AdamW 2e-3/1e-4, cosine with warmup 500, EMA 0.999, cross-entropy objective) unchanged.
     """
     batch = batch or CFG.BATCH
     T_MAX = horizon() if t_max is None else t_max
@@ -160,15 +160,15 @@ def train_ours_hvg2k(train, val, V, iscale, seed, steps, *, batch=None, log_fn=p
     model = build_net(dim, iscale, ckpt=grad_ckpt).to(DEV)
     amp = (torch.autocast(device_type="cuda", dtype=torch.bfloat16)
            if (bf16 and torch.cuda.is_available()) else contextlib.nullcontext())
-    log_fn(f"    [训练精度] bf16 autocast={bf16}（权重仍为 fp32）  梯度检查点={grad_ckpt}")
+    log_fn(f"    [training precision] bf16 autocast={bf16} (weights still fp32)  gradient checkpointing={grad_ckpt}")
     opt = torch.optim.AdamW(model.parameters(), lr=CFG.LR, weight_decay=CFG.WD)
     sched = BB._cosine_sched(opt, steps, CFG.WARMUP)
     if resume_from is not None:
         sd_ = torch.load(resume_from, map_location=DEV, weights_only=False)
         model.load_state_dict(sd_)
-        log_fn(f"    [RESUME] 从 {Path(resume_from).name} 续训 —— "
-               f"**优化器状态与 EMA 没有保存，是从权重冷启的**，"
-               f"所以 warmup/cosine 调度会重来一遍。这一点写进日志，不要当成无缝续训。")
+        log_fn(f"    [RESUME] resuming training from {Path(resume_from).name}: "
+               f"**optimizer state and EMA were not saved; this is a cold start from the weights**,"
+               f"so the warmup/cosine schedule restarts. This is written to the log; do not treat it as a seamless resume.")
     ema = copy.deepcopy(model)
     for p in ema.parameters():
         p.requires_grad_(False)
@@ -184,7 +184,7 @@ def train_ours_hvg2k(train, val, V, iscale, seed, steps, *, batch=None, log_fn=p
         return n_t, t
 
     run_tr, best, bad, stopped = None, float("inf"), 0, steps
-    es_ref, es_would_stop = float("inf"), None   # 早停参照点 / 「若启用会停在哪一步」
+    es_ref, es_would_stop = float("inf"), None   # early-stop reference point / where it would have stopped if enabled
     for st in range(steps):
         model.train()
         idx = torch.randint(0, n, (batch,), generator=g)
@@ -207,29 +207,29 @@ def train_ours_hvg2k(train, val, V, iscale, seed, steps, *, batch=None, log_fn=p
         run_tr = lv if run_tr is None else 0.98 * run_tr + 0.02 * lv
         if (st + 1) % eval_every == 0 or st == steps - 1:
             model.eval()
-            # ===== 2026-08-10：val 必须是**权重的确定性函数**，且不能动训练 RNG =====
-            # 原来只把 `noise` 里的 `torch.rand`（抽 t）交给固定的 CPU `gv`，
-            # 但腐蚀本身 —— `torch.binomial(x0, r)` / `torch.poisson(...)` —— 的输入
-            # 在 DEV 上，走的是**全局 CUDA RNG**，`gv` 管不到。于是两件事同时发生：
-            #   1. 每次评估的腐蚀噪声都不同 -> val 曲线里混进抽样噪声（主线问的就是这个）；
-            #   2. val 评估**消耗全局 CUDA RNG** -> 反过来改训练轨迹，
-            #      正是 EXP143 那个坑，只是走的是 CUDA 那条流而不是 CPU 那条。
-            # 修法照 EXP138：固定 val 子集 + 固定腐蚀种子 + 评估前后**存取全局 RNG 状态**。
+            # ===== 2026-08-10: val must be a **deterministic function of the weights** and must not touch the training RNG =====
+            # originally only `noise` in `torch.rand`(drawing t) is handed to a fixed CPU `gv`,
+            # but the corruption itself: `torch.binomial(x0, r)` / `torch.poisson(...)` — input
+            # on DEV it uses the **global CUDA RNG**,`gv` cannot reach it. So two things happen at once:
+            #   1. the corruption noise differs at every evaluation -> sampling noise leaks into the val curve (exactly the main-line question);
+            #   2. val evaluation **consumes the global CUDA RNG** -> which in turn changes the training trajectory,
+            #      exactly the EXP143 pitfall, only through the CUDA stream rather than the CPU one.
+            # fix as in EXP138: fixed val subset + fixed corruption seed + **save and restore the global RNG state** around evaluation.
             _cpu_rng = torch.get_rng_state()
             _cuda_rng = torch.cuda.get_rng_state_all() if torch.cuda.is_available() else None
-            torch.manual_seed(12345)          # 同时给 CPU 与所有 CUDA 设备播种
+            torch.manual_seed(12345)          # seeds both CPU and all CUDA devices
             with torch.no_grad():
                 gv = torch.Generator(device="cpu").manual_seed(12345)
                 vi = torch.randint(0, Xva.shape[0], (min(2048, Xva.shape[0]),), generator=gv)
                 vx0 = Xva[vi].to(DEV)
                 vnt, vt = noise(vx0, gv)
-                # ★ **必须分块。** 一次前向 2048 个细胞在 dim=2000 上是 **21.6 GB**
-                #   （T2 实测推理 10.8 MB/细胞），比 batch=128 的训练步（8.5 GB）还大 2.5 倍。
-                #   2026-08-09 夜里抖死的真正原因就是它，不是 batch 太大 ——
-                #   61gene 那份配方里 2048×61 基因微不足道，照抄到 2000 维就成了峰值。
-                #   用 reduction="sum" 再除以总元素数，与一次性求 mean **数值完全相同**，
-                #   所以 val 曲线与之前的运行仍然可比。
-                # val 一律 fp32 评估 —— 两个精度配置的曲线要能直接并排比
+                # ★ ****must be chunked.** A forward pass of 2048 cells at dim=2000 is **21.6 GB**
+                #   (T2 measured 10.8 MB/cell at inference), 2.5 times more than a training step at batch=128 (8.5 GB).
+                #   2026-08-09 this, not the batch size, is the real cause of the overnight stalls:
+                #   61gene in that recipe 2048×61 genes is negligible; copied to 2000 dimensions it becomes the peak.
+                #   use reduction="sum" then dividing by the total number of elements is **numerically identical** to taking the mean at once,
+                #   so the val curves remain comparable with earlier runs.
+                # val always evaluated in fp32: the curves of the two precision configurations must be directly comparable
                 s_, n_ = 0.0, 0
                 for lo in range(0, vx0.shape[0], CFG.VAL_CHUNK):
                     hi = lo + CFG.VAL_CHUNK
@@ -240,35 +240,35 @@ def train_ours_hvg2k(train, val, V, iscale, seed, steps, *, batch=None, log_fn=p
                     n_ += xb.numel()
                 vl = s_ / max(n_, 1)
                 del vx0, vnt, vt
-            torch.set_rng_state(_cpu_rng)                       # 训练轨迹一位不动
+            torch.set_rng_state(_cpu_rng)                       # training trajectory unchanged
             if _cuda_rng is not None:
                 torch.cuda.set_rng_state_all(_cuda_rng)
             curve["step"].append(st + 1); curve["train"].append(run_tr); curve["val"].append(vl)
-            # ================= 早停：2026-08-10 修的逻辑 bug =================
-            # 旧代码（把实验 X 的两次训练都砍断了）：
+            # ================= early stopping: logic fixed on 2026-08-10 bug =================
+            # old code (which cut both training runs of experiment X):
             #     imp = vl < best * (1 - REL)
             #     best, bad = (vl, 0) if imp else (min(best, vl), bad + 1)
-            # 错在 **`best` 与「相对阈值的参照点」是同一个变量**：
-            #   `min(best, vl)` 让 best 每次刷新都往下棘轮，于是
-            #   「刷新了 best、但幅度不到 REL=0.3%」的那一步 —— best 被更新，
-            #   bad 却 +1。计数器在破纪录的那一步没有清零。
-            #   run1  step 5000 val=0.11510 < best=0.11520（改善 0.087% < 0.3%）-> bad=3/3 停
-            #   run1b step 2800 val=0.11408   就是最终 best_val 本身        -> bad=5/5 停
-            # 修法：参照点 `ref` 只在**显著**改善时下移，`best` 只管存盘，两者分开。
-            imp_any = vl < best                                # 任何新纪录 -> 存 .best
-            imp_sig = vl < es_ref * (1.0 - CFG.EARLY_STOP_REL)  # 显著改善 -> 清零计数器
+            # the error is in **`best` and [the reference point of the relative threshold] are the same variable**:
+            #   `min(best, vl)` makes best ratchet down at every refresh, so
+            #   the step that [refreshed best but by less than REL=0.3%]: best is updated,
+            #   bad but +1. The counter was not reset at the record-breaking step.
+            #   run1  step 5000 val=0.11510 < best=0.11520(improvement 0.087% < 0.3%) -> bad=3/3 stop
+            #   run1b step 2800 val=0.11408   is the final best_val itself        -> bad=5/5 stop
+            # fix: the reference point `ref` moves down only on a **significant** improvement,`best` only handles saving; the two are separate.
+            imp_any = vl < best                                # any new record -> save .best
+            imp_sig = vl < es_ref * (1.0 - CFG.EARLY_STOP_REL)  # significant improvement -> reset the counter
             if imp_sig:
                 es_ref, bad = vl, 0
             else:
                 bad += 1
             best = min(best, vl)
-            # **早停只记录、不执行**（主线 2026-08-10）：第一次触发点写进日志供定预算用。
+            # **early stopping is record-only, never executed** (main line 2026-08-10): the first trigger point is logged for budgeting.
             if bad >= patience and es_would_stop is None:
                 es_would_stop = st + 1
-                log_fn(f"    [EARLY-STOP·仅记录] 若启用，第一次触发会在 step {es_would_stop}"
-                       f"（patience={patience}, rel={CFG.EARLY_STOP_REL}）—— 本轮不执行，继续训")
-            # **每个评估点都落盘**。第一版只在最后保存，2026-08-10 那次 pilot 因显存抖动
-            # 被迫在 step 1000 中止时，5.3 小时训练一个产物都没留下。
+                log_fn(f"    [EARLY-STOP·record only] if enabled, the first trigger happens at step {es_would_stop}"
+                       f"(patience={patience}, rel={CFG.EARLY_STOP_REL}): not executed in this round; training continues")
+            # ****every evaluation point is saved to disk**. The first version only saved at the end; the 2026-08-10 pilot, because of memory jitter,
+            # when forced to abort at step 1000, 5.3 hours of training left no output at all.
             if ckpt_path is not None:
                 ema.eval()
                 torch.save(ema.state_dict(), str(ckpt_path) + ".last")
@@ -278,16 +278,16 @@ def train_ours_hvg2k(train, val, V, iscale, seed, steps, *, batch=None, log_fn=p
             pk_gb = (torch.cuda.max_memory_allocated() / 2 ** 30) if torch.cuda.is_available() else 0
             log_fn(f"    step {st+1:6d}/{steps} train={run_tr:.4f} val={vl:.4f} "
                    f"best={best:.4f} bad={bad}/{patience}"
-                   + (f"  [GPU 峰值分配 {pk_gb:.1f} GB]" if torch.cuda.is_available() else ""))
-            # **判据用 max_memory_allocated，不用 memory_reserved。**
-            # 开了 `expandable_segments:True` 之后 reserved 报的是虚拟地址空间，
-            # 会出现「24 GB 卡上 reserved 38 GB」这种读数，拿它当判据是量错了对象。
+                   + (f"  [GPU peak allocation {pk_gb:.1f} GB]" if torch.cuda.is_available() else ""))
+            # **the criterion uses max_memory_allocated, not memory_reserved.**
+            # enabled `expandable_segments:True` after that, reserved reports virtual address space,
+            # readings like 38 GB reserved on a 24 GB card appear; using it as the criterion measures the wrong thing.
             if pk_gb > 18.0:
-                log_fn(f"    [WARN] 峰值分配 {pk_gb:.1f} GB —— 24 GB 卡上余量不足，"
-                       f"再涨会触发 WDDM 溢出到共享内存，速度掉一个数量级")
+                log_fn(f"    [WARN] peak allocation {pk_gb:.1f} GB: not enough headroom on a 24 GB card,"
+                       f"growing further triggers WDDM spilling into shared memory and slows down by an order of magnitude")
             if bad >= patience and CFG.EARLY_STOP_ENFORCE:
                 stopped = st + 1
-                log_fn(f"    [EARLY-STOP] 连续 {patience} 次 val 无改善，停在 step {stopped}")
+                log_fn(f"    [EARLY-STOP] {patience} consecutive val evaluations without improvement, stopped at step {stopped}")
                 break
     ema.eval()
     return ema, curve, {"n_params": int(sum(p.numel() for p in ema.parameters())),

@@ -117,7 +117,7 @@ def main() -> None:
     fixed = {t: set(v7["types"][t]["fixed_labels"]) for t in TYPES}
     ceil_v7, spread_v7, nceil = {}, {}, {}
     for t in TYPES:
-        row = next(r for r in v7["types"][t]["rows"] if r["arm"] == "真实 val 细胞")
+        row = next(r for r in v7["types"][t]["rows"] if r["arm"] == "real val cells")
         ceil_v7[t] = row["purity_fixed"]
         spread_v7[t] = row["across_call_spread"]
         nceil[t] = row["n"]
@@ -145,7 +145,7 @@ def main() -> None:
     for t in TYPES:
         if cc is None:
             break
-        p, n = purity_from_hist(cc[t]["label_dists"]["真实 val 细胞"], fixed[t])
+        p, n = purity_from_hist(cc[t]["label_dists"]["real val cells"], fixed[t])
         cross[t] = p
         d = p - ceil_v7[t]
         flag = "within v7 spread" if abs(d) <= max(spread_v7[t], 1e-9) else "OUTSIDE v7 spread"

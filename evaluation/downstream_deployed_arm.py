@@ -33,7 +33,7 @@ from evaluation import downstream_multiseed as MS                           # no
 # and the remainder is resolved against archive/. The arrays themselves (~7.6 GB) are not part
 # of the repository; restore them under archive/ to run this script.
 REPO = C.ARCHIVE
-WIN_PREFIX = ("D:\\research\\Git-backup\\crndiff\\CRNDIFF\\"
+WIN_PREFIX = ("D:\\experiments\\CRNDIFF\\"
               "Conditional generation experiments\\HVG2K\\")
 WORK = C.OUT / "e33_197"
 SUMMARY = C.OUT / "summary"

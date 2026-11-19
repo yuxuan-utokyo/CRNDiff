@@ -22,17 +22,6 @@ SOFTWARE.
 
 ---
 
-The MIT terms above cover the source code in this repository.
-
-Data redistributed here is covered by its own licence, not by the MIT terms:
-
-  assets/_shared/panel61/_shared/data/{train,val}.npy
-      80,463 x 61 and 10,057 x 61 integer count matrices, an endothelial
-      61-gene panel derived from the Heart Cell Atlas
-      (Litvinukova et al., Nature 2020, https://www.heartcellatlas.org),
-      which is distributed under CC-BY-4.0. These two arrays remain under
-      CC-BY-4.0; attribute the original authors when you redistribute them.
-
-Third-party software is not vendored here. scVI and scANVI are used through
-scvi-tools, and CFGen through its own upstream repository; baselines/README.md
-records the version and commit of each, and what was and was not changed.
+The MIT terms above cover the source code in this repository. No data, model weights or
+experimental results are distributed here. Data used with this code (for example the Heart
+Cell Atlas, CC-BY-4.0, and the Human Lung Cell Atlas) remain under their own licences.

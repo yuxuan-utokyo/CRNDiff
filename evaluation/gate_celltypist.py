@@ -1,20 +1,20 @@
 # -*- coding: utf-8 -*-
-"""Gate G5 (A 类): the CellTypist purity ruler must be the SAME ruler the archive used.
-用途：闸门 G5（裁定 164 §3）。CellTypist 不是丢失的冻结件，是 pip 包 `celltypist` +
-下载到 `~/.celltypist/` 的 `Healthy_Adult_Heart.pkl`。归档 json **只记了模型文件名**，
-没记版本也没记 sha256 —— 模型换个版本，标签直方图就变，新 purity 就落到另一把尺子上，
-和论文表里留用的那些行不可比。
+"""Gate G5 (A classes): the CellTypist purity ruler must be the SAME ruler the archive used.
+purpose: gate G5 (ruling 164 section 3). CellTypist is not a lost frozen copy; it is a pip package `celltypist` +
+download to `~/.celltypist/` of `Healthy_Adult_Heart.pkl`. The archived json **only records the model file name**,
+neither version nor sha256 recorded: with another model version the label histogram changes, and the new purity lands on a different ruler,
+not comparable with the rows kept in the paper table.
 
-判据：用**当前机器上**的 celltypist + 模型，重打一条**已归档**的臂，
-标签直方图必须与归档 **逐 key 相同**（key 与 count 都相同，不许四舍五入、不许只比 top-k）。
+criterion: with celltypist + model **on the current machine**, rescore one **archived** arm,
+label histograms must be **identical key by key** to the archive (same keys and counts; no rounding, no top-k-only comparison).
 
-选哪一条：`celltypist_Myeloid_ceiling_canonical.json`。理由是它的 job 列表最短——
-只有默认的 pilot（就是 §3 补迁进来的那个 tau=0 base 池），所以它同时验证
-**模型 + val 数据 + base 池**三样，而且 rng 的消费序列最短、最不容易走样。
-它的三份直方图（空操作 / 真实 val 建映射用 / 真实 val 细胞）全部逐 key 比。
+which one to pick:`celltypist_Myeloid_ceiling_canonical.json`. The reason is that its job list is the shortest:
+only the default pilot (the tau=0 base pool migrated in section 3), so it also validates
+**model + val data + base pool, and the rng consumption sequence is the shortest and least likely to drift.
+its three histograms (no-op / real val for building the mapping / real val cells) are all compared key by key.
 
-不过 ⇒ **停下贴数字**，报给 Q。**禁止**去找旧版本模型换着试
-（与 H0(b) 同一类禁令：那是拿哈希当超参搜索）。
+fails ⇒ **stop and post the numbers**, report. **Do not** try older model versions instead
+(same class of ban as H0(b): that would be a hyperparameter search over hashes).
 
     python -m evaluation.gate_celltypist          -> out/gates/CELLTYPIST.json
 """

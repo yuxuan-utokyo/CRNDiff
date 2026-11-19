@@ -48,10 +48,10 @@ from crndiff.io import load_runs, sha256_file                            # noqa:
 
 FROZEN = ROOT / "evaluation" / "frozen"
 FROZEN_SHA = {
-    "metrics_exp08.py": "bdb35b4592e44cd2ac2443971d1317cf061846592b5edb39d3aba656d01f56de",
+    "metrics_exp08.py": "6319272ff7d1440271773afb25fd8bbc6e383a230a604f3000c142334aadb0a5",
     "sliced_w1.py": "6224428255b9f97cf577e668aa16bd62c263bd5c07cf0ce4c2a0bde9ef9a63e0",
     "e30plus_eval_cpu_worker.py":
-        "b5ca3313ed7e540328d542afd8f5b7fb799321a13e83589cca4ab23da99af7bc",
+        "94ab30a2be161cfa576192ddc23b2f89007e5ab87c75b68b8e0176ebee39e425",
 }
 ARCHIVE = C.ARCHIVE
 COND_W1 = ARCHIVE / "cond_w1" / "out" / "cond_w1.json"

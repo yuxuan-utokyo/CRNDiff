@@ -554,7 +554,7 @@ GRIDS = {"gates": gates, "main_single_type": main_single_type,
          "type_pair": type_pair,                    # Stage 6 · Table 8
          "schedule_table11": schedule_table11,      # Stage 5 · CANCELLED by 167-AMEND
          # ---- Stage 6 (Table 8) needs a MIX table built first; registered when it exists ----
-         # ---- queued behind Q's go; NOT part of ticket 167 ----
+         # ---- queued behind approval; NOT part of ticket 167 ----
          "alpha_sweep": deployed_grid,
          "J_convergence": J_convergence, "plugin_vs_twist": plugin_vs_twist,
          # ---- ticket 172 ----
@@ -594,7 +594,7 @@ def main(argv=None) -> int:
         p.write_text(json.dumps(rows, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         print(f"[manifest] {name:18s} {len(rows):4d} runs -> {p}")
     if a.round:
-        print("[manifest] queued behind Q's go, NOT written by --round: "
+        print("[manifest] queued behind approval, NOT written by --round: "
               "alpha_sweep(INTERSECT) / J_convergence / plugin_vs_twist / interval ladder / "
               "seeds 20260988, 20260989 / any baseline")
     return 0

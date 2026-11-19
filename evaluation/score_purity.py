@@ -130,7 +130,7 @@ def score_run(run: dict, genes: list, labels: set, target: str) -> dict:
         "purity_over_ceiling": (mean / ceiling) if ceiling else None,
         "label_dist_whole": whole,
         "label_dists_per_block": hists,
-        # the diversity / sampler readings Q asked for alongside purity
+        # the diversity / sampler readings requested for alongside purity
         "unique_cell_fraction": run.get("unique_cell_fraction"),
         "unique_lineage_fraction": run.get("unique_lineage_fraction"),
         "ess_min_fraction": run.get("ess_min_fraction"),
